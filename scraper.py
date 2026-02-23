@@ -319,135 +319,207 @@ def scrape_arxiv(lookback_days, seen_urls):
 # ============================================================
 
 ACL_BASE = "https://aclanthology.org/"
-# ACL Anthology XML data is hosted on GitHub — we fetch only the current year's files.
-ACL_GITHUB_XML_BASE = "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/"
-ACL_GITHUB_XML_DIR = "https://api.github.com/repos/acl-org/acl-anthology/contents/data/xml"
+ACL_RSS_URL = "https://aclanthology.org/papers/index.xml"
+
+# Venue blocklist — papers whose proceedings title contains any of these
+# substrings (case-insensitive) will be skipped before fetching their pages.
+# Covers speech/audio, narrow MT, biomedical, historical, legal, OCR venues.
+ACL_VENUE_BLOCKLIST = [
+    # Speech & audio
+    "Spoken Dialogue",
+    "Speech and Language Processing",
+    "Acoustics, Speech",
+    "Spoken Language",
+    "Speech Communication",
+    "Text-to-Speech",
+    "INTERSPEECH",
+    "ICASSP",
+    "Odyssey",
+    "SLTU",
+    # Machine translation (narrow)
+    "Conference on Machine Translation",
+    "Workshop on Machine Translation",
+    "MT Summit",
+    "Asia-Pacific Association for Machine Translation",
+    "European Association for Machine Translation",
+    "Workshop on Asian Translation",
+    # Biomedical / clinical
+    "BioNLP",
+    "Clinical NLP",
+    "ClinicalNLP",
+    "Biomedical",
+    "LOUHI",
+    "BioCreative",
+    "Health Informatics",
+    "Medical NLP",
+    # Historical, literary, cultural heritage
+    "LaTeCH",
+    "HistoInformatics",
+    "Digital Humanities",
+    "Cultural Heritage",
+    "Literary",
+    # Low-resource / morphology / linguistics
+    "AmericasNLP",
+    "SIGMORPHON",
+    "Endangered Languages",
+    "ComputEL",
+    "Low-Resource",
+    # Legal (narrow)
+    "Legal and Law",
+    "Natural Legal Language",
+    "Workshop on Legal",
+    # Document processing / OCR
+    "Document Analysis",
+    "Document Engineering",
+    "ICDAR",
+]
 
 
-def fetch_acl_xml_file_list():
-    """Return list of XML filenames in the ACL Anthology GitHub data/xml directory."""
-    resp = requests.get(ACL_GITHUB_XML_DIR, timeout=30)
-    resp.raise_for_status()
-    files = resp.json()
-    return [f["name"] for f in files if f["name"].endswith(".xml")]
+def is_blocked_venue(description):
+    """Return True if the paper's venue matches the blocklist."""
+    desc_lower = description.lower()
+    return any(term.lower() in desc_lower for term in ACL_VENUE_BLOCKLIST)
 
 
-def parse_acl_xml(xml_content, current_year):
+def fetch_acl_page(url):
     """
-    Parse an ACL Anthology XML file and return paper dicts for the current year.
-    ACL XML structure: <collection id="..."><volume id="..."><paper id="...">
+    Fetch an ACL Anthology paper page and extract the abstract and full text.
+    Returns (abstract, fulltext) tuple; either may be None on failure.
+
+    ACL paper pages have the abstract in a <div class="acl-abstract"> or
+    <span class="abstract-text"> element. We grab a broad text slice for
+    affiliation checking.
     """
-    papers = []
     try:
-        root = ET.fromstring(xml_content)
-    except ET.ParseError as e:
-        log.warning(f"XML parse error: {e}")
-        return papers
+        resp = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+        if resp.status_code != 200:
+            log.debug(f"ACL page returned {resp.status_code}: {url}")
+            return None, None
+        soup = BeautifulSoup(resp.content, "html.parser")
 
-    collection_id = root.get("id", "")
+        # Try several known selectors for the abstract
+        abstract = None
+        for selector in [
+            "span.abstract-text",
+            "div.acl-abstract",
+            "section#abstract",
+            "div#abstract",
+        ]:
+            el = soup.select_one(selector)
+            if el:
+                abstract = el.get_text(separator=" ", strip=True)
+                break
 
-    for volume in root.findall("volume"):
-        volume_id = volume.get("id", "")
+        # Fall back: look for a <strong>Abstract</strong> followed by text
+        if not abstract:
+            for tag in soup.find_all(["p", "div"]):
+                text = tag.get_text(separator=" ", strip=True)
+                if text.lower().startswith("abstract"):
+                    abstract = text[len("abstract"):].strip().lstrip(":").strip()
+                    if len(abstract) > 50:
+                        break
 
-        # Get volume-level year from <meta>
-        vol_year = ""
-        vol_meta = volume.find("meta")
-        if vol_meta is not None:
-            year_el = vol_meta.find("year")
-            if year_el is not None:
-                vol_year = year_el.text or ""
+        # Fulltext for affiliation checking — first 60KB of page text is enough
+        fulltext = soup.get_text(separator=" ")[:60000]
 
-        for paper in volume.findall("paper"):
-            paper_id = paper.get("id", "")
+        return abstract, fulltext
 
-            # Paper-level year overrides volume-level year
-            year_el = paper.find("year")
-            year = (year_el.text or vol_year) if year_el is not None else vol_year
-
-            if year != current_year:
-                continue
-
-            title_el = paper.find("title")
-            title = "".join(title_el.itertext()) if title_el is not None else ""
-
-            abstract_el = paper.find("abstract")
-            abstract = "".join(abstract_el.itertext()) if abstract_el is not None else ""
-
-            authors = []
-            for author in paper.findall("author"):
-                first = author.findtext("first", "")
-                last = author.findtext("last", "")
-                authors.append(f"{first} {last}".strip())
-
-            # e.g. 2025.acl-long.1
-            acl_id = f"{collection_id}-{volume_id}.{paper_id}"
-            url = urljoin(ACL_BASE, acl_id)
-
-            month_el = paper.find("month")
-            month = month_el.text if month_el is not None else ""
-            published = f"{month} {year}".strip()
-
-            papers.append({
-                "title": title,
-                "abstract": abstract,
-                "url": url,
-                "authors": ", ".join(authors),
-                "published": published,
-                "source": "ACL Anthology",
-                "_acl_id": acl_id,
-            })
-
-    return papers
+    except Exception as e:
+        log.debug(f"Could not fetch ACL page {url}: {e}")
+        return None, None
 
 
 def fetch_acl_recent_papers(lookback_days):
     """
-    Fetch recent ACL Anthology papers by pulling current-year XML files from GitHub.
-    Returns a list of paper dicts.
+    Fetch the ACL Anthology RSS feed, filter to the lookback window,
+    exclude blocked venues, then fetch each surviving paper's page
+    to extract the abstract and run keyword/affiliation checks.
+
+    RSS <item> structure:
+        <title>Paper Title</title>
+        <link>https://aclanthology.org/2026.acl-long.1/</link>
+        <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+        <guid>2026.acl-long.1</guid>
+        <description>Author1, Author2 in Proceedings of ...</description>
     """
-    current_year = str(datetime.datetime.utcnow().year)
+    cutoff = datetime.datetime.utcnow() - datetime.timedelta(days=lookback_days)
 
-    log.info("Fetching ACL Anthology XML file list from GitHub...")
-    xml_files = fetch_acl_xml_file_list()
+    log.info(f"Fetching ACL Anthology RSS feed...")
+    resp = requests.get(ACL_RSS_URL, timeout=30)
+    resp.raise_for_status()
 
-    # Only process files that start with the current year (e.g. 2025.acl-long.xml)
-    current_year_files = [f for f in xml_files if f.startswith(current_year)]
-    log.info(f"Found {len(current_year_files)} XML files for {current_year}")
+    soup = BeautifulSoup(resp.content, "xml")
+    items = soup.find_all("item")
+    log.info(f"RSS feed contains {len(items)} items total")
 
+    # --- Step 1: filter by date and venue blocklist ---
+    candidates = []
+    skipped_date = 0
+    skipped_venue = 0
+
+    for item in items:
+        pub_str = item.findtext("pubDate", "").strip()
+        published_dt = None
+        if pub_str:
+            try:
+                published_dt = datetime.datetime.strptime(
+                    pub_str, "%a, %d %b %Y %H:%M:%S %z"
+                ).replace(tzinfo=None)
+            except ValueError:
+                pass
+
+        # RSS is newest-first; stop once past the cutoff
+        if published_dt and published_dt < cutoff:
+            skipped_date += 1
+            break
+
+        description = item.findtext("description", "").strip()
+        if is_blocked_venue(description):
+            skipped_venue += 1
+            continue
+
+        title = item.findtext("title", "").strip()
+        url = item.findtext("link", "").strip()
+        acl_id = item.findtext("guid", "").strip()
+
+        # Parse authors from description: "Author1, Author2 in Proceedings of ..."
+        authors = ""
+        if " in " in description:
+            authors = description.split(" in ")[0].strip()
+
+        candidates.append({
+            "title": title,
+            "url": url,
+            "authors": authors,
+            "published": pub_str,
+            "source": "ACL Anthology",
+            "_acl_id": acl_id,
+            "_description": description,
+        })
+
+    log.info(
+        f"After date filter: {skipped_date} too old, "
+        f"{skipped_venue} blocked by venue, "
+        f"{len(candidates)} candidates remaining"
+    )
+
+    # --- Step 2: fetch each candidate's page for abstract + affiliation ---
     papers = []
-    for filename in current_year_files:
-        url = ACL_GITHUB_XML_BASE + filename
-        log.info(f"Fetching {url}")
-        try:
-            resp = requests.get(url, timeout=30)
-            resp.raise_for_status()
-            file_papers = parse_acl_xml(resp.content, current_year)
-            papers.extend(file_papers)
-            time.sleep(0.5)  # be polite to GitHub
-        except Exception as e:
-            log.warning(f"Failed to fetch/parse {filename}: {e}")
+    for i, p in enumerate(candidates):
+        log.info(f"Fetching ACL page {i+1}/{len(candidates)}: {p['url']}")
+        abstract, fulltext = fetch_acl_page(p["url"])
+        p["abstract"] = abstract or ""
+        p["_fulltext"] = fulltext or ""
+        papers.append(p)
+        time.sleep(1)  # be polite to ACL servers
 
-    log.info(f"Fetched {len(papers)} ACL papers from current year XML files")
+    log.info(f"Fetched pages for {len(papers)} ACL candidates")
     return papers
 
 
-def fetch_acl_fulltext(acl_id):
-    """
-    Fetch the ACL Anthology paper page to extract affiliation info.
-    """
-    url = urljoin(ACL_BASE, acl_id)
-    try:
-        resp = requests.get(url, timeout=20)
-        if resp.status_code == 200:
-            soup = BeautifulSoup(resp.content, "html.parser")
-            text = soup.get_text(separator=" ")[:50000]
-            return text
-    except Exception as e:
-        log.debug(f"Could not fetch ACL page for {acl_id}: {e}")
-    return None
-
-
 def scrape_acl(lookback_days, seen_urls):
+    # fetch_acl_recent_papers already handles date filtering, venue blocklist,
+    # and page fetching -- each paper dict has 'abstract' and '_fulltext' ready.
     papers = fetch_acl_recent_papers(lookback_days)
     results = []
 
@@ -456,24 +528,18 @@ def scrape_acl(lookback_days, seen_urls):
             continue
 
         abstract = p["abstract"]
+        fulltext = p.get("_fulltext", "")
 
-        # Hard requirement: must contain an LLM-related term
-        has_llm = contains_any(abstract, LLM_TERMS)
-        if not has_llm:
+        # Hard requirement: must contain an LLM-related term in abstract
+        if not contains_any(abstract, LLM_TERMS):
             continue
 
+        # Pass if abstract keywords match OR affiliation match in fulltext
         has_keyword = contains_any(abstract, ABSTRACT_KEYWORDS)
+        has_affiliation = passes_affiliation_filter(fulltext)
 
-        if has_keyword:
-            # Passes on abstract keywords alone — no need to fetch fulltext
+        if has_keyword or has_affiliation:
             results.append(p)
-        else:
-            # Did not pass on abstract keywords — fetch fulltext and check affiliations
-            log.info(f"Fetching ACL fulltext for affiliation check: {p['_acl_id']}")
-            fulltext = fetch_acl_fulltext(p["_acl_id"])
-            if fulltext and passes_affiliation_filter(fulltext):
-                results.append(p)
-            time.sleep(1)
 
     log.info(f"ACL Anthology: {len(results)} papers passed filter")
     return results

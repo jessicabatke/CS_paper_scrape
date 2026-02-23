@@ -3,33 +3,87 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://github.com</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Mon, 23 Feb 2026 11:47:53 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 12:09:55 +0000</lastBuildDate>
     <item>
+      
+      
       <title>Validating Political Position Predictions of Arguments</title>
+      
+      
       <link>https://arxiv.org/abs/2602.18351v1</link>
+      
+      
       <description>Real-world knowledge representation often requires capturing subjective, continuous attributes -- such as political positions -- that conflict with pairwise validation, the widely accepted gold standard for human evaluation. We address this challenge through a dual-scale validation framework applied to political stance prediction in argumentative discourse, combining pointwise and pairwise human annotation. Using 22 language models, we construct a large-scale knowledge base of political position predictions for 23,228 arguments drawn from 30 debates that appeared on the UK politicial television programme \textit{Question Time}. Pointwise evaluation shows moderate human-model agreement (Krippendorff's $α=0.578$), reflecting intrinsic subjectivity, while pairwise validation reveals substantially stronger alignment between human- and model-derived rankings ($α=0.86$ for the best model). This work contributes: (i) a practical validation methodology for subjective continuous knowledge that balances scalability with reliability; (ii) a validated structured argumentation knowledge base enabling graph-based reasoning and retrieval-augmented generation in political domains; and (iii) evidence that ordinal structure can be extracted from pointwise language models predictions from inherently subjective real-world discourse, advancing knowledge representation capabilities for domains where traditional symbolic or categorical approaches are insufficient.</description>
+      
+      
       <author>Jordan Robinson, Angus R. Williams, Katie Atkinson, Anthony G. Cohn</author>
+      
+      
       <pubDate>2026-02-20T17:03:44Z</pubDate>
+      
+      
       <source>arXiv</source>
+      
+      
       <guid isPermaLink="true">https://arxiv.org/abs/2602.18351v1</guid>
+      
+    
     </item>
+    
+    
     <item>
+      
+      
       <title>On the Adversarial Robustness of Discrete Image Tokenizers</title>
+      
+      
       <link>https://arxiv.org/abs/2602.18252v1</link>
+      
+      
       <description>Discrete image tokenizers encode visual inputs as sequences of tokens from a finite vocabulary and are gaining popularity in multimodal systems, including encoder-only, encoder-decoder, and decoder-only models. However, unlike CLIP encoders, their vulnerability to adversarial attacks has not been explored. Ours being the first work studying this topic, we first formulate attacks that aim to perturb the features extracted by discrete tokenizers, and thus change the extracted tokens. These attacks are computationally efficient, application-agnostic, and effective across classification, multimodal retrieval, and captioning tasks. Second, to defend against this vulnerability, inspired by recent work on robust CLIP encoders, we fine-tune popular tokenizers with unsupervised adversarial training, keeping all other components frozen. While unsupervised and task-agnostic, our approach significantly improves robustness to both unsupervised and end-to-end supervised attacks and generalizes well to unseen tasks and data. Unlike supervised adversarial training, our approach can leverage unlabeled images, making it more versatile. Overall, our work highlights the critical role of tokenizer robustness in downstream tasks and presents an important step in the development of safe multimodal foundation models.</description>
+      
+      
       <author>Rishika Bhagwatkar, Irina Rish, Nicolas Flammarion, Francesco Croce</author>
+      
+      
       <pubDate>2026-02-20T14:39:17Z</pubDate>
+      
+      
       <source>arXiv</source>
+      
+      
       <guid isPermaLink="true">https://arxiv.org/abs/2602.18252v1</guid>
+      
+    
     </item>
+    
+    
     <item>
+      
+      
       <title>Capabilities Ain't All You Need: Measuring Propensities in AI</title>
+      
+      
       <link>https://arxiv.org/abs/2602.18182v1</link>
+      
+      
       <description>AI evaluation has primarily focused on measuring capabilities, with formal approaches inspired from Item Response Theory (IRT) being increasingly applied. Yet propensities - the tendencies of models to exhibit particular behaviours - play a central role in determining both performance and safety outcomes. However, traditional IRT describes a model's success on a task as a monotonic function of model capabilities and task demands, an approach unsuited to propensities, where both excess and deficiency can be problematic. Here, we introduce the first formal framework for measuring AI propensities by using a bilogistic formulation for model success, which attributes high success probability when the model's propensity is within an &quot;ideal band&quot;. Further, we estimate the limits of the ideal band using LLMs equipped with newly developed task-agnostic rubrics. Applying our framework to six families of LLM models whose propensities are incited in either direction, we find that we can measure how much the propensity is shifted and what effect this has on the tasks. Critically, propensities estimated using one benchmark successfully predict behaviour on held-out tasks. Moreover, we obtain stronger predictive power when combining propensities and capabilities than either separately. More broadly, our framework showcases how rigorous propensity measurements can be conducted and how it yields gains over solely using capability evaluations to predict AI behaviour.</description>
+      
+      
       <author>Daniel Romero-Alvarado, Fernando Martínez-Plumed, Lorenzo Pacchiardi, Hugo Save, Siddhesh Milind Pawar, Behzad Mehrbakhsh, Pablo Antonio Moreno Casares, Ben Slater, Paolo Bova, Peter Romero, Zachary R. Tyler, Jonathan Prunty, Luning Sun, Jose Hernandez-Orallo</author>
+      
+      
       <pubDate>2026-02-20T12:40:18Z</pubDate>
+      
+      
       <source>arXiv</source>
+      
+      
       <guid isPermaLink="true">https://arxiv.org/abs/2602.18182v1</guid>
+      
+    
     </item>
+    
+  
   </channel>
 </rss>

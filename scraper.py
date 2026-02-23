@@ -66,7 +66,7 @@ ABSTRACT_KEYWORDS = [
 ]
 
 # The affiliation cluster — paper passes if fulltext contains ANY of these (case-insensitive substring)
-# Checked only after a paper passes the LLM + abstract keyword filter, for efficiency
+# Checked for any paper that contains an LLM term but does NOT match the abstract keywords above
 AFFILIATION_STRINGS = [
     "Chinese Academy of Sciences",
     "Beijing Key Laboratory of Safe AI and Superalignment",
@@ -293,7 +293,7 @@ def scrape_arxiv(lookback_days, seen_urls):
 
         abstract = p["abstract"]
 
-        # Quick abstract-only check first
+        # Hard requirement: must contain an LLM-related term
         has_llm = contains_any(abstract, LLM_TERMS)
         if not has_llm:
             continue
@@ -301,10 +301,10 @@ def scrape_arxiv(lookback_days, seen_urls):
         has_keyword = contains_any(abstract, ABSTRACT_KEYWORDS)
 
         if has_keyword:
-            # Passes on abstract alone
+            # Passes on abstract keywords alone — no need to fetch fulltext
             results.append(p)
         else:
-            # Try fulltext for affiliation match
+            # Did not pass on abstract keywords — fetch fulltext and check affiliations
             log.info(f"Fetching fulltext for affiliation check: {p['_arxiv_id']}")
             fulltext = fetch_arxiv_fulltext(p["_arxiv_id"])
             if fulltext and passes_affiliation_filter(fulltext):
@@ -394,6 +394,8 @@ def scrape_acl(lookback_days, seen_urls):
             continue
 
         abstract = p["abstract"]
+
+        # Hard requirement: must contain an LLM-related term
         has_llm = contains_any(abstract, LLM_TERMS)
         if not has_llm:
             continue
@@ -401,8 +403,10 @@ def scrape_acl(lookback_days, seen_urls):
         has_keyword = contains_any(abstract, ABSTRACT_KEYWORDS)
 
         if has_keyword:
+            # Passes on abstract keywords alone — no need to fetch fulltext
             results.append(p)
         else:
+            # Did not pass on abstract keywords — fetch fulltext and check affiliations
             log.info(f"Fetching ACL fulltext for affiliation check: {p['_acl_id']}")
             fulltext = fetch_acl_fulltext(p["_acl_id"])
             if fulltext and passes_affiliation_filter(fulltext):

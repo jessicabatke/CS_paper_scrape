@@ -28,14 +28,14 @@ log = logging.getLogger(__name__)
 # ============================================================
 
 # How many days back to look for new papers
-LOOKBACK_DAYS = 3
+LOOKBACK_DAYS = 8
 
 # Path where the RSS feed will be written
 RSS_OUTPUT_PATH = "rss.xml"
 
 # URL where the RSS feed will be publicly accessible (used in feed metadata)
 # Format: https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml
-RSS_PUBLIC_URL = "https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml"
+RSS_PUBLIC_URL = "https://raw.githubusercontent.com/jessicabatke/CS_paper_scrape/main/rss.xml"
 
 # --- arXiv ---
 

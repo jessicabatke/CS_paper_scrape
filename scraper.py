@@ -318,54 +318,116 @@ def scrape_arxiv(lookback_days, seen_urls):
 # ACL ANTHOLOGY SCRAPER
 # ============================================================
 
-ACL_ANTHOLOGY_API = "https://aclanthology.org/anthology+abstracts.bib.gz"
-ACL_ANTHOLOGY_JSON = "https://aclanthology.org/anthology.json"
 ACL_BASE = "https://aclanthology.org/"
+# ACL Anthology XML data is hosted on GitHub — we fetch only the current year's files.
+ACL_GITHUB_XML_BASE = "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/"
+ACL_GITHUB_XML_DIR = "https://api.github.com/repos/acl-org/acl-anthology/contents/data/xml"
+
+
+def fetch_acl_xml_file_list():
+    """Return list of XML filenames in the ACL Anthology GitHub data/xml directory."""
+    resp = requests.get(ACL_GITHUB_XML_DIR, timeout=30)
+    resp.raise_for_status()
+    files = resp.json()
+    return [f["name"] for f in files if f["name"].endswith(".xml")]
+
+
+def parse_acl_xml(xml_content, current_year):
+    """
+    Parse an ACL Anthology XML file and return paper dicts for the current year.
+    ACL XML structure: <collection id="..."><volume id="..."><paper id="...">
+    """
+    papers = []
+    try:
+        root = ET.fromstring(xml_content)
+    except ET.ParseError as e:
+        log.warning(f"XML parse error: {e}")
+        return papers
+
+    collection_id = root.get("id", "")
+
+    for volume in root.findall("volume"):
+        volume_id = volume.get("id", "")
+
+        # Get volume-level year from <meta>
+        vol_year = ""
+        vol_meta = volume.find("meta")
+        if vol_meta is not None:
+            year_el = vol_meta.find("year")
+            if year_el is not None:
+                vol_year = year_el.text or ""
+
+        for paper in volume.findall("paper"):
+            paper_id = paper.get("id", "")
+
+            # Paper-level year overrides volume-level year
+            year_el = paper.find("year")
+            year = (year_el.text or vol_year) if year_el is not None else vol_year
+
+            if year != current_year:
+                continue
+
+            title_el = paper.find("title")
+            title = "".join(title_el.itertext()) if title_el is not None else ""
+
+            abstract_el = paper.find("abstract")
+            abstract = "".join(abstract_el.itertext()) if abstract_el is not None else ""
+
+            authors = []
+            for author in paper.findall("author"):
+                first = author.findtext("first", "")
+                last = author.findtext("last", "")
+                authors.append(f"{first} {last}".strip())
+
+            # e.g. 2025.acl-long.1
+            acl_id = f"{collection_id}-{volume_id}.{paper_id}"
+            url = urljoin(ACL_BASE, acl_id)
+
+            month_el = paper.find("month")
+            month = month_el.text if month_el is not None else ""
+            published = f"{month} {year}".strip()
+
+            papers.append({
+                "title": title,
+                "abstract": abstract,
+                "url": url,
+                "authors": ", ".join(authors),
+                "published": published,
+                "source": "ACL Anthology",
+                "_acl_id": acl_id,
+            })
+
+    return papers
+
 
 def fetch_acl_recent_papers(lookback_days):
     """
-    Fetch recently added ACL Anthology papers using the anthology JSON index.
+    Fetch recent ACL Anthology papers by pulling current-year XML files from GitHub.
     Returns a list of paper dicts.
     """
-    cutoff = datetime.datetime.utcnow() - datetime.timedelta(days=lookback_days)
+    current_year = str(datetime.datetime.utcnow().year)
 
-    log.info("Fetching ACL Anthology JSON index...")
-    resp = requests.get(ACL_ANTHOLOGY_JSON, timeout=60)
-    resp.raise_for_status()
-    data = resp.json()
+    log.info("Fetching ACL Anthology XML file list from GitHub...")
+    xml_files = fetch_acl_xml_file_list()
+
+    # Only process files that start with the current year (e.g. 2025.acl-long.xml)
+    current_year_files = [f for f in xml_files if f.startswith(current_year)]
+    log.info(f"Found {len(current_year_files)} XML files for {current_year}")
 
     papers = []
-    for paper_id, meta in data.items():
-        # ACL JSON has a 'year' field but not a precise date.
-        # Use the 'url' field and check if it's a current-year paper.
-        # For daily diff, we check against a 'month' + 'year' if available.
-        year = str(meta.get("year", ""))
-        current_year = str(datetime.datetime.utcnow().year)
+    for filename in current_year_files:
+        url = ACL_GITHUB_XML_BASE + filename
+        log.info(f"Fetching {url}")
+        try:
+            resp = requests.get(url, timeout=30)
+            resp.raise_for_status()
+            file_papers = parse_acl_xml(resp.content, current_year)
+            papers.extend(file_papers)
+            time.sleep(0.5)  # be polite to GitHub
+        except Exception as e:
+            log.warning(f"Failed to fetch/parse {filename}: {e}")
 
-        # Only process papers from current year to keep it fast
-        if year != current_year:
-            continue
-
-        title = meta.get("title", "")
-        abstract = meta.get("abstract", "")
-        authors = ", ".join(
-            f"{a.get('first', '')} {a.get('last', '')}".strip()
-            for a in meta.get("author", [])
-        )
-        url = urljoin(ACL_BASE, paper_id)
-        published = f"{meta.get('month', '')} {year}".strip()
-
-        papers.append({
-            "title": title,
-            "abstract": abstract,
-            "url": url,
-            "authors": authors,
-            "published": published,
-            "source": "ACL Anthology",
-            "_acl_id": paper_id,
-        })
-
-    log.info(f"Fetched {len(papers)} ACL papers from current year")
+    log.info(f"Fetched {len(papers)} ACL papers from current year XML files")
     return papers
 
 

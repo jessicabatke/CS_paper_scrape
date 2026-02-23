@@ -222,29 +222,46 @@ def fetch_arxiv_papers(lookback_days):
             "sortOrder": "descending",
         }
         log.info(f"Fetching arXiv batch start={start}")
-        resp = requests.get(ARXIV_API, params=params, timeout=60)
+        # Retry up to 3 times with backoff for rate limiting
+        for attempt in range(3):
+            resp = requests.get(ARXIV_API, params=params, timeout=60)
+            if resp.status_code == 429:
+                wait = 20 * (attempt + 1)
+                log.warning(f"arXiv rate limited (429), waiting {wait}s before retry...")
+                time.sleep(wait)
+            else:
+                break
         resp.raise_for_status()
 
-        soup = BeautifulSoup(resp.content, "lxml-xml")
-        entries = soup.find_all("entry")
+        arxiv_root = ET.fromstring(resp.content)
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+        entries = arxiv_root.findall("atom:entry", ns)
         if not entries:
             break
 
         stop = False
         for entry in entries:
-            published_str = entry.find("published").get_text(strip=True)
+            def atext(tag):
+                el = entry.find(f"atom:{tag}", ns)
+                return (el.text or "").strip() if el is not None else ""
+
+            published_str = atext("published")
             published_dt = datetime.datetime.fromisoformat(published_str.replace("Z", "+00:00")).replace(tzinfo=None)
 
             if published_dt < cutoff:
                 stop = True
                 break
 
-            paper_id = entry.find("id").get_text(strip=True)
-            # Canonical URL
+            paper_id = atext("id")
             url = paper_id.replace("http://", "https://")
-            title = entry.find("title").get_text(strip=True).replace("\n", " ")
-            abstract = entry.find("summary").get_text(strip=True).replace("\n", " ")
-            authors = ", ".join(a.find("name").get_text(strip=True) for a in entry.find_all("author"))
+            title = atext("title").replace("\n", " ")
+            abstract = atext("summary").replace("\n", " ")
+            author_els = entry.findall("atom:author", ns)
+            authors = ", ".join(
+                (a.find("atom:name", ns).text or "").strip()
+                for a in author_els
+                if a.find("atom:name", ns) is not None
+            )
 
             papers.append({
                 "title": title,
@@ -448,8 +465,10 @@ def fetch_acl_recent_papers(lookback_days):
     resp = requests.get(ACL_RSS_URL, timeout=60)
     resp.raise_for_status()
 
-    soup = BeautifulSoup(resp.content, "lxml-xml")
-    items = soup.find_all("item")
+    root = ET.fromstring(resp.content)
+    # Handle optional RSS namespace
+    channel = root.find("channel") or root
+    items = channel.findall("item")
     log.info(f"RSS feed contains {len(items)} items total")
 
     # --- Step 1: filter by date and venue blocklist ---
@@ -457,8 +476,12 @@ def fetch_acl_recent_papers(lookback_days):
     skipped_date = 0
     skipped_venue = 0
 
+    def item_text(item, tag):
+        el = item.find(tag)
+        return (el.text or "").strip() if el is not None else ""
+
     for item in items:
-        pub_str = item.findtext("pubDate", "").strip()
+        pub_str = item_text(item, "pubDate")
         published_dt = None
         if pub_str:
             try:
@@ -473,14 +496,14 @@ def fetch_acl_recent_papers(lookback_days):
             skipped_date += 1
             break
 
-        description = item.findtext("description", "").strip()
+        description = item_text(item, "description")
         if is_blocked_venue(description):
             skipped_venue += 1
             continue
 
-        title = item.findtext("title", "").strip()
-        url = item.findtext("link", "").strip()
-        acl_id = item.findtext("guid", "").strip()
+        title = item_text(item, "title")
+        url = item_text(item, "link")
+        acl_id = item_text(item, "guid")
 
         # Parse authors from description: "Author1, Author2 in Proceedings of ..."
         authors = ""

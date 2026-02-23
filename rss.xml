@@ -1,9 +1,18 @@
 <rss version="2.0">
   <channel>
     <title>AI Safety &amp; Alignment Papers</title>
-    <link>https://github.com</link>
+    <link>https://raw.githubusercontent.com/jessicabatke/CS_paper_scrape/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Mon, 23 Feb 2026 13:21:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 13:48:24 +0000</lastBuildDate>
+    <item>
+      <title>Games That Teach, Chats That Convince: Comparing Interactive and Static Formats for Persuasive Learning</title>
+      <link>https://arxiv.org/abs/2602.17905v1</link>
+      <description>Interactive systems such as chatbots and games are increasingly used to persuade and educate on sustainability-related topics, yet it remains unclear how different delivery formats shape learning and persuasive outcomes when content is held constant. Grounding on identical arguments and factual content across conditions, we present a controlled user study comparing three modes of information delivery: static essays, conversational chatbots, and narrative text-based games. Across subjective measures, the chatbot condition consistently outperformed the other modes and increased perceived importance of the topic. However, perceived learning did not reliably align with objective outcomes: participants in the text-based game condition reported learning less than those reading essays, yet achieved higher scores on a delayed (24-hour) knowledge quiz. Additional exploratory analyses further suggest that common engagement proxies, such as verbosity and interaction length, are more closely related to subjective experience than to actual learning. These findings highlight a dissociation between how persuasive experiences feel and what participants retain, and point to important design trade-offs between interactivity, realism, and learning in persuasive systems and serious games.</description>
+      <author>Seyed Hossein Alavi, Zining Wang, Shruthi Chockkalingam, Raymond T. Ng, Vered Shwartz</author>
+      <pubDate>2026-02-20T00:07:18Z</pubDate>
+      <source>arXiv</source>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.17905v1</guid>
+    </item>
     <item>
       <title>FENCE: A Financial and Multimodal Jailbreak Detection Dataset</title>
       <link>https://arxiv.org/abs/2602.18154v1</link>

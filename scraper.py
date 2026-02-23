@@ -28,10 +28,14 @@ log = logging.getLogger(__name__)
 # ============================================================
 
 # How many days back to look for new papers
-LOOKBACK_DAYS = 8
+LOOKBACK_DAYS = 3
 
 # Path where the RSS feed will be written
 RSS_OUTPUT_PATH = "rss.xml"
+
+# URL where the RSS feed will be publicly accessible (used in feed metadata)
+# Format: https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml
+RSS_PUBLIC_URL = "https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml"
 
 # --- arXiv ---
 
@@ -48,13 +52,12 @@ ARXIV_CATEGORIES = [
 # A paper must contain at least one of these in its abstract to pass (case-insensitive substring)
 LLM_TERMS = [
     "llm",
-    "llms",
     "large language model",
-    "large language models",
     "foundation model",
-    "foundation models",
-    "language model",
-    "language models",
+    "language model alignment",
+    "language model safety",
+    "language model evaluation",
+    "chatbot",
 ]
 
 # The abstract keyword cluster — paper passes if abstract contains ANY of these (case-insensitive substring)
@@ -160,7 +163,7 @@ def build_rss(items, existing_path):
     rss = ET.Element("rss", version="2.0")
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = "AI Safety & Alignment Papers"
-    ET.SubElement(channel, "link").text = "https://github.com"
+    ET.SubElement(channel, "link").text = RSS_PUBLIC_URL
     ET.SubElement(channel, "description").text = (
         "Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics."
     )

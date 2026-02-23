@@ -29,7 +29,7 @@ Create a new GitHub repository and push these files to it.
 Go to **Settings → Pages** and set the source to **Deploy from a branch**, branch `main`, folder `/ (root)`. After the first scrape run, your RSS feed will be available at:
 
 ```
-https://<your-username>.github.io/<repo-name>/rss.xml
+[https://<your-username>.github.io/<repo-name>/rss.xml](https://raw.githubusercontent.com/jessicabatke/CS_paper_scrape/main/rss.xml)
 ```
 
 ### 3. Run manually to test

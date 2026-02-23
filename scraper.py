@@ -28,7 +28,7 @@ log = logging.getLogger(__name__)
 # ============================================================
 
 # How many days back to look for new papers
-LOOKBACK_DAYS = 6
+LOOKBACK_DAYS = 3
 
 # Path where the RSS feed will be written
 RSS_OUTPUT_PATH = "rss.xml"
@@ -222,10 +222,10 @@ def fetch_arxiv_papers(lookback_days):
             "sortOrder": "descending",
         }
         log.info(f"Fetching arXiv batch start={start}")
-        resp = requests.get(ARXIV_API, params=params, timeout=30)
+        resp = requests.get(ARXIV_API, params=params, timeout=60)
         resp.raise_for_status()
 
-        soup = BeautifulSoup(resp.content, "xml")
+        soup = BeautifulSoup(resp.content, "lxml-xml")
         entries = soup.find_all("entry")
         if not entries:
             break
@@ -445,10 +445,10 @@ def fetch_acl_recent_papers(lookback_days):
     cutoff = datetime.datetime.utcnow() - datetime.timedelta(days=lookback_days)
 
     log.info(f"Fetching ACL Anthology RSS feed...")
-    resp = requests.get(ACL_RSS_URL, timeout=30)
+    resp = requests.get(ACL_RSS_URL, timeout=60)
     resp.raise_for_status()
 
-    soup = BeautifulSoup(resp.content, "xml")
+    soup = BeautifulSoup(resp.content, "lxml-xml")
     items = soup.find_all("item")
     log.info(f"RSS feed contains {len(items)} items total")
 

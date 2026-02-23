@@ -16,7 +16,7 @@ import logging
 import requests
 import datetime
 import xml.etree.ElementTree as ET
-from xml.dom import minidom
+
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
@@ -184,13 +184,8 @@ def build_rss(items, existing_path):
     for old_item in existing_items:
         channel.append(old_item)
 
-    xml_str = ET.tostring(rss, encoding="unicode")
-    pretty = minidom.parseString(xml_str).toprettyxml(indent="  ")
-    # Remove the extra XML declaration minidom adds
-    lines = pretty.split("\n")
-    if lines[0].startswith("<?xml"):
-        pretty = "\n".join(lines[1:])
-    return pretty
+    ET.indent(rss, space="  ")
+    return ET.tostring(rss, encoding="unicode", xml_declaration=False)
 
 # ============================================================
 # ARXIV SCRAPER

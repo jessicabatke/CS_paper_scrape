@@ -28,7 +28,7 @@ log = logging.getLogger(__name__)
 # ============================================================
 
 # How many days back to look for new papers
-LOOKBACK_DAYS = 3
+LOOKBACK_DAYS = 8
 
 # Path where the RSS feed will be written
 RSS_OUTPUT_PATH = "rss.xml"

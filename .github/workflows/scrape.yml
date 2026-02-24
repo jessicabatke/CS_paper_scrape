@@ -3,7 +3,7 @@ name: Daily Paper Scrape
 on:
   schedule:
     # Runs every day at 04:00 UTC — adjust to taste
-    - cron: "0 4 * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch:  # allows manual triggering from the Actions tab
 
 permissions:

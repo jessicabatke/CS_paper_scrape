@@ -51,6 +51,7 @@ Everything you'd want to tweak is in the `CONFIGURATION` block at the top of `sc
 | `LLM_TERMS` | Terms that qualify a paper as LLM-related (abstract, any match) |
 | `ABSTRACT_KEYWORDS` | Keyword cluster — paper passes if abstract contains any of these |
 | `AFFILIATION_STRINGS` | Affiliation cluster — checked in fulltext if abstract keyword check fails |
+| `MAX_RSS_ITEMS` | The number of items to keep in the xml file before deleting older ones |
 
 To add or remove terms, just edit the relevant list. No other code needs to change.
 

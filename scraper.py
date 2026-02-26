@@ -183,9 +183,13 @@ def build_rss(items, existing_path):
         ET.SubElement(item, "author").text = paper.get("authors", "")
         ET.SubElement(item, "pubDate").text = paper.get("published", "")
         # Source: arXiv or ACL Anthology
-        ET.SubElement(item, "category").text = paper.get("source", "")
+        source = paper.get("source", "")
+        if source:
+            ET.SubElement(item, "category").text = source
         # Match reason: what condition caused this paper to be included
-        ET.SubElement(item, "category").text = paper.get("match_reason", "")
+        match_reason = paper.get("match_reason", "")
+        if match_reason:
+            ET.SubElement(item, "category").text = match_reason
         guid = ET.SubElement(item, "guid", isPermaLink="true")
         guid.text = paper["url"]
 

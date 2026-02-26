@@ -1,33 +1,25 @@
 name: Daily Paper Scrape
-
 on:
   schedule:
-    # Runs every day at 04:00 UTC — adjust to taste
+    # Runs every day at 01:00 UTC — adjust to taste
     - cron: "0 1 * * *"
   workflow_dispatch:  # allows manual triggering from the Actions tab
-
 permissions:
   contents: write  # needed to commit the updated rss.xml back to the repo
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run scraper
         run: python scraper.py
-
       - name: Commit updated RSS feed
         run: |
           git config user.name "github-actions[bot]"
@@ -35,4 +27,5 @@ jobs:
           git add rss.xml
           # Only commit if something changed
           git diff --staged --quiet || git commit -m "chore: update RSS feed $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin main
           git push

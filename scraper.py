@@ -35,7 +35,10 @@ RSS_OUTPUT_PATH = "rss.xml"
 
 # URL where the RSS feed will be publicly accessible (used in feed metadata)
 # Format: https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml
-RSS_PUBLIC_URL = "https://raw.githubusercontent.com/jessicabatke/CS_paper_scrape/main/rss.xml"
+RSS_PUBLIC_URL = "https://raw.githubusercontent.com/<username>/<repo>/main/rss.xml"
+
+# Maximum number of items to keep in the RSS feed (oldest are dropped when exceeded)
+MAX_RSS_ITEMS = 750
 
 # --- arXiv ---
 
@@ -179,13 +182,22 @@ def build_rss(items, existing_path):
         ET.SubElement(item, "description").text = paper.get("abstract", "")
         ET.SubElement(item, "author").text = paper.get("authors", "")
         ET.SubElement(item, "pubDate").text = paper.get("published", "")
-        ET.SubElement(item, "source").text = paper.get("source", "")
+        # Source: arXiv or ACL Anthology
+        ET.SubElement(item, "category").text = paper.get("source", "")
+        # Match reason: what condition caused this paper to be included
+        ET.SubElement(item, "category").text = paper.get("match_reason", "")
         guid = ET.SubElement(item, "guid", isPermaLink="true")
         guid.text = paper["url"]
 
-    # Append old items
+    # Append old items, then trim to MAX_RSS_ITEMS
     for old_item in existing_items:
         channel.append(old_item)
+
+    all_items = channel.findall("item")
+    if len(all_items) > MAX_RSS_ITEMS:
+        for item_to_remove in all_items[MAX_RSS_ITEMS:]:
+            channel.remove(item_to_remove)
+        log.info(f"Trimmed RSS feed to {MAX_RSS_ITEMS} items")
 
     ET.indent(rss, space="  ")
     return ET.tostring(rss, encoding="unicode", xml_declaration=False)
@@ -316,13 +328,14 @@ def scrape_arxiv(lookback_days, seen_urls):
         has_keyword = contains_any(abstract, ABSTRACT_KEYWORDS)
 
         if has_keyword:
-            # Passes on abstract keywords alone — no need to fetch fulltext
+            p["match_reason"] = "abstract_keywords"
             results.append(p)
         else:
             # Did not pass on abstract keywords — fetch fulltext and check affiliations
             log.info(f"Fetching fulltext for affiliation check: {p['_arxiv_id']}")
             fulltext = fetch_arxiv_fulltext(p["_arxiv_id"])
             if fulltext and passes_affiliation_filter(fulltext):
+                p["match_reason"] = "affiliation"
                 results.append(p)
             time.sleep(1)
 
@@ -559,7 +572,14 @@ def scrape_acl(lookback_days, seen_urls):
         has_keyword = contains_any(abstract, ABSTRACT_KEYWORDS)
         has_affiliation = passes_affiliation_filter(fulltext)
 
-        if has_keyword or has_affiliation:
+        if has_keyword and has_affiliation:
+            p["match_reason"] = "abstract_keywords+affiliation"
+            results.append(p)
+        elif has_keyword:
+            p["match_reason"] = "abstract_keywords"
+            results.append(p)
+        elif has_affiliation:
+            p["match_reason"] = "affiliation"
             results.append(p)
 
     log.info(f"ACL Anthology: {len(results)} papers passed filter")

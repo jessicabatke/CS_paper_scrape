@@ -179,15 +179,16 @@ def build_rss(items, existing_path):
         item = ET.SubElement(channel, "item")
         ET.SubElement(item, "title").text = paper["title"]
         ET.SubElement(item, "link").text = paper["url"]
-        ET.SubElement(item, "description").text = paper.get("abstract", "")
+        # Prepend source and match reason to description so they show in Feedly
+        source = paper.get("source", "")
+        match_reason = paper.get("match_reason", "")
+        prefix = f"[{source} | {match_reason}]\n\n" if source or match_reason else ""
+        ET.SubElement(item, "description").text = prefix + paper.get("abstract", "")
         ET.SubElement(item, "author").text = paper.get("authors", "")
         ET.SubElement(item, "pubDate").text = paper.get("published", "")
-        # Source: arXiv or ACL Anthology
-        source = paper.get("source", "")
+        # Also keep category tags for readers that support them
         if source:
             ET.SubElement(item, "category").text = source
-        # Match reason: what condition caused this paper to be included
-        match_reason = paper.get("match_reason", "")
         if match_reason:
             ET.SubElement(item, "category").text = match_reason
         guid = ET.SubElement(item, "guid", isPermaLink="true")

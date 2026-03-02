@@ -56,12 +56,7 @@ ARXIV_CATEGORIES = [
 LLM_TERMS = [
     "llm",
     "language model",
-    "chatbot",
-    "instruction tuning",
-    "prompt tuning",
-    "reinforcement learning from human feedback",
-    "rlhf",
-    "supervised fine"
+    "chatbot"
 ]
 
 # The abstract keyword cluster — paper passes if abstract contains ANY of these (case-insensitive substring)

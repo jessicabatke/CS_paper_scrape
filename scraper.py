@@ -55,12 +55,13 @@ ARXIV_CATEGORIES = [
 # A paper must contain at least one of these in its abstract to pass (case-insensitive substring)
 LLM_TERMS = [
     "llm",
-    "large language model",
-    "foundation model",
-    "language model alignment",
-    "language model safety",
-    "language model evaluation",
+    "language model",
     "chatbot",
+    "instruction tuning",
+    "prompt tuning",
+    "reinforcement learning from human feedback",
+    "rlhf",
+    "supervised fine"
 ]
 
 # The abstract keyword cluster — paper passes if abstract contains ANY of these (case-insensitive substring)

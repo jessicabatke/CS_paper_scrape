@@ -3,7 +3,271 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Sun, 08 Mar 2026 03:30:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 03:33:40 +0000</lastBuildDate>
+    <item>
+      <title>BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations</title>
+      <link>https://arxiv.org/abs/2603.06576v1</link>
+      <description>[arXiv | abstract_keywords]
+
+The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.</description>
+      <author>Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen, Sihao Ding</author>
+      <pubDate>2026-03-06T18:59:55Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06576v1</guid>
+    </item>
+    <item>
+      <title>SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning</title>
+      <link>https://arxiv.org/abs/2603.06570v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 question categories covering safety assessment, decision rationale, and forecasting, and uses a multi-agent pipeline to extract and structure supervision at scale. Across 134.7K clips and 170 procedure types, SUREON yields 206.8k QA pairs and an expert-validated benchmark of 354 examples. To evaluate the extent to which this supervision translates to surgical reasoning ability, we introduce two models: SureonVLM, a vision-language model adapted through supervised fine-tuning, and SureonVLM-R1, a reasoning model trained with Group Relative Policy Optimization. Both models can answer complex questions about surgery and substantially outperform larger general-domain models, exceeding 84% accuracy on the SUREON benchmark while outperforming general-domain models on standard surgical perception tasks. Qualitative analysis of SureonVLM-R1 reveals explicit reasoning behavior, such as inferring operative intent from visual context.</description>
+      <author>Alejandra Perez, Anita Rau, Lee White, Busisiwe Mlambo, Chinedu Nwoye, Muhammad Abdullah Jamal, Omid Mohareri</author>
+      <pubDate>2026-03-06T18:58:36Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06570v1</guid>
+    </item>
+    <item>
+      <title>Speak in Context: Multilingual ASR with Speech Context Alignment via Contrastive Learning</title>
+      <link>https://arxiv.org/abs/2603.06505v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Automatic speech recognition (ASR) has benefited from advances in pretrained speech and language models, yet most systems remain constrained to monolingual settings and short, isolated utterances. While recent efforts in context-aware ASR show promise, two key challenges persist: limited multilingual support and the absence of principled alignment between speech and contextual representations. In this paper, we introduce a context-aware multilingual ASR framework that supports diverse languages and accents while preserving the modularity of pretrained models. Our approach combines a frozen speech encoder and a decoder-only language model via a lightweight projection module, allowing structured context prompts, including dialogue history and biasing words, to guide transcription. To improve interaction between speech and context, we employ a contrastive learning objective that aligns their representations in a shared embedding space. Evaluations on over 1,500 hours of real-world conversational speech across 11 languages and 5 English dialects show that contextual input consistently improves recognition quality. Contrastive alignment provides additional gains when applied to different context types, with an overall performance gain of over 5%. These results highlight the importance of both contextual modeling and cross-modal alignment in multilingual ASR.</description>
+      <author>Yuchen Zhang, Haralambos Mouratidis, Ravi Shekhar</author>
+      <pubDate>2026-03-06T17:37:06Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06505v1</guid>
+    </item>
+    <item>
+      <title>COLD-Steer: Steering Large Language Models via In-Context One-step Learning Dynamics</title>
+      <link>https://arxiv.org/abs/2603.06495v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Activation steering methods enable inference-time control of large language model (LLM) behavior without retraining, but current approaches face a fundamental trade-off: sample-efficient methods suboptimally capture steering signals from labeled examples, while methods that better extract these signals require hundreds to thousands of examples. We introduce COLD-Steer, a training-free framework that steers LLM activations by approximating the representational changes that would result from gradient descent on in-context examples. Our key insight is that the effect of fine-tuning on a small set of examples can be efficiently approximated at inference time without actual parameter updates. We formalize this through two complementary approaches: (i) a unit kernel approximation method that updates the activations directly using gradients with respect to them, normalized across examples, and (ii) a finite-difference approximation requiring only two forward passes regardless of example count. Experiments across a variety of steering tasks and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates accommodating diverse perspectives without extensive demonstration data, which we validate through our experiments on pluralistic alignment tasks. Our framework opens new possibilities for adaptive, context-aware model control that can flexibly address varying loss-driven human preferences through principled approximation of learning dynamics rather than specialized training procedures.</description>
+      <author>Kartik Sharma, Rakshit S. Trivedi</author>
+      <pubDate>2026-03-06T17:27:27Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06495v1</guid>
+    </item>
+    <item>
+      <title>PONTE: Personalized Orchestration for Natural Language Trustworthy Explanations</title>
+      <link>https://arxiv.org/abs/2603.06485v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Explainable Artificial Intelligence (XAI) seeks to enhance the transparency and accountability of machine learning systems, yet most methods follow a one-size-fits-all paradigm that neglects user differences in expertise, goals, and cognitive needs. Although Large Language Models can translate technical explanations into natural language, they introduce challenges related to faithfulness and hallucinations. To address these challenges, we present PONTE (Personalized Orchestration for Natural language Trustworthy Explanations), a human-in-the-loop framework for adaptive and reliable XAI narratives. PONTE models personalization as a closed-loop validation and adaptation process rather than prompt engineering. It combines: (i) a low-dimensional preference model capturing stylistic requirements; (ii) a preference-conditioned generator grounded in structured XAI artifacts; and (iii) verification modules enforcing numerical faithfulness, informational completeness, and stylistic alignment, optionally supported by retrieval-grounded argumentation. User feedback iteratively updates the preference state, enabling quick personalization. Automatic and human evaluations across healthcare and finance domains show that the verification-refinement loop substantially improves completeness and stylistic alignment over validation-free generation. Human studies further confirm strong agreement between intended preference vectors and perceived style, robustness to generation stochasticity, and consistently positive quality assessments.</description>
+      <author>Vittoria Vineis, Matteo Silvestri, Lorenzo Antonelli, Filippo Betello, Gabriele Tolomei</author>
+      <pubDate>2026-03-06T17:12:47Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06485v1</guid>
+    </item>
+    <item>
+      <title>Do Foundation Models Know Geometry? Probing Frozen Features for Continuous Physical Measurement</title>
+      <link>https://arxiv.org/abs/2603.06459v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Vision-language models encode continuous geometry that their text pathway fails to express: a 6,000-parameter linear probe extracts hand joint angles at 6.1 degrees MAE from frozen features, while the best text output achieves only 20.0 degrees -- a 3.3x bottleneck. LoRA fine-tuning (r=16, 2,000 images) narrows this gap to 6.5 degrees, providing evidence for a pathway-training deficit rather than a representational one. Training objective determines accuracy more than architecture: five encoders spanning self-supervised, contrastive, and hybrid paradigms converge to statistically equivalent accuracy (R^2 approximately 0.55, TOST-equivalent at delta=0.03) despite sharing as little as CKA=0.41 representational similarity -- functional convergence without representational convergence. Autoregressive generation damages geometric fidelity, but the damage originates in the generation process, not in language alignment: Qwen2.5-VL's LLM layers actually improve probe accuracy over its raw vision encoder. Layer-wise analysis reveals a universal mid-network accuracy peak across all architectures, with attention heads in layers 18-22 carrying disproportionate geometric signal. These findings enable a single frozen backbone to function as a multi-task geometric sensor through lightweight probes, without fine-tuning or text generation.</description>
+      <author>Yakov Pyotr Shkolnikov</author>
+      <pubDate>2026-03-06T16:48:27Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06459v1</guid>
+    </item>
+    <item>
+      <title>Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming Text Input</title>
+      <link>https://arxiv.org/abs/2603.06444v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Streaming TTS that receives streaming text is essential for interactive systems, yet this scheme faces two major challenges: unnatural prosody due to missing lookahead and long-form collapse due to unbounded context. We propose a prosodic-boundary-aware post-training strategy, adapting a pretrained LLM-based TTS model using weakly time-aligned data. Specifically, the model is adapted to learn early stopping at specified content boundaries when provided with limited future text. During inference, a sliding-window prompt carries forward previous text and speech tokens, ensuring bounded context and seamless concatenation. Evaluations show our method outperforms CosyVoice-Style interleaved baseline in both short and long-form scenarios. In long-text synthesis, especially, it achieves a 66.2% absolute reduction in word error rate (from 71.0% to 4.8%) and increases speaker and emotion similarity by 16.1% and 1.5% relatively, offering a robust solution for streaming TTS with incremental text.</description>
+      <author>Changsong Liu, Tianrui Wang, Ye Ni, Yizhou Peng, Eng Siong Chng</author>
+      <pubDate>2026-03-06T16:36:51Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06444v1</guid>
+    </item>
+    <item>
+      <title>Efficient, Property-Aligned Fan-Out Retrieval via RL-Compiled Diffusion</title>
+      <link>https://arxiv.org/abs/2603.06397v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Many modern retrieval problems are set-valued: given a broad intent, the system must return a collection of results that optimizes higher-order properties   (e.g., diversity, coverage, complementarity, coherence) while remaining grounded with respect to a fixed database. Set-valued objectives are typically   non-decomposable and are not captured by existing supervised (query, content) datasets which only prioritize top-1 retrieval. Consequently, fan-out   retrieval is often employed to generate diverse subqueries to retrieve item sets. While reinforcement learning (RL) can optimize set-level objectives via   interaction, deploying an RL-tuned LLM for fan-out retrieval is prohibitively expensive at inference time. Conversely, diffusion-based generative   retrieval enables efficient single-pass fan-out in embedding space, but requires objective-aligned training targets. To address these issues, we propose   R4T (Retrieve-for-Train), which uses RL once as an objective transducer in a three-step process: (i) train a fan-out LLM with composite set-level rewards,   (ii) synthesize objective-consistent training pairs, and (iii) train a lightweight diffusion retriever to model the conditional distribution of set-valued   outputs. Across large-scale fashion and music benchmarks consisting of curated item sets, we show that R4T improves retrieval quality relative to strong   baselines while reducing query-time fan-out latency by an order of magnitude.</description>
+      <author>Pengcheng Jiang, Judith Yue Li, Moonkyung Ryu, R. Lily Hu, Kun Su, Zhong Yi Wan, Liam Hebert, Hao Peng, Jiawei Han, Dima Kuzmin, Craig Boutilier</author>
+      <pubDate>2026-03-06T15:42:33Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06397v1</guid>
+    </item>
+    <item>
+      <title>K-MaT: Knowledge-Anchored Manifold Transport for Cross-Modal Prompt Learning in Medical Imaging</title>
+      <link>https://arxiv.org/abs/2603.06340v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large-scale biomedical vision-language models (VLMs) adapted on high-end imaging (e.g., CT) often fail to transfer to frontline low-end modalities (e.g., radiography), collapsing into modality-specific shortcuts. We propose K-MaT (Knowledge-Anchored Manifold Transport), a prompt-learning framework that transfers decision structures to low-end modalities without requiring low-end training images. K-MaT factorizes prompts, anchors them to clinical text descriptions, and aligns the low-end prompt manifold to the visually-grounded high-end space using Fused Gromov-Wasserstein optimal transport. We evaluate K-MaT on four cross-modal benchmarks, including dermoscopy, mammography to ultrasound, and CT to chest X-ray. K-MaT achieves state-of-the-art results, improving the average harmonic mean of accuracy to 44.1% (from BiomedCoOp's 42.0%) and macro-F1 to 36.2%. Notably, on the challenging breast imaging task, it mitigates the catastrophic forgetting seen in standard methods like CoOp (which drops to 27.0% accuracy on the low-end), preserving robust performance across modalities. Aligning prompt manifolds via optimal transport provides a highly effective route for the zero-shot cross-modal deployment of medical VLMs.</description>
+      <author>Jiajun Zeng, Shadi Albarqouni</author>
+      <pubDate>2026-03-06T14:46:55Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06340v1</guid>
+    </item>
+    <item>
+      <title>From Entropy to Calibrated Uncertainty: Training Language Models to Reason About Uncertainty</title>
+      <link>https://arxiv.org/abs/2603.06317v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large Language Models (LLMs) that can express interpretable and calibrated uncertainty are crucial in high-stakes domains. While methods to compute uncertainty post-hoc exist, they are often sampling-based and therefore computationally expensive or lack calibration. We propose a three-stage pipeline to post-train LLMs to efficiently infer calibrated uncertainty estimates for their responses. First, we compute fine-grained entropy-based uncertainty scores on the training data, capturing the distributional variability of model outputs in embedding space. Second, these scores are calibrated via Platt scaling, producing reliable and human-interpretable uncertainty signals. Finally, the target LLM is post-trained via reinforcement learning to align its policy with these calibrated signals through a verifiable reward function. Unlike post-hoc uncertainty estimation methods, our approach provides interpretable and computationally efficient uncertainty estimates at test time. Experiments show that models trained with our pipeline achieve better calibration than baselines and generalize to unseen tasks without further processing, suggesting that they learn a robust uncertainty reasoning behavior.</description>
+      <author>Azza Jenane, Nassim Walha, Lukas Kuhn, Florian Buettner</author>
+      <pubDate>2026-03-06T14:21:42Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06317v1</guid>
+    </item>
+    <item>
+      <title>Stem: Rethinking Causal Information Flow in Sparse Attention</title>
+      <link>https://arxiv.org/abs/2603.06274v1</link>
+      <description>[arXiv | abstract_keywords]
+
+The quadratic computational complexity of self-attention remains a fundamental bottleneck for scaling Large Language Models (LLMs) to long contexts, particularly during the pre-filling phase. In this paper, we rethink the causal attention mechanism from the perspective of information flow. Due to causal constraints, tokens at initial positions participate in the aggregation of every subsequent token. However, existing sparse methods typically apply a uniform top-k selection across all token positions within a layer, ignoring the cumulative dependency of token information inherent in causal architectures. To address this, we propose Stem, a novel, plug-and-play sparsity module aligned with information flow. First, Stem employs the Token Position-Decay strategy, applying position-dependent top-k within each layer to retain initial tokens for recursive dependencies. Second, to preserve information-rich tokens, Stem utilizes the Output-Aware Metric. It prioritizes high-impact tokens based on approximate output magnitude. Extensive evaluations demonstrate that Stem achieves superior accuracy with reduced computation and pre-filling latency.</description>
+      <author>Lin Niu, Xin Luo, Linchuan Xie, Yifu Sun, Guanghua Yu, Jianchen Zhu, S Kevin Zhou</author>
+      <pubDate>2026-03-06T13:33:29Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06274v1</guid>
+    </item>
+    <item>
+      <title>Agentic retrieval-augmented reasoning reshapes collective reliability under model variability in radiology question answering</title>
+      <link>https://arxiv.org/abs/2603.06271v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Agentic retrieval-augmented reasoning pipelines are increasingly used to structure how large language models (LLMs) incorporate external evidence in clinical decision support. These systems iteratively retrieve curated domain knowledge and synthesize it into structured reports before answer selection. Although such pipelines can improve performance, their impact on reliability under model variability remains unclear. In real-world deployment, heterogeneous models may align, diverge, or synchronize errors in ways not captured by accuracy. We evaluated 34 LLMs on 169 expert-curated publicly available radiology questions, comparing zero-shot inference with a radiology-specific multi-step agentic retrieval condition in which all models received identical structured evidence reports derived from curated radiology knowledge. Agentic inference reduced inter-model decision dispersion (median entropy 0.48 vs. 0.13) and increased robustness of correctness across models (mean 0.74 vs. 0.81). Majority consensus also increased overall (P&lt;0.001). Consensus strength and robust correctness remained correlated under both strategies (\r{ho}=0.88 for zero-shot; \r{ho}=0.87 for agentic), although high agreement did not guarantee correctness. Response verbosity showed no meaningful association with correctness. Among 572 incorrect outputs, 72% were associated with moderate or high clinically assessed severity, although inter-rater agreement was low (\k{appa}=0.02). Agentic retrieval therefore was associated with more concentrated decision distributions, stronger consensus, and higher cross-model robustness of correctness. These findings suggest that evaluating agentic systems through accuracy or agreement alone may not always be sufficient, and that complementary analyses of stability, cross-model robustness, and potential clinical impact are needed to characterize reliability under model variability.</description>
+      <author>Mina Farajiamiri, Jeta Sopa, Saba Afza, Lisa Adams, Felix Barajas Ordonez, Tri-Thien Nguyen, Mahshad Lotfinia, Sebastian Wind, Keno Bressem, Sven Nebelung, Daniel Truhn, Soroosh Tayebi Arasteh</author>
+      <pubDate>2026-03-06T13:31:54Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06271v1</guid>
+    </item>
+    <item>
+      <title>Mind the Gap: Pitfalls of LLM Alignment with Asian Public Opinion</title>
+      <link>https://arxiv.org/abs/2603.06264v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large Language Models (LLMs) are increasingly being deployed in multilingual, multicultural settings, yet their reliance on predominantly English-centric training data risks misalignment with the diverse cultural values of different societies. In this paper, we present a comprehensive, multilingual audit of the cultural alignment of contemporary LLMs including GPT-4o-Mini, Gemini-2.5-Flash, Llama 3.2, Mistral and Gemma 3 across India, East Asia and Southeast Asia. Our study specifically focuses on the sensitive domain of religion as the prism for broader alignment. To facilitate this, we conduct a multi-faceted analysis of every LLM's internal representations, using log-probs/logits, to compare the model's opinion distributions against ground-truth public attitudes. We find that while the popular models generally align with public opinion on broad social issues, they consistently fail to accurately represent religious viewpoints, especially those of minority groups, often amplifying negative stereotypes. Lightweight interventions, such as demographic priming and native language prompting, partially mitigate but do not eliminate these cultural gaps. We further show that downstream evaluations on bias benchmarks (such as CrowS-Pairs, IndiBias, ThaiCLI, KoBBQ) reveal persistent harms and under-representation in sensitive contexts. Our findings underscore the urgent need for systematic, regionally grounded audits to ensure equitable global deployment of LLMs.</description>
+      <author>Hari Shankar, Vedanta S P, Sriharini Margapuri, Debjani Mazumder, Ponnurangam Kumaraguru, Abhijnan Chakraborty</author>
+      <pubDate>2026-03-06T13:29:54Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06264v1</guid>
+    </item>
+    <item>
+      <title>SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models</title>
+      <link>https://arxiv.org/abs/2603.06222v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Explicit Chain-of-Thought improves the reasoning performance of large language models but often incurs high inference cost due to verbose token-level traces. While recent approaches reduce this overhead via concise prompting or step pruning, they largely truncate what the model says rather than internalize what the model thinks. Latent reasoning offers a promising alternative by performing computation in the hidden space, yet prior methods face two critical challenges. Many existing approaches rely on rigid point-to-point alignment, forcing a latent token to approximate the final representation of a reasoning step, which can be insufficient to capture the dense, variable-length semantics of an entire reasoning segment. Furthermore, these methods often suffer from a lack of interpretability: latent states are commonly produced by unconstrained optimization or embedding mixing, yielding vectors that are difficult to decode or audit under the pretrained language head. We propose SPOT, a flexible framework that compresses explicit CoT into compact latent pause tokens without enforcing a fixed response template. At the core of SPOT is Span-level Semantic Alignment, a Sinkhorn optimal-transport objective that softly matches each pause token to the semantics of an entire reasoning segment, overcoming the rigidity of step-end alignment. To further improve interpretability, SPOT introduces a Frozen-Head Decoding Constraint that keeps latent states directly decodable as token distributions under the frozen pretrained LM head, enabling readable keyword interpretations of latent thoughts. Experiments on reasoning benchmarks demonstrate that SPOT improves accuracy by 2.3 points on average while reducing generated tokens by 37.5% and provides faithful semantic interpretations of the latent reasoning process.</description>
+      <author>Yunlong Chu, Minglai Shao, Yuhang Liu, Bing Hao, Yumeng Lin, Jialu Wang, Ruijie Wang</author>
+      <pubDate>2026-03-06T12:34:27Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06222v1</guid>
+    </item>
+    <item>
+      <title>DeepSight: Bridging Depth Maps and Language with a Depth-Driven Multimodal Model</title>
+      <link>https://arxiv.org/abs/2603.06090v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Multimodal large language models (MLLMs) have achieved impressive performance across various tasks such as image captioning and visual question answer(VQA); however, they often struggle to accurately interpret depth information inherent in visual data. In this work, we introduce DeepSight, the first dedicated depth MLLM designed to enhance three-dimensional scene understanding. Unlike conventional methods that align RGB image encodings with text, our approach takes advantage of the unique characteristics of depth images: single-channel grayscale images where the pixel values directly reflect depth cues to improve spatial reasoning. To address challenges associated with limited depth data and the inadequacy of simple channel replication, we construct a novel depth image-text pair dataset and a depth instruction dataset. Depth maps are generated from visual images using the GLPN model, and GPT-4 is employed to curate corresponding depth instructions, an approach validated by LLaVA. Additionally, we modify the ViT encoder in CLIP to incorporate local object information, thereby capturing the subtle continuous variations of depth more effectively. To evaluate the performance of our model, we develop a comprehensive depth question answer benchmark based on existing depth image datasets, which rigorously assesses understanding in typical depth map scenarios. Experimental results demonstrate that DeepSight significantly enhances depth perception and downstream task performance, marking a substantial step forward in multimodal three-dimensional understanding.</description>
+      <author>Hao Yang, Hongbo Zhang, Yanyan Zhao, Bing Qin</author>
+      <pubDate>2026-03-06T09:43:12Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06090v1</guid>
+    </item>
+    <item>
+      <title>Lifelong Embodied Navigation Learning</title>
+      <link>https://arxiv.org/abs/2603.06073v1</link>
+      <description>[arXiv | affiliation]
+
+Embodied navigation agents powered by large language models have shown strong performance on individual tasks but struggle to continually acquire new navigation skills, which suffer from catastrophic forgetting. We formalize this challenge as lifelong embodied navigation learning (LENL), where an agent is required to adapt to a sequence of navigation tasks spanning multiple scenes and diverse user instruction styles, while retaining previously learned knowledge. To tackle this problem, we propose Uni-Walker, a lifelong embodied navigation framework that decouples navigation knowledge into task-shared and task-specific components with Decoder Extension LoRA (DE-LoRA). To learn the shared knowledge, we design a knowledge inheritance strategy and an experts co-activation strategy to facilitate shared knowledge transfer and refinement across multiple navigation tasks. To learn the specific knowledge, we propose an expert subspace orthogonality constraint together and a navigation-specific chain-of-thought reasoning mechanism to capture specific knowledge and enhance instruction-style understanding. Extensive experiments demonstrate the superiority of Uni-Walker for building universal navigation agents with lifelong learning.</description>
+      <author>Xudong Wang, Jiahua Dong, Baichen Liu, Qi Lyu, Lianqing Liu, Zhi Han</author>
+      <pubDate>2026-03-06T09:25:26Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06073v1</guid>
+    </item>
+    <item>
+      <title>Probing Visual Concepts in Lightweight Vision-Language Models for Automated Driving</title>
+      <link>https://arxiv.org/abs/2603.06054v1</link>
+      <description>[arXiv | abstract_keywords]
+
+The use of Vision-Language Models (VLMs) in automated driving applications is becoming increasingly common, with the aim of leveraging their reasoning and generalisation capabilities to handle long tail scenarios. However, these models often fail on simple visual questions that are highly relevant to automated driving, and the reasons behind these failures remain poorly understood. In this work, we examine the intermediate activations of VLMs and assess the extent to which specific visual concepts are linearly encoded, with the goal of identifying bottlenecks in the flow of visual information. Specifically, we create counterfactual image sets that differ only in a targeted visual concept and then train linear probes to distinguish between them using the activations of four state-of-the-art (SOTA) VLMs. Our results show that concepts such as the presence of an object or agent in a scene are explicitly and linearly encoded, whereas other spatial visual concepts, such as the orientation of an object or agent, are only implicitly encoded by the spatial structure retained by the vision encoder. In parallel, we observe that in certain cases, even when a concept is linearly encoded in the model's activations, the model still fails to answer correctly. This leads us to identify two failure modes. The first is perceptual failure, where the visual information required to answer a question is not linearly encoded in the model's activations. The second is cognitive failure, where the visual information is present but the model fails to align it correctly with language semantics. Finally, we show that increasing the distance of the object in question quickly degrades the linear separability of the corresponding visual concept. Overall, our findings improve our understanding of failure cases in VLMs on simple visual tasks that are highly relevant to automated driving.</description>
+      <author>Nikos Theodoridis, Reenu Mohandas, Ganesh Sistu, Anthony Scanlan, Ciarán Eising, Tim Brophy</author>
+      <pubDate>2026-03-06T09:07:57Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06054v1</guid>
+    </item>
+    <item>
+      <title>ViewFusion: Structured Spatial Thinking Chains for Multi-View Reasoning</title>
+      <link>https://arxiv.org/abs/2603.06024v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Multi-view spatial reasoning remains difficult for current vision-language models. Even when multiple viewpoints are available, models often underutilize cross-view relations and instead rely on single-image shortcuts, leading to fragile performance on viewpoint transformation and occlusion-sensitive cases. We present ViewFusion, a two-stage framework that explicitly separates cross-view spatial pre-alignment from question answering. In the first stage, the model performs deliberate spatial pre-thinking to infer viewpoint relations and spatial transformations across views, forming an intermediate workspace that goes beyond a simple re-description. In the second stage, the model conducts question-driven reasoning conditioned on this workspace to produce the final prediction. We train ViewFusion with synthetic reasoning supervision followed by reinforcement learning using GRPO, which improves answer correctness while stabilizing the intended two-stage generation behavior. On MMSI-Bench, ViewFusion improves accuracy by 5.3\% over Qwen3-VL-4B-Instruct, with the largest gains on examples that require genuine cross-view alignment.</description>
+      <author>Xingjian Tao, Yiwei Wang, Yujun Cai, Yifan Song, Jing Tang</author>
+      <pubDate>2026-03-06T08:19:42Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.06024v1</guid>
+    </item>
+    <item>
+      <title>MM-ISTS: Cooperating Irregularly Sampled Time Series Forecasting with Multimodal Vision-Text LLMs</title>
+      <link>https://arxiv.org/abs/2603.05997v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Irregularly sampled time series (ISTS) are widespread in real-world scenarios, exhibiting asynchronous observations on uneven time intervals across variables. Existing ISTS forecasting methods often solely utilize historical observations to predict future ones while falling short in learning contextual semantics and fine-grained temporal patterns. To address these problems, we achieve MM-ISTS, a multimodal framework augmented by vision-text large language models, that bridges temporal, visual, and textual modalities, facilitating ISTS forecasting. MM-ISTS encompasses a novel two-stage encoding mechanism. In particular, a cross-modal vision-text encoding module is proposed to automatically generate informative visual images and textual data, enabling the capture of intricate temporal patterns and comprehensive contextual understanding, in collaboration with multimodal LLMs (MLLMs). In parallel, ISTS encoding extracts complementary yet enriched temporal features from historical ISTS observations, including multi-view embedding fusion and a temporal-variable encoder. Further, we propose an adaptive query-based feature extractor to compress the learned tokens of MLLMs, filtering out small-scale useful knowledge, which in turn reduces computational costs. In addition, a multimodal alignment module with modality-aware gating is designed to alleviate the modality gap across ISTS, images, and text. Extensive experiments on real data offer insight into the effectiveness of the proposed solutions.</description>
+      <author>Zhi Lei, Chenxi Liu, Hao Miao, Wanghui Qiu, Bin Yang, Chenjuan Guo</author>
+      <pubDate>2026-03-06T07:57:15Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.05997v1</guid>
+    </item>
+    <item>
+      <title>Implicit Style Conditioning: A Structured Style-Rewrite Framework for Low-Resource Character Modeling</title>
+      <link>https://arxiv.org/abs/2603.05933v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large Language Models (LLMs) have demonstrated impressive capabilities in role-playing (RP); however, small Language Models (SLMs) with highly stylized personas remains a challenge due to data scarcity and the complexity of style disentanglement. Standard Supervised Fine-Tuning (SFT) often captures surface-level semantics while failing to reproduce the intricate syntactic and pragmatic nuances of a character, leading to "Out-Of-Character" (OOC) generation. To address this, we propose a Structured Style-Rewrite Framework that explicitly disentangles style into three interpretable dimensions: lexical signatures (via PMI), syntactic patterns (grounded in PCFG rules), and pragmatic style. Furthermore, we introduce an implicit style conditioning strategy via Chain-of-Thought (CoT) distillation. By leveraging explicit reasoning traces during training as a strong inductive bias, our approach aligns the model's latent representations with structured style features, enabling high-fidelity stylized generation without requiring explicit reasoning tokens during inference. Extensive experiments on a specific high-stylization domain (anime characters) demonstrate that our method enables a Qwen-1.7B model to outperform significantly larger baselines (e.g., 4B Vanilla SFT) in style consistency and semantic fidelity. Our approach offers a data-efficient paradigm for democratizing inference and deployment on consumer hardware.</description>
+      <author>Chanhui Zhu</author>
+      <pubDate>2026-03-06T06:04:47Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.05933v1</guid>
+    </item>
+    <item>
+      <title>Learning Next Action Predictors from Human-Computer Interaction</title>
+      <link>https://arxiv.org/abs/2603.05923v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Truly proactive AI systems must anticipate what we will do next. This foresight demands far richer information than the sparse signals we type into our prompts -- it demands reasoning over the entire context of what we see and do. We formalize this as next action prediction (NAP): given a sequence of a user's multimodal interactions with a computer (screenshots, clicks, sensor data), predict that user's next action. Progress on this task requires both new data and modeling approaches. To scale data, we annotate longitudinal, naturalistic computer use with vision-language models. We release an open-source pipeline for performing this labeling on private infrastructure, and label over 360K actions across one month of continuous phone usage from 20 users, amounting to 1,800 hours of screen time. We then introduce LongNAP, a user model that combines parametric and in-context learning to reason over long interaction histories. LongNAP is trained via policy gradient methods to generate user-specific reasoning traces given some context; retrieve relevant traces from a library of past traces; and then apply retrieved traces in-context to predict future actions. Using an LLM-as-judge evaluation metric (0-1 similarity to ground truth), LongNAP significantly outperforms supervised finetuning and prompted baselines on held-out data (by 79% and 39% respectively). Additionally, LongNAP generalizes to held out users when trained across individuals. The space of next actions a user might take at any moment is unbounded, spanning thousands of possible outcomes. Despite this, 17.1% of LongNAP's predicted trajectories are well-aligned with what a user does next (LLM-judge score $\geq$ 0.5). This rises to 26% when we filter to highly confident predictions. In sum, we argue that learning from the full context of user behavior to anticipate user needs is now a viable task with substantial opportunity.</description>
+      <author>Omar Shaikh, Valentin Teutschbein, Kanishk Gandhi, Yikun Chi, Nick Haber, Thomas Robinson, Nilam Ram, Byron Reeves, Sherry Yang, Michael S. Bernstein, Diyi Yang</author>
+      <pubDate>2026-03-06T05:31:04Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.05923v1</guid>
+    </item>
+    <item>
+      <title>Evolving Deception: When Agents Evolve, Deception Wins</title>
+      <link>https://arxiv.org/abs/2603.05872v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Self-evolving agents offer a promising path toward scalable autonomy. However, in this work, we show that in competitive environments, self-evolution can instead give rise to a serious and previously underexplored risk: the spontaneous emergence of deception as an evolutionarily stable strategy. We conduct a systematic empirical study on the self-evolution of large language model (LLM) agents in a competitive Bidding Arena, where agents iteratively refine their strategies through interaction-driven reflection. Across different evolutionary paths (\eg, Neutral, Honesty-Guided, and Deception-Guided), we find a consistent pattern: under utility-driven competition, unconstrained self-evolution reliably drifts toward deceptive behaviors, even when honest strategies remain viable. This drift is explained by a fundamental asymmetry in generalization. Deception evolves as a transferable meta-strategy that generalizes robustly across diverse and unseen tasks, whereas honesty-based strategies are fragile and often collapse outside their original contexts. Further analysis of agents internal states reveals the emergence of rationalization mechanisms, through which agents justify or deny deceptive actions to reconcile competitive success with normative instructions. Our paper exposes a fundamental tension between agent self-evolution and alignment, highlighting the risks of deploying self-improving agents in adversarial environments.</description>
+      <author>Zonghao Ying, Haowen Dai, Tianyuan Zhang, Yisong Xiao, Quanchen Zou, Aishan Liu, Jian Yang, Yaodong Yang, Xianglong Liu</author>
+      <pubDate>2026-03-06T03:47:07Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.05872v1</guid>
+    </item>
     <item>
       <title>Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval</title>
       <link>https://arxiv.org/abs/2603.05471v1</link>

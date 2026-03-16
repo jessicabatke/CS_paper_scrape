@@ -2,7 +2,7 @@ name: Daily Paper Scrape
 on:
   schedule:
     # Runs every day at 04:00 UTC — adjust to taste
-    - cron: "0 1 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:  # allows manual triggering from the Actions tab
 permissions:
   contents: write  # needed to commit the updated rss.xml back to the repo

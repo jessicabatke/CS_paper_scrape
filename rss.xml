@@ -3,7 +3,163 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Mon, 16 Mar 2026 03:53:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 01:43:12 +0000</lastBuildDate>
+    <item>
+      <title>OasisSimp: An Open-source Asian-English Sentence Simplification Dataset</title>
+      <link>https://arxiv.org/abs/2603.14111v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Sentence simplification aims to make complex text more accessible by reducing linguistic complexity while preserving the original meaning. However, progress in this area remains limited for mid-resource and low-resource languages due to the scarcity of high-quality data. To address this gap, we introduce the OasisSimp dataset, a multilingual dataset for sentence-level simplification covering five languages: English, Sinhala, Tamil, Pashto, and Thai. Among these, no prior sentence simplification datasets exist for Thai, Pashto, and Tamil, while limited data is available for Sinhala. Each language simplification dataset was created by trained annotators who followed detailed guidelines to simplify sentences while maintaining meaning, fluency, and grammatical correctness. We evaluate eight open-weight multilingual Large Language Models (LLMs) on the OasisSimp dataset and observe substantial performance disparities between high-resource and low-resource languages, highlighting the simplification challenges in multilingual settings. The OasisSimp dataset thus provides both a valuable multilingual resource and a challenging benchmark, revealing the limitations of current LLM-based simplification methods and paving the way for future research in low-resource sentence simplification. The dataset is available at https://OasisSimpDataset.github.io/.</description>
+      <author>Hannah Liu, Muxin Tian, Iqra Ali, Haonan Gao, Qiaoyiwen Wu, Blair Yang, Uthayasanker Thayasivam, En-Shiun Annie Lee, Pakawat Nakwijit, Surangika Ranathunga, Ravi Shekhar</author>
+      <pubDate>2026-03-14T20:37:21Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.14111v1</guid>
+    </item>
+    <item>
+      <title>The Reasoning Bottleneck in Graph-RAG: Structured Prompting and Context Compression for Multi-Hop QA</title>
+      <link>https://arxiv.org/abs/2603.14045v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Graph-RAG systems achieve strong multi-hop question answering by indexing documents into knowledge graphs, but strong retrieval does not guarantee strong answers. Evaluating KET-RAG, a leading Graph-RAG system, on three multi-hop QA benchmarks (HotpotQA, MuSiQue, 2WikiMultiHopQA), we find that 77% to 91% of questions have the gold answer in the retrieved context, yet accuracy is only 35% to 78%, and 73% to 84% of errors are reasoning failures. We propose two augmentations: (i) SPARQL chain-of-thought prompting, which decomposes questions into triple-pattern queries aligned with the entity-relationship context, and (ii) graph-walk compression, which compresses the context by ~60% via knowledge-graph traversal with no LLM calls. SPARQL CoT improves accuracy by +2 to +14 pp; graph-walk compression adds +6 pp on average when paired with structured prompting on smaller models. Surprisingly, we show that, with question-type routing, a fully augmented budget open-weight Llama-8B model matches or exceeds the unaugmented Llama-70B baseline on all three benchmarks at ~12x lower cost. A replication on LightRAG confirms that our augmentations transfer across Graph-RAG systems.</description>
+      <author>Yasaman Zarinkia, Venkatesh Srinivasan, Alex Thomo</author>
+      <pubDate>2026-03-14T17:29:13Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.14045v1</guid>
+    </item>
+    <item>
+      <title>Faithful or Just Plausible? Evaluating the Faithfulness of Closed-Source LLMs in Medical Reasoning</title>
+      <link>https://arxiv.org/abs/2603.13988v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Closed-source large language models (LLMs), such as ChatGPT and Gemini, are increasingly consulted for medical advice, yet their explanations may appear plausible while failing to reflect the model's underlying reasoning process. This gap poses serious risks as patients and clinicians may trust coherent but misleading explanations. We conduct a systematic black-box evaluation of faithfulness in medical reasoning among three widely used closed-source LLMs. Our study consists of three perturbation-based probes: (1) causal ablation, testing whether stated chain-of-thought (CoT) reasoning causally influences predictions; (2) positional bias, examining whether models create post-hoc justifications for answers driven by input positioning; and (3) hint injection, testing susceptibility to external suggestions. We complement these quantitative probes with a small-scale human evaluation of model responses to patient-style medical queries to examine concordance between physician assessments of explanation faithfulness and layperson perceptions of trustworthiness. We find that CoT reasoning steps often do not causally drive predictions, and models readily incorporate external hints without acknowledgment. In contrast, positional biases showed minimal impact in this setting. These results underscore that faithfulness, not just accuracy, must be central in evaluating LLMs for medicine, to ensure both public protection and safe clinical deployment.</description>
+      <author>Halimat Afolabi, Zainab Afolabi, Elizabeth Friel, Jude Roberts, Antonio Ji-Xu, Lloyd Chen, Egheosa Ogbomo, Emiliomo Imevbore, Phil Eneje, Wissal El Ouahidi, Aaron Sohal, Alisa Kennan, Shreya Srivastava, Anirudh Vairavan, Laura Napitu, Katie McClure</author>
+      <pubDate>2026-03-14T15:30:53Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13988v1</guid>
+    </item>
+    <item>
+      <title>EviAgent: Evidence-Driven Agent for Radiology Report Generation</title>
+      <link>https://arxiv.org/abs/2603.13956v1</link>
+      <description>[arXiv | affiliation]
+
+Automated radiology report generation holds immense potential to alleviate the heavy workload of radiologists. Despite the formidable vision-language capabilities of recent Multimodal Large Language Models (MLLMs), their clinical deployment is severely constrained by inherent limitations: their "black-box" decision-making renders the generated reports untraceable due to the lack of explicit visual evidence to support the diagnosis, and they struggle to access external domain knowledge. To address these challenges, we propose the Evidence-driven Radiology Report Generation Agent (EviAgent). Unlike opaque end-to-end paradigms, EviAgent coordinates a transparent reasoning trajectory by breaking down the complex generation process into granular operational units. We integrate multi-dimensional visual experts and retrieval mechanisms as external support modules, endowing the system with explicit visual evidence and high-quality clinical priors. Extensive experiments on MIMIC-CXR, CheXpert Plus, and IU-Xray datasets demonstrate that EviAgent outperforms both large-scale generalist models and specialized medical models, providing a robust and trustworthy solution for automated radiology report generation.</description>
+      <author>Tuoshi Qi, Shenshen Bu, Yingfei Xiang, Zhiming Dai</author>
+      <pubDate>2026-03-14T14:07:55Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13956v1</guid>
+    </item>
+    <item>
+      <title>OmniCompliance-100K: A Multi-Domain, Rule-Grounded, Real-World Safety Compliance Dataset</title>
+      <link>https://arxiv.org/abs/2603.13933v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Ensuring the safety and compliance of large language models (LLMs) is of paramount importance. However, existing LLM safety datasets often rely on ad-hoc taxonomies for data generation and suffer from a significant shortage of rule-grounded, real-world cases that are essential for robustly protecting LLMs. In this work, we address this critical gap by constructing a comprehensive safety dataset from a compliance perspective. Using a powerful web-searching agent, we collect a rule-grounded, real-world case dataset OmniCompliance-100K, sourced from multi-domain authoritative references. The dataset spans 74 regulations and policies across a wide range of domains, including security and privacy regulations, content safety and user data privacy policies from leading AI companies and social media platforms, financial security requirements, medical device risk management standards, educational integrity guidelines, and protections of fundamental human rights. In total, our dataset contains 12,985 distinct rules and 106,009 associated real-world compliance cases. Our analysis confirms a strong alignment between the rules and their corresponding cases. We further conduct extensive benchmarking experiments to evaluate the safety and compliance capabilities of advanced LLMs across different model scales. Our experiments reveal several interesting findings that have great potential to offer valuable insights for future LLM safety research.</description>
+      <author>Wenbin Hu, Huihao Jing, Haochen Shi, Changxuan Fan, Haoran Li, Yangqiu Song</author>
+      <pubDate>2026-03-14T13:04:55Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13933v1</guid>
+    </item>
+    <item>
+      <title>How do Role Models Shape Collective Morality? Exemplar-Driven Moral Learning in Multi-Agent Simulation</title>
+      <link>https://arxiv.org/abs/2603.13876v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Do We Need Role Models? How do Role Models Shape Collective Morality? To explore the questions, we build a multi-agent simulation powered by a Large Language Model, where agents with diverse intrinsic drives, ranging from cooperative to competitive, interact and adapt through a four-stage cognitive loop (plan-act-observe-reflect). We design four experimental games (Alignment, Collapse, Conflict, and Construction) and conduct motivational ablation studies to identify the key drivers of imitation. The results indicate that identity-driven conformity can powerfully override initial dispositions. Agents consistently adapt their values to align with a perceived successful exemplar, leading to rapid value convergence.</description>
+      <author>Junjie Liao, Huacong Tang, Zhou Ziheng, Yizhou Wang, Fangwei Zhong</author>
+      <pubDate>2026-03-14T10:23:29Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13876v1</guid>
+    </item>
+    <item>
+      <title>APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution</title>
+      <link>https://arxiv.org/abs/2603.13853v1</link>
+      <description>[arXiv | affiliation]
+
+Retrieval-augmented generation (RAG), based on large language models (LLMs), serves as a vital approach to retrieving and leveraging external knowledge in various domain applications. When confronted with complex multi-hop questions, single-round retrieval is often insufficient for accurate reasoning and problem solving. To enhance search capabilities for complex tasks, most existing works integrate multi-round iterative retrieval with reasoning processes via end-to-end training. While these approaches significantly improve problem-solving performance, they are still faced with challenges in task reasoning and model training, especially ambiguous retrieval execution paths and sparse rewards in end-to-end reinforcement learning (RL) process, leading to inaccurate retrieval results and performance degradation. To address these issues, in this paper, we proposes APEX-Searcher, a novel Agentic Planning and Execution framework to augment LLM search capabilities. Specifically, we introduce a two-stage agentic framework that decouples the retrieval process into planning and execution: It first employs RL with decomposition-specific rewards to optimize strategic planning; Built on the sub-task decomposition, it then applies supervised fine-tuning on high-quality multi-hop trajectories to equip the model with robust iterative sub-task execution capabilities. Extensive experiments demonstrate that our proposed framework achieves significant improvements in both multi-hop RAG and task planning performances across multiple benchmarks.</description>
+      <author>Kun Chen, Qingchao Kong, Zhao Feifei, Wenji Mao</author>
+      <pubDate>2026-03-14T09:17:12Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13853v1</guid>
+    </item>
+    <item>
+      <title>Node Role-Guided LLMs for Dynamic Graph Clustering</title>
+      <link>https://arxiv.org/abs/2603.13799v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Dynamic graph clustering aims to detect and track time-varying clusters in dynamic graphs, revealing how complex real-world systems evolve over time. However, existing methods are predominantly black-box models. They lack interpretability in their clustering decisions and fail to provide semantic explanations of why clusters form or how they evolve, severely limiting their use in safety-critical domains such as healthcare or transportation. To address these limitations, we propose an end-to-end interpretable framework that maps continuous graph embeddings into discrete semantic concepts through learnable prototypes. Specifically, we first decompose node representations into orthogonal role and clustering subspaces, so that nodes with similar roles (e.g., hubs, bridges) but different cluster affiliations can be properly distinguished. We then introduce five node role prototypes (Leader, Contributor, Wanderer, Connector, Newcomer) in the role subspace as semantic anchors, transforming continuous embeddings into discrete concepts to facilitate LLM understanding of node roles within communities. Finally, we design a hierarchical LLM reasoning mechanism to generate both clustering results and natural language explanations, while providing consistency feedback as weak supervision to refine node representations. Experimental results on four synthetic and six real-world benchmarks demonstrate the effectiveness, interpretability, and robustness of DyG-RoLLM. Code is available at https://github.com/Clearloveyuan/DyG-RoLLM.</description>
+      <author>Dongyuan Li, Ying Zhang, Yaozu Wu, Renhe Jiang</author>
+      <pubDate>2026-03-14T07:14:53Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13799v1</guid>
+    </item>
+    <item>
+      <title>DeceptGuard :A Constitutional Oversight Framework For Detecting Deception in LLM Agents</title>
+      <link>https://arxiv.org/abs/2603.13791v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reliable detection of deceptive behavior in Large Language Model (LLM) agents is an essential prerequisite for safe deployment in high-stakes agentic contexts. Prior work on scheming detection has focused exclusively on black-box monitors that observe only externally visible tool calls and outputs, discarding potentially rich internal reasoning signals. We introduce DECEPTGUARD, a unified framework that systematically compares three monitoring regimes: black-box monitors (actions and outputs only), CoT-aware monitors (additionally observing the agent's chain-of-thought reasoning trace), and activation-probe monitors (additionally reading hidden-state representations from a frozen open-weights encoder).   We introduce DECEPTSYNTH, a scalable synthetic pipeline for generating deception-positive and deception-negative agent trajectories across a novel 12-category taxonomy spanning verbal, behavioral, and structural deception. Our monitors are optimized on 4,800 synthetic trajectories and evaluated on 9,200 held-out samples from DeceptArena, a benchmark of realistic sandboxed agent environments with execution-verified labels.   Across all evaluation settings, CoT-aware and activation-probe monitors substantially outperform their black-box counterparts (mean pAUROC improvement of +0.097), with the largest gains on subtle, long-horizon deception that leaves minimal behavioral footprints. We empirically characterize a transparency-detectability trade-off: as agents learn to suppress overt behavioral signals, chain-of-thought becomes the primary detection surface but is itself increasingly unreliable due to post-training faithfulness degradation.   We propose HYBRID-CONSTITUTIONAL ensembles as a robust defense-in-depth approach, achieving a pAUROC of 0.934 on the held-out test set, representing a substantial advance over the prior state of the art.</description>
+      <author>Snehasis Mukhopadhyay</author>
+      <pubDate>2026-03-14T06:45:43Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13791v1</guid>
+    </item>
+    <item>
+      <title>Retrieval-Feedback-Driven Distillation and Preference Alignment for Efficient LLM-based Query Expansion</title>
+      <link>https://arxiv.org/abs/2603.13776v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large language models have recently enabled a generative paradigm for query expansion, but their high inference cost makes direct deployment difficult in practical retrieval systems. To address this issue, a retrieval-feedback-driven distillation and preference-alignment framework is proposed to transfer retrieval-friendly expansion behavior from a strong teacher model to a compact student model. Rather than relying on few-shot exemplars at inference time, the framework first leverages two complementary types of teacher-generated expansions, produced under zero-shot and few-shot prompting conditions, as supervision signals for distillation and as candidate pools for preference construction. A retrieval-metric-driven strategy is then introduced to automatically form chosen/rejected expansion pairs according to nDCG@10 differences, and Direct Preference Optimization is applied to explicitly align generation preferences with retrieval objectives. Experiments on TREC DL19/20/21 and MIRACL-zh show that the proposed approach preserves strong retrieval effectiveness while substantially reducing inference cost. In particular, the distilled Qwen3-4B model reaches about 97% of the teacher (DeepSeek-685B) model's nDCG@10 performance on DL19, and remains effective on the Chinese MIRACL-zh benchmark, demonstrating strong practicality across both English and Chinese retrieval settings.</description>
+      <author>Minghan Li, Guodong Zhou</author>
+      <pubDate>2026-03-14T05:59:12Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13776v1</guid>
+    </item>
+    <item>
+      <title>Bodhi VLM: Privacy-Alignment Modeling for Hierarchical Visual Representations in Vision Backbones and VLM Encoders via Bottom-Up and Top-Down Feature Search</title>
+      <link>https://arxiv.org/abs/2603.13728v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Learning systems that preserve privacy often inject noise into hierarchical visual representations; a central challenge is to \emph{model} how such perturbations align with a declared privacy budget in a way that is interpretable and applicable across vision backbones and vision--language models (VLMs). We propose \emph{Bodhi VLM}, a \emph{privacy-alignment modeling} framework for \emph{hierarchical neural representations}: it (1) links sensitive concepts to layer-wise grouping via NCP and MDAV-based clustering; (2) locates sensitive feature regions using bottom-up (BUA) and top-down (TDA) strategies over multi-scale representations (e.g., feature pyramids or vision-encoder layers); and (3) uses an Expectation-Maximization Privacy Assessment (EMPA) module to produce an interpretable \emph{budget-alignment signal} by comparing the fitted sensitive-feature distribution to an evaluator-specified reference (e.g., Laplace or Gaussian with scale $c/ε$). The output is reference-relative and is \emph{not} a formal differential-privacy estimator. We formalize BUA/TDA over hierarchical feature structures and validate the framework on object detectors (YOLO, PPDPTS, DETR) and on the \emph{visual encoders} of VLMs (CLIP, LLaVA, BLIP). BUA and TDA yield comparable deviation trends; EMPA provides a stable alignment signal under the reported setups. We compare with generic discrepancy baselines (Chi-square, K-L, MMD) and with task-relevant baselines (MomentReg, NoiseMLE, Wass-1). Results are reported as mean$\pm$std over multiple seeds with confidence intervals in the supplementary materials. This work contributes a learnable, interpretable modeling perspective for privacy-aligned hierarchical representations rather than a post hoc audit only. Source code: \href{https://github.com/mabo1215/bodhi-vlm.git}{Bodhi-VLM GitHub repository}</description>
+      <author>Bo Ma, Jinsong Wu, Wei Qi Yan</author>
+      <pubDate>2026-03-14T03:11:31Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13728v1</guid>
+    </item>
+    <item>
+      <title>SAATT Nav: a Socially Aware Autonomous Transparent Transportation Navigation Framework for Wheelchairs</title>
+      <link>https://arxiv.org/abs/2603.13698v1</link>
+      <description>[arXiv | abstract_keywords]
+
+While powered wheelchairs reduce physical fatigue as opposed to manual wheelchairs for individuals with mobility impairment, they demand high cognitive workload due to information processing, decision making and motor coordination. Current autonomous systems lack social awareness in navigation and transparency in decision-making, leading to decreased perceived safety and trust from the user and others in context. This work proposes Socially Aware Autonomous Transparent Transportation (SAATT) Navigation framework for wheelchairs as a potential solution. By implementing a Large Language Model (LLM) informed of user intent and capable of predicting other peoples' intent as a decision-maker for its local controller, it is able to detect and navigate social situations, such as passing pedestrians or a pair conversing. Furthermore, the LLM textually communicates its reasoning at each waypoint for transparency. In this experiment, it is compared against a standard global planner, a representative competing social navigation model, and an Ablation study in three simulated environments varied by social levels in eight metrics categorized under Safety, Social Compliance, Efficiency, and Comfort. Overall, SAATT Nav outperforms in most social situations and equivalently or only slightly worse in the remaining metrics, demonstrating the potential of a socially aware and transparent autonomous navigation system to assist wheelchair users.</description>
+      <author>Yutong Zhang, Shaiv Y. Mehra, Bradley S. Duerstock, Juan P. Wachs</author>
+      <pubDate>2026-03-14T02:13:58Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13698v1</guid>
+    </item>
+    <item>
+      <title>QuarkMedBench: A Real-World Scenario Driven Benchmark for Evaluating Large Language Models</title>
+      <link>https://arxiv.org/abs/2603.13691v1</link>
+      <description>[arXiv | abstract_keywords]
+
+While Large Language Models (LLMs) excel on standardized medical exams, high scores often fail to translate to high-quality responses for real-world medical queries. Current evaluations rely heavily on multiple-choice questions, failing to capture the unstructured, ambiguous, and long-tail complexities inherent in genuine user inquiries. To bridge this gap, we introduce QuarkMedBench, an ecologically valid benchmark tailored for real-world medical LLM assessment. We compiled a massive dataset spanning Clinical Care, Wellness Health, and Professional Inquiry, comprising 20,821 single-turn queries and 3,853 multi-turn sessions. To objectively evaluate open-ended answers, we propose an automated scoring framework that integrates multi-model consensus with evidence-based retrieval to dynamically generate 220,617 fine-grained scoring rubrics (~9.8 per query). During evaluation, hierarchical weighting and safety constraints structurally quantify medical accuracy, key-point coverage, and risk interception, effectively mitigating the high costs and subjectivity of human grading. Experimental results demonstrate that the generated rubrics achieve a 91.8% concordance rate with clinical expert blind audits, establishing highly dependable medical reliability. Crucially, baseline evaluations on this benchmark reveal significant performance disparities among state-of-the-art models when navigating real-world clinical nuances, highlighting the limitations of conventional exam-based metrics. Ultimately, QuarkMedBench establishes a rigorous, reproducible yardstick for measuring LLM performance on complex health issues, while its framework inherently supports dynamic knowledge updates to prevent benchmark obsolescence.</description>
+      <author>Yao Wu, Kangping Yin, Liang Dong, Zhenxin Ma, Shuting Xu, Xuehai Wang, Yuxuan Jiang, Tingting Yu, Yunqing Hong, Jiayi Liu, Rianzhe Huang, Shuxin Zhao, Haiping Hu, Wen Shang, Jian Xu, Guanjun Jiang</author>
+      <pubDate>2026-03-14T01:51:43Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.13691v1</guid>
+    </item>
     <item>
       <title>Visual-ERM: Reward Modeling for Visual Equivalence</title>
       <link>https://arxiv.org/abs/2603.13224v1</link>
@@ -8100,123 +8256,6 @@ The paradigm of large language model (LLM) reasoning is shifting from parameter 
       <pubDate>2026-02-16T15:51:59Z</pubDate>
       <source>arXiv</source>
       <guid isPermaLink="true">https://arxiv.org/abs/2602.14857v1</guid>
-    </item>
-    <item>
-      <title>Atomix: Timely, Transactional Tool Use for Reliable Agentic Workflows</title>
-      <link>https://arxiv.org/abs/2602.14849v1</link>
-      <description>LLM agents increasingly act on external systems, yet tool effects are immediate. Under failures, speculation, or contention, losing branches can leak unintended side effects with no safe rollback. We introduce Atomix, a runtime that provides progress-aware transactional semantics for agent tool calls. Atomix tags each call with an epoch, tracks per-resource frontiers, and commits only when progress predicates indicate safety; bufferable effects can be delayed, while externalized effects are tracked and compensated on abort. Across real workloads with fault injection, transactional retry improves task success, while frontier-gated commit strengthens isolation under speculation and contention.</description>
-      <author>Bardia Mohammadi, Nearchos Potamitis, Lars Klein, Akhil Arora, Laurent Bindschaedler</author>
-      <pubDate>2026-02-16T15:46:19Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14849v1</guid>
-    </item>
-    <item>
-      <title>Physical Commonsense Reasoning for Lower-Resourced Languages and Dialects: a Study on Basque</title>
-      <link>https://arxiv.org/abs/2602.14812v1</link>
-      <description>Physical commonsense reasoning represents a fundamental capability of human intelligence, enabling individuals to understand their environment, predict future events, and navigate physical spaces. Recent years have witnessed growing interest in reasoning tasks within Natural Language Processing (NLP). However, no prior research has examined the performance of Large Language Models (LLMs) on non-question-answering (non-QA) physical commonsense reasoning tasks in low-resource languages such as Basque. Taking the Italian GITA as a starting point, this paper addresses this gap by presenting BasPhyCo, the first non-QA physical commonsense reasoning dataset for Basque, available in both standard and dialectal variants. We evaluate model performance across three hierarchical levels of commonsense understanding: (1) distinguishing between plausible and implausible narratives (accuracy), (2) identifying the conflicting element that renders a narrative implausible (consistency), and (3) determining the specific physical state that creates the implausibility (verifiability). These tasks were assessed using multiple multilingual LLMs as well as models pretrained specifically for Italian and Basque. Results indicate that, in terms of verifiability, LLMs exhibit limited physical commonsense capabilities in low-resource languages such as Basque, especially when processing dialectal variants.</description>
-      <author>Jaione Bengoetxea, Itziar Gonzalez-Dios, Rodrigo Agerri</author>
-      <pubDate>2026-02-16T15:04:35Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14812v1</guid>
-    </item>
-    <item>
-      <title>Emergently Misaligned Language Models Show Behavioral Self-Awareness That Shifts With Subsequent Realignment</title>
-      <link>https://arxiv.org/abs/2602.14777v1</link>
-      <description>Recent research has demonstrated that large language models (LLMs) fine-tuned on incorrect trivia question-answer pairs exhibit toxicity - a phenomenon later termed "emergent misalignment". Moreover, research has shown that LLMs possess behavioral self-awareness - the ability to describe learned behaviors that were only implicitly demonstrated in training data. Here, we investigate the intersection of these phenomena. We fine-tune GPT-4.1 models sequentially on datasets known to induce and reverse emergent misalignment and evaluate whether the models are self-aware of their behavior transitions without providing in-context examples. Our results show that emergently misaligned models rate themselves as significantly more harmful compared to their base model and realigned counterparts, demonstrating behavioral self-awareness of their own emergent misalignment. Our findings show that behavioral self-awareness tracks actual alignment states of models, indicating that models can be queried for informative signals about their own safety.</description>
-      <author>Laurène Vaugrante, Anietta Weckauff, Thilo Hagendorff</author>
-      <pubDate>2026-02-16T14:29:46Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14777v1</guid>
-    </item>
-    <item>
-      <title>Residual Connections and the Causal Shift: Uncovering a Structural Misalignment in Transformers</title>
-      <link>https://arxiv.org/abs/2602.14760v1</link>
-      <description>Large Language Models (LLMs) are trained with next-token prediction, implemented in autoregressive Transformers via causal masking for parallelism. This creates a subtle misalignment: residual connections tie activations to the current token, while supervision targets the next token, potentially propagating mismatched information if the current token is not the most informative for prediction. In this work, we empirically localize this input-output alignment shift in pretrained LLMs, using decoding trajectories over tied embedding spaces and similarity-based metrics. Our experiments reveal that the hidden token representations switch from input alignment to output alignment deep within the network. Motivated by this observation, we propose a lightweight residual-path mitigation based on residual attenuation, implemented either as a fixed-layer intervention or as a learnable gating mechanism. Experiments on multiple benchmarks show that these strategies alleviate the representation misalignment and yield improvements, providing an efficient and general architectural enhancement for autoregressive Transformers.</description>
-      <author>Jonathan Lys, Vincent Gripon, Bastien Pasdeloup, Lukas Mauch, Fabien Cardinaux, Ghouthi Boukli Hacene</author>
-      <pubDate>2026-02-16T14:04:42Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14760v1</guid>
-    </item>
-    <item>
-      <title>Rethinking the Role of LLMs in Time Series Forecasting</title>
-      <link>https://arxiv.org/abs/2602.14744v1</link>
-      <description>Large language models (LLMs) have been introduced to time series forecasting (TSF) to incorporate contextual knowledge beyond numerical signals. However, existing studies question whether LLMs provide genuine benefits, often reporting comparable performance without LLMs. We show that such conclusions stem from limited evaluation settings and do not hold at scale. We conduct a large-scale study of LLM-based TSF (LLM4TSF) across 8 billion observations, 17 forecasting scenarios, 4 horizons, multiple alignment strategies, and both in-domain and out-of-domain settings. Our results demonstrate that \emph{LLM4TS indeed improves forecasting performance}, with especially large gains in cross-domain generalization. Pre-alignment outperforming post-alignment in over 90\% of tasks. Both pretrained knowledge and model architecture of LLMs contribute and play complementary roles: pretraining is critical under distribution shifts, while architecture excels at modeling complex temporal dynamics. Moreover, under large-scale mixed distributions, a fully intact LLM becomes indispensable, as confirmed by token-level routing analysis and prompt-based improvements. Overall, Our findings overturn prior negative assessments, establish clear conditions under which LLMs are not only useful, and provide practical guidance for effective model design. We release our code at https://github.com/EIT-NLP/LLM4TSF.</description>
-      <author>Xin Qiu, Junlong Tong, Yirong Sun, Yunpu Ma, Wei Zhang, Xiaoyu Shen</author>
-      <pubDate>2026-02-16T13:39:09Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14744v1</guid>
-    </item>
-    <item>
-      <title>Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks</title>
-      <link>https://arxiv.org/abs/2602.14689v1</link>
-      <description>As the capabilities of large language models continue to advance, so does their potential for misuse. While closed-source models typically rely on external defenses, open-weight models must primarily depend on internal safeguards to mitigate harmful behavior. Prior red-teaming research has largely focused on input-based jailbreaking and parameter-level manipulations. However, open-weight models also natively support prefilling, which allows an attacker to predefine initial response tokens before generation begins. Despite its potential, this attack vector has received little systematic attention. We present the largest empirical study to date of prefill attacks, evaluating over 20 existing and novel strategies across multiple model families and state-of-the-art open-weight models. Our results show that prefill attacks are consistently effective against all major contemporary open-weight models, revealing a critical and previously underexplored vulnerability with significant implications for deployment. While certain large reasoning models exhibit some robustness against generic prefilling, they remain vulnerable to tailored, model-specific strategies. Our findings underscore the urgent need for model developers to prioritize defenses against prefill attacks in open-weight LLMs.</description>
-      <author>Lukas Struppek, Adam Gleave, Kellin Pelrine</author>
-      <pubDate>2026-02-16T12:24:21Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14689v1</guid>
-    </item>
-    <item>
-      <title>Crowdsourcing Piedmontese to Test LLMs on Non-Standard Orthography</title>
-      <link>https://arxiv.org/abs/2602.14675v1</link>
-      <description>We present a crowdsourced dataset for Piedmontese, an endangered Romance language of northwestern Italy. The dataset comprises 145 Italian-Piedmontese parallel sentences derived from Flores+, with translations produced by speakers writing in their natural orthographic style rather than adhering to standardized conventions, along with manual word alignment. We use this resource to benchmark several large language models on tokenization parity, topic classification, and machine translation. Our analysis reveals that Piedmontese incurs a tokenization penalty relative to higher-resource Romance languages, yet LLMs achieve classification performance approaching that of Italian, French, and English. Machine translation results are asymmetric: models translate adequately from Piedmontese into high-resource languages, but generation into Piedmontese remains challenging. The dataset and code are publicly released.</description>
-      <author>Gianluca Vico, Jindřich Libovický</author>
-      <pubDate>2026-02-16T12:02:29Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14675v1</guid>
-    </item>
-    <item>
-      <title>Is Information Density Uniform when Utterances are Grounded on Perception and Discourse?</title>
-      <link>https://arxiv.org/abs/2602.14653v1</link>
-      <description>The Uniform Information Density (UID) hypothesis posits that speakers are subject to a communicative pressure to distribute information evenly within utterances, minimising surprisal variance. While this hypothesis has been tested empirically, prior studies are limited exclusively to text-only inputs, abstracting away from the perceptual context in which utterances are produced. In this work, we present the first computational study of UID in visually grounded settings. We estimate surprisal using multilingual vision-and-language models over image-caption data in 30 languages and visual storytelling data in 13 languages, together spanning 11 families. We find that grounding on perception consistently smooths the distribution of information, increasing both global and local uniformity across typologically diverse languages compared to text-only settings. In visual narratives, grounding in both image and discourse contexts has additional effects, with the strongest surprisal reductions occurring at the onset of discourse units. Overall, this study takes a first step towards modelling the temporal dynamics of information flow in ecologically plausible, multimodal language use, and finds that grounded language exhibits greater information uniformity, supporting a context-sensitive formulation of UID.</description>
-      <author>Matteo Gay, Coleman Haley, Mario Giulianelli, Edoardo Ponti</author>
-      <pubDate>2026-02-16T11:25:00Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14653v1</guid>
-    </item>
-    <item>
-      <title>GradMAP: Faster Layer Pruning with Gradient Metric and Projection Compensation</title>
-      <link>https://arxiv.org/abs/2602.14649v1</link>
-      <description>Large Language Models (LLMs) exhibit strong reasoning abilities, but their high computational costs limit their practical deployment. Recent studies reveal significant redundancy in LLMs layers, making layer pruning an active research topic. Layer pruning research primarily focuses on two aspects: measuring layer importance and recovering performance after pruning. Unfortunately, the present works fail to simultaneously maintain pruning performance and efficiency. In this study, we propose GradMAP, a faster layer pruning method with \textbf{Grad}ient \textbf{M}etric \textbf{A}nd \textbf{P}rojection compensation, which consists of two stages. In the first stage, we introduce a novel metric based on gradient magnitudes, enabling a global assessment of layer importance. Note that, it requires only a single backward propagation step per pruning decision, substantially enhancing pruning efficiency. In the second stage, we first analyze the layers with the largest mean shift resulting from pruning, and then incorporate a simple yet effective projection compensation matrix to correct this drift in one step. In this way, the degradation of model performance caused by layer pruning is effectively alleviated. Extensive experiments show that GradMAP outperforms previous layer pruning methods in both pruning speed (achieving an average $4\times$ speedup) and performance.</description>
-      <author>Hao Liu, Guangyan Li, Wensheng Zhang, Yongqiang Tang</author>
-      <pubDate>2026-02-16T11:14:02Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14649v1</guid>
-    </item>
-    <item>
-      <title>Assessing Large Language Models for Medical QA: Zero-Shot and LLM-as-a-Judge Evaluation</title>
-      <link>https://arxiv.org/abs/2602.14564v1</link>
-      <description>Recently, Large Language Models (LLMs) have gained significant traction in medical domain, especially in developing a QA systems to Medical QA systems for enhancing access to healthcare in low-resourced settings. This paper compares five LLMs deployed between April 2024 and August 2025 for medical QA, using the iCliniq dataset, containing 38,000 medical questions and answers of diverse specialties. Our models include Llama-3-8B-Instruct, Llama 3.2 3B, Llama 3.3 70B Instruct, Llama-4-Maverick-17B-128E-Instruct, and GPT-5-mini. We are using a zero-shot evaluation methodology and using BLEU and ROUGE metrics to evaluate performance without specialized fine-tuning. Our results show that larger models like Llama 3.3 70B Instruct outperform smaller models, consistent with observed scaling benefits in clinical tasks. It is notable that, Llama-4-Maverick-17B exhibited more competitive results, thus highlighting evasion efficiency trade-offs relevant for practical deployment. These findings align with advancements in LLM capabilities toward professional-level medical reasoning and reflect the increasing feasibility of LLM-supported QA systems in the real clinical environments. This benchmark aims to serve as a standardized setting for future study to minimize model size, computational resources and to maximize clinical utility in medical NLP applications.</description>
-      <author>Shefayat E Shams Adib, Ahmed Alfey Sani, Ekramul Alam Esham, Ajwad Abrar, Tareque Mohmud Chowdhury</author>
-      <pubDate>2026-02-16T08:53:23Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14564v1</guid>
-    </item>
-    <item>
-      <title>Beyond Translation: Evaluating Mathematical Reasoning Capabilities of LLMs in Sinhala and Tamil</title>
-      <link>https://arxiv.org/abs/2602.14517v1</link>
-      <description>Large language models (LLMs) demonstrate strong mathematical reasoning in English, but whether these capabilities reflect genuine multilingual reasoning or reliance on translation-based processing in low-resource languages like Sinhala and Tamil remains unclear. We examine this fundamental question by evaluating whether LLMs genuinely reason mathematically in these languages or depend on implicit translation to English-like representations. Using a taxonomy of six math problem types, from basic arithmetic to complex unit conflict and optimization problems, we evaluate four prominent large language models. To avoid translation artifacts that confound language ability with translation quality, we construct a parallel dataset where each problem is natively authored by fluent speakers with mathematical training in all three languages. Our analysis demonstrates that while basic arithmetic reasoning transfers robustly across languages, complex reasoning tasks show significant degradation in Tamil and Sinhala. The pattern of failures varies by model and problem type, suggesting that apparent multilingual competence may not reflect uniform reasoning capabilities across languages. These findings challenge the common assumption that models exhibiting strong multilingual performance can reason equally effectively across languages, and highlight the need for fine-grained, type-aware evaluation in multilingual settings.</description>
-      <author>Sukumar Kishanthan, Kumar Thushalika, Buddhi Jayasekara, Asela Hevapathige</author>
-      <pubDate>2026-02-16T07:08:37Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14517v1</guid>
-    </item>
-    <item>
-      <title>Query as Anchor: Scenario-Adaptive User Representation via Large Language Model</title>
-      <link>https://arxiv.org/abs/2602.14492v2</link>
-      <description>Industrial-scale user representation learning requires balancing robust universality with acute task-sensitivity. However, existing paradigms primarily yield static, task-agnostic embeddings that struggle to reconcile the divergent requirements of downstream scenarios within unified vector spaces. Furthermore, heterogeneous multi-source data introduces inherent noise and modality conflicts, degrading representation. We propose Query-as-Anchor, a framework shifting user modeling from static encoding to dynamic, query-aware synthesis. To empower Large Language Models (LLMs) with deep user understanding, we first construct UserU, an industrial-scale pre-training dataset that aligns multi-modal behavioral sequences with user understanding semantics, and our Q-Anchor Embedding architecture integrates hierarchical coarse-to-fine encoders into dual-tower LLMs via joint contrastive-autoregressive optimization for query-aware user representation. To bridge the gap between general pre-training and specialized business logic, we further introduce Cluster-based Soft Prompt Tuning to enforce discriminative latent structures, effectively aligning model attention with scenario-specific modalities. For deployment, anchoring queries at sequence termini enables KV-cache-accelerated inference with negligible incremental latency. Evaluations on 10 Alipay industrial benchmarks show consistent SOTA performance, strong scalability, and efficient deployment. Large-scale online A/B testing in Alipay's production system across two real-world scenarios further validates its practical effectiveness. Our code is prepared for public release and will be available at: https://github.com/JhCircle/Q-Anchor.</description>
-      <author>Jiahao Yuan, Yike Xu, Jinyong Wen, Baokun Wang, Ziyi Gao, Xiaotong Lin, Yun Liu, Xing Fu, Yu Cheng, Yongchao Liu, Weiqiang Wang, Zhongle Xie</author>
-      <pubDate>2026-02-16T06:09:31Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14492v2</guid>
-    </item>
-    <item>
-      <title>BETA-Labeling for Multilingual Dataset Construction in Low-Resource IR</title>
-      <link>https://arxiv.org/abs/2602.14488v1</link>
-      <description>IR in low-resource languages remains limited by the scarcity of high-quality, task-specific annotated datasets. Manual annotation is expensive and difficult to scale, while using large language models (LLMs) as automated annotators introduces concerns about label reliability, bias, and evaluation validity. This work presents a Bangla IR dataset constructed using a BETA-labeling framework involving multiple LLM annotators from diverse model families. The framework incorporates contextual alignment, consistency checks, and majority agreement, followed by human evaluation to verify label quality. Beyond dataset creation, we examine whether IR datasets from other low-resource languages can be effectively reused through one-hop machine translation. Using LLM-based translation across multiple language pairs, we experimented on meaning preservation and task validity between source and translated datasets. Our experiment reveal substantial variation across languages, reflecting language-dependent biases and inconsistent semantic preservation that directly affect the reliability of cross-lingual dataset reuse. Overall, this study highlights both the potential and limitations of LLM-assisted dataset creation for low-resource IR. It provides empirical evidence of the risks associated with cross-lingual dataset reuse and offers practical guidance for constructing more reliable benchmarks and evaluation pipelines in low-resource language settings.</description>
-      <author>Md. Najib Hasan, Mst. Jannatun Ferdous Rain, Fyad Mohammed, Nazmul Siddique</author>
-      <pubDate>2026-02-16T06:04:04Z</pubDate>
-      <source>arXiv</source>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14488v1</guid>
     </item>
   </channel>
 </rss>

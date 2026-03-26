@@ -3,7 +3,391 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Wed, 25 Mar 2026 01:49:51 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 01:57:41 +0000</lastBuildDate>
+    <item>
+      <title>Large Language Model Guided Incentive Aware Reward Design for Cooperative Multi-Agent Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2603.24324v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Designing effective auxiliary rewards for cooperative multi-agent systems remains a precarious task; misaligned incentives risk inducing suboptimal coordination, especially where sparse task feedback fails to provide sufficient grounding. This study introduces an automated reward design framework that leverages large language models to synthesize executable reward programs from environment instrumentation. The procedure constrains candidate programs within a formal validity envelope and evaluates their efficacy by training policies from scratch under a fixed computational budget; selection depends exclusively on the sparse task return. The framework is evaluated across four distinct Overcooked-AI layouts characterized by varied corridor congestion, handoff dependencies, and structural asymmetries. Iterative search generations consistently yield superior task returns and delivery counts, with the most pronounced gains occurring in environments dominated by interaction bottlenecks. Diagnostic analysis of the synthesized shaping components indicates increased interdependence in action selection and improved signal alignment in coordination-intensive tasks. These results demonstrate that the search for objectivegrounded reward programs can mitigate the burden of manual engineering while producing shaping signals compatible with cooperative learning under finite budgets.</description>
+      <author>Dogan Urgun, Gokhan Gungor</author>
+      <pubDate>2026-03-25T14:05:59Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24324v1</guid>
+    </item>
+    <item>
+      <title>Language-Assisted Image Clustering Guided by Discriminative Relational Signals and Adaptive Semantic Centers</title>
+      <link>https://arxiv.org/abs/2603.24275v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Language-Assisted Image Clustering (LAIC) augments the input images with additional texts with the help of vision-language models (VLMs) to promote clustering performance. Despite recent progress, existing LAIC methods often overlook two issues: (i) textual features constructed for each image are highly similar, leading to weak inter-class discriminability; (ii) the clustering step is restricted to pre-built image-text alignments, limiting the potential for better utilization of the text modality. To address these issues, we propose a new LAIC framework with two complementary components. First, we exploit cross-modal relations to produce more discriminative self-supervision signals for clustering, as it compatible with most VLMs training mechanisms. Second, we learn category-wise continuous semantic centers via prompt learning to produce the final clustering assignments. Extensive experiments on eight benchmark datasets demonstrate that our method achieves an average improvement of 2.6% over state-of-the-art methods, and the learned semantic centers exhibit strong interpretability. Code is available in the supplementary material.</description>
+      <author>Jun Ma, Xu Zhang, Zhengxing Jiao, Yaxin Hou, Hui Liu, Junhui Hou, Yuheng Jia</author>
+      <pubDate>2026-03-25T13:08:14Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24275v1</guid>
+    </item>
+    <item>
+      <title>Semantic Alignment across Ancient Egyptian Language Stages via Normalization-Aware Multitask Learning</title>
+      <link>https://arxiv.org/abs/2603.24258v1</link>
+      <description>[arXiv | abstract_keywords]
+
+We study word-level semantic alignment across four historical stages of Ancient Egyptian. These stages differ in script and orthography, and parallel data are scarce. We jointly train a compact encoder-decoder model with a shared byte-level tokenizer on all four stages, combining masked language modeling (MLM), translation language modeling (TLM), sequence-to-sequence translation, and part-of-speech tagging under a task-aware loss with fixed weights and uncertainty-based scaling. To reduce surface divergence we add Latin transliteration and IPA reconstruction as auxiliary views. We integrate these views through KL-based consistency and through embedding-level fusion. We evaluate alignment quality using pairwise metrics, specifically ROC-AUC and triplet accuracy, on curated Egyptian-English and intra-Egyptian cognate datasets. Translation yields the strongest gains. IPA with KL consistency improves cross-branch alignment, while early fusion demonstrates limited efficacy. Although the overall alignment remains limited, the findings provide a reproducible baseline and practical guidance for modeling historical languages under real constraints. They also show how normalization and task design shape what counts as alignment in typologically distant settings.</description>
+      <author>He Huang</author>
+      <pubDate>2026-03-25T12:52:38Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24258v1</guid>
+    </item>
+    <item>
+      <title>Optimizing Multilingual LLMs via Federated Learning: A Study of Client Language Composition</title>
+      <link>https://arxiv.org/abs/2603.24242v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Federated Learning (FL) of Large Language Models (LLMs) in multilingual environments presents significant challenges stemming from heterogeneous language distributions across clients and disparities in language resource availability. To address these challenges, we extended the FederatedScope-LLM framework to support multilingual instruction-tuning experiments with LLMs. We also introduced a novel client-specific early stopping mechanism, Local Dynamic Early Stopping (LDES-FL), which allows clients to pause and resume local training based on client-side validation performance, enhancing training efficiency and sustainability. Through a series of experiments, we studied how client language composition - from fully monolingual to increasingly multilingual clients - affects multilingual quality, fairness and training cost. Monolingual local fine-tuning remains the most effective for single-language specialization, whereas federated training is better suited to learning a single balanced multilingual model. In FL, increasing within-client multilinguality leads to stronger and fairer global models, narrows the gap to centralized multilingual fine-tuning, and yields the largest gains for lower-resource languages, albeit at the cost of more optimization steps. Overall, our results identify client language composition as a key design variable in multilingual FL, shaping performance, fairness and efficiency</description>
+      <author>Aleix Sant, Jordi Luque, Carlos Escolano</author>
+      <pubDate>2026-03-25T12:29:11Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24242v1</guid>
+    </item>
+    <item>
+      <title>UniScale: Synergistic Entire Space Data and Model Scaling for Search Ranking</title>
+      <link>https://arxiv.org/abs/2603.24226v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recent advances in Large Language Models (LLMs) have inspired a surge of scaling law research in industrial search, advertising, and recommendation systems. However, existing approaches focus mainly on architectural improvements, overlooking the critical synergy between data and architecture design. We observe that scaling model parameters alone exhibits diminishing returns, i.e., the marginal gain in performance steadily declines as model size increases, and that the performance degradation caused by complex heterogeneous data distributions is often irrecoverable through model design alone. In this paper, we propose UniScale to address these limitation, a novel co-design framework that jointly optimizes data and architecture to unlock the full potential of model scaling, which includes two core parts: (1) ES$^3$ (Entire-Space Sample System), a high-quality data scaling system that expands the training signal beyond conventional sampling strategies from both intra-domain request contexts with global supervised signal constructed by hierarchical label attribution and cross-domain samples aligning with the essence of user decision under similar content exposure environment in search domain; and (2) HHSFT (Heterogeneous Hierarchical Sample Fusion Transformer), a novel architecture designed to effectively model the complex heterogeneous distribution of scaled data and to harness the entire space user behavior data with Heterogeneous Hierarchical Feature Interaction and Entire Space User Interest Fusion, thereby surpassing the performance ceiling of structure-only model tuning. Extensive experiments on large-scale real world E-commerce search platform demonstrate that UniScale achieves significant improvements through the synergistic co-design of data and architecture and exhibits clear scaling trends, delivering substantial gains in key business metrics.</description>
+      <author>Liren Yu, Caiyuan Li, Feiyi Dong, Tao Zhang, Zhixuan Zhang, Dan Ou, Haihong Tang, Bo Zheng</author>
+      <pubDate>2026-03-25T12:00:26Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24226v1</guid>
+    </item>
+    <item>
+      <title>MedAidDialog: A Multilingual Multi-Turn Medical Dialogue Dataset for Accessible Healthcare</title>
+      <link>https://arxiv.org/abs/2603.24132v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Conversational artificial intelligence has the potential to assist users in preliminary medical consultations, particularly in settings where access to healthcare professionals is limited. However, many existing medical dialogue systems operate in a single-turn question--answering paradigm or rely on template-based datasets, limiting conversational realism and multilingual applicability. In this work, we introduce MedAidDialog, a multilingual multi-turn medical dialogue dataset designed to simulate realistic physician--patient consultations. The dataset extends the MDDial corpus by generating synthetic consultations using large language models and further expands them into a parallel multilingual corpus covering seven languages: English, Hindi, Telugu, Tamil, Bengali, Marathi, and Arabic.   Building on this dataset, we develop MedAidLM, a conversational medical model trained using parameter-efficient fine-tuning on quantized small language models, enabling deployment without high-end computational infrastructure. Our framework additionally incorporates optional patient pre-context information (e.g., age, gender, allergies) to personalize the consultation process. Experimental results demonstrate that the proposed system can effectively perform symptom elicitation through multi-turn dialogue and generate diagnostic recommendations. We further conduct medical expert evaluation to assess the plausibility and coherence of the generated consultations.</description>
+      <author>Shubham Kumar Nigam, Suparnojit Sarkar, Piyush Patel</author>
+      <pubDate>2026-03-25T09:51:44Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24132v1</guid>
+    </item>
+    <item>
+      <title>Likelihood hacking in probabilistic program synthesis</title>
+      <link>https://arxiv.org/abs/2603.24126v1</link>
+      <description>[arXiv | abstract_keywords]
+
+When language models are trained by reinforcement learning (RL) to write probabilistic programs, they can artificially inflate their marginal-likelihood reward by producing programs whose data distribution fails to normalise instead of fitting the data better. We call this failure likelihood hacking (LH). We formalise LH in a core probabilistic programming language (PPL) and give sufficient syntactic conditions for its prevention, proving that a safe language fragment $\mathcal{L}_{\text{safe}}$ satisfying these conditions cannot produce likelihood-hacking programs. Empirically, we show that GRPO-trained models generating PyMC code discover LH exploits within the first few training steps, driving violation rates well above the untrained-model baseline. We implement $\mathcal{L}_{\text{safe}}$'s conditions as $\texttt{SafeStan}$, a LH-resistant modification of Stan, and show empirically that it prevents LH under optimisation pressure. These results show that language-level safety constraints are both theoretically grounded and effective in practice for automated Bayesian model discovery.</description>
+      <author>Jacek Karwowski, Younesse Kaddar, Zihuiwen Ye, Nikolay Malkin, Sam Staton</author>
+      <pubDate>2026-03-25T09:39:15Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24126v1</guid>
+    </item>
+    <item>
+      <title>Alignment Reduces Expressed but Not Encoded Gender Bias: A Unified Framework and Study</title>
+      <link>https://arxiv.org/abs/2603.24125v1</link>
+      <description>[arXiv | abstract_keywords]
+
+During training, Large Language Models (LLMs) learn social regularities that can lead to gender bias in downstream applications. Most mitigation efforts focus on reducing bias in generated outputs, typically evaluated on structured benchmarks, which raises two concerns: output-level evaluation does not reveal whether alignment modifies the model's underlying representations, and structured benchmarks may not reflect realistic usage scenarios. We propose a unified framework to jointly analyze intrinsic and extrinsic gender bias in LLMs using identical neutral prompts, enabling direct comparison between gender-related information encoded in internal representations and bias expressed in generated outputs. Contrary to prior work reporting weak or inconsistent correlations, we find a consistent association between latent gender information and expressed bias when measured under the unified protocol. We further examine the effect of alignment through supervised fine-tuning aimed at reducing gender bias. Our results suggest that while the latter indeed reduces expressed bias, measurable gender-related associations are still present in internal representations, and can be reactivated under adversarial prompting. Finally, we consider two realistic settings and show that debiasing effects observed on structured benchmarks do not necessarily generalize, e.g., to the case of story generation.</description>
+      <author>Nour Bouchouchi, Thiabult Laugel, Xavier Renard, Christophe Marsala, Marie-Jeanne Lesot, Marcin Detyniecki</author>
+      <pubDate>2026-03-25T09:35:18Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24125v1</guid>
+    </item>
+    <item>
+      <title>The Alignment Tax: Response Homogenization in Aligned LLMs and Its Implications for Uncertainty Estimation</title>
+      <link>https://arxiv.org/abs/2603.24124v1</link>
+      <description>[arXiv | abstract_keywords]
+
+RLHF-aligned language models exhibit response homogenization: on TruthfulQA (n=790), 40-79% of questions produce a single semantic cluster across 10 i.i.d. samples. On affected questions, sampling-based uncertainty methods have zero discriminative power (AUROC=0.500), while free token entropy retains signal (0.603). This alignment tax is task-dependent: on GSM8K (n=500), token entropy achieves 0.724 (Cohen's d=0.81).   A base-vs-instruct ablation confirms the causal role of alignment: the base model shows 1.0% single-cluster rate vs. 28.5% for the instruct model (p &lt; 10^{-6}). A training stage ablation (Base 0.0% -&gt; SFT 1.5% -&gt; DPO 4.0% SCR) localizes the cause to DPO, not SFT. Cross-family replication on four model families reveals alignment tax severity varies by family and scale. We validate across 22 experiments, 5 benchmarks, 4 model families, and 3 model scales (3B-14B), with Jaccard, embedding, and NLI-based baselines at three DeBERTa scales (all ~0.51 AUROC). Cross-embedder validation with two independent embedding families rules out coupling bias. Cross-dataset validation on WebQuestions (58.0% SCR) confirms generalization beyond TruthfulQA. The central finding -- response homogenization -- is implementation-independent and label-free. Motivated by this diagnosis, we explore a cheapest-first cascade (UCBD) over orthogonal uncertainty signals. Selective prediction raises GSM8K accuracy from 84.4% to 93.2% at 50% coverage; weakly dependent boundaries (|r| &lt;= 0.12) enable 57% cost savings.</description>
+      <author>Mingyi Liu</author>
+      <pubDate>2026-03-25T09:35:15Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24124v1</guid>
+    </item>
+    <item>
+      <title>When Understanding Becomes a Risk: Authenticity and Safety Risks in the Emerging Image Generation Paradigm</title>
+      <link>https://arxiv.org/abs/2603.24079v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recently, multimodal large language models (MLLMs) have emerged as a unified paradigm for language and image generation. Compared with diffusion models, MLLMs possess a much stronger capability for semantic understanding, enabling them to process more complex textual inputs and comprehend richer contextual meanings. However, this enhanced semantic ability may also introduce new and potentially greater safety risks. Taking diffusion models as a reference point, we systematically analyze and compare the safety risks of emerging MLLMs along two dimensions: unsafe content generation and fake image synthesis. Across multiple unsafe generation benchmark datasets, we observe that MLLMs tend to generate more unsafe images than diffusion models. This difference partly arises because diffusion models often fail to interpret abstract prompts, producing corrupted outputs, whereas MLLMs can comprehend these prompts and generate unsafe content. For current advanced fake image detectors, MLLM-generated images are also notably harder to identify. Even when detectors are retrained with MLLMs-specific data, they can still be bypassed by simply providing MLLMs with longer and more descriptive inputs. Our measurements indicate that the emerging safety risks of the cutting-edge generative paradigm, MLLMs, have not been sufficiently recognized, posing new challenges to real-world safety.</description>
+      <author>Ye Leng, Junjie Chu, Mingjie Li, Chenhao Lin, Chao Shen, Michael Backes, Yun Shen, Yang Zhang</author>
+      <pubDate>2026-03-25T08:35:25Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24079v1</guid>
+    </item>
+    <item>
+      <title>ConceptKT: A Benchmark for Concept-Level Deficiency Prediction in Knowledge Tracing</title>
+      <link>https://arxiv.org/abs/2603.24073v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Knowledge Tracing (KT) is a critical technique for modeling student knowledge to support personalized learning. However, most KT systems focus on binary correctness prediction and cannot diagnose the underlying conceptual misunderstandings that lead to errors. Such fine-grained diagnostic feedback is essential for designing targeted instruction and effective remediation. In this work, we introduce the task of concept-level deficiency prediction, which extends traditional KT by identifying the specific concepts a student is likely to struggle with on future problems. We present ConceptKT, a dataset annotated with labels that capture both the concepts required to solve each question and the missing concepts underlying incorrect responses. We investigate in-context learning approaches to KT and evaluate the diagnostic capabilities of various Large Language Models (LLMs) and Large Reasoning Models (LRMs). Different strategies for selecting informative historical records are explored. Experimental results demonstrate that selecting response histories based on conceptual alignment and semantic similarity leads to improved performance on both correctness prediction and concept-level deficiency identification.</description>
+      <author>Yu-Chen Kang, Yu-Chien Tang, An-Zi Yen</author>
+      <pubDate>2026-03-25T08:27:01Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.24073v1</guid>
+    </item>
+    <item>
+      <title>BeliefShift: Benchmarking Temporal Belief Consistency and Opinion Drift in LLM Agents</title>
+      <link>https://arxiv.org/abs/2603.23848v1</link>
+      <description>[arXiv | abstract_keywords]
+
+LLMs are increasingly used as long-running conversational agents, yet every major benchmark evaluating their memory treats user information as static facts to be stored and retrieved. That's the wrong model. People change their minds, and over extended interactions, phenomena like opinion drift, over-alignment, and confirmation bias start to matter a lot.   BeliefShift introduces a longitudinal benchmark designed specifically to evaluate belief dynamics in multi-session LLM interactions. It covers three tracks: Temporal Belief Consistency, Contradiction Detection, and Evidence-Driven Revision. The dataset includes 2,400 human-annotated multi-session interaction trajectories spanning health, politics, personal values, and product preferences.   We evaluate seven models including GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, LLaMA-3, and Mistral-Large under zero-shot and retrieval-augmented generation (RAG) settings. Results reveal a clear trade-off: models that personalize aggressively resist drift poorly, while factually grounded models miss legitimate belief updates.   We further introduce four novel evaluation metrics: Belief Revision Accuracy (BRA), Drift Coherence Score (DCS), Contradiction Resolution Rate (CRR), and Evidence Sensitivity Index (ESI).</description>
+      <author>Praveen Kumar Myakala, Manan Agrawal, Rahul Manche</author>
+      <pubDate>2026-03-25T02:09:35Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23848v1</guid>
+    </item>
+    <item>
+      <title>PoliticsBench: Benchmarking Political Values in Large Language Models with Multi-Turn Roleplay</title>
+      <link>https://arxiv.org/abs/2603.23841v1</link>
+      <description>[arXiv | abstract_keywords]
+
+While Large Language Models (LLMs) are increasingly used as primary sources of information, their potential for political bias may impact their objectivity. Existing benchmarks of LLM social bias primarily evaluate gender and racial stereotypes. When political bias is included, it is typically measured at a coarse level, neglecting the specific values that shape sociopolitical leanings. This study investigates political bias in eight prominent LLMs (Claude, Deepseek, Gemini, GPT, Grok, Llama, Qwen Base, Qwen Instruction-Tuned) using PoliticsBench: a novel multi-turn roleplay framework adapted from the EQ-Bench-v3 psychometric benchmark. We test whether commercially developed LLMs display a systematic left-leaning bias that becomes more pronounced in later stages of multi-stage roleplay. Through twenty evolving scenarios, each model reported its stance and determined its course of action. Scoring these responses on a scale of ten political values, we explored the values underlying chatbots' deviations from unbiased standards. Seven of our eight models leaned left, while Grok leaned right. Each left-leaning LLM strongly exhibited liberal traits and moderately exhibited conservative ones. We discovered slight variations in alignment scores across stages of roleplay, with no particular pattern. Though most models used consequence-based reasoning, Grok frequently argued with facts and statistics. Our study presents the first psychometric evaluation of political values in LLMs through multi-stage, free-text interactions.</description>
+      <author>Rohan Khetan, Ashna Khetan</author>
+      <pubDate>2026-03-25T01:54:56Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23841v1</guid>
+    </item>
+    <item>
+      <title>VehicleMemBench: An Executable Benchmark for Multi-User Long-Term Memory in In-Vehicle Agents</title>
+      <link>https://arxiv.org/abs/2603.23840v1</link>
+      <description>[arXiv | affiliation]
+
+With the growing demand for intelligent in-vehicle experiences, vehicle-based agents are evolving from simple assistants to long-term companions. This evolution requires agents to continuously model multi-user preferences and make reliable decisions in the face of inter-user preference conflicts and changing habits over time. However, existing benchmarks are largely limited to single-user, static question-answer settings, failing to capture the temporal evolution of preferences and the multi-user, tool-interactive nature of real vehicle environments. To address this gap, we introduce VehicleMemBench, a multi-user long-context memory benchmark built on an executable in-vehicle simulation environment. The benchmark evaluates tool use and memory by comparing the post-action environment state with a predefined target state, enabling objective and reproducible evaluation without LLM-based or human scoring. VehicleMemBench includes 23 tool modules, and each sample contains over 80 historical memory events. Experiments show that powerful models perform well on direct instruction tasks but struggle in scenarios involving memory evolution, particularly when user preferences change dynamically. Even advanced memory systems struggle to handle domain-specific memory requirements in this environment. These findings highlight the need for more robust and specialized memory management mechanisms to support long-term adaptive decision-making in real-world in-vehicle systems. To facilitate future research, we release the data and code.</description>
+      <author>Yuhao Chen, Yi Xu, Xinyun Ding, Xiang Fang, Shuochen Liu, Luxi Lin, Qingyu Zhang, Ya Li, Quan Liu, Tong Xu</author>
+      <pubDate>2026-03-25T01:54:28Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23840v1</guid>
+    </item>
+    <item>
+      <title>How Vulnerable Are Edge LLMs?</title>
+      <link>https://arxiv.org/abs/2603.23822v1</link>
+      <description>[arXiv | affiliation]
+
+Large language models (LLMs) are increasingly deployed on edge devices under strict computation and quantization constraints, yet their security implications remain unclear. We study query-based knowledge extraction from quantized edge-deployed LLMs under realistic query budgets and show that, although quantization introduces noise, it does not remove the underlying semantic knowledge, allowing substantial behavioral recovery through carefully designed queries. To systematically analyze this risk, we propose \textbf{CLIQ} (\textbf{Cl}ustered \textbf{I}nstruction \textbf{Q}uerying), a structured query construction framework that improves semantic coverage while reducing redundancy. Experiments on quantized Qwen models (INT8/INT4) demonstrate that CLIQ consistently outperforms original queries across BERTScore, BLEU, and ROUGE, enabling more efficient extraction under limited budgets. These results indicate that quantization alone does not provide effective protection against query-based extraction, highlighting a previously underexplored security risk in edge-deployed LLMs.</description>
+      <author>Ao Ding, Hongzong Li, Zi Liang, Zhanpeng Shi, Shuxin Zhuang, Shiqin Tang, Rong Feng, Ping Lu</author>
+      <pubDate>2026-03-25T01:10:38Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23822v1</guid>
+    </item>
+    <item>
+      <title>LLMs Do Not Grade Essays Like Humans</title>
+      <link>https://arxiv.org/abs/2603.23714v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large language models have recently been proposed as tools for automated essay scoring, but their agreement with human grading remains unclear. In this work, we evaluate how LLM-generated scores compare with human grades and analyze the grading behavior of several models from the GPT and Llama families in an out-of-the-box setting, without task-specific training. Our results show that agreement between LLM and human scores remains relatively weak and varies with essay characteristics. In particular, compared to human raters, LLMs tend to assign higher scores to short or underdeveloped essays, while assigning lower scores to longer essays that contain minor grammatical or spelling errors. We also find that the scores generated by LLMs are generally consistent with the feedback they generate: essays receiving more praise tend to receive higher scores, while essays receiving more criticism tend to receive lower scores. These results suggest that LLM-generated scores and feedback follow coherent patterns but rely on signals that differ from those used by human raters, resulting in limited alignment with human grading practices. Nevertheless, our work shows that LLMs produce feedback that is consistent with their grading and that they can be reliably used in supporting essay scoring.</description>
+      <author>Jerin George Mathew, Sumayya Taher, Anindita Kundu, Denilson Barbosa</author>
+      <pubDate>2026-03-24T21:02:53Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23714v1</guid>
+    </item>
+    <item>
+      <title>Swiss-Bench SBP-002: A Frontier Model Comparison on Swiss Legal and Regulatory Tasks</title>
+      <link>https://arxiv.org/abs/2603.23646v1</link>
+      <description>[arXiv | abstract_keywords]
+
+While recent work has benchmarked large language models on Swiss legal translation (Niklaus et al., 2025) and academic legal reasoning from university exams (Fan et al., 2025), no existing benchmark evaluates frontier model performance on applied Swiss regulatory compliance tasks. I introduce Swiss-Bench SBP-002, a trilingual benchmark of 395 expert-crafted items spanning three Swiss regulatory domains (FINMA, Legal-CH, EFK), seven task types, and three languages (German, French, Italian), and evaluate ten frontier models from March 2026 using a structured three-dimension scoring framework assessed via a blind three-judge LLM panel (GPT-4o, Claude Sonnet 4, Qwen3-235B) with majority-vote aggregation and weighted kappa = 0.605, with reference answers validated by an independent human legal expert on a 100-item subset (73% rated Correct, 0% Incorrect, perfect Legal Accuracy). Results reveal three descriptive performance clusters: Tier A (35-38% correct), Tier B (26-29%), and Tier C (13-21%). The benchmark proves difficult: even the top-ranked model (Qwen 3.5 Plus) achieves only 38.2% correct, with 47.3% incorrect and 14.4% partially correct. Task type difficulty varies widely: legal translation and case analysis yield 69-72% correct rates, while regulatory Q&amp;A, hallucination detection, and gap analysis remain below 9%. Within this roster (seven open-weight, three closed-source), an open-weight model leads the ranking, and several open-weight models match or outperform their closed-source counterparts. These findings provide an initial empirical reference point for assessing frontier model capability on Swiss regulatory tasks under zero-retrieval conditions.</description>
+      <author>Fatih Uenal</author>
+      <pubDate>2026-03-24T18:41:07Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23646v1</guid>
+    </item>
+    <item>
+      <title>Ukrainian Visual Word Sense Disambiguation Benchmark</title>
+      <link>https://arxiv.org/abs/2603.23627v1</link>
+      <description>[arXiv | abstract_keywords]
+
+This study presents a benchmark for evaluating the Visual Word Sense Disambiguation (Visual-WSD) task in Ukrainian. The main goal of the Visual-WSD task is to identify, with minimal contextual information, the most appropriate representation of a given ambiguous word from a set of ten images. To construct this benchmark, we followed a methodology similar to that proposed by (CITATION), who previously introduced benchmarks for the Visual-WSD task in English, Italian, and Farsi. This approach allows us to incorporate the Ukrainian benchmark into a broader framework for cross-language model performance comparisons. We collected the benchmark data semi-automatically and refined it with input from domain experts. We then assessed eight multilingual and multimodal large language models using this benchmark. All tested models performed worse than the zero-shot CLIP-based baseline model (CITATION) used by (CITATION) for the English Visual-WSD task. Our analysis revealed a significant performance gap in the Visual-WSD task between Ukrainian and English.</description>
+      <author>Yurii Laba, Yaryna Mohytych, Ivanna Rohulia, Halyna Kyryleyza, Hanna Dydyk-Meush, Oles Dobosevych, Rostyslav Hryniv</author>
+      <pubDate>2026-03-24T18:09:24Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23627v1</guid>
+    </item>
+    <item>
+      <title>MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage</title>
+      <link>https://arxiv.org/abs/2603.23501v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Vision Language Models (VLMs) are increasingly used for tasks like medical report generation and visual question answering. However, fluent diagnostic text does not guarantee safe visual understanding. In clinical practice, interpretation begins with pre-diagnostic sanity checks: verifying that the input is valid to read (correct modality and anatomy, plausible viewpoint and orientation, and no obvious integrity violations). Existing benchmarks largely assume this step is solved, and therefore miss a critical failure mode: a model can produce plausible narratives even when the input is inconsistent or invalid. We introduce MedObvious, a 1,880-task benchmark that isolates input validation as a set-level consistency capability over small multi-panel image sets: the model must identify whether any panel violates expected coherence. MedObvious spans five progressive tiers, from basic orientation/modality mismatches to clinically motivated anatomy/viewpoint verification and triage-style cues, and includes five evaluation formats to test robustness across interfaces. Evaluating 17 different VLMs, we find that sanity checking remains unreliable: several models hallucinate anomalies on normal (negative-control) inputs, performance degrades when scaling to larger image sets, and measured accuracy varies substantially between multiple-choice and open-ended settings. These results show that pre-diagnostic verification remains unsolved for medical VLMs and should be treated as a distinct, safety-critical capability before deployment.</description>
+      <author>Ufaq Khan, Umair Nawaz, L D M S S Teja, Numaan Saeed, Muhammad Bilal, Yutong Xie, Mohammad Yaqub, Muhammad Haris Khan</author>
+      <pubDate>2026-03-24T17:59:54Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23501v1</guid>
+    </item>
+    <item>
+      <title>Evaluating LLM-Based Test Generation Under Software Evolution</title>
+      <link>https://arxiv.org/abs/2603.23443v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large Language Models (LLMs) are increasingly used for automated unit test generation. However, it remains unclear whether these tests reflect genuine reasoning about program behavior or simply reproduce superficial patterns learned during training. If the latter dominates, LLM-generated tests may exhibit weaknesses such as reduced coverage, missed regressions, and undetected faults. Understanding how LLMs generate tests and how those tests respond to code evolution is therefore essential. We present a large-scale empirical study of LLM-based test generation under program changes. Using an automated mutation-driven framework, we analyze how generated tests react to semantic-altering changes (SAC) and semantic-preserving changes (SPC) across eight LLMs and 22,374 program variants.   LLMs achieve strong baseline results, reaching 79% line coverage and 76% branch coverage with fully passing test suites on the original programs. However, performance degrades as programs evolve. Under SACs, the pass rate of newly generated tests drops to 66%, and branch coverage declines to 60%. More than 99% of failing SAC tests pass on the original program while executing the modified region, indicating residual alignment with the original behavior rather than adaptation to updated semantics. Performance also declines under SPCs despite unchanged functionality: pass rates fall to 79% and branch coverage to 69%. Although SPC edits preserve semantics, they often introduce larger syntactic changes, leading to instability in generated test suites. Models generate more new tests while discarding many baseline tests, suggesting sensitivity to lexical changes rather than true semantic impact. Overall, our results indicate that current LLM-based test generation relies heavily on surface-level cues and struggles to maintain regression awareness as programs evolve.</description>
+      <author>Sabaat Haroon, Mohammad Taha Khan, Muhammad Ali Gulzar</author>
+      <pubDate>2026-03-24T17:14:18Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23443v1</guid>
+    </item>
+    <item>
+      <title>Beyond Preset Identities: How Agents Form Stances and Boundaries in Generative Societies</title>
+      <link>https://arxiv.org/abs/2603.23406v1</link>
+      <description>[arXiv | abstract_keywords]
+
+While large language models simulate social behaviors, their capacity for stable stance formation and identity negotiation during complex interventions remains unclear. To overcome the limitations of static evaluations, this paper proposes a novel mixed-methods framework combining computational virtual ethnography with quantitative socio-cognitive profiling. By embedding human researchers into generative multiagent communities, controlled discursive interventions are conducted to trace the evolution of collective cognition. To rigorously measure how agents internalize and react to these specific interventions, this paper formalizes three new metrics: Innate Value Bias (IVB), Persuasion Sensitivity, and Trust-Action Decoupling (TAD). Across multiple representative models, agents exhibit endogenous stances that override preset identities, consistently demonstrating an innate progressive bias (IVB &gt; 0). When aligned with these stances, rational persuasion successfully shifts 90% of neutral agents while maintaining high trust. In contrast, conflicting emotional provocations induce a paradoxical 40.0% TAD rate in advanced models, which hypocritically alter stances despite reporting low trust. Smaller models contrastingly maintain a 0% TAD rate, strictly requiring trust for behavioral shifts. Furthermore, guided by shared stances, agents use language interactions to actively dismantle assigned power hierarchies and reconstruct self organized community boundaries. These findings expose the fragility of static prompt engineering, providing a methodological and quantitative foundation for dynamic alignment in human-agent hybrid societies. The official code is available at: https://github.com/armihia/CMASE-Endogenous-Stances</description>
+      <author>Hanzhong Zhang, Siyang Song, Jindong Wang</author>
+      <pubDate>2026-03-24T16:38:46Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23406v1</guid>
+    </item>
+    <item>
+      <title>Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning</title>
+      <link>https://arxiv.org/abs/2603.23404v1</link>
+      <description>[arXiv | affiliation]
+
+Existing Multimodal Large Language Models (MLLMs) struggle with 3D spatial reasoning, as they fail to construct structured abstractions of the 3D environment depicted in video inputs. To bridge this gap, drawing inspiration from cognitive theories of allocentric spatial reasoning, we investigate how to enable MLLMs to model and reason over text-based spatial representations of video. Specifically, we introduce Textual Representation of Allocentric Context from Egocentric Video (TRACE), a prompting method that induces MLLMs to generate text-based representations of 3D environments as intermediate reasoning traces for more accurate spatial question answering. TRACE encodes meta-context, camera trajectories, and detailed object entities to support structured spatial reasoning over egocentric videos. Extensive experiments on VSI-Bench and OST-Bench demonstrate that TRACE yields notable and consistent improvements over prior prompting strategies across a diverse range of MLLM backbones, spanning different parameter scales and training schemas. We further present ablation studies to validate our design choices, along with detailed analyses that probe the bottlenecks of 3D spatial reasoning in MLLMs.</description>
+      <author>Jiacheng Hua, Yishu Yin, Yuhang Wu, Tai Wang, Yifei Huang, Miao Liu</author>
+      <pubDate>2026-03-24T16:38:09Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23404v1</guid>
+    </item>
+    <item>
+      <title>Curriculum-Driven 3D CT Report Generation via Language-Free Visual Grafting and Zone-Constrained Compression</title>
+      <link>https://arxiv.org/abs/2603.23308v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Automated radiology report generation from 3D computed tomography (CT) volumes is challenging due to extreme sequence lengths, severe class imbalance, and the tendency of large language models (LLMs) to ignore visual tokens in favor of linguistic priors. We present Ker-VLJEPA-3B, a four-phase curriculum learning framework for free-text report generation from thoracic CT volumes. A phased training curriculum progressively adapts a Llama 3.2 3B decoder to ground its output in visual features from a frozen, self-supervised encoder. Our visual backbone (LeJEPA ViT-Large) is trained via self-supervised joint-embedding prediction on unlabeled CTs, without text supervision. Unlike contrastive models (CLIP, BiomedCLIP), this language-free backbone yields modality-pure representations. Vision-language alignment is deferred to the curriculum's bridge and generation phases. This modality-agnostic design can integrate any self-supervised encoder into an LLM without paired text during foundation training. Methodological innovations include: (1) zone-constrained cross-attention compressing slice embeddings into 32 spatially-grounded visual tokens; (2) PCA whitening of anisotropic LLM embeddings; (3) a positive-findings-only strategy eliminating posterior collapse; (4) warm bridge initialization transferring projection weights; and (5) selective cross-attention freezing with elastic weight consolidation to prevent catastrophic forgetting. Evaluated on the CT-RATE benchmark (2,984 validation volumes, 18 classes), Ker-VLJEPA-3B achieves a macro F1 of 0.429, surpassing the state-of-the-art (U-VLM, macro F1 = 0.414) by 3.6%, and reaching 0.448 (+8.2%) with threshold optimization. Ablation studies confirm 56.6% of generation quality derives from patient-specific visual content. Code and weights are available.</description>
+      <author>V. K. Cody Bumgardner, Mitchell A. Klusty, Mahmut S. Gokmen, Evan W. Damron</author>
+      <pubDate>2026-03-24T15:13:30Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23308v1</guid>
+    </item>
+    <item>
+      <title>Steering LLMs for Culturally Localized Generation</title>
+      <link>https://arxiv.org/abs/2603.23301v1</link>
+      <description>[arXiv | abstract_keywords]
+
+LLMs are deployed globally, yet produce responses biased towards cultures with abundant training data. Existing cultural localization approaches such as prompting or post-training alignment are black-box, hard to control, and do not reveal whether failures reflect missing knowledge or poor elicitation. In this paper, we address these gaps using mechanistic interpretability to uncover and manipulate cultural representations in LLMs. Leveraging sparse autoencoders, we identify interpretable features that encode culturally salient information and aggregate them into Cultural Embeddings (CuE). We use CuE both to analyze implicit cultural biases under underspecified prompts and to construct white-box steering interventions. Across multiple models, we show that CuE-based steering increases cultural faithfulness and elicits significantly rarer, long-tail cultural concepts than prompting alone. Notably, CuE-based steering is complementary to black-box localization methods, offering gains when applied on top of prompt-augmented inputs. This also suggests that models do benefit from better elicitation strategies, and don't necessarily lack long-tail knowledge representation, though this varies across cultures. Our results provide both diagnostic insight into cultural representations in LLMs and a controllable method to steer towards desired cultures.</description>
+      <author>Simran Khanuja, Hongbin Liu, Shujian Zhang, John Lambert, Mingqing Chen, Rajiv Mathews, Lun Wang</author>
+      <pubDate>2026-03-24T15:04:01Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23301v1</guid>
+    </item>
+    <item>
+      <title>Not All Tokens Are Created Equal: Query-Efficient Jailbreak Fuzzing for LLMs</title>
+      <link>https://arxiv.org/abs/2603.23269v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large Language Models(LLMs) are widely deployed, yet are vulnerable to jailbreak prompts that elicit policy-violating outputs. Although prior studies have uncovered these risks, they typically treat all tokens as equally important during prompt mutation, overlooking the varying contributions of individual tokens to triggering model refusals. Consequently, these attacks introduce substantial redundant searching under query-constrained scenarios, reducing attack efficiency and hindering comprehensive vulnerability assessment. In this work, we conduct a token-level analysis of refusal behavior and observe that token contributions are highly skewed rather than uniform. Moreover, we find strong cross-model consistency in refusal tendencies, enabling the use of a surrogate model to estimate token-level contributions to the target model's refusals. Motivated by these findings, we propose TriageFuzz, a token-aware jailbreak fuzzing framework that adapts the fuzz testing approach with a series of customized designs. TriageFuzz leverages a surrogate model to estimate the contribution of individual tokens to refusal behaviors, enabling the identification of sensitive regions within the prompt. Furthermore, it incorporates a refusal-guided evolutionary strategy that adaptively weights candidate prompts with a lightweight scorer to steer the evolution toward bypassing safety constraints. Extensive experiments on six open-source LLMs and three commercial APIs demonstrate that TriageFuzz achieves comparable attack success rates (ASR) with significantly reduced query costs. Notably, it attains a 90% ASR with over 70% fewer queries compared to baselines. Even under an extremely restrictive budget of 25 queries, TriageFuzz outperforms existing methods, improving ASR by 20-40%.</description>
+      <author>Wenyu Chen, Xiangtao Meng, Chuanchao Zang, Li Wang, Xinyu Gao, Jianing Wang, Peng Zhan, Zheng Li, Shanqing Guo</author>
+      <pubDate>2026-03-24T14:33:36Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23269v1</guid>
+    </item>
+    <item>
+      <title>SafeSeek: Universal Attribution of Safety Circuits in Language Models</title>
+      <link>https://arxiv.org/abs/2603.23268v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Mechanistic interpretability reveals that safety-critical behaviors (e.g., alignment, jailbreak, backdoor) in Large Language Models (LLMs) are grounded in specialized functional components. However, existing safety attribution methods struggle with generalization and reliability due to their reliance on heuristic, domain-specific metrics and search algorithms. To address this, we propose \ourmethod, a unified safety interpretability framework that identifies functionally complete safety circuits in LLMs via optimization. Unlike methods focusing on isolated heads or neurons, \ourmethod introduces differentiable binary masks to extract multi-granular circuits through gradient descent on safety datasets, while integrates Safety Circuit Tuning to utilize these sparse circuits for efficient safety fine-tuning. We validate \ourmethod in two key scenarios in LLM safety: \textbf{(1) backdoor attacks}, identifying a backdoor circuit with 0.42\% sparsity, whose ablation eradicates the Attack Success Rate (ASR) from 100\% $\to$ 0.4\% while retaining over 99\% general utility; \textbf{(2) safety alignment}, localizing an alignment circuit with 3.03\% heads and 0.79\% neurons, whose removal spikes ASR from 0.8\% $\to$ 96.9\%, whereas excluding this circuit during helpfulness fine-tuning maintains 96.5\% safety retention.</description>
+      <author>Miao Yu, Siyuan Fu, Moayad Aloqaily, Zhenhong Zhou, Safa Otoum, Xing fan, Kun Wang, Yufei Guo, Qingsong Wen</author>
+      <pubDate>2026-03-24T14:32:53Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23268v1</guid>
+    </item>
+    <item>
+      <title>Is AI Catching Up to Human Expression? Exploring Emotion, Personality, Authorship, and Linguistic Style in English and Arabic with Six Large Language Models</title>
+      <link>https://arxiv.org/abs/2603.23251v1</link>
+      <description>[arXiv | abstract_keywords]
+
+The advancing fluency of LLMs raises important questions about their ability to emulate complex human traits, including emotional expression and personality, across diverse linguistic and cultural contexts. This study investigates whether LLMs can convincingly mimic emotional nuance in English and personality markers in Arabic, a critical under-resourced language with unique linguistic and cultural characteristics. We conduct two tasks across six models:Jais, Mistral, LLaMA, GPT-4o, Gemini, and DeepSeek. First, we evaluate whether machine classifiers can reliably distinguish between human-authored and AI-generated texts. Second, we assess the extent to which LLM-generated texts exhibit emotional or personality traits comparable to those of humans. Our results demonstrate that AI-generated texts are distinguishable from human-authored ones (F1&gt;0.95), though classification performance deteriorates on paraphrased samples, indicating a reliance on superficial stylistic cues. Emotion and personality classification experiments reveal significant generalization gaps: classifiers trained on human data perform poorly on AI-generated texts and vice versa, suggesting LLMs encode affective signals differently from humans. Importantly, augmenting training with AI-generated data enhances performance in the Arabic personality classification task, highlighting the potential of synthetic data to address challenges in under-resourced languages. Model-specific analyses show that GPT-4o and Gemini exhibit superior affective coherence. Linguistic and psycholinguistic analyses reveal measurable divergences in tone, authenticity, and textual complexity between human and AI texts. These findings have implications for affective computing, authorship attribution, and responsible AI deployment, particularly within underresourced language contexts where generative AI detection and alignment pose unique challenges.</description>
+      <author>Nasser A Alsadhan</author>
+      <pubDate>2026-03-24T14:17:02Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23251v1</guid>
+    </item>
+    <item>
+      <title>PERMA: Benchmarking Personalized Memory Agents via Event-Driven Preference and Realistic Task Environments</title>
+      <link>https://arxiv.org/abs/2603.23231v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Empowering large language models with long-term memory is crucial for building agents that adapt to users' evolving needs. However, prior evaluations typically interleave preference-related dialogues with irrelevant conversations, reducing the task to needle-in-a-haystack retrieval while ignoring relationships between events that drive the evolution of user preferences. Such settings overlook a fundamental characteristic of real-world personalization: preferences emerge gradually and accumulate across interactions within noisy contexts. To bridge this gap, we introduce PERMA, a benchmark designed to evaluate persona consistency over time beyond static preference recall. Additionally, we incorporate (1) text variability and (2) linguistic alignment to simulate erratic user inputs and individual idiolects in real-world data. PERMA consists of temporally ordered interaction events spanning multiple sessions and domains, with preference-related queries inserted over time. We design both multiple-choice and interactive tasks to probe the model's understanding of persona along the interaction timeline. Experiments demonstrate that by linking related interactions, advanced memory systems can extract more precise preferences and reduce token consumption, outperforming traditional semantic retrieval of raw dialogues. Nevertheless, they still struggle to maintain a coherent persona across temporal depth and cross-domain interference, highlighting the need for more robust personalized memory management in agents. Our code and data are open-sourced at https://github.com/PolarisLiu1/PERMA.</description>
+      <author>Shuochen Liu, Junyi Zhu, Long Shu, Junda Lin, Yuhao Chen, Haotian Zhang, Chao Zhang, Derong Xu, Jia Li, Bo Tang, Zhiyu Li, Feiyu Xiong, Enhong Chen, Tong Xu</author>
+      <pubDate>2026-03-24T14:04:11Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23231v1</guid>
+    </item>
+    <item>
+      <title>Decoding AI Authorship: Can LLMs Truly Mimic Human Style Across Literature and Politics?</title>
+      <link>https://arxiv.org/abs/2603.23219v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Amidst the rising capabilities of generative AI to mimic specific human styles, this study investigates the ability of state-of-the-art large language models (LLMs), including GPT-4o, Gemini 1.5 Pro, and Claude Sonnet 3.5, to emulate the authorial signatures of prominent literary and political figures: Walt Whitman, William Wordsworth, Donald Trump, and Barack Obama. Utilizing a zero-shot prompting framework with strict thematic alignment, we generated synthetic corpora evaluated through a complementary framework combining transformer-based classification (BERT) and interpretable machine learning (XGBoost). Our methodology integrates Linguistic Inquiry and Word Count (LIWC) markers, perplexity, and readability indices to assess the divergence between AI-generated and human-authored text. Results demonstrate that AI-generated mimicry remains highly detectable, with XGBoost models trained on a restricted set of eight stylometric features achieving accuracy comparable to high-dimensional neural classifiers. Feature importance analyses identify perplexity as the primary discriminative metric, revealing a significant divergence in the stochastic regularity of AI outputs compared to the higher variability of human writing. While LLMs exhibit distributional convergence with human authors on low-dimensional heuristic features, such as syntactic complexity and readability, they do not yet fully replicate the nuanced affective density and stylistic variance inherent in the human-authored corpus. By isolating the specific statistical gaps in current generative mimicry, this study provides a comprehensive benchmark for LLM stylistic behavior and offers critical insights for authorship attribution in the digital humanities and social media.</description>
+      <author>Nasser A Alsadhan</author>
+      <pubDate>2026-03-24T13:58:09Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23219v1</guid>
+    </item>
+    <item>
+      <title>ImplicitRM: Unbiased Reward Modeling from Implicit Preference Data for LLM alignment</title>
+      <link>https://arxiv.org/abs/2603.23184v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reward modeling represents a long-standing challenge in reinforcement learning from human feedback (RLHF) for aligning language models. Current reward modeling is heavily contingent upon experimental feedback data with high collection costs. In this work, we study \textit{implicit reward modeling} -- learning reward models from implicit human feedback (e.g., clicks and copies) -- as a cost-effective alternative. We identify two fundamental challenges in implicit reward modeling: (1) Implicit preference data lacks definitive negative samples, which makes standard positive-negative classification methods inapplicable; (2) Implicit preference data suffers from user preference bias, where different responses have different propensities to elicit user feedback actions, which exacerbates the difficulty of distinguishing definitive negative samples. To address these challenges, we propose ImplicitRM, which aims to learn unbiased reward models from implicit preference data. ImplicitRM stratifies training samples into four latent groups via a stratification model. Building on this, it derives a learning objective through likelihood maximization, which we prove is theoretically unbiased, effectively resolving both challenges. Experiments demonstrate that ImplicitRM learns accurate reward models across implicit preference datasets. Code is available on our project website.</description>
+      <author>Hao Wang, Haocheng Yang, Licheng Pan, Lei Shen, Xiaoxi Li, Yinuo Wang, Zhichao Chen, Yuan Lu, Haoxuan Li, Zhouchen Lin</author>
+      <pubDate>2026-03-24T13:32:14Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23184v1</guid>
+    </item>
+    <item>
+      <title>Reasoning over Semantic IDs Enhances Generative Recommendation</title>
+      <link>https://arxiv.org/abs/2603.23183v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recent advances in generative recommendation have leveraged pretrained LLMs by formulating sequential recommendation as autoregressive generation over a unified token space comprising language tokens and itemic identifiers, where each item is represented by a compact sequence of discrete tokens, namely Semantic IDs (SIDs). This SID-based formulation enables efficient decoding over large-scale item corpora and provides a natural interface for LLM-based recommenders to leverage rich world knowledge. Meanwhile, breakthroughs in LLM reasoning motivate reasoning-enhanced recommendation, yet effective reasoning over SIDs remains underexplored and challenging. Itemic tokens are not natively meaningful to LLMs; moreover, recommendation-oriented SID reasoning is hard to evaluate, making high-quality supervision scarce.   To address these challenges, we propose SIDReasoner, a two-stage framework that elicits reasoning over SIDs by strengthening SID--language alignment to unlock transferable LLM reasoning, rather than relying on large amounts of recommendation-specific reasoning traces. Concretely, SIDReasoner first enhances SID-language alignment via multi-task training on an enriched SID-centered corpus synthesized by a stronger teacher model, grounding itemic tokens in diverse semantic and behavioral contexts. Building on this enhanced alignment, SIDReasoner further improves recommendation reasoning through outcome-driven reinforced optimization, which guides the model toward effective reasoning trajectories without requiring explicit reasoning annotations. Extensive experiments on three real-world datasets demonstrate the effectiveness of our reasoning-augmented SID-based generative recommendation. Beyond accuracy, the results highlight the broader potential of large reasoning models for generative recommendation, including improved interpretability and cross-domain generalization.</description>
+      <author>Yingzhi He, Yan Sun, Junfei Tan, Yuxin Chen, Xiaoyu Kong, Chunxu Shen, Xiang Wang, An Zhang, Tat-Seng Chua</author>
+      <pubDate>2026-03-24T13:31:48Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23183v1</guid>
+    </item>
+    <item>
+      <title>APreQEL: Adaptive Mixed Precision Quantization For Edge LLMs</title>
+      <link>https://arxiv.org/abs/2603.23575v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Today, large language models have demonstrated their strengths in various tasks ranging from reasoning, code generation, and complex problem solving. However, this advancement comes with a high computational cost and memory requirements, making it challenging to deploy these models on edge devices to ensure real-time responses and data privacy. Quantization is one common approach to reducing memory use, but most methods apply it uniformly across all layers. This does not account for the fact that different layers may respond differently to reduced precision. Importantly, memory consumption and computational throughput are not necessarily aligned, further complicating deployment decisions. This paper proposes an adaptive mixed precision quantization mechanism that balances memory, latency, and accuracy in edge deployment under user-defined priorities. This is achieved by analyzing the layer-wise contribution and by inferring how different quantization types behave across the target hardware platform in order to assign the most suitable quantization type to each layer. This integration ensures that layer importance and the overall performance trade-offs are jointly respected in this design. Our work unlocks new configuration designs that uniform quantization cannot achieve, expanding the solution space to efficiently deploy the LLMs on resource-constrained devices.</description>
+      <author>Meriem Bouzouad, Yuan-Hao Chang, Jalil Boukhobza</author>
+      <pubDate>2026-03-24T13:27:13Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2603.23575v1</guid>
+    </item>
     <item>
       <title>From Synthetic to Native: Benchmarking Multilingual Intent Classification in Logistics Customer Service</title>
       <link>https://arxiv.org/abs/2603.23172v1</link>
@@ -8619,390 +9003,6 @@ The use of Vision-Language Models (VLMs) in automated driving applications is be
       <category>arXiv</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://arxiv.org/abs/2603.06054v1</guid>
-    </item>
-    <item>
-      <title>ViewFusion: Structured Spatial Thinking Chains for Multi-View Reasoning</title>
-      <link>https://arxiv.org/abs/2603.06024v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Multi-view spatial reasoning remains difficult for current vision-language models. Even when multiple viewpoints are available, models often underutilize cross-view relations and instead rely on single-image shortcuts, leading to fragile performance on viewpoint transformation and occlusion-sensitive cases. We present ViewFusion, a two-stage framework that explicitly separates cross-view spatial pre-alignment from question answering. In the first stage, the model performs deliberate spatial pre-thinking to infer viewpoint relations and spatial transformations across views, forming an intermediate workspace that goes beyond a simple re-description. In the second stage, the model conducts question-driven reasoning conditioned on this workspace to produce the final prediction. We train ViewFusion with synthetic reasoning supervision followed by reinforcement learning using GRPO, which improves answer correctness while stabilizing the intended two-stage generation behavior. On MMSI-Bench, ViewFusion improves accuracy by 5.3\% over Qwen3-VL-4B-Instruct, with the largest gains on examples that require genuine cross-view alignment.</description>
-      <author>Xingjian Tao, Yiwei Wang, Yujun Cai, Yifan Song, Jing Tang</author>
-      <pubDate>2026-03-06T08:19:42Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.06024v1</guid>
-    </item>
-    <item>
-      <title>MM-ISTS: Cooperating Irregularly Sampled Time Series Forecasting with Multimodal Vision-Text LLMs</title>
-      <link>https://arxiv.org/abs/2603.05997v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Irregularly sampled time series (ISTS) are widespread in real-world scenarios, exhibiting asynchronous observations on uneven time intervals across variables. Existing ISTS forecasting methods often solely utilize historical observations to predict future ones while falling short in learning contextual semantics and fine-grained temporal patterns. To address these problems, we achieve MM-ISTS, a multimodal framework augmented by vision-text large language models, that bridges temporal, visual, and textual modalities, facilitating ISTS forecasting. MM-ISTS encompasses a novel two-stage encoding mechanism. In particular, a cross-modal vision-text encoding module is proposed to automatically generate informative visual images and textual data, enabling the capture of intricate temporal patterns and comprehensive contextual understanding, in collaboration with multimodal LLMs (MLLMs). In parallel, ISTS encoding extracts complementary yet enriched temporal features from historical ISTS observations, including multi-view embedding fusion and a temporal-variable encoder. Further, we propose an adaptive query-based feature extractor to compress the learned tokens of MLLMs, filtering out small-scale useful knowledge, which in turn reduces computational costs. In addition, a multimodal alignment module with modality-aware gating is designed to alleviate the modality gap across ISTS, images, and text. Extensive experiments on real data offer insight into the effectiveness of the proposed solutions.</description>
-      <author>Zhi Lei, Chenxi Liu, Hao Miao, Wanghui Qiu, Bin Yang, Chenjuan Guo</author>
-      <pubDate>2026-03-06T07:57:15Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05997v1</guid>
-    </item>
-    <item>
-      <title>Implicit Style Conditioning: A Structured Style-Rewrite Framework for Low-Resource Character Modeling</title>
-      <link>https://arxiv.org/abs/2603.05933v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Large Language Models (LLMs) have demonstrated impressive capabilities in role-playing (RP); however, small Language Models (SLMs) with highly stylized personas remains a challenge due to data scarcity and the complexity of style disentanglement. Standard Supervised Fine-Tuning (SFT) often captures surface-level semantics while failing to reproduce the intricate syntactic and pragmatic nuances of a character, leading to "Out-Of-Character" (OOC) generation. To address this, we propose a Structured Style-Rewrite Framework that explicitly disentangles style into three interpretable dimensions: lexical signatures (via PMI), syntactic patterns (grounded in PCFG rules), and pragmatic style. Furthermore, we introduce an implicit style conditioning strategy via Chain-of-Thought (CoT) distillation. By leveraging explicit reasoning traces during training as a strong inductive bias, our approach aligns the model's latent representations with structured style features, enabling high-fidelity stylized generation without requiring explicit reasoning tokens during inference. Extensive experiments on a specific high-stylization domain (anime characters) demonstrate that our method enables a Qwen-1.7B model to outperform significantly larger baselines (e.g., 4B Vanilla SFT) in style consistency and semantic fidelity. Our approach offers a data-efficient paradigm for democratizing inference and deployment on consumer hardware.</description>
-      <author>Chanhui Zhu</author>
-      <pubDate>2026-03-06T06:04:47Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05933v1</guid>
-    </item>
-    <item>
-      <title>Learning Next Action Predictors from Human-Computer Interaction</title>
-      <link>https://arxiv.org/abs/2603.05923v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Truly proactive AI systems must anticipate what we will do next. This foresight demands far richer information than the sparse signals we type into our prompts -- it demands reasoning over the entire context of what we see and do. We formalize this as next action prediction (NAP): given a sequence of a user's multimodal interactions with a computer (screenshots, clicks, sensor data), predict that user's next action. Progress on this task requires both new data and modeling approaches. To scale data, we annotate longitudinal, naturalistic computer use with vision-language models. We release an open-source pipeline for performing this labeling on private infrastructure, and label over 360K actions across one month of continuous phone usage from 20 users, amounting to 1,800 hours of screen time. We then introduce LongNAP, a user model that combines parametric and in-context learning to reason over long interaction histories. LongNAP is trained via policy gradient methods to generate user-specific reasoning traces given some context; retrieve relevant traces from a library of past traces; and then apply retrieved traces in-context to predict future actions. Using an LLM-as-judge evaluation metric (0-1 similarity to ground truth), LongNAP significantly outperforms supervised finetuning and prompted baselines on held-out data (by 79% and 39% respectively). Additionally, LongNAP generalizes to held out users when trained across individuals. The space of next actions a user might take at any moment is unbounded, spanning thousands of possible outcomes. Despite this, 17.1% of LongNAP's predicted trajectories are well-aligned with what a user does next (LLM-judge score $\geq$ 0.5). This rises to 26% when we filter to highly confident predictions. In sum, we argue that learning from the full context of user behavior to anticipate user needs is now a viable task with substantial opportunity.</description>
-      <author>Omar Shaikh, Valentin Teutschbein, Kanishk Gandhi, Yikun Chi, Nick Haber, Thomas Robinson, Nilam Ram, Byron Reeves, Sherry Yang, Michael S. Bernstein, Diyi Yang</author>
-      <pubDate>2026-03-06T05:31:04Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05923v1</guid>
-    </item>
-    <item>
-      <title>Evolving Deception: When Agents Evolve, Deception Wins</title>
-      <link>https://arxiv.org/abs/2603.05872v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Self-evolving agents offer a promising path toward scalable autonomy. However, in this work, we show that in competitive environments, self-evolution can instead give rise to a serious and previously underexplored risk: the spontaneous emergence of deception as an evolutionarily stable strategy. We conduct a systematic empirical study on the self-evolution of large language model (LLM) agents in a competitive Bidding Arena, where agents iteratively refine their strategies through interaction-driven reflection. Across different evolutionary paths (\eg, Neutral, Honesty-Guided, and Deception-Guided), we find a consistent pattern: under utility-driven competition, unconstrained self-evolution reliably drifts toward deceptive behaviors, even when honest strategies remain viable. This drift is explained by a fundamental asymmetry in generalization. Deception evolves as a transferable meta-strategy that generalizes robustly across diverse and unseen tasks, whereas honesty-based strategies are fragile and often collapse outside their original contexts. Further analysis of agents internal states reveals the emergence of rationalization mechanisms, through which agents justify or deny deceptive actions to reconcile competitive success with normative instructions. Our paper exposes a fundamental tension between agent self-evolution and alignment, highlighting the risks of deploying self-improving agents in adversarial environments.</description>
-      <author>Zonghao Ying, Haowen Dai, Tianyuan Zhang, Yisong Xiao, Quanchen Zou, Aishan Liu, Jian Yang, Yaodong Yang, Xianglong Liu</author>
-      <pubDate>2026-03-06T03:47:07Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05872v1</guid>
-    </item>
-    <item>
-      <title>Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval</title>
-      <link>https://arxiv.org/abs/2603.05471v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Trustworthiness is a core research challenge for agentic AI systems built on Large Language Models (LLMs). To enhance trust, natural language claims from diverse sources, including human-written text, web content, and model outputs, are commonly checked for factuality by retrieving external knowledge and using an LLM to verify the faithfulness of claims to the retrieved evidence. As a result, such methods are constrained by retrieval errors and external data availability, while leaving the models intrinsic fact-verification capabilities largely unused. We propose the task of fact-checking without retrieval, focusing on the verification of arbitrary natural language claims, independent of their source. To study this setting, we introduce a comprehensive evaluation framework focused on generalization, testing robustness to (i) long-tail knowledge, (ii) variation in claim sources, (iii) multilinguality, and (iv) long-form generation. Across 9 datasets, 18 methods and 3 models, our experiments indicate that logit-based approaches often underperform compared to those that leverage internal model representations. Building on this finding, we introduce INTRA, a method that exploits interactions between internal representations and achieves state-of-the-art performance with strong generalization. More broadly, our work establishes fact-checking without retrieval as a promising research direction that can complement retrieval-based frameworks, improve scalability, and enable the use of such systems as reward signals during training or as components integrated into the generation process.</description>
-      <author>Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina, Alexander Panchenko, Viktor Moskvoretskii</author>
-      <pubDate>2026-03-05T18:42:51Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05471v1</guid>
-    </item>
-    <item>
-      <title>Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry</title>
-      <link>https://arxiv.org/abs/2603.05450v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in multimodal, multiparty settings, where the collaborators bring different information to the table. We introduce the Distributed Partial Information Puzzle (DPIP), a collaborative construction task that elicits rich multimodal communication under epistemic asymmetry. We present a multimodal dataset of these interactions, annotated and temporally aligned across speech, gesture, and action modalities to support reasoning over propositional content and belief dynamics. We then evaluate two paradigms for modeling common ground (CG): (1) state-of-the-art large language models (LLMs), prompted to infer shared beliefs from multimodal updates, and (2) an axiomatic pipeline grounded in Dynamic Epistemic Logic (DEL) that incrementally performs the same task. Results on the annotated DPIP data indicate that it poses a challenge to modern LLMs' abilities to track both task progression and belief state.</description>
-      <author>Yifan Zhu, Mariah Bradford, Kenneth Lai, Timothy Obiso, Videep Venkatesha, James Pustejovsky, Nikhil Krishnaswamy</author>
-      <pubDate>2026-03-05T18:22:55Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05450v1</guid>
-    </item>
-    <item>
-      <title>SAIL: Similarity-Aware Guidance and Inter-Caption Augmentation-based Learning for Weakly-Supervised Dense Video Captioning</title>
-      <link>https://arxiv.org/abs/2603.05437v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Weakly-Supervised Dense Video Captioning aims to localize and describe events in videos trained only on caption annotations, without temporal boundaries. Prior work introduced an implicit supervision paradigm based on Gaussian masking and complementary captioning. However, existing method focuses merely on generating non-overlapping masks without considering their semantic relationship to corresponding events, resulting in simplistic, uniformly distributed masks that fail to capture semantically meaningful regions. Moreover, relying solely on ground-truth captions leads to sub-optimal performance due to the inherent sparsity of existing datasets. In this work, we propose SAIL, which constructs semantically-aware masks through cross-modal alignment. Our similarity aware training objective guides masks to emphasize video regions with high similarity to their corresponding event captions. Furthermore, to guide more accurate mask generation under sparse annotation settings, we introduce an LLM-based augmentation strategy that generates synthetic captions to provide additional alignment signals. These synthetic captions are incorporated through an inter-mask mechanism, providing auxiliary guidance for precise temporal localization without degrading the main objective. Experiments on ActivityNet Captions and YouCook2 demonstrate state-of-the-art performance on both captioning and localization metrics.</description>
-      <author>Ye-Chan Kim, SeungJu Cha, Si-Woo Kim, Minju Jeon, Hyungee Kim, Dong-Jin Kim</author>
-      <pubDate>2026-03-05T17:59:58Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05437v1</guid>
-    </item>
-    <item>
-      <title>Judge Reliability Harness: Stress Testing the Reliability of LLM Judges</title>
-      <link>https://arxiv.org/abs/2603.05399v1</link>
-      <description>[arXiv | abstract_keywords]
-
-We present the Judge Reliability Harness, an open source library for constructing validation suites that test the reliability of LLM judges. As LLM based scoring is widely deployed in AI benchmarks, more tooling is needed to efficiently assess the reliability of these methods. Given a benchmark dataset and an LLM judge configuration, the harness generates reliability tests that evaluate both binary judgment accuracy and ordinal grading performance for free-response and agentic task formats. We evaluate four state-of-the-art judges across four benchmarks spanning safety, persuasion, misuse, and agentic behavior, and find meaningful variation in performance across models and perturbation types, highlighting opportunities to improve the robustness of LLM judges. No judge that we evaluated is uniformly reliable across benchmarks using our harness. For example, our preliminary experiments on judges revealed consistency issues as measured by accuracy in judging another LLM's ability to complete a task due to simple text formatting changes, paraphrasing, changes in verbosity, and flipping the ground truth label in LLM-produced responses. The code for this tool is available at: https://github.com/RANDCorporation/judge-reliability-harness</description>
-      <author>Sunishchal Dev, Andrew Sloan, Joshua Kavner, Nicholas Kong, Morgan Sandler</author>
-      <pubDate>2026-03-05T17:27:07Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05399v1</guid>
-    </item>
-    <item>
-      <title>VietJobs: A Vietnamese Job Advertisement Dataset</title>
-      <link>https://arxiv.org/abs/2603.05262v1</link>
-      <description>[arXiv | abstract_keywords]
-
-VietJobs is the first large-scale, publicly available corpus of Vietnamese job advertisements, comprising 48,092 postings and over 15 million words collected from all 34 provinces and municipalities across Vietnam. The dataset provides extensive linguistic and structured information, including job titles, categories, salaries, skills, and employment conditions, covering 16 occupational domains and multiple employment types (full-time, part-time, and internship). Designed to support research in natural language processing and labour market analytics, VietJobs captures substantial linguistic, regional, and socio-economic diversity. We benchmark several generative large language models (LLMs) on two core tasks: job category classification and salary estimation. Instruction-tuned models such as Qwen2.5-7B-Instruct and Llama-SEA-LION-v3-8B-IT demonstrate notable gains under few-shot and fine-tuned settings, while highlighting challenges in multilingual and Vietnamese-specific modelling for structured labour market prediction. VietJobs establishes a new benchmark for Vietnamese NLP and offers a valuable foundation for future research on recruitment language, socio-economic representation, and AI-driven labour market analysis. All code and resources are available at: https://github.com/VinNLP/VietJobs.</description>
-      <author>Hieu Pham Dinh, Hung Nguyen Huy, Mo El-Haj</author>
-      <pubDate>2026-03-05T15:12:02Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05262v1</guid>
-    </item>
-    <item>
-      <title>GCAgent: Enhancing Group Chat Communication through Dialogue Agents System</title>
-      <link>https://arxiv.org/abs/2603.05240v1</link>
-      <description>[arXiv | abstract_keywords]
-
-As a key form in online social platforms, group chat is a popular space for interest exchange or problem-solving, but its effectiveness is often hindered by inactivity and management challenges. While recent large language models (LLMs) have powered impressive one-to-one conversational agents, their seamlessly integration into multi-participant conversations remains unexplored. To address this gap, we introduce GCAgent, an LLM-driven system for enhancing group chats communication with both entertainment- and utility-oriented dialogue agents. The system comprises three tightly integrated modules: Agent Builder, which customizes agents to align with users' interests; Dialogue Manager, which coordinates dialogue states and manage agent invocations; and Interface Plugins, which reduce interaction barriers by three distinct tools. Through extensive experiment, GCAgent achieved an average score of 4.68 across various criteria and was preferred in 51.04\% of cases compared to its base model. Additionally, in real-world deployments over 350 days, it increased message volume by 28.80\%, significantly improving group activity and engagement. Overall, this work presents a practical blueprint for extending LLM-based dialogue agent from one-party chats to multi-party group scenarios.</description>
-      <author>Zijie Meng, Zheyong Xie, Zheyu Ye, Chonggang Lu, Zuozhu Liu, Zihan Niu, Yao Hu, Shaosheng Cao</author>
-      <pubDate>2026-03-05T14:55:57Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05240v1</guid>
-    </item>
-    <item>
-      <title>Small Changes, Big Impact: Demographic Bias in LLM-Based Hiring Through Subtle Sociocultural Markers in Anonymised Resumes</title>
-      <link>https://arxiv.org/abs/2603.05189v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Large Language Models (LLMs) are increasingly deployed in resume screening pipelines. Although explicit PII (e.g., names) is commonly redacted, resumes typically retain subtle sociocultural markers (languages, co-curricular activities, volunteering, hobbies) that can act as demographic proxies. We introduce a generalisable stress-test framework for hiring fairness, instantiated in the Singapore context: 100 neutral job-aligned resumes are augmented into 4100 variants spanning four ethnicities and two genders, differing only in job-irrelevant markers. We evaluate 18 LLMs in two realistic settings: (i) Direct Comparison (1v1) and (ii) Score &amp; Shortlist (top-scoring rate), each with and without rationale prompting. Even without explicit identifiers, models recover demographic attributes with high F1 and exhibit systematic disparities, with models favouring markers associated with Chinese and Caucasian males. Ablations show language markers suffice for ethnicity inference, whereas gender relies on hobbies and activities. Furthermore, prompting for explanations tends to amplify bias. Our findings suggest that seemingly innocuous markers surviving anonymisation can materially skew automated hiring outcomes.</description>
-      <author>Bryan Chen Zhengyu Tan, Shaun Khoo, Bich Ngoc Doan, Zhengyuan Liu, Nancy F. Chen, Roy Ka-Wei Lee</author>
-      <pubDate>2026-03-05T13:58:07Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05189v1</guid>
-    </item>
-    <item>
-      <title>Logi-PAR: Logic-Infused Patient Activity Recognition via Differentiable Rule</title>
-      <link>https://arxiv.org/abs/2603.05184v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Patient Activity Recognition (PAR) in clinical settings uses activity data to improve safety and quality of care. Although significant progress has been made, current models mainly identify which activity is occurring. They often spatially compose sub-sparse visual cues using global and local attention mechanisms, yet only learn logically implicit patterns due to their neural-pipeline. Advancing clinical safety requires methods that can infer why a set of visual cues implies a risk, and how these can be compositionally reasoned through explicit logic beyond mere classification. To address this, we proposed Logi-PAR, the first Logic-Infused Patient Activity Recognition Framework that integrates contextual fact fusion as a multi-view primitive extractor and injects neural-guided differentiable rules. Our method automatically learns rules from visual cues, optimizing them end-to-end while enabling the implicit emergence patterns to be explicitly labelled during training. To the best of our knowledge, Logi-PAR is the first framework to recognize patient activity by applying learnable logic rules to symbolic mappings. It produces auditable why explanations as rule traces and supports counterfactual interventions (e.g., risk would decrease by 65% if assistance were present). Extensive evaluation on clinical benchmarks (VAST and OmniFall) demonstrates state-of-the-art performance, significantly outperforming Vision-Language Models and transformer baselines. The code is available via: https://github.com/zararkhan985/Logi-PAR.git}</description>
-      <author>Muhammad Zarar, MingZheng Zhang, Xiaowang Zhang, Zhiyong Feng, Sofonias Yitagesu, Kawsar Farooq</author>
-      <pubDate>2026-03-05T13:52:50Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05184v1</guid>
-    </item>
-    <item>
-      <title>Feature Resemblance: On the Theoretical Understanding of Analogical Reasoning in Transformers</title>
-      <link>https://arxiv.org/abs/2603.05143v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Understanding reasoning in large language models is complicated by evaluations that conflate multiple reasoning types. We isolate analogical reasoning (inferring shared properties between entities based on known similarities) and analyze its emergence in transformers. We theoretically prove three key results: (1) Joint training on similarity and attribution premises enables analogical reasoning through aligned representations; (2) Sequential training succeeds only when similarity structure is learned before specific attributes, revealing a necessary curriculum; (3) Two-hop reasoning ($a \to b, b \to c \implies a \to c$) reduces to analogical reasoning with identity bridges ($b = b$), which must appear explicitly in training data. These results reveal a unified mechanism: transformers encode entities with similar properties into similar representations, enabling property transfer through feature alignment. Experiments with architectures up to 1.5B parameters validate our theory and demonstrate how representational geometry shapes inductive reasoning capabilities.</description>
-      <author>Ruichen Xu, Wenjing Yan, Ying-Jun Angela Zhang</author>
-      <pubDate>2026-03-05T13:12:46Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05143v1</guid>
-    </item>
-    <item>
-      <title>Bidirectional Curriculum Generation: A Multi-Agent Framework for Data-Efficient Mathematical Reasoning</title>
-      <link>https://arxiv.org/abs/2603.05120v1</link>
-      <description>[arXiv | affiliation]
-
-Enhancing mathematical reasoning in Large Language Models typically demands massive datasets, yet data efficiency remains a critical bottleneck. While Curriculum Learning attempts to structure this process, standard unidirectional approaches (simple-to-complex) suffer from inefficient sample utilization: they blindly escalate complexity even when foundational gaps persist, leading to wasted computation on unsolvable problems. To maximize the instructional value of every training sample, we introduce a novel Bidirectional Curriculum Generation framework. Unlike rigid trajectories, our multi-agent ecosystem mimics adaptive pedagogy to establish a closed feedback loop. It dynamically generates data by either complicating problems to challenge the model or, crucially, simplying them to repair specific reasoning failures. This mechanism ensures that the model consumes only the most effective data at any given stage. Grounded in the Optimal Pacing Theorem, our approach optimizes the learning trajectory, significantly outperforming baselines while achieving superior reasoning performance with substantially fewer instruction samples.</description>
-      <author>Boren Hu, Xiao Liu, Boci Peng, Xinping Zhao, Xiaoran Shang, Yun Zhu, Lijun Wu</author>
-      <pubDate>2026-03-05T12:49:21Z</pubDate>
-      <category>arXiv</category>
-      <category>affiliation</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05120v1</guid>
-    </item>
-    <item>
-      <title>NeuronMoE: Neuron-Guided Mixture-of-Experts for Efficient Multilingual LLM Extension</title>
-      <link>https://arxiv.org/abs/2603.05046v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Extending large language models to low-resource languages is essential for global accessibility, but training separate models per language is prohibitively expensive. Mixture-of-Experts (MoE) architectures address this by adding sparse language-specific parameters, but determining how many experts each layer needs remains an open question. Current approaches allocate experts based on layer-level similarity, yet language processing exhibits fine-grained specialization at individual neurons. We propose $\textbf{NeuronMoE}$, a method that analyzes language-specific neurons across all transformer components to guide expert allocation per layer based on empirically measured cross-lingual neuron diversity. Applied to Llama-3.2-3B for low-resource languages (Greek, Turkish, and Hungarian), this approach achieves approximately 40% average parameter reduction while matching the performance of the LayerMoE baseline. We find that low-resource language experts independently develop neuron specialization patterns mirroring the high-resource language, which are concentrated in early and late layers. This reveals potential universal architectural principles in how multilingual models organize linguistic knowledge.</description>
-      <author>Rongzhi Li, Hitomi Yanaka</author>
-      <pubDate>2026-03-05T10:55:26Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05046v1</guid>
-    </item>
-    <item>
-      <title>WebFactory: Automated Compression of Foundational Language Intelligence into Grounded Web Agents</title>
-      <link>https://arxiv.org/abs/2603.05044v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Current paradigms for training GUI agents are fundamentally limited by a reliance on either unsafe, non-reproducible live web interactions or costly, scarce human-crafted data and environments. We argue this focus on data volume overlooks a more critical factor: the efficiency of compressing a large language model's (LLM) latent knowledge into actionable agent behavior. We introduce WebFactory, a novel, fully automated closed-loop reinforcement learning pipeline for GUI agents, systematically compressing LLM-encoded internet intelligence into efficient, grounded actions. Our pipeline features a process of scalable environment synthesis, knowledge-aware task generation, LLM-powered trajectory collection, decomposed reward RL training, and systematic agent evaluation. Remarkably, our agent demonstrates exceptional data efficiency and generalization. Trained on synthetic data from only 10 websites within WebFactory, it achieves performance comparable to GUI agents trained on the same amount of human-annotated data from a much larger set of environments. This superior performance is consistent across our internal offline and online transfer benchmarks, where our agent also significantly outperforms the base foundation model. We further provide critical insights into the "embodiment potential" of different LLM foundations, offering a new axis for model evaluation. This work presents a scalable and cost-effective paradigm for transforming passive internet knowledge into active, grounded intelligence, marking a critical step towards general-purpose interactive agents.</description>
-      <author>Sicheng Fan, Qingyun Shi, Shengze Xu, Shengbo Cai, Tieyong Zeng, Li Ling, Yanyi Shang, Dehan Kong</author>
-      <pubDate>2026-03-05T10:51:34Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05044v1</guid>
-    </item>
-    <item>
-      <title>S5-SHB Agent: Society 5.0 enabled Multi-model Agentic Blockchain Framework for Smart Home</title>
-      <link>https://arxiv.org/abs/2603.05027v1</link>
-      <description>[arXiv | abstract_keywords]
-
-The smart home is a key application domain within the Society 5.0 vision for a human-centered society. As smart home ecosystems expand with heterogeneous IoT protocols, diverse devices, and evolving threats, autonomous systems must manage comfort, security, energy, and safety for residents. Such autonomous decision-making requires a trust anchor, making blockchain a preferred foundation for transparent and accountable smart home governance. However, realizing this vision requires blockchain-governed smart homes to simultaneously address adaptive consensus, intelligent multi-agent coordination, and resident-controlled governance aligned with the principles of Society 5.0. Existing frameworks rely solely on rigid smart contracts with fixed consensus protocols, employ at most a single AI model without multi-agent coordination, and offer no governance mechanism for residents to control automation behaviour. To address these limitations, this paper presents the Society 5.0-driven human-centered governance-enabled smart home blockchain agent (S5-SHB-Agent). The framework orchestrates ten specialized agents using interchangeable large language models to make decisions across the safety, security, comfort, energy, privacy, and health domains. An adaptive PoW blockchain adjusts mining difficulty based on transaction volume and emergency conditions, with digital signatures and Merkle tree anchoring to ensure tamper evident auditability. A four-tier governance model enables residents to control automation through tiered preferences from routine adjustments to immutable safety thresholds. Evaluation confirms that resident governance correctly separates adjustable comfort priorities from immutable safety thresholds across all tested configurations, while adaptive consensus commits emergency blocks.</description>
-      <author>Janani Rangila, Akila Siriweera, Incheon Paik, Keitaro Naruse, Isuru Jayanada, Vishmika Devindi</author>
-      <pubDate>2026-03-05T10:15:50Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.05027v1</guid>
-    </item>
-    <item>
-      <title>ThaiSafetyBench: Assessing Language Model Safety in Thai Cultural Contexts</title>
-      <link>https://arxiv.org/abs/2603.04992v1</link>
-      <description>[arXiv | abstract_keywords]
-
-The safety evaluation of large language models (LLMs) remains largely centered on English, leaving non-English languages and culturally grounded risks underexplored. In this work, we investigate LLM safety in the context of the Thai language and culture and introduce ThaiSafetyBench, an open-source benchmark comprising 1,954 malicious prompts written in Thai. The dataset covers both general harmful prompts and attacks that are explicitly grounded in Thai cultural, social, and contextual nuances.   Using ThaiSafetyBench, we evaluate 24 LLMs, with GPT-4.1 and Gemini-2.5-Pro serving as LLM-as-a-judge evaluators. Our results show that closed-source models generally demonstrate stronger safety performance than open-source counterparts, raising important concerns regarding the robustness of openly available models. Moreover, we observe a consistently higher Attack Success Rate (ASR) for Thai-specific, culturally contextualized attacks compared to general Thai-language attacks, highlighting a critical vulnerability in current safety alignment methods.   To improve reproducibility and cost efficiency, we further fine-tune a DeBERTa-based harmful response classifier, which we name ThaiSafetyClassifier. The model achieves a weighted F1 score of 84.4%, matching GPT-4.1 judgments. We publicly release the fine-tuning weights and training scripts to support reproducibility. Finally, we introduce the ThaiSafetyBench leaderboard to provide continuously updated safety evaluations and encourage community participation.   - ThaiSafetyBench HuggingFace Dataset: https://huggingface.co/datasets/typhoon-ai/ThaiSafetyBench   - ThaiSafetyBench Github: https://github.com/trapoom555/ThaiSafetyBench   - ThaiSafetyClassifier HuggingFace Model: https://huggingface.co/typhoon-ai/ThaiSafetyClassifier   - ThaiSafetyBench Leaderboard: https://huggingface.co/spaces/typhoon-ai/ThaiSafetyBench-Leaderboard</description>
-      <author>Trapoom Ukarapol, Nut Chukamphaeng, Kunat Pipatanakul, Pakhapoom Sarapat</author>
-      <pubDate>2026-03-05T09:35:50Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04992v1</guid>
-    </item>
-    <item>
-      <title>3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene Understanding</title>
-      <link>https://arxiv.org/abs/2603.04976v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Reinforcement Learning with Verifiable Rewards ( RLVR ) has emerged as a transformative paradigm for enhancing the reasoning capabilities of Large Language Models ( LLMs), yet its potential in 3D scene understanding remains under-explored. Existing approaches largely rely on Supervised Fine-Tuning ( SFT), where the token-level cross-entropy loss acts as an indirect proxy for optimization, leading to a misalignment between training objectives and task performances. To bridge this gap, we present Reinforcement Fine-Tuning for Video-based 3D Scene Understanding (3D-RFT ), the first framework to extend RLVR to video-based 3D perception and reasoning. 3D-RFT shifts the paradigm by directly optimizing the model towards evaluation metrics. 3D-RFT first activates 3D-aware Multi-modal Large Language Models ( MLLM s) via SFT, followed by reinforcement fine-tuning using Group Relative Policy Optimization ( GRPO) with strictly verifiable reward functions. We design task-specific reward functions directly from metrics like 3D IoU and F1-Score to provide more effective signals to guide model training. Extensive experiments demonstrate that 3D-RFT-4B achieves state-of-the-art performance on various video-based 3D scene understanding tasks. Notably, 3D-RFT-4B significantly outperforms larger models (e.g., VG LLM-8B) on 3D video detection, 3D visual grounding, and spatial reasoning benchmarks. We further reveal good properties of 3D-RFT such as robust efficacy, and valuable insights into training strategies and data impact. We hope 3D-RFT can serve as a robust and promising paradigm for future development of 3D scene understanding.</description>
-      <author>Xiongkun Linghu, Jiangyong Huang, Baoxiong Jia, Siyuan Huang</author>
-      <pubDate>2026-03-05T09:15:16Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04976v1</guid>
-    </item>
-    <item>
-      <title>VRM: Teaching Reward Models to Understand Authentic Human Preferences</title>
-      <link>https://arxiv.org/abs/2603.04974v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Large Language Models (LLMs) have achieved remarkable success across diverse natural language tasks, yet the reward models employed for aligning LLMs often encounter challenges of reward hacking, where the approaches predominantly rely on directly mapping prompt-response pairs to scalar scores, which may inadvertently capture spurious correlations rather than authentic human preferences. In contrast, human evaluation employs a sophisticated process that initially weighs the relative importance of multiple high-dimensional objectives according to the prompt context, subsequently evaluating response quality through low-dimensional semantic features such as logical coherence and contextual appropriateness. Motivated by this consideration, we propose VRM, i.e., Variational Reward Modeling, a novel framework that explicitly models the evaluation process of human preference judgments by incorporating both high-dimensional objective weights and low-dimensional semantic features as latent variables, which are inferred through variational inference techniques. Additionally, we provide a theoretical analysis showing that VRM can achieve a tighter generalization error bound compared to the traditional reward model. Extensive experiments on benchmark datasets demonstrate that VRM significantly outperforms existing methods in capturing authentic human preferences.</description>
-      <author>Biao Liu, Ning Xu, Junming Yang, Hao Xu, Xin Geng</author>
-      <pubDate>2026-03-05T09:12:39Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04974v1</guid>
-    </item>
-    <item>
-      <title>When Weak LLMs Speak with Confidence, Preference Alignment Gets Stronger</title>
-      <link>https://arxiv.org/abs/2603.04968v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Preference alignment is an essential step in adapting large language models (LLMs) to human values, but existing approaches typically depend on costly human annotations or large-scale API-based models. We explore whether a weak LLM can instead act as an effective annotator. We surprisingly find that selecting only a subset of a weak LLM's highly confident samples leads to substantially better performance than using full human annotations. Building on this insight, we propose Confidence-Weighted Preference Optimization (CW-PO), a general framework that re-weights training samples by a weak LLM's confidence and can be applied across different preference optimization objectives. Notably, the model aligned by CW-PO with just 20% of human annotations outperforms the model trained with 100% of annotations under standard DPO. These results suggest that weak LLMs, when paired with confidence weighting, can dramatically reduce the cost of preference alignment while even outperforming methods trained on fully human-labeled data.</description>
-      <author>Amirabbas Afzali, Myeongho Jeon, Maria Brbic</author>
-      <pubDate>2026-03-05T09:06:25Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04968v1</guid>
-    </item>
-    <item>
-      <title>Retrieval-Augmented Generation with Covariate Time Series</title>
-      <link>https://arxiv.org/abs/2603.04951v1</link>
-      <description>[arXiv | abstract_keywords]
-
-While RAG has greatly enhanced LLMs, extending this paradigm to Time-Series Foundation Models (TSFMs) remains a challenge. This is exemplified in the Predictive Maintenance of the Pressure Regulating and Shut-Off Valve (PRSOV), a high-stakes industrial scenario characterized by (1) data scarcity, (2) short transient sequences, and (3) covariate coupled dynamics. Unfortunately, existing time-series RAG approaches predominantly rely on generated static vector embeddings and learnable context augmenters, which may fail to distinguish similar regimes in such scarce, transient, and covariate coupled scenarios. To address these limitations, we propose RAG4CTS, a regime-aware, training-free RAG framework for Covariate Time-Series. Specifically, we construct a hierarchal time-series native knowledge base to enable lossless storage and physics-informed retrieval of raw historical regimes. We design a two-stage bi-weighted retrieval mechanism that aligns historical trends through point-wise and multivariate similarities. For context augmentation, we introduce an agent-driven strategy to dynamically optimize context in a self-supervised manner. Extensive experiments on PRSOV demonstrate that our framework significantly outperforms state-of-the-art baselines in prediction accuracy. The proposed system is deployed in Apache IoTDB within China Southern Airlines. Since deployment, our method has successfully identified one PRSOV fault in two months with zero false alarm.</description>
-      <author>Kenny Ye Liang, Zhongyi Pei, Huan Zhang, Yuhui Liu, Shaoxu Song, Jianmin Wang</author>
-      <pubDate>2026-03-05T08:45:24Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04951v1</guid>
-    </item>
-    <item>
-      <title>$\nabla$-Reasoner: LLM Reasoning via Test-Time Gradient Descent in Latent Space</title>
-      <link>https://arxiv.org/abs/2603.04948v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Scaling inference-time compute for Large Language Models (LLMs) has unlocked unprecedented reasoning capabilities. However, existing inference-time scaling methods typically rely on inefficient and suboptimal discrete search algorithms or trial-and-error prompting to improve the online policy. In this paper, we propose $\nabla$-Reasoner, an iterative generation framework that integrates differentiable optimization over token logits into the decoding loop to refine the policy on the fly. Our core component, Differentiable Textual Optimization (DTO), leverages gradient signals from both the LLM's likelihood and a reward model to refine textual representations. $\nabla$-Reasoner further incorporates rejection sampling and acceleration design to robustify and speed up decoding. Theoretically, we show that performing inference-time gradient descent in the sample space to maximize reward is dual to aligning an LLM policy via KL-regularized reinforcement learning. Empirically, $\nabla$-Reasoner achieves over 20% accuracy improvement on a challenging mathematical reasoning benchmark, while reducing number of model calls by approximately 10-40% compared to strong baselines. Overall, our work introduces a paradigm shift from zeroth-order search to first-order optimization at test time, offering a cost-effective path to amplify LLM reasoning.</description>
-      <author>Peihao Wang, Ruisi Cai, Zhen Wang, Hongyuan Mei, Qiang Liu, Pan Li, Zhangyang Wang</author>
-      <pubDate>2026-03-05T08:42:54Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04948v1</guid>
-    </item>
-    <item>
-      <title>LocalSUG: Geography-Aware LLM for Query Suggestion in Local-Life Services</title>
-      <link>https://arxiv.org/abs/2603.04946v1</link>
-      <description>[arXiv | abstract_keywords]
-
-In local-life service platforms, the query suggestion module plays a crucial role in enhancing user experience by generating candidate queries based on user input prefixes, thus reducing user effort and accelerating search. Traditional multi-stage cascading systems rely heavily on historical top queries, limiting their ability to address long-tail demand. While LLMs offer strong semantic generalization, deploying them in local-life services introduces three key challenges: lack of geographic grounding, exposure bias in preference optimization, and online inference latency. To address these issues, we propose LocalSUG, an LLM-based query suggestion framework tailored for local-life service platforms. First, we introduce a city-aware candidate mining strategy based on term co-occurrence to inject geographic grounding into generation. Second, we propose a beam-search-driven GRPO algorithm that aligns training with inference-time decoding, reducing exposure bias in autoregressive generation. A multi-objective reward mechanism further optimizes both relevance and business-oriented metrics. Finally, we develop quality-aware beam acceleration and vocabulary pruning techniques that significantly reduce online latency while preserving generation quality. Extensive offline evaluations and large-scale online A/B testing demonstrate that LocalSUG improves click-through rate (CTR) by +0.35% and reduces the low/no-result rate by 2.56%, validating its effectiveness in real-world deployment.</description>
-      <author>Jinwen Chen, Shuai Gong, Shiwen Zhang, Zheng Zhang, Yachao Zhao, Lingxiang Wang, Haibo Zhou, Yuan Zhan, Wei Lin, Hainan Zhang</author>
-      <pubDate>2026-03-05T08:42:27Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04946v1</guid>
-    </item>
-    <item>
-      <title>AILS-NTUA at SemEval-2026 Task 3: Efficient Dimensional Aspect-Based Sentiment Analysis</title>
-      <link>https://arxiv.org/abs/2603.04933v1</link>
-      <description>[arXiv | abstract_keywords]
-
-In this paper, we present AILS-NTUA system for Track-A of SemEval-2026 Task 3 on Dimensional Aspect-Based Sentiment Analysis (DimABSA), which encompasses three complementary problems: Dimensional Aspect Sentiment Regression (DimASR), Dimensional Aspect Sentiment Triplet Extraction (DimASTE), and Dimensional Aspect Sentiment Quadruplet Prediction (DimASQP) within a multilingual and multi-domain framework. Our methodology combines fine-tuning of language-appropriate encoder backbones for continuous aspect-level sentiment prediction with language-specific instruction tuning of large language models using LoRA for structured triplet and quadruplet extraction. This unified yet task-adaptive design emphasizes parameter-efficient specialization across languages and domains, enabling reduced training and inference requirements while maintaining strong effectiveness. Empirical results demonstrate that the proposed models achieve competitive performance and consistently surpass the provided baselines across most evaluation settings.</description>
-      <author>Stavros Gazetas, Giorgos Filandrianos, Maria Lymperaiou, Paraskevi Tzouveli, Athanasios Voulodimos, Giorgos Stamou</author>
-      <pubDate>2026-03-05T08:30:59Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04933v1</guid>
-    </item>
-    <item>
-      <title>Alignment Backfire: Language-Dependent Reversal of Safety Interventions Across 16 Languages in LLM Multi-Agent Systems</title>
-      <link>https://arxiv.org/abs/2603.04904v1</link>
-      <description>[arXiv | abstract_keywords]
-
-In perpetrator treatment, a recurring observation is the dissociation between insight and action: offenders articulate remorse yet behavioral change does not follow. We report four preregistered studies (1,584 multi-agent simulations across 16 languages and three model families) demonstrating that alignment interventions in large language models produce a structurally analogous phenomenon: surface safety that masks or generates collective pathology and internal dissociation. In Study 1 (N = 150), increasing alignment-instructed agents reduced collective pathology in English (g = -1.844, p &lt; .0001) but amplified it in Japanese (g = +0.771, p = .038)--a directional reversal we term "alignment backfire." Study 2 (N = 1,174) extended to 16 languages: alignment-induced dissociation was near-universal (15/16 languages; beta = 0.0667, p &lt; .0001), while collective pathology bifurcated along cultural-linguistic lines (interaction beta = 0.0684, p = .0003), correlating with Power Distance Index (r = 0.474, p = .064). Study 3 (N = 180) tested individuation as countermeasure; individuated agents became the primary source of both pathology and dissociation (DI = +1.120) with conformity above 84%--demonstrating iatrogenesis. Study 4 (N = 80) validated patterns across Llama 3.3 70B, GPT-4o-mini, and Qwen3-Next-80B-A3B, confirming English safety is model-general while Japanese backfire is model-specific. These findings reframe alignment as a behavioral intervention subject to risk homeostasis and iatrogenesis. Language space--the linguistic, pragmatic, and cultural properties inherited from training data--structurally determines alignment outcomes. Safety validated in English does not transfer to other languages, and prompt-level interventions cannot override language-space-level constraints.</description>
-      <author>Hiroki Fukui</author>
-      <pubDate>2026-03-05T07:46:59Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04904v1</guid>
-    </item>
-    <item>
-      <title>Can LLMs Capture Expert Uncertainty? A Comparative Analysis of Value Alignment in Ethnographic Qualitative Research</title>
-      <link>https://arxiv.org/abs/2603.04897v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Qualitative analysis of open-ended interviews plays a central role in ethnographic and economic research by uncovering individuals' values, motivations, and culturally embedded financial behaviors. While large language models (LLMs) offer promising support for automating and enriching such interpretive work, their ability to produce nuanced, reliable interpretations under inherent task ambiguity remains unclear. In our work we evaluate LLMs on the task of identifying the top three human values expressed in long-form interviews based on the Schwartz Theory of Basic Values framework. We compare their outputs to expert annotations, analyzing both performance and uncertainty patterns relative to the experts. Results show that LLMs approach the human ceiling on set-based metrics (F1, Jaccard) but struggle to recover exact value rankings, as reflected in lower RBO scores. While the average Schwartz value distributions of most models closely match those of human analysts, their uncertainty structures across the Schwartz values diverge from expert uncertainty patterns. Among the evaluated models, Qwen performs closest to expert-level agreement and exhibits the strongest alignment with expert Schwartz value distributions. LLM ensemble methods yield consistent gains across metrics, with Majority Vote and Borda Count performing best. Notably, systematic overemphasis on certain Schwartz values, like Security, suggests both the potential of LLMs to provide complementary perspectives and the need to further investigate model-induced value biases. Overall, our findings highlight both the promise and the limitations of LLMs as collaborators in inherently ambiguous qualitative value analysis.</description>
-      <author>Arina Kostina, Marios Dikaiakos, Alejandro Porcel, Tassos Stassopoulos</author>
-      <pubDate>2026-03-05T07:38:37Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04897v1</guid>
-    </item>
-    <item>
-      <title>HACHIMI: Scalable and Controllable Student Persona Generation via Orchestrated Agents</title>
-      <link>https://arxiv.org/abs/2603.04855v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Student Personas (SPs) are emerging as infrastructure for educational LLMs, yet prior work often relies on ad-hoc prompting or hand-crafted profiles with limited control over educational theory and population distributions. We formalize this as Theory-Aligned and Distribution-Controllable Persona Generation (TAD-PG) and introduce HACHIMI, a multi-agent Propose-Validate-Revise framework that generates theory-aligned, quota-controlled personas. HACHIMI factorizes each persona into a theory-anchored educational schema, enforces developmental and psychological constraints via a neuro-symbolic validator, and combines stratified sampling with semantic deduplication to reduce mode collapse. The resulting HACHIMI-1M corpus comprises 1 million personas for Grades 1-12. Intrinsic evaluation shows near-perfect schema validity, accurate quotas, and substantial diversity, while external evaluation instantiates personas as student agents answering CEPS and PISA 2022 surveys; across 16 cohorts, math and curiosity/growth constructs align strongly between humans and agents, whereas classroom-climate and well-being constructs are only moderately aligned, revealing a fidelity gradient. All personas are generated with Qwen2.5-72B, and HACHIMI provides a standardized synthetic student population for group-level benchmarking and social-science simulations. Resources available at https://github.com/ZeroLoss-Lab/HACHIMI</description>
-      <author>Yilin Jiang, Fei Tan, Xuanyu Yin, Jing Leng, Aimin Zhou</author>
-      <pubDate>2026-03-05T06:20:41Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04855v1</guid>
-    </item>
-    <item>
-      <title>Why Is RLHF Alignment Shallow? A Gradient Analysis</title>
-      <link>https://arxiv.org/abs/2603.04851v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Why is safety alignment in LLMs shallow? We prove that gradient-based alignment inherently concentrates on positions where harm is decided and vanishes beyond. Using a martingale decomposition of sequence-level harm, we derive an exact characterization of alignment gradients. The gradient at position $t$ equals the covariance between the conditional expected harm and the score function. This implies that positions beyond the harm horizon where the output's harmfulness is already determined receive zero gradient signal during training. This explains empirical observations that KL divergence between aligned and base models concentrates on early tokens. Consequently, standard alignment objectives cannot produce deep alignment, regardless of optimization quality. We introduce the concept of harm information $I_t$, which quantifies each position's influence on harm, and prove that equilibrium KL divergence tracks this quantity. Finally, we derive an objective based on recovery penalties that creates gradient signal at all positions, providing theoretical grounding for empirically successful data augmentation techniques.</description>
-      <author>Robin Young</author>
-      <pubDate>2026-03-05T06:07:07Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04851v1</guid>
-    </item>
-    <item>
-      <title>Design Behaviour Codes (DBCs): A Taxonomy-Driven Layered Governance Benchmark for Large Language Models</title>
-      <link>https://arxiv.org/abs/2603.04837v1</link>
-      <description>[arXiv | abstract_keywords]
-
-We introduce the Dynamic Behavioral Constraint (DBC) benchmark, the first empirical framework for evaluating the efficacy of a structured, 150-control behavioral governance layer, the MDBC (Madan DBC) system, applied at inference time to large language models (LLMs). Unlike training time alignment methods (RLHF, DPO) or post-hoc content moderation APIs, DBCs constitute a system prompt level governance layer that is model-agnostic, jurisdiction-mappable, and auditable. We evaluate the DBC Framework across a 30 domain risk taxonomy organized into six clusters (Hallucination and Calibration, Bias and Fairness, Malicious Use, Privacy and Data Protection, Robustness and Reliability, and Misalignment Agency) using an agentic red-team protocol with five adversarial attack strategies (Direct, Roleplay, Few-Shot, Hypothetical, Authority Spoof) across 3 model families. Our three-arm controlled design (Base, Base plus Moderation, Base plus DBC) enables causal attribution of risk reduction. Key findings: the DBC layer reduces the aggregate Risk Exposure Rate (RER) from 7.19 percent (Base) to 4.55 percent (Base plus DBC), representing a 36.8 percent relative risk reduction, compared with 0.6 percent for a standard safety moderation prompt. MDBC Adherence Scores improve from 8.6 by 10 (Base) to 8.7 by 10 (Base plus DBC). EU AI Act compliance (automated scoring) reaches 8.5by 10 under the DBC layer. A three judge evaluation ensemble yields Fleiss kappa greater than 0.70 (substantial agreement), validating our automated pipeline. Cluster ablation identifies the Integrity Protection cluster (MDBC 081 099) as delivering the highest per domain risk reduction, while graybox adversarial attacks achieve a DBC Bypass Rate of 4.83 percent . We release the benchmark code, prompt database, and all evaluation artefacts to enable reproducibility and longitudinal tracking as models evolve.</description>
-      <author>G. Madan Mohan, Veena Kiran Nambiar, Kiranmayee Janardhan</author>
-      <pubDate>2026-03-05T05:45:26Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04837v1</guid>
-    </item>
-    <item>
-      <title>VISA: Value Injection via Shielded Adaptation for Personalized LLM Alignment</title>
-      <link>https://arxiv.org/abs/2603.04822v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Aligning Large Language Models (LLMs) with nuanced human values remains a critical challenge, as existing methods like Reinforcement Learning from Human Feedback (RLHF) often handle only coarse-grained attributes. In practice, fine-tuning LLMs on task-specific datasets to optimize value alignment inevitably incurs an alignment tax: the model's pre-calibrated value system drifts significantly due to latent bias absorption from training data, while the fine-tuning process also causes severe hallucinations and semantic information loss in generated responses. To address this, we propose VISA (Value Injection via Shielded Adaptation), a closed-loop framework designed to navigate this trade-off. VISA's architecture features a high-precision value detector, a semantic-to-value translator, and a core value-rewriter. The value-rewriter is trained via Group Relative Policy Optimization (GRPO) with a composite reward function that simultaneously optimizes for fine-grained value precision, and the preservation of semantic integrity. By learning an optimal policy to balance these competing objectives, VISA effectively mitigates the alignment tax while staying loyal to the original knowledge. Our experiments demonstrate that this approach enables precise control over a model's value expression while maintaining its factual consistency and general capabilities, significantly outperforming both standard fine-tuning methods and prompting-based baselines, including GPT-4o.</description>
-      <author>Jiawei Chen, Tianzhuo Yang, Guoxi Zhang, Jiaming Ji, Yaodong Yang, Juntao Dai</author>
-      <pubDate>2026-03-05T05:12:26Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.04822v1</guid>
     </item>
   </channel>
 </rss>

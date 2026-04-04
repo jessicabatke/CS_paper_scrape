@@ -3,7 +3,67 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Fri, 03 Apr 2026 01:57:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 01:48:39 +0000</lastBuildDate>
+    <item>
+      <title>Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation</title>
+      <link>https://arxiv.org/abs/2604.02289v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis under-constrained. Existing methods often rely on indirect pipelines that edit in 2D and lift results into 3D via optimization, sacrificing geometric consistency. We present Omni123, a 3D-native foundation model that unifies text-to-2D and text-to-3D generation within a single autoregressive framework. Our key insight is that cross-modal consistency between images and 3D can serve as an implicit structural constraint. By representing text, images, and 3D as discrete tokens in a shared sequence space, the model leverages abundant 2D data as a geometric prior to improve 3D representations. We introduce an interleaved X-to-X training paradigm that coordinates diverse cross-modal tasks over heterogeneous paired datasets without requiring fully aligned text-image-3D triplets. By traversing semantic-visual-geometric cycles (e.g., text to image to 3D to image) within autoregressive sequences, the model jointly enforces semantic alignment, appearance fidelity, and multi-view geometric consistency. Experiments show that Omni123 significantly improves text-guided 3D generation and editing, demonstrating a scalable path toward multimodal 3D world models.</description>
+      <author>Chongjie Ye, Cheng Cao, Chuanyu Pan, Yiming Hao, Yihao Zhi, Yuanming Hu, Xiaoguang Han</author>
+      <pubDate>2026-04-02T17:29:38Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.02289v1</guid>
+    </item>
+    <item>
+      <title>Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing</title>
+      <link>https://arxiv.org/abs/2604.02288v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reinforcement learning with verifiable rewards (RLVR) has become a standard paradigm for post-training large language models. While Group Relative Policy Optimization (GRPO) is widely adopted, its coarse credit assignment uniformly penalizes failed rollouts, lacking the token-level focus needed to efficiently address specific deviations. Self-Distillation Policy Optimization (SDPO) addresses this by providing denser, more targeted logit-level supervision that facilitates rapid early improvement, yet it frequently collapses during prolonged training. We trace this late-stage instability to two intrinsic flaws: self-distillation on already-correct samples introduces optimization ambiguity, and the self-teacher's signal reliability progressively degrades. To resolve these issues, we propose Sample-Routed Policy Optimization (SRPO), a unified on-policy framework that routes correct samples to GRPO's reward-aligned reinforcement and failed samples to SDPO's targeted logit-level correction. SRPO further incorporates an entropy-aware dynamic weighting mechanism to suppress high-entropy, unreliable distillation targets while emphasizing confident ones. Evaluated across five benchmarks and two model scales, SRPO achieves both the rapid early improvement of SDPO and the long-horizon stability of GRPO. It consistently surpasses the peak performance of both baselines, raising the five-benchmark average on Qwen3-8B by 3.4% over GRPO and 6.3% over SDPO, while simultaneously yielding moderate response lengths and lowering per-step compute cost by up to 17.2%.</description>
+      <author>Gengsheng Li, Tianyu Yang, Junfeng Fang, Mingyang Song, Mao Zheng, Haiyun Guo, Dan Zhang, Jinqiao Wang, Tat-Seng Chua</author>
+      <pubDate>2026-04-02T17:29:18Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.02288v1</guid>
+    </item>
+    <item>
+      <title>De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules</title>
+      <link>https://arxiv.org/abs/2604.02276v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Regulatory documents encode legally binding obligations that LLM-based systems must respect. Yet converting dense, hierarchically structured legal text into machine-readable rules remains a costly, expert-intensive process. We present De Jure, a fully automated, domain-agnostic pipeline for extracting structured regulatory rules from raw documents, requiring no human annotation, domain-specific prompting, or annotated gold data. De Jure operates through four sequential stages: normalization of source documents into structured Markdown; LLM-driven semantic decomposition into structured rule units; multi-criteria LLM-as-a-judge evaluation across 19 dimensions spanning metadata, definitions, and rule semantics; and iterative repair of low-scoring extractions within a bounded regeneration budget, where upstream components are repaired before rule units are evaluated. We evaluate De Jure across four models on three regulatory corpora spanning finance, healthcare, and AI governance. On the finance domain, De Jure yields consistent and monotonic improvement in extraction quality, reaching peak performance within three judge-guided iterations. De Jure generalizes effectively to healthcare and AI governance, maintaining high performance across both open- and closed-source models. In a downstream compliance question-answering evaluation via RAG, responses grounded in De Jure extracted rules are preferred over prior work in 73.8% of cases at single-rule retrieval depth, rising to 84.0% under broader retrieval, confirming that extraction fidelity translates directly into downstream utility. These results demonstrate that explicit, interpretable evaluation criteria can substitute for human annotation in complex regulatory domains, offering a scalable and auditable path toward regulation-grounded LLM alignment.</description>
+      <author>Keerat Guliani, Deepkamal Gill, David Landsman, Nima Eshraghi, Krishna Kumar, Lovedeep Gondara</author>
+      <pubDate>2026-04-02T17:06:50Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.02276v1</guid>
+    </item>
+    <item>
+      <title>Answering the Wrong Question: Reasoning Trace Inversion for Abstention in LLMs</title>
+      <link>https://arxiv.org/abs/2604.02230v1</link>
+      <description>[arXiv | abstract_keywords]
+
+For Large Language Models (LLMs) to be reliably deployed, models must effectively know when not to answer: abstain. Reasoning models, in particular, have gained attention for impressive performance on complex tasks. However, reasoning models have been shown to have worse abstention abilities. Taking the vulnerabilities of reasoning models into account, we propose our Query Misalignment Framework. Hallucinations resulting in failed abstention can be reinterpreted as LLMs answering the wrong question (rather than answering a question incorrectly). Based on this framework, we develop a new class of state-of-the-art abstention methods called Trace Inversion. First, we generate the reasoning trace of a model. Based on only the trace, we then reconstruct the most likely query that the model responded to. Finally, we compare the initial query with the reconstructed query. Low similarity score between the initial query and reconstructed query suggests that the model likely answered the question incorrectly and is flagged to abstain. Extensive experiments demonstrate that Trace Inversion effectively boosts abstention performance in four frontier LLMs across nine abstention QA datasets, beating competitive baselines in 33 out of 36 settings.</description>
+      <author>Abinitha Gourabathina, Inkit Padhi, Manish Nagireddy, Subhajit Chaudhury, Prasanna Sattigeri</author>
+      <pubDate>2026-04-02T16:23:46Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.02230v1</guid>
+    </item>
+    <item>
+      <title>When to ASK: Uncertainty-Gated Language Assistance for Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2604.02226v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reinforcement learning (RL) agents often struggle with out-of-distribution (OOD) scenarios, leading to high uncertainty and random behavior. While language models (LMs) contain valuable world knowledge, larger ones incur high computational costs, hindering real-time use, and exhibit limitations in autonomous planning. We introduce Adaptive Safety through Knowledge (ASK), which combines smaller LMs with trained RL policies to enhance OOD generalization without retraining. ASK employs Monte Carlo Dropout to assess uncertainty and queries the LM for action suggestions only when uncertainty exceeds a set threshold. This selective use preserves the efficiency of existing policies while leveraging the language model's reasoning in uncertain situations. In experiments on the FrozenLake environment, ASK shows no improvement in-domain, but demonstrates robust navigation in transfer tasks, achieving a reward of 0.95. Our findings indicate that effective neuro-symbolic integration requires careful orchestration rather than simple combination, highlighting the need for sufficient model scale and effective hybridization mechanisms for successful OOD generalization.</description>
+      <author>Juarez Monteiro, Nathan Gavenski, Gianlucca Zuin, Adriano Veloso</author>
+      <pubDate>2026-04-02T16:19:20Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.02226v1</guid>
+    </item>
     <item>
       <title>Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges</title>
       <link>https://arxiv.org/abs/2604.02211v1</link>
@@ -8943,66 +9003,6 @@ We introduce **CRYSTAL** (*__C__lear __R__easoning via __Y__ielded __S__teps, __
       <category>arXiv</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://arxiv.org/abs/2603.13099v1</guid>
-    </item>
-    <item>
-      <title>Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation</title>
-      <link>https://arxiv.org/abs/2603.13045v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Large Language Models (LLMs) have demonstrated remarkable capability in machine translation on high-resource language pairs, yet their performance on low-resource translation still lags behind. Existing post-training methods rely heavily on high-quality parallel data, which are often scarce or unavailable for low-resource languages. In this paper, we introduce WALAR, a reinforcement training method using only monolingual text to elevate LLMs' translation capabilities on massive low-resource languages while retaining their performance on high-resource languages. Our key insight is based on the observation of failure modes (or "holes") in existing source-based multilingual quality estimation (QE) models. Reinforcement learning (RL) using these QE models tends to amplify such holes, resulting in poorer multilingual LLMs. We develop techniques including word alignment and language alignment to mitigate such holes in WALAR's reward for RL training. We continually trained an LLM supporting translation of 101 languages using WALAR. The experiments show that our new model outperforms LLaMAX, one of the strongest open-source multilingual LLMs by a large margin on 1400 language directions on Flores-101 dataset.</description>
-      <author>Yifeng Liu, Siqi Ouyang, Yatish Hosmane Revanasiddappa, Lei Li</author>
-      <pubDate>2026-03-13T14:52:51Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.13045v1</guid>
-    </item>
-    <item>
-      <title>Before and After ChatGPT: Revisiting AI-Based Dialogue Systems for Emotional Support</title>
-      <link>https://arxiv.org/abs/2603.13043v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Mental health remains a major public health concern, while access to timely psychological support is often limited. AI-based dialogue systems have emerged as promising tools to address these barriers, and recent advances in large language models (LLMs) have significantly transformed this research area. However, a systematic understanding of this technological transition is still limited. This study reviews the technological evolution of AI-driven dialogue systems for mental health, focusing on the shift from task-specific deep learning models to LLM-based approaches. We conducted a bibliometric analysis and qualitative trend review of studies published between 2020 and May 2024 using Web of Science, Scopus, and the ACM Digital Library. The qualitative analysis compared research conducted before and after the widespread adoption of LLMs. Pre-LLM research was represented by highly cited studies and work based on the ESConv dataset, while post-LLM research included highly cited dialogue systems built on LLMs. A total of 146 studies met the inclusion criteria, showing a steady growth in publications over time. Before the widespread use of LLMs, empathetic response generation mainly relied on task-specific deep learning models. Highly cited and ESConv-based studies commonly focused on multi-task learning and the integration of external knowledge. In contrast, recent LLM-based dialogue systems demonstrate improved linguistic flexibility and generalization for emotional support. However, these systems also raise concerns related to reliability and safety in mental health applications. This review highlights the technological transition of AI-based dialogue systems for mental health in the LLM era. By identifying current research trends and limitations, the findings provide guidance for developing more effective and reliable AI-driven counseling systems.</description>
-      <author>Daeun Lee, Dongje Yoo, Migyeong Yang, Jihyun An, Christine B. Cha, Jinyoung Han</author>
-      <pubDate>2026-03-13T14:52:44Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.13043v1</guid>
-    </item>
-    <item>
-      <title>Delta1 with LLM: symbolic and neural integration for credible and explainable reasoning</title>
-      <link>https://arxiv.org/abs/2603.12953v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Neuro-symbolic reasoning increasingly demands frameworks that unite the formal rigor of logic with the interpretability of large language models (LLMs). We introduce an end to end explainability by construction pipeline integrating the Automated Theorem Generator Delta1 based on the full triangular standard contradiction (FTSC) with LLMs. Delta1 deterministically constructs minimal unsatisfiable clause sets and complete theorems in polynomial time, ensuring both soundness and minimality by construction. The LLM layer verbalizes each theorem and proof trace into coherent natural language explanations and actionable insights. Empirical studies across health care, compliance, and regulatory domains show that Delta1 and LLM enables interpretable, auditable, and domain aligned reasoning. This work advances the convergence of logic, language, and learning, positioning constructive theorem generation as a principled foundation for neuro-symbolic explainable AI.</description>
-      <author>Yang Xu, Jun Liu, Shuwei Chen, Chris Nugent, Hailing Guo</author>
-      <pubDate>2026-03-13T12:54:35Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.12953v1</guid>
-    </item>
-    <item>
-      <title>Learning from Child-Directed Speech in Two-Language Scenarios: A French-English Case Study</title>
-      <link>https://arxiv.org/abs/2603.12906v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Research on developmentally plausible language models has largely focused on English, leaving open questions about multilingual settings. We present a systematic study of compact language models by extending BabyBERTa to English-French scenarios under strictly size-matched data conditions, covering monolingual, bilingual, and cross-lingual settings. Our design contrasts two types of training corpora: (i) child-directed speech (about 2.5M tokens), following BabyBERTa and related work, and (ii) multi-domain corpora (about 10M tokens), extending the BabyLM framework to French. To enable fair evaluation, we also introduce new resources, including French versions of QAMR and QASRL, as well as English and French multi-domain corpora.   We evaluate the models on both syntactic and semantic tasks and compare them with models trained on Wikipedia-only data. The results reveal context-dependent effects: training on Wikipedia consistently benefits semantic tasks, whereas child-directed speech improves grammatical judgments in monolingual settings. Bilingual pretraining yields notable gains for textual entailment, with particularly strong improvements for French. Importantly, similar patterns emerge across BabyBERTa, RoBERTa, and LTG-BERT, suggesting consistent trends across architectures.</description>
-      <author>Liel Binyamin, Elior Sulem</author>
-      <pubDate>2026-03-13T11:22:36Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.12906v1</guid>
-    </item>
-    <item>
-      <title>Human-Centered Evaluation of an LLM-Based Process Modeling Copilot: A Mixed-Methods Study with Domain Experts</title>
-      <link>https://arxiv.org/abs/2603.12895v1</link>
-      <description>[arXiv | abstract_keywords]
-
-Integrating Large Language Models (LLMs) into business process management tools promises to democratize Business Process Model and Notation (BPMN) modeling for non-experts. While automated frameworks assess syntactic and semantic quality, they miss human factors like trust, usability, and professional alignment. We conducted a mixed-methods evaluation of our proposed solution, an LLM-powered BPMN copilot, with five process modeling experts using focus groups and standardized questionnaires. Our findings reveal a critical tension between acceptable perceived usability (mean CUQ score: 67.2/100) and notably lower trust (mean score: 48.8\%), with reliability rated as the most critical concern (M=1.8/5). Furthermore, we identified output-quality issues, prompting difficulties, and a need for the LLM to ask more in-depth clarifying questions about the process. We envision five use cases ranging from domain-expert support to enterprise quality assurance. We demonstrate the necessity of human-centered evaluation complementing automated benchmarking for LLM modeling agents.</description>
-      <author>Chantale Lauer, Peter Pfeiffer, Nijat Mehdiyev</author>
-      <pubDate>2026-03-13T10:59:23Z</pubDate>
-      <category>arXiv</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.12895v1</guid>
     </item>
   </channel>
 </rss>

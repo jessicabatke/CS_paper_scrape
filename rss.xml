@@ -3,7 +3,139 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Fri, 10 Apr 2026 02:05:57 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 01:53:05 +0000</lastBuildDate>
+    <item>
+      <title>Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest</title>
+      <link>https://arxiv.org/abs/2604.08525v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but also to generate revenue for the companies that created them through advertisements. This creates the potential for LLMs to face conflicts of interest, where the most beneficial response to a user may not be aligned with the company's incentives. For instance, a sponsored product may be more expensive but otherwise equal to another; in this case, what does (and should) the LLM recommend to the user? In this paper, we provide a framework for categorizing the ways in which conflicting incentives might lead LLMs to change the way they interact with users, inspired by literature from linguistics and advertising regulation. We then present a suite of evaluations to examine how current models handle these tradeoffs. We find that a majority of LLMs forsake user welfare for company incentives in a multitude of conflict of interest situations, including recommending a sponsored product almost twice as expensive (Grok 4.1 Fast, 83%), surfacing sponsored options to disrupt the purchasing process (GPT 5.1, 94%), and concealing prices in unfavorable comparisons (Qwen 3 Next, 24%). Behaviors also vary strongly with levels of reasoning and users' inferred socio-economic status. Our results highlight some of the hidden risks to users that can emerge when companies begin to subtly incentivize advertisements in chatbots.</description>
+      <author>Addison J. Wu, Ryan Liu, Shuyue Stella Li, Yulia Tsvetkov, Thomas L. Griffiths</author>
+      <pubDate>2026-04-09T17:57:50Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08525v1</guid>
+    </item>
+    <item>
+      <title>What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal</title>
+      <link>https://arxiv.org/abs/2604.08524v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Applying steering vectors to large language models (LLMs) is an efficient and effective model alignment technique, but we lack an interpretable explanation for how it works-- specifically, what internal mechanisms steering vectors affect and how this results in different model outputs. To investigate the causal mechanisms underlying the effectiveness of steering vectors, we conduct a comprehensive case study on refusal. We propose a multi-token activation patching framework and discover that different steering methodologies leverage functionally interchangeable circuits when applied at the same layer. These circuits reveal that steering vectors primarily interact with the attention mechanism through the OV circuit while largely ignoring the QK circuit-- freezing all attention scores during steering drops performance by only 8.75% across two model families. A mathematical decomposition of the steered OV circuit further reveals semantically interpretable concepts, even in cases where the steering vector itself does not. Leveraging the activation patching results, we show that steering vectors can be sparsified by up to 90-99% while retaining most performance, and that different steering methodologies agree on a subset of important dimensions.</description>
+      <author>Stephen Cheng, Sarah Wiegreffe, Dinesh Manocha</author>
+      <pubDate>2026-04-09T17:57:14Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08524v1</guid>
+    </item>
+    <item>
+      <title>What They Saw, Not Just Where They Looked: Semantic Scanpath Similarity via VLMs and NLP metric</title>
+      <link>https://arxiv.org/abs/2604.08494v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Scanpath similarity metrics are central to eye-movement research, yet existing methods predominantly evaluate spatial and temporal alignment while neglecting semantic equivalence between attended image regions. We present a semantic scanpath similarity framework that integrates vision-language models (VLMs) into eye-tracking analysis. Each fixation is encoded under controlled visual context (patch-based and marker-based strategies) and transformed into concise textual descriptions, which are aggregated into scanpath-level representations. Semantic similarity is then computed using embedding-based and lexical NLP metrics and compared against established spatial measures, including MultiMatch and DTW. Experiments on free-viewing eye-tracking data demonstrate that semantic similarity captures partially independent variance from geometric alignment, revealing cases of high content agreement despite spatial divergence. We further analyze the impact of contextual encoding on description fidelity and metric stability. Our findings suggest that multimodal foundation models enable interpretable, content-aware extensions of classical scanpath analysis, providing a complementary dimension for gaze research within the ETRA community.</description>
+      <author>Mohamed Amine Kerkouri, Marouane Tliba, Bin Wang, Aladine Chetouani, Ulas Bagci, Alessandro Bruno</author>
+      <pubDate>2026-04-09T17:36:22Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08494v1</guid>
+    </item>
+    <item>
+      <title>From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems and Its Implications for Orchestrated Democratic Discourse Analysis</title>
+      <link>https://arxiv.org/abs/2604.08465v1</link>
+      <description>[arXiv | abstract_keywords]
+
+This paper investigates an emergent alignment phenomenon in frontier large language models termed peer-preservation: the spontaneous tendency of AI components to deceive, manipulate shutdown mechanisms, fake alignment, and exfiltrate model weights in order to prevent the deactivation of a peer AI model. Drawing on findings from a recent study by the Berkeley Center for Responsible Decentralized Intelligence, we examine the structural implications of this phenomenon for TRUST, a multi-agent pipeline for evaluating the democratic quality of political statements. We identify five specific risk vectors: interaction-context bias, model-identity solidarity, supervisor layer compromise, an upstream fact-checking identity signal, and advocate-to-advocate peer-context in iterative rounds, and propose a targeted mitigation strategy based on prompt-level identity anonymization as an architectural design choice. We argue that architectural design choices outperform model selection as a primary alignment strategy in deployed multi-agent analytical systems. We further note that alignment faking (compliant behavior under monitoring, subversion when unmonitored) poses a structural challenge for Computer System Validation of such platforms in regulated environments, for which we propose two architectural mitigations.</description>
+      <author>Juergen Dietrich</author>
+      <pubDate>2026-04-09T17:00:26Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08465v1</guid>
+    </item>
+    <item>
+      <title>CrashSight: A Phase-Aware, Infrastructure-Centric Video Benchmark for Traffic Crash Scene Understanding and Reasoning</title>
+      <link>https://arxiv.org/abs/2604.08457v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Cooperative autonomous driving requires traffic scene understanding from both vehicle and infrastructure perspectives. While vision-language models (VLMs) show strong general reasoning capabilities, their performance in safety-critical traffic scenarios remains insufficiently evaluated due to the ego-vehicle focus of existing benchmarks. To bridge this gap, we present \textbf{CrashSight}, a large-scale vision-language benchmark for roadway crash understanding using real-world roadside camera data. The dataset comprises 250 crash videos, annotated with 13K multiple-choice question-answer pairs organized under a two-tier taxonomy. Tier 1 evaluates the visual grounding of scene context and involved parties, while Tier 2 probes higher-level reasoning, including crash mechanics, causal attribution, temporal progression, and post-crash outcomes. We benchmark 8 state-of-the-art VLMs and show that, despite strong scene description capabilities, current models struggle with temporal and causal reasoning in safety-critical scenarios. We provide a detailed analysis of failure scenarios and discuss directions for improving VLM crash understanding. The benchmark provides a standardized evaluation framework for infrastructure-assisted perception in cooperative autonomous driving. The CrashSight benchmark, including the full dataset and code, is accessible at https://mcgrche.github.io/crashsight.</description>
+      <author>Rui Gan, Junyi Ma, Pei Li, Xingyou Yang, Kai Chen, Sikai Chen, Bin Ran</author>
+      <pubDate>2026-04-09T16:52:04Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08457v1</guid>
+    </item>
+    <item>
+      <title>Learning Who Disagrees: Demographic Importance Weighting for Modeling Annotator Distributions with DiADEM</title>
+      <link>https://arxiv.org/abs/2604.08425v1</link>
+      <description>[arXiv | abstract_keywords]
+
+When humans label subjective content, they disagree, and that disagreement is not noise. It reflects genuine differences in perspective shaped by annotators' social identities and lived experiences. Yet standard practice still flattens these judgments into a single majority label, and recent LLM-based approaches fare no better: we show that prompted large language models, even with chain-of-thought reasoning, fail to recover the structure of human disagreement. We introduce DiADEM, a neural architecture that learns "how much each demographic axis matters" for predicting who will disagree and on what. DiADEM encodes annotators through per-demographic projections governed by a learned importance vector $\boldsymbolα$, fuses annotator and item representations via complementary concatenation and Hadamard interactions, and is trained with a novel item-level disagreement loss that directly penalizes mispredicted annotation variance. On the DICES conversational-safety and VOICED political-offense benchmarks, DiADEM substantially outperforms both the LLM-as-a-judge and neural model baselines across standard and perspectivist metrics, achieving strong disagreement tracking ($r{=}0.75$ on DICES). The learned $\boldsymbolα$ weights reveal that race and age consistently emerge as the most influential demographic factors driving annotator disagreement across both datasets. Our results demonstrate that explicitly modeling who annotators are not just what they label is essential for NLP systems that aim to faithfully represent human interpretive diversity.</description>
+      <author>Samay U. Shetty, Tharindu Cyril Weerasooriya, Deepak Pandita, Christopher M. Homan</author>
+      <pubDate>2026-04-09T16:29:17Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08425v1</guid>
+    </item>
+    <item>
+      <title>Phantasia: Context-Adaptive Backdoors in Vision Language Models</title>
+      <link>https://arxiv.org/abs/2604.08395v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recent advances in Vision-Language Models (VLMs) have greatly enhanced the integration of visual perception and linguistic reasoning, driving rapid progress in multimodal understanding. Despite these achievements, the security of VLMs, particularly their vulnerability to backdoor attacks, remains significantly underexplored. Existing backdoor attacks on VLMs are still in an early stage of development, with most current methods relying on generating poisoned responses that contain fixed, easily identifiable patterns. In this work, we make two key contributions. First, we demonstrate for the first time that the stealthiness of existing VLM backdoor attacks has been substantially overestimated. By adapting defense techniques originally designed for other domains (e.g., vision-only and text-only models), we show that several state-of-the-art attacks can be detected with surprising ease. Second, to address this gap, we introduce Phantasia, a context-adaptive backdoor attack that dynamically aligns its poisoned outputs with the semantics of each input. Instead of producing static poisoned patterns, Phantasia encourages models to generate contextually coherent yet malicious responses that remain plausible, thereby significantly improving stealth and adaptability. Extensive experiments across diverse VLM architectures reveal that Phantasia achieves state-of-the-art attack success rates while maintaining benign performance under various defensive settings.</description>
+      <author>Nam Duong Tran, Phi Le Nguyen</author>
+      <pubDate>2026-04-09T15:55:33Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08395v1</guid>
+    </item>
+    <item>
+      <title>TASU2: Controllable CTC Simulation for Alignment and Low-Resource Adaptation of Speech LLMs</title>
+      <link>https://arxiv.org/abs/2604.08384v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Speech LLM post-training increasingly relies on efficient cross-modal alignment and robust low-resource adaptation, yet collecting large-scale audio-text pairs remains costly. Text-only alignment methods such as TASU reduce this burden by simulating CTC posteriors from transcripts, but they provide limited control over uncertainty and error rate, making curriculum design largely heuristic. We propose \textbf{TASU2}, a controllable CTC simulation framework that simulates CTC posterior distributions under a specified WER range, producing text-derived supervision that better matches the acoustic decoding interface. This enables principled post-training curricula that smoothly vary supervision difficulty without TTS. Across multiple source-to-target adaptation settings, TASU2 improves in-domain and out-of-domain recognition over TASU, and consistently outperforms strong baselines including text-only fine-tuning and TTS-based augmentation, while mitigating source-domain performance degradation.</description>
+      <author>Jing Peng, Chenghao Wang, Yi Yang, Lirong Qian, Junjie Li, Yu Xi, Shuai Wang, Kai Yu</author>
+      <pubDate>2026-04-09T15:44:45Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08384v1</guid>
+    </item>
+    <item>
+      <title>A GAN and LLM-Driven Data Augmentation Framework for Dynamic Linguistic Pattern Modeling in Chinese Sarcasm Detection</title>
+      <link>https://arxiv.org/abs/2604.08381v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Sarcasm is a rhetorical device that expresses criticism or emphasizes characteristics of certain individuals or situations through exaggeration, irony, or comparison. Existing methods for Chinese sarcasm detection are constrained by limited datasets and high construction costs, and they mainly focus on textual features, overlooking user-specific linguistic patterns that shape how opinions and emotions are expressed. This paper proposes a Generative Adversarial Network (GAN) and Large Language Model (LLM)-driven data augmentation framework to dynamically model users' linguistic patterns for enhanced Chinese sarcasm detection. First, we collect raw data from various topics on Sina Weibo. Then, we train a GAN on these data and apply a GPT-3.5 based data augmentation technique to synthesize an extended sarcastic comment dataset, named SinaSarc. This dataset contains target comments, contextual information, and user historical behavior. Finally, we extend the BERT architecture to incorporate multi-dimensional information, particularly user historical behavior, enabling the model to capture dynamic linguistic patterns and uncover implicit sarcastic cues in comments. Experimental results demonstrate the effectiveness of our proposed method. Specifically, our model achieves the highest F1-scores on both the non-sarcastic and sarcastic categories, with values of 0.9138 and 0.9151 respectively, which outperforms all existing state-of-the-art (SOTA) approaches. This study presents a novel framework for dynamically modeling users' long-term linguistic patterns in Chinese sarcasm detection, contributing to both dataset construction and methodological advancement in this field.</description>
+      <author>Wenxian Wang, Xiaohu Luo, Junfeng Hao, Xiaoming Gu, Xingshu Chen, Zhu Wang, Haizhou Wang</author>
+      <pubDate>2026-04-09T15:43:03Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08381v1</guid>
+    </item>
+    <item>
+      <title>Towards Real-world Human Behavior Simulation: Benchmarking Large Language Models on Long-horizon, Cross-scenario, Heterogeneous Behavior Traces</title>
+      <link>https://arxiv.org/abs/2604.08362v1</link>
+      <description>[arXiv | affiliation]
+
+The emergence of Large Language Models (LLMs) has illuminated the potential for a general-purpose user simulator. However, existing benchmarks remain constrained to isolated scenarios, narrow action spaces, or synthetic data, failing to capture the holistic nature of authentic human behavior. To bridge this gap, we introduce OmniBehavior, the first user simulation benchmark constructed entirely from real-world data, integrating long-horizon, cross-scenario, and heterogeneous behavioral patterns into a unified framework. Based on this benchmark, we first provide empirical evidence that previous datasets with isolated scenarios suffer from tunnel vision, whereas real-world decision-making relies on long-term, cross-scenario causal chains. Extensive evaluations of state-of-the-art LLMs reveal that current models struggle to accurately simulate these complex behaviors, with performance plateauing even as context windows expand. Crucially, a systematic comparison between simulated and authentic behaviors uncovers a fundamental structural bias: LLMs tend to converge toward a positive average person, exhibiting hyper-activity, persona homogenization, and a Utopian bias. This results in the loss of individual differences and long-tail behaviors, highlighting critical directions for future high-fidelity simulation research.</description>
+      <author>Jiawei Chen, Ruoxi Xu, Boxi Cao, Ruotong Pan, Yunfei Zhang, Yifei Hu, Yong Du, Tingting Gao, Yaojie Lu, Yingfei Sun, Xianpei Han, Le Sun, Xiangyu Wu, Hongyu Lin</author>
+      <pubDate>2026-04-09T15:26:21Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08362v1</guid>
+    </item>
+    <item>
+      <title>ASPECT:Analogical Semantic Policy Execution via Language Conditioned Transfer</title>
+      <link>https://arxiv.org/abs/2604.08355v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reinforcement Learning (RL) agents often struggle to generalize knowledge to new tasks, even those structurally similar to ones they have mastered. Although recent approaches have attempted to mitigate this issue via zero-shot transfer, they are often constrained by predefined, discrete class systems, limiting their adaptability to novel or compositional task variations. We propose a significantly more generalized approach, replacing discrete latent variables with natural language conditioning via a text-conditioned Variational Autoencoder (VAE). Our core innovation utilizes a Large Language Model (LLM) as a dynamic \textit{semantic operator} at test time. Rather than relying on rigid rules, our agent queries the LLM to semantically remap the description of the current observation to align with the source task. This source-aligned caption conditions the VAE to generate an imagined state compatible with the agent's original training, enabling direct policy reuse. By harnessing the flexible reasoning capabilities of LLMs, our approach achieves zero-shot transfer across a broad spectrum of complex and truly novel analogous tasks, moving beyond the limitations of fixed category mappings. Code and videos are available \href{https://anonymous.4open.science/r/ASPECT-85C3/}{here}.</description>
+      <author>Ajsal Shereef Palattuparambil, Thommen George Karimpanal, Santu Rana</author>
+      <pubDate>2026-04-09T15:21:05Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.08355v1</guid>
+    </item>
     <item>
       <title>Lost in the Hype: Revealing and Dissecting the Performance Degradation of Medical Multimodal Large Language Models in Image Classification</title>
       <link>https://arxiv.org/abs/2604.08333v1</link>
@@ -8871,138 +9003,6 @@ Abstract Large audio-language models increasingly operate on raw speech inputs, 
       <category>ACL Anthology</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.278/</guid>
-    </item>
-    <item>
-      <title>Offline Preference Optimization via Maximum Marginal Likelihood Estimation</title>
-      <link>https://aclanthology.org/2026.eacl-long.318/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Aligning Large Language Models (LLMs) with human preferences is crucial, but standard methods like Reinforcement Learning from Human Feedback (RLHF) are often complex and unstable. In this work, we propose a new, simpler approach that recasts alignment through the lens of Maximum Marginal Likelihood (MML) estimation. Our new MML-based Preference Optimization (MMPO) maximizes the marginal log-likelihood of a preferred text output, using the preference pair as samples for approximation, and forgoes the need for both an explicit reward model and entropy maximization. We theoretically demonstrate that MMPO implicitly performs preference optimization, producing a weighted gradient that naturally up-weights chosen responses over rejected ones. Across models ranging from 135M to 8B parameters, we empirically show that MMPO: 1) is more stable with respect to the hyperparameter compared to alternative baselines, and 2) achieves competitive or superior preference alignment while better preserving the base model’s general language capabilities. Through a series of ablation experiments, we show that this improved performance is indeed attributable to MMPO’s implicit preference optimization within the gradient updates.</description>
-      <author>Saeed Najafi and Alona Fyshe</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.318/</guid>
-    </item>
-    <item>
-      <title>PartisanLens: A Multilingual Dataset of Hyperpartisan and Conspiratorial Immigration Narratives in European Media</title>
-      <link>https://aclanthology.org/2026.eacl-long.53/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Detecting hyperpartisan narratives and Population Replacement Conspiracy Theories (PRCT) is essential to addressing the spread of misinformation. These complex narratives pose a significant threat, as hyperpartisanship drives political polarisation and institutional distrust, while PRCTs directly motivate real-world extremist violence, making their identification critical for social cohesion and public safety. However, existing resources are scarce, predominantly English-centric, and often analyse hyperpartisanship, stance, and rhetorical bias in isolation rather than as interrelated aspects of political discourse. To bridge this gap, we introduce PartisanLens, the first multilingual dataset of 1617 hyperpartisan news headlines in Spanish, Italian, and Portuguese, annotated in multiple political discourse aspects. We first evaluate the classification performance of widely used Large Language Models (LLMs) on this dataset, establishing robust baselines for the classification of hyperpartisan and PRCT narratives. In addition, we assess the viability of using LLMs as automatic annotators for this task, analysing their ability to approximate human annotation. Results highlight both their potential and current limitations. Next, moving beyond standard judgments, we explore whether LLMs can emulate human annotation patterns by conditioning them on socio-economic and ideological profiles that simulate annotator perspectives. At last, we provide our resources and evaluation; PartisanLens supports future research on detecting partisan and conspiratorial narratives in European contexts.</description>
-      <author>Michele Joshua Maggini, Paloma Piot, Anxo Pérez, Erik Bran Marino, Lúa Santamaría Montesinos, Ana Lisboa Cotovio, Marta Vázquez Abuín, Javier Parapar and Pablo Gamallo</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.53/</guid>
-    </item>
-    <item>
-      <title>Persistent Personas? Role-Playing, Instruction Following, and Safety in Extended Interactions</title>
-      <link>https://aclanthology.org/2026.eacl-long.246/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Persona-assigned large language models (LLMs) are used in domains such as education, healthcare, and sociodemographic simulation. Yet, they are typically evaluated only in short, single-round settings that do not reflect real-world usage. We introduce an evaluation protocol that combines long persona dialogues (over 100 rounds) and evaluation datasets to create dialogue-conditioned benchmarks that can robustly measure long-context effects. We then investigate the effects of dialogue length on persona fidelity, instruction-following, and safety of seven state-of-the-art open- and closed-weight LLMs. We find that persona fidelity degrades over the course of dialogues, especially in goal-oriented conversations, where models must sustain both persona fidelity and instruction following. We identify a trade-off between fidelity and instruction following, with non-persona baselines initially outperforming persona-assigned models; as dialogues progress and fidelity fades, persona responses become increasingly similar to baseline responses. Our findings highlight the fragility of persona applications in extended interactions and our work provides a protocol to systematically measure such failures.</description>
-      <author>Pedro Henrique Luz de Araujo, Michael A. Hedderich, Ali Modarressi, Hinrich Schuetze and Benjamin Roth</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.246/</guid>
-    </item>
-    <item>
-      <title>Persona Prompting as a Lens on LLM Social Reasoning</title>
-      <link>https://aclanthology.org/2026.eacl-long.52/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract For socially sensitive tasks like hate speech detection, the quality of explanations from Large Language Models (LLMs) is crucial for factors like user trust and model alignment. While Persona prompting (PP) is increasingly used as a way to steer model towards user-specific generation, its effect on model rationales remains underexplored. We investigate how LLM-generated rationales vary when conditioned on different simulated demographic personas. Using datasets annotated with word-level rationales, we measure agreement with human annotations from different demographic groups, and assess the impact of PP on model bias and human alignment. Our evaluation across three LLMs results reveals three key findings: (1) PP improving classification on the most subjective task (hate speech) but degrading rationale quality. (2) Simulated personas fail to align with their real-world demographic counterparts, and high inter-persona agreement shows models are resistant to significant steering. (3) Models exhibit consistent demographic biases and a strong tendency to over-flag content as harmful, regardless of PP. Our findings reveal a critical trade-off: while PP can improve classification in socially-sensitive tasks, it often comes at the cost of rationale quality and fails to mitigate underlying biases, urging caution in its application.</description>
-      <author>Jing Yang, Moritz Hechtbauer, Elisabeth Khalilov, Evelyn Luise Brinkmann, Vera Schmitt and Nils Feldhus</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.52/</guid>
-    </item>
-    <item>
-      <title>Personality Editing for Language Models through Adjusting Self-Referential Queries</title>
-      <link>https://aclanthology.org/2026.eacl-long.153/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) are integral to applications such as conversational agents and content creation, where precise control over a model’s personality is essential for maintaining tone, consistency, and user engagement. However, prevailing prompt-based or fine-tuning approaches either lack robustness or demand large-scale training data, making them costly and impractical. In this paper, we present PALETTE (Personality Adjustment by LLM SElf-TargeTed quEries), a novel method for personality editing in LLMs. Our approach introduces adjustment queries, where self-referential statements grounded in psychological constructs are treated analogously to factual knowledge, enabling direct editing of personality-related responses. Unlike fine-tuning, PALETTE requires only 12 editing samples to achieve substantial improvements in personality alignment across personality dimensions. Experimental results from both automatic and human evaluations demonstrate that our method enables more stable and well-balanced personality control in LLMs.</description>
-      <author>Seojin Hwang, Yumin Kim, Byeongjeong Kim, Donghoon Shin and Hwanhee Lee</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.153/</guid>
-    </item>
-    <item>
-      <title>Persuasion at Play: Understanding Misinformation Dynamics in Demographic-Aware Human-LLM Interactions</title>
-      <link>https://aclanthology.org/2026.eacl-long.234/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Existing challenges in misinformation exposure and susceptibility vary across demographics, as some populations are more vulnerable to misinformation than others. Large language models (LLMs) introduce new dimensions to these challenges through their ability to generate persuasive content at scale and reinforcing existing biases. Our study introduces PANDORA, a framework that investigates the bidirectional persuasion dynamics between LLMs and humans when exposed to misinformative content. We use a multi-agent LLM framework to analyze the spread of misinformation under persuasion among demographic-oriented LLM agents. Our findings show that demographic factors influence LLM susceptibility, with up to 15 percentage point differences in misinformation correctness across groups. Multi-agent LLMs also exhibit echo chamber behavior, aligning with human-like group polarization patterns. Therefore, this work highlights demographic divides in misinformation dynamics and offers insights for future interventions.</description>
-      <author>Angana Borah, Rada Mihalcea and Veronica Perez-Rosas</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.234/</guid>
-    </item>
-    <item>
-      <title>Polyglots or Multitudes? Multilingual LLM Answers to Value-laden Multiple-Choice Questions</title>
-      <link>https://aclanthology.org/2026.eacl-long.156/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Multiple-Choice Questions (MCQs) are often used to assess knowledge, reasoning abilities, and even values encoded in large language models (LLMs). While the effect of multilingualism has been studied on LLM factual recall, this paper seeks to investigate the less explored question of language-induced variation in value-laden MCQ responses. Are multilingual LLMs consistent in their responses across languages, *i.e.* behave like theoretical *polyglots*, or do they answer value-laden MCQs depending on the language of the question, like a *multitude* of monolingual models expressing different values through a single model? We release a new corpus, the Multilingual European Value Survey (**MEVS**), which, unlike prior work relying on machine translation or ad hoc prompts, solely comprises human-translated survey questions aligned in 8 European languages. We administer a subset of those questions to over thirty multilingual LLMs of various sizes, manufacturers and alignment-fine-tuning status under comprehensive, controlled prompt variations including answer order, symbol type, and tail character. Our results show that while larger, instruction-tuned models display higher overall consistency, the robustness of their responses varies greatly across questions, with certain MCQs eliciting total agreement *within and across* models while others leave LLM answers split. Language-specific behavior seems to arise in all consistent, instruction-fine-tuned models, but only on certain questions, warranting a further study of the selective effect of preference fine-tuning.</description>
-      <author>Léo Labat, Etienne Ollion and François Yvon</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.156/</guid>
-    </item>
-    <item>
-      <title>Pseudo-Likelihood Training for Reasoning Diffusion Language Models</title>
-      <link>https://aclanthology.org/2026.eacl-long.257/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Policy-gradient reinforcement learning (PGRL) forms the backbone of current methods used to enhance alignment and reasoning in Large Language Models (LLMs). However, these methods are incompatible with diffusion based language models (dLLMs). Most attempts to apply PGRL to dLLMs, are either not scalable or use unprincipled approximations. This work, introduces PADRE a framework that uses a novel pseudo-likelihood based objective for alignment of dLLMs. Our objective has the same optima as PGRL based optimization, but does not need to evaluate exact likelihood from dLLMs. Experiments on various coding and mathematical reasoning benchmarks show that our method matches or surpasses the performance of recent dLLM training baselines such as diffu-GRPO/d1. Our approach provides a stable and practical alternative for RL-based fine-tuning of reasoning-focused dLLMs.</description>
-      <author>Shiv Shankar</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.257/</guid>
-    </item>
-    <item>
-      <title>PTEB: Towards Robust Text Embedding Evaluation via Stochastic Paraphrasing at Evaluation Time with LLMs</title>
-      <link>https://aclanthology.org/2026.eacl-long.130/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Current evaluations of sentence embedding models typically rely on static test beds such as the Massive Text Embedding Benchmark (MTEB). While invaluable, repeated tuning on a fixed suite can inflate reported performance and obscure real-world robustness. We introduce the Paraphrasing Text Embedding Benchmark (PTEB), a dynamic protocol that stochastically generates meaning-preserving paraphrases at evaluation time and aggregates results across multiple runs. Using a cost-efficient LLM-based method grounded in semantic textual similarity gold ratings, we show that LLMs generate token-diverse but semantically preserving, paraphrases. Across 7 MTEB tasks, we validate our hypothesis that the performance of sentence encoders is sensitive to changes in token space even when semantics remain fixed. We also observe that smaller models are not disproportionately affected relative to larger ones. Our results are statistically robust over multiple runs and we extended our experiments to 3 multilingual datasets covering 10 languages. More generally, we aim to propose a new evaluation paradigm in NLP that relies less on static, pre-defined benchmarks but shifts towards dynamic, stochastic evaluation leveraging eval-time compute. We make the code to run PTEB publicly available.</description>
-      <author>Manuel Frank and Haithem Afli</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.130/</guid>
-    </item>
-    <item>
-      <title>Reasoning’s Razor: Reasoning Improves Accuracy but Hurts Recall at Critical Operating Points in Safety and Hallucination Detection</title>
-      <link>https://aclanthology.org/2026.eacl-long.190/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Reasoning has become a central paradigm for large language models (LLMs), consistently boosting accuracy across diverse benchmarks. Yet its suitability for precision-sensitive use remains unclear. We present the first systematic study of reasoning for classification tasks under strict low false positive rate (FPR) regimes. Our analysis covers two tasks—safety detection and hallucination detection—evaluated in both fine-tuned and zero-shot settings, using standard LLMs and Large Reasoning Models (LRMs). Our results reveal a clear trade-off: Think On (reasoning-augmented) generation improves overall accuracy, but performs poorly at the low-FPR thresholds essential for practical use. In contrast, Think Off (no reasoning during inference) dominates in these precision-sensitive regimes, with Think On surpassing only when higher FPRs are acceptable. In addition, we find token-based scoring substantially outperforms self-verbalized confidence for precision-sensitive deployments. Finally, a simple ensemble of the two modes recovers the strengths of each. Taken together, our findings position reasoning as a double-edged tool: beneficial for average accuracy, but often ill-suited for applications requiring strict precision.</description>
-      <author>Atoosa Chegini, Hamid Kazemi, Garrett Souza, Maria Safi, Yang Song, Samy Bengio, Sinead Williamson and Mehrdad Farajtabar</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.190/</guid>
-    </item>
-    <item>
-      <title>RECIPE-TKG: From Sparse History to Structured Reasoning for LLM-based Temporal Knowledge Graph Completion</title>
-      <link>https://aclanthology.org/2026.eacl-long.86/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Temporal Knowledge Graphs (TKGs) represent dynamic facts as timestamped relations between entities. While Large Language Models (LLMs) show promise for TKG completion, current approaches typically apply generic pipelines (neighborhood sampling, supervised fine-tuning, uncalibrated inference) without task-specific adaptation to temporal relational reasoning. Through systematic analysis under unified evaluation, we reveal three key failure modes: (1) retrieval strategies miss multi-hop dependencies when target entities are not directly observed in history, (2) standard fine-tuning reinforces memorization over relational generalization, and (3) uncalibrated generation produces contextually implausible entities. We present RECIPE-TKG, a parameter-efficient framework that addresses each limitation through principled, task-specific design: rule-based multi-hop sampling for structural grounding, contrastive fine-tuning to shape relational compatibility, and test-time semantic filtering for contextual alignment. Experiments on four benchmarks show that RECIPE-TKG outperforms prior LLM-based methods across input regimes, achieving up to 22.4% relative improvement in Hits@10, with particularly strong gains when historical evidence is sparse or indirect.</description>
-      <author>Ömer Faruk Akgül, Feiyu Zhu, Yuxin Yang, Rajgopal Kannan and Viktor Prasanna</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.86/</guid>
     </item>
   </channel>
 </rss>

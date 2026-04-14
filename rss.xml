@@ -3,7 +3,283 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Mon, 13 Apr 2026 02:07:03 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 02:06:47 +0000</lastBuildDate>
+    <item>
+      <title>A RAG Chatbot with Incremental Context Retrieval based on Local LLMs for Hospital Documents</title>
+      <link>https://aclanthology.org/2026.propor-2.14/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract The adoption of LLMs in hospital environments demands solutions that ensure information security, computational efficiency, and rigorous control over sensitive institutional data. This work presents the development and evaluation of a chatbot based on RAG, using exclusively local LLMs, applied to internal documents of a university hospital in Portuguese, composed of Standard Operating Procedures and technical manuals. The methodology initially evaluates the quality of information retrieval through dense embedding models, measured by the Mean Reciprocal Rank (MRR) metric. Then, the generation stage is analyzed in two distinct scenarios: (i) RAG with fixed context, in which multiple chunks are provided simultaneously to the model, and (ii) Incremental page retrieval, in which chunks are sent sequentially according to the retrieval ranking. The generation assessment was conducted with four local LLMs — MedGemma3:27B, Gemma3:27B, Gpt-oss:20B, and Mistral Small 3.1 — using BERTScore as a quality metric. The results indicate that indiscriminate context increase in the fixed-context scenario degrades generation quality, even while increasing the probability of recovering the relevant chunk. In contrast, the incremental page retrieval technique showed improvements in BERTScore values, with the MedGemma3:27B model standing out with the best overall results. These findings demonstrate that adaptive context control is a critical factor in increasing the reliability and efficiency of RAG systems based on local LLMs in the healthcare domain.</description>
+      <author>Murilo Vargas da Cunha, Marília Rosa Silveira, César Brasil Sperb, Larissa Astrogildo Freitas and Ulisses Brisolara Corrêa</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-2.14/</guid>
+    </item>
+    <item>
+      <title>Accelerating Portuguese Masked Diffusion Models through Representation Alignment</title>
+      <link>https://aclanthology.org/2026.propor-1.97/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Masked Diffusion Language Models (MDLM) have recently demonstrated that discrete diffusion can achieve competitive performance in text generation. However, training these models remains computationally expensive, particularly for lower-resourced languages like Portuguese. In this work, we adapt REPresentation Alignment (REPA), a technique originally proposed for vision, to the textual domain. We systematically evaluate the impact of aligning the internal representations of a Portuguese MDLM with those of pretrained teacher encoders (e.g., Qwen, BERTimbau). Our experiments show that REPA significantly accelerates training and improves final perplexity by 28.6% compared to a baseline without alignment. We also identify optimal hyperparameters, finding that mid-level alignment with modern teacher encoders yields the best results.</description>
+      <author>Adalberto Ferreira Barbosa Junior, Lucas Lima Neves and Adriano César Santana</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.97/</guid>
+    </item>
+    <item>
+      <title>ALBA: A European Portuguese Benchmark for Evaluating Language and Linguistic Dimensions in Generative LLMs</title>
+      <link>https://aclanthology.org/2026.propor-1.69/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract As Large Language Models (LLMs) expand across multilingual domains, evaluating their performance in under-represented languages becomes increasingly important. European Portuguese (pt-PT) is particularly affected, as existing training data and benchmarks are mainly in Brazilian Portuguese (pt-BR). To address this, we introduce ALBA, a linguistically grounded benchmark designed from the ground up to assess LLM proficiency in linguistic-related tasks in pt-PT across eight linguistic dimensions, including Language Variety, Culture-bound Semantics, Discourse Analysis, Word Plays, Syntax, Morphology, Lexicology, and Phonetics and Phonology. ALBA is manually constructed by language experts and paired with an LLM-as-a-judge framework for scalable evaluation of pt-PT generated language. Experiments on a diverse set of models reveal performance variability across linguistic dimensions, highlighting the need for comprehensive, variety-sensitive benchmarks that support further development of tools in pt-PT.</description>
+      <author>Inês Vieira, Inês Calvo, Iago Paulo, James Furtado, Rafael Ferreira, Diogo Tavares, Diogo Glória-Silva, David Semedo and João Magalhães</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.69/</guid>
+    </item>
+    <item>
+      <title>Analysing LLMs for spelling normalization of 18th century Portuguese</title>
+      <link>https://aclanthology.org/2026.propor-1.49/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract This paper presents an evaluation of large language models (LLMs) applied to the task of normalizing eighteenth-century written texts. Several LLMs were employed to process texts in pre-contemporary spellings and update them according to contemporary Portuguese orthography. Their outputs were rigorously compared against a curated reference corpus. The findings indicate marked disparities in model performance, with the Portuguese-specialized model Sabiá demonstrating a statistically significant advantage over multilingual alternatives.</description>
+      <author>Helena Freire Cameron, Aline Paes, Fernanda Olival and Renata Vieira</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.49/</guid>
+    </item>
+    <item>
+      <title>Annotation Guidelines and Challenges for Automatic Simplification of Portuguese Drug Leaflets</title>
+      <link>https://aclanthology.org/2026.propor-2.19/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract While most essential medicines have become widely accessible across all social strata in Brazil due to government initiatives and market shifts, a significant barrier remains: the technical complexity of medication leaflets. This pragmatic and linguistic gap hinders patient comprehension of critical risks and benefits. Thus, adapting these texts into plain language patterns is crucial for patient safety and treatment adherence. Large language models have been increasingly effective as practical solutions for text simplification, an important Natural Language Processing (NLP) task that serves as a basis for several other linguistic and computational tasks. However, the scarcity of annotated datasets remains a bottleneck for rigorous evaluation. To bridge this gap, we propose a streamlined pipeline for generating simplified medical leaflets and introduce an initial benchmark dataset of 30 expertly annotated samples. Our results, supported by semantic and morphosyntactic evaluations, demonstrate that the proposed method produces high-quality, simplified content suitable for health applications.</description>
+      <author>Arthur Scalercio, Eduarda Bertotto, Silvana Jesus, Maria José Finatto and Aline Paes</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-2.19/</guid>
+    </item>
+    <item>
+      <title>Auditing the Evaluators: How Far Can Automatic Evaluation Go in Assessing Portuguese Financial Texts?</title>
+      <link>https://aclanthology.org/2026.propor-1.22/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Automatic metrics are widely used to evaluate text quality across various natural language processing tasks. Despite their convenience and scalability, the extent to which these metrics reliably reflect textual quality remains an open challenge. The LLM-as-a-judge paradigm has recently emerged, aligning more closely with human judgments by using LLMs themselves as evaluators. However, there is still a gap in such evaluations across specific domains and languages, as most prior work focuses on generic task benchmarks in English. In this paper, we examine the robustness of both traditional automatic metrics and the LLM-as-a-judge approach for assessing the quality of financial commentaries in Portuguese, an underexplored task and language that has been neglected in previous work. We introduce fine-grained perturbations into the texts generated by specialists to analyze which types of noise most significantly affect evaluation outcomes, using noise-free counterparts as references. The results highlight the weaknesses of classical metrics in this specific task and the limitations of even recent evaluation paradigms, underscoring the need to develop context- and domain-sensitive.</description>
+      <author>Marina Ramalhete Masid, Gabriel Assis, Daniela Vianna, Aline Paes and Altigran Soares da Silva</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.22/</guid>
+    </item>
+    <item>
+      <title>CLARIN-PT-LDB: An Open LLM Leaderboard for Portuguese to assess Language, Culture and Civility</title>
+      <link>https://aclanthology.org/2026.propor-1.7/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract This paper reports on the development of a leaderboard of Open Large Language Models (LLM) for European Portuguese (PT-PT), and on its associated benchmarks.This leaderboard comes as a way to address a gap in the evaluation of LLM for European Portuguese, which so far had no leaderboard dedicated to this variant of the language.The paper also reports on novel benchmarks, including some that address aspects of performance that so far have not been available in benchmarks for European Portuguese, namely model safeguards and alignment to Portuguese culture.The leaderboard is available at https://huggingface.co/spaces/PORTULAN/portuguese-llm-leaderboard.</description>
+      <author>João Ricardo Silva, Luís Gomes and António Branco</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.7/</guid>
+    </item>
+    <item>
+      <title>Class of LLMs: Benchmarking Large Language Models on the Brazilian National Medical Examination</title>
+      <link>https://aclanthology.org/2026.propor-2.17/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract The evaluation of Large Language Models (LLMs) in medicine has predominantly relied on English-language benchmarks aligned with North American clinical guidelines, limiting their applicability to other healthcare systems. In this paper, we evaluate twenty-two proprietary and open-weight LLMs on the 2025 National Examination for the Evaluation of Medical Training (ENAMED), a high-stakes, government-standardized assessment used to evaluate medical graduates in Brazil. The benchmark comprises 90 multiple-choice questions grounded in Brazilian public health policy, clinical practice, and Portuguese medical terminology, and is released as an open dataset. Model performance is measured using both standard accuracy and the official Item Response Theory (IRT) framework employed by ENAMED, enabling direct comparison with human proficiency thresholds. Results reveal a clear stratification of model capabilities: proprietary frontier models achieve the highest performance, whereas many open-weight and smaller-domain-adapted models fail to meet the minimum proficiency criterion. Across comparable scales, large generalist models consistently outperform specialized medical fine-tunes, suggesting that general reasoning capacity is a stronger predictor of success than narrow domain adaptation in this setting. These findings establish ENAMED as a rigorous benchmark for evaluating medical LLMs in Portuguese and highlight both the potential and current limitations of such models for educational assessment.</description>
+      <author>João Vitor Mariano Correia, Pedro Henrique Alves de Castro, Gabriel Lino Garcia, Pedro Henrique Paiola and João Paulo Papa</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-2.17/</guid>
+    </item>
+    <item>
+      <title>CURUPIRA: Clever guard for harm and linguistic prompt mitigation in Brazilian Portuguese</title>
+      <link>https://aclanthology.org/2026.propor-1.107/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract The safe deployment of Large Language Models remains challenging in multilingual settings, particularly when models are exposed to adversarial or malicious prompts in underrepresented languages. In this work, we present Curupira, a Brazilian Portuguese-language guard model designed to mitigate harmful prompt exploitation. To do this, we establish a three steps methodology that involves adaptation, data generation, and fine-tuning. We also evaluate our model with two state-of-the-art open guardrail architectures. The results show that targeted fine-tuning leads to consistent improvements in safety classification for Portuguese prompts, with favorable efficiency–performance trade-offs for compact models and limited degradation in cross-lingual evaluation.</description>
+      <author>Rogério Sousa, William Alberto Cruz-Castañeda, José Roberto Homeli Silva and Marcellus Amadeus</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.107/</guid>
+    </item>
+    <item>
+      <title>Efficient Fine-Tuning Methods for Portuguese Question Answering: A Comparative Study of PEFT on BERTimbau and Exploratory Evaluation of Generative LLMs</title>
+      <link>https://aclanthology.org/2026.propor-1.91/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Although large language models have transformed natural language processing, their computational costs create accessibility barriers for low-resource languages such as Brazilian Portuguese. This work presents a systematic evaluation of Parameter-Efficient Fine-Tuning (PEFT) and quantization techniques applied to BERTimbau for Question Answering on SQuAD-BR, the Brazilian Portuguese translation of SQuAD v1.We evaluate 40 configurations combining four PEFT methods (LoRA, DoRA, QLoRA, QDoRA) across two model sizes (Base: 110M and Large: 335M parameters). Our findings reveal three critical insights: (1) LoRA achieves 95.8% of baseline performance on BERTimbau-Large while reducing training time by 73.5% (F1 = 81.32 vs. 84.86); (2) higher learning rates (2e-4) substantially improve PEFT performance, with F1 gains of up to +19.71 points compared to standard rates; and (3) larger models show twice the quantization resilience (loss of 4.83 vs. 9.56 F1 points).These results demonstrate that encoder-based models can be efficiently fine-tuned for extractive Brazilian Portuguese question answering with substantially lower computational cost than large generative LLMs, promoting more sustainable approaches aligned with Green AI principles. An exploratory evaluation of Tucano and Sabiá on the same benchmark shows that although generative models can achieve competitive F1 scores with LoRA fine-tuning, they require up to 4.2 times more GPU memory and three times more training time than BERTimbau-Base, reinforcing the efficiency advantage of smaller encoder-based architectures for this task.</description>
+      <author>Mariela M. Nina, Caio Veloso Costa, Lilian Berton and Didier A. Vega-Oliveros</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.91/</guid>
+    </item>
+    <item>
+      <title>Enhancing Brazilian Inflation Forecasts through Sentiment Analysis Using Large Language Models</title>
+      <link>https://aclanthology.org/2026.propor-1.17/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Reliable inflation forecasts play a critical role in economic stability and policy decisions. Traditional econometric models perform well but often overlook qualitative signals that could improve predictive accuracy. Recent advances in AI-based Natural Language Processing enable the extraction of latent sentiment, offering a promising avenue for inflation forecasting. This study proposes a framework that combines Large Language Models (LLMs) to extract sentiment variables from the Brazilian Monetary Policy Committee (COPOM) minutes, optimize bias to match human-collected sentiment, and integrate them into ARIMA and LSTM models for one-step-ahead monthly IPCA prediction. Results show that LLM-generated sentiment trends are temporally coherent with historical inflation patterns and highly statistically significant (p &lt; 0.001). Models whose sentiment evaluations aligned more closely with human assessments (e.g., grok-4-fast and llama-4-maverick) achieved superior forecasting performance. ARIMA models consistently benefited from sentiment inclusion, while LSTM results were more variable.</description>
+      <author>Lucas Miranda Mendonça Rezende, Cézio Luiz Ferreira Junior, Mateus Tarcinalli Machado and Evandro Eduardo Seron Ruiz</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.17/</guid>
+    </item>
+    <item>
+      <title>Field of Science and Technology Classification of Academic Documents in Portuguese</title>
+      <link>https://aclanthology.org/2026.propor-1.104/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Towards improving metadata in academic repositories, this study evaluates the efficacy of different transformer-based models in the automatic classification of the Field of Science and Technology (FOS) of academic theses written in Portuguese. We compare the performance of four different encoder models, two multilingual and two Portuguese-specific, against five larger decoder-based LLMs, on a dataset of 9,696 theses characterized by their title, keywords, and abstract. Fine-tuned encoder-based models achieved the best scores (F1 = 88%), outperforming general-purpose decoder models prompted for the task. These results suggest that, for localized academic domains, task-specific fine-tuning remains more effective than general-purpose LLM prompting.</description>
+      <author>Ivo Simões, Hugo Gonçalo Oliveira and João Correia</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.104/</guid>
+    </item>
+    <item>
+      <title>Gender Identification in Brazilian Portuguese Product Reviews: A Comparative Study of Classical Models, BERT, and LLMs</title>
+      <link>https://aclanthology.org/2026.propor-1.2/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract This study analyzes gender identification in Brazilian Portuguese using Amazon reviews drawn from ten product categories. Nine models were evaluated: three classical classifiers (Logistic Regression, Random Forest, and SVM), a multilingual BERT, and five LLMs (ChatGPT 4o, ChatGPT 3.5, DeepSeek, Sabia3, and Sabiazinho). Experiments show that BERT achieved the best performance (macro-F1 = 0.634), outperforming ChatGPT 4o and Logistic Regression by less than one percentage point. Reviews authored by women reach an average F1 of 0.654—four points higher than those by men. Performance also varies by domain: books and automotive are easier, whereas baby and pets are more challenging.</description>
+      <author>Tiago de Melo and Carlos M. S. Figueiredo</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.2/</guid>
+    </item>
+    <item>
+      <title>Global vs. Local Sentence Embeddings for Brazilian Portuguese: Revisiting Monolingual Models in the Age of Foundation Models</title>
+      <link>https://aclanthology.org/2026.propor-1.52/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract The choice between large-scale, multilingual, foundation models and specialized monolingual models for languages like Brazilian Portuguese (PT-BR) presents a complex trade-off between generalization and specialization. This paper investigates this trade-off through an empirical study across a diverse suite of tasks. We evaluate multiple families of language models under both linear probing and fine-tuning regimes. We find that monolingual encoders exhibit greater "adaptation plasticity" during fine-tuning, improving on both classification and semantic similarity, where global (multilingual) models degrade. However, this plasticity comes at a cost: our tokenization analysis suggests that monolingual models struggle with foreign terms, whereas modern multilingual tokenizers show surprising morphological competence, challenging a long-standing assumption in the field. We conclude that the optimal model choice is a task-dependent trade-off between vocabulary coverage and adaptation flexibility.</description>
+      <author>Matheus Peixoto, Guilherme Silva, Giacomo Figueredo, Pedro Silva and Eduardo J. S. Luz</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.52/</guid>
+    </item>
+    <item>
+      <title>Improving Machine Translation of Idioms: A Spanish–Galician Parallel Dataset and Synthetic Augmentation Approach</title>
+      <link>https://aclanthology.org/2026.propor-1.99/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Idiomatic expressions are a well-known challenge for neural machine translation, including both traditional sequence-to-sequence models and large language models (LLMs). This paper presents a systematic approach to improve idiom translation between Spanish and Galician. First, we build a high-quality parallel dataset of idioms manually aligned across both languages. Then, we automatically extend this dataset into a large synthetic parallel corpus using LLMs, following a strategy that prioritizes the most frequent idioms observed in authentic corpora. This augmented dataset is used to retrain a seq2seq translation model. We evaluate the resulting system and compare it both to the baseline model without idiom data and to state-of-the-art LLM-based translators such as SalamandraTA. Results show that the translation of idioms improves significantly after the training, alongside a slight boost in the model’s overall performance.</description>
+      <author>Lúa Santamaría Montesinos, Saúl Buján, Daniel Bardanca and Pablo Gamallo</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.99/</guid>
+    </item>
+    <item>
+      <title>JabuticaBERT: Modern Portuguese Encoders from Scratch with RTD and Long-Context Training</title>
+      <link>https://aclanthology.org/2026.propor-1.93/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Encoder-based language models remain essential for natural language understanding tasks such as classification, semantic similarity, and retrieval-augmented generation. However, the lack of high-quality monolingual encoders for Brazilian Portuguese poses a significant challenge to performance. In this work, we systematically explore the training of Portuguese-specific encoder models from scratch using two modern architectures: DeBERTa, trained with Replaced Token Detection (RTD), and ModernBERT, trained with Masked Language Modeling (MLM). All models are pre-trained on the large-scale Jabuticaba corpus. Our DeBERTa-Large model achieves results comparable to the state-of-the-art, with F1 scores of 0.920 on ASSIN2 RTE and 0.915 on LeNER. Crucially, it matches the performance of the 900M-parameter Albertina model while utilizing significantly fewer parameters. We also release custom tokenizers that reduce token fertility rates compared to multilingual baselines. These findings provide evidence that careful architectural choices and monolingual tokenization can yield competitive performance without massive model scaling.</description>
+      <author>Thiago Porto, Gabriel Gomes, Alexandre Bender, Ulisses Corrêa, Larissa Freitas, William Cruz and Marcellus Amadeus</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.93/</guid>
+    </item>
+    <item>
+      <title>Language Effects in Text-to-SQL Across English and Portuguese</title>
+      <link>https://aclanthology.org/2026.propor-1.27/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Text-to-SQL systems allow users to query relational databases using natural language, but accuracy remains sensitive to the choice of language, model architecture, and prompting strategy. Although recent Large Language Models (LLMs) incorporate reasoning mechanisms that improve multi-step problem solving in other domains, their effects on multilingual Text-to-SQL are not yet well understood. This work evaluates a diverse set of LLMs on the BIRD benchmark and BIRD_PT, a Portuguese version produced by translating the questions and external knowledge while keeping the original English database schema and values unchanged. We compare four controlled scenarios that vary internal reasoning and guided reasoning for SQL generation. The results show a consistent decrease in accuracy when switching from English to Portuguese, with large variations in robustness across models. Reasoning alone does not reliably improve execution accuracy and can reduce performance in Portuguese, while combining reasoning with a guided plan provides the most stable improvements, although still weaker than in English. These findings highlight ongoing challenges in multilingual Text-to-SQL and emphasize the need to jointly consider language understanding, reasoning activation, and task-aligned planning when designing future systems.</description>
+      <author>Lucas Nobre, Suele Sousa, Savio Teles and Anderson Soares</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.27/</guid>
+    </item>
+    <item>
+      <title>Leveraging political alignment information for stance detection</title>
+      <link>https://aclanthology.org/2026.propor-1.3/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Stance detection is the task of determining whether an input text expresses a stance in favour of or against a given target topic. This, in a standard supervised fashion, will typically require a new set of labelled training examples for each test topic. As an alternative to full supervision (or costly LLM-based methods), this study leverages political alignment information by assuming that stances on related moral or political issues tend to co-occur (e.g., support for a right-wing politician correlating with support for the death penalty or opposition to abortion). This alignment, presently treated as a form of distance labelling, enables stance inference without constructing new corpora and is evaluated against standard cross-domain and prompt-based methods using a large corpus of stances in the Portuguese language.</description>
+      <author>Matheus Camasmie Pavan and Ivandré Paraboni</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.3/</guid>
+    </item>
+    <item>
+      <title>LLM-Based Multi-Agent System with Retrieval-Augmented Generation for Medical Care Planning Generation in Sickle Cell Disease</title>
+      <link>https://aclanthology.org/2026.propor-2.16/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Ensuring safety in clinical applications of large language models (LLMs) remains an unresolved challenge, particularly for high-risk and underrepresented conditions such as Sickle Cell Disease (SCD). Consequently, these models may exhibit limited reliability for SCD, including hallucinations and clinically unsafe outputs. This paper proposes an LLM-based Multi-Agent System (MAS) enhanced by Retrieval-Augmented Generation (RAG) to support the generation of medical care plans for SCD. The MAS decomposes clinical reasoning into specialized agents responsible for diagnosis, investigation, and treatment planning. Retrieval is framed not as a performance optimization, but as a safety control mechanism. Three RAG strategies, namely LLM-Guided Tree Retrieval, Metadata-Filtered Retrieval, and Semantic Similarity Retrieval, are evaluated alongside a baseline. Our experiments considered LLM-as-a-Judge evaluations and independent assessments by physicians. The results demonstrate high clinical quality, with safety scores exceeding 4 on a 5-point scale. While average performance was similar between RAG and baseline conditions, the Tree Retrieval strategy reduced the frequency of clinically unsafe outputs compared to conventional Semantic Retrieval, indicating fewer clinically unsafe outputs. These findings show evidence that average performance is insufficient to evaluate clinical AI systems, particularly in high-risk scenarios where retrieval serves as a safety control layer.</description>
+      <author>Luana Bringel Leite, David Eduardo Pereira, Eyshila Buriti de Araujo Azevedo, Leonardo Mota Meira Filho, Eliane Cristina Araújo, Cláudio E. C. Campelo, Taciana R. O. C. Marques, Letícia B. de Almeida and Herman Martins Gomes</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-2.16/</guid>
+    </item>
+    <item>
+      <title>Modeling Linguistic Violence: An Ontology-Based Framework for the Computational Analysis of Violence Manifested in Language</title>
+      <link>https://aclanthology.org/2026.propor-1.29/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract The conceptual ambiguity among terms like ’hate speech’, ’toxic speech’, and ’dangerous speech’ creates a significant bottleneck for both research and automated moderation. Traditional NLP models, often focused on lexical cues, struggle to differentiate these nuanced forms of linguistic violence, especially when the harm is implicit. This paper addresses this gap with a twofold objective. First, we conduct a conceptual review and propose a unified ontology that differentiates these concepts—including verbal aggression and cyberbullying—based on their core attributes, such as their target, intent, and associated rhetorical hallmarks. Second, we propose a computational methodology designed to operationalize this ontology. Our framework uses a multi-stage NLP pipeline that leverages semantic analysis, specifically Semantic Role Labeling and Named Entity Recognition, to deconstruct speech acts into their core components (e.g., target and action). This component-based approach allows for a granular classification that can robustly distinguish between seemingly similar phenomena, such as a general insult and a targeted identity-based attack. This methodology is particularly promising for low-resource languages, such as Portuguese, as it relies on core semantic tasks for which multilingual models are available, rather than requiring massive, task-specific labeled datasets.</description>
+      <author>Brenda Salenave Santana, Ana Marilza Pernas and Aline A. Vanin</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.29/</guid>
+    </item>
+    <item>
+      <title>NormaTex-MapSNOMED: Bridging the Gap Between Brazilian Portuguese Clinical Narratives and SNOMED CT</title>
+      <link>https://aclanthology.org/2026.propor-1.115/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Clinical narratives written in free text contain valuable information for patient care. However, their unstructured nature and linguistic variability pose significant challenges for automatic processing and interoperability. In particular, mapping clinical terms to standardized terminologies such as SNOMED Clinical Terms (SNOMED CT) remains difficult for languages other than English, including Brazilian Portuguese. This paper presents NormaTex-MapSNOMED, a proposed component of the NormaTex framework that focuses on mapping clinical terms to predefined categories aligned with SNOMED CT. Given previously extracted terms, the method leverages large language models (LLMs) guided by a structured prompt to assign terms to target categories. Experiments were conducted on Portuguese-language clinical narratives and evaluated using three complementary strategies: lexical similarity based on Levenshtein distance, contextual similarity using a BERT-based model, and semantic validation using LLMs. The results show that LLM-based evaluation consistently outperforms lexical and contextual baselines across different models, with higher precision observed for disease-related terms compared to symptom-related expressions. These findings indicate that LLMs are a promising approach for semantic mapping of clinical terms in Brazilian Portuguese and can support clinical term normalization and interoperability with standardized terminologies.</description>
+      <author>Isabela Araujo, Claudia Moro and Layslla Martinez</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.115/</guid>
+    </item>
+    <item>
+      <title>Retrieval-Augmented Generation for Clinical Question Answering in Portuguese Drug Leaflets: Benefits and Limitations</title>
+      <link>https://aclanthology.org/2026.propor-2.18/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Retrieval-Augmented Generation (RAG) is proposed to reduce hallucination and improve grounding in clinical language models, yet its effectiveness across different levels of clinical reasoning remains unclear. We conducted a controlled evaluation of medication-related question answering in Portuguese using over 7,000 Brazilian regulatory drug leaflets and a complementary clinical benchmark derived from national medical licensing examinations (Revalida and Fuvest). Retrieval substantially improved factual recall and clinical coherence in medication-specific queries, increasing F1 from 0.276 to 0.412. However, naive retrieval did not consistently improve complex clinical reasoning and sometimes reduced accuracy compared to a parametric-only baseline. We identify retrieval-induced anchoring bias, where partially relevant evidence shifts model decisions toward clinically incorrect conclusions. Critique-based and adaptive retrieval mitigated this effect and achieved the highest clinical benchmark accuracy (54.25%). Clinically grounded evaluation dimensions revealed safety-relevant differences beyond traditional NLP metrics. These results show that retrieval augmentation is effective in regulatory settings but requires adaptive control for higher-level clinical reasoning.</description>
+      <author>Gabriel Lino Garcia, Pedro Henrique Paiola, João Vitor Mariano Correia, Douglas Rodrigues and João Paulo Papa</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-2.18/</guid>
+    </item>
+    <item>
+      <title>Think Portuguese with Bode Reasoning</title>
+      <link>https://aclanthology.org/2026.propor-1.95/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Large Language Models (LLMs) have introduced reasoning capabilities through multi-step problem-solving processes. These models predominantly perform reasoning in English, limiting their effectiveness in other languages. This paper introduces Bode Reasoning, a Portuguese-language reasoning approach built upon fine-tuned Qwen3-4B and Qwen3-4B-Thinking models, and the Bode Reasoning Portuguese Dataset, comprising 13,961 instances from Brazilian examinations and translated datasets. Through supervised fine-tuning, the proposed approach successfully shifts the reasoning process to Brazilian Portuguese while reducing output verbosity. Experimental evaluation demonstrates that fine-tuned models generate Portuguese reasoning in 86-98.7% of outputs and achieve superior lexical alignment with reference answers. However, this specialization results in moderate mean G-Eval and accuracy degradation across diverse multiple-choice question types, highlighting inherent trade-offs in adapting multilingual reasoning models.</description>
+      <author>Gabriel Lino Garcia, André da F. Schuck, João R. R. Manesco, Pedro Henrique Paiola, Leandro A. Passos and João Paulo Papa</author>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.propor-1.95/</guid>
+    </item>
     <item>
       <title>Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest</title>
       <link>https://arxiv.org/abs/2604.08525v1</link>
@@ -8727,282 +9003,6 @@ Abstract Preparing high-quality instructional materials remains a labor-intensiv
       <category>ACL Anthology</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.191/</guid>
-    </item>
-    <item>
-      <title>Investigating Language and Retrieval Bias in Multilingual Previously Fact-Checked Claim Detection</title>
-      <link>https://aclanthology.org/2026.eacl-long.240/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Multilingual Large Language Models (LLMs) offer powerful capabilities for cross-lingual fact-checking. However, these models often exhibit language bias, performing disproportionately better on high-resource languages such as English than on low-resource counterparts. We also present and inspect a novel concept - retrieval bias, when information retrieval systems tend to favor certain information over others, leaving the retrieval process skewed. In this paper, we study language and retrieval bias in the context of Previously Fact-Checked Claim Detection (PFCD). We evaluate six open-source multilingual LLMs across 20 languages using a fully multilingual prompting strategy, leveraging the AMC-16K dataset. By translating task prompts into each language, we uncover disparities in monolingual and cross-lingual performance and identify key trends based on model family, size, and prompting strategy. Our findings highlight persistent bias in LLM behavior and offer recommendations for improving equity in multilingual fact-checking. To investigate retrieval bias, we employed multilingual embedding models and look into the frequency of retrieved claims. Our analysis reveals that certain claims are retrieved disproportionately across different posts, leading to inflated retrieval performance for popular claims while under-representing less common ones.</description>
-      <author>Ivan Vykopal, Antonia Karamolegkou, Jaroslav Kopčan, Qiwei Peng, Tomáš Javůrek, Michal Gregor and Marian Simko</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.240/</guid>
-    </item>
-    <item>
-      <title>Is Information Density Uniform when Utterances are Grounded on Perception and Discourse?</title>
-      <link>https://aclanthology.org/2026.eacl-long.178/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract The Uniform Information Density (UID) hypothesis posits that speakers are subject to a communicative pressure to distribute information evenly within utterances, minimising surprisal variance. While this hypothesis has been tested empirically, prior studies are limited exclusively to text-only inputs, abstracting away from the perceptual context in which utterances are produced. In this work, we present the first computational study of UID in visually grounded settings. We estimate surprisal using multilingual vision-and-language models over image–caption data in 30 languages and visual storytelling data in 13 languages, together spanning 11 families. We find that grounding on perception consistently smooths the distribution of information, increasing both global and local uniformity across typologically diverse languages compared to text-only settings. In visual narratives, grounding in both image and discourse contexts has additional effects, with the strongest surprisal reductions occurring at the onset of discourse units. Overall, this study takes a first step towards modelling the temporal dynamics of information flow in ecologically plausible, multimodal language use, and finds that grounded language exhibits greater information uniformity, supporting a context-sensitive formulation of UID.</description>
-      <author>Matteo Gay, Coleman Haley, Mario Giulianelli and Edoardo Ponti</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.178/</guid>
-    </item>
-    <item>
-      <title>It’s All About the Confidence: An Unsupervised Approach for Multilingual Historical Entity Linking using Large Language Models</title>
-      <link>https://aclanthology.org/2026.eacl-long.184/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Despite the recent advancements in NLP with the advent of Large Language Models (LLMs), Entity Linking (EL) for historical texts remains challenging due to linguistic variation, noisy inputs, and evolving semantic conventions. Existing solutions either require substantial training data or rely on domain-specific rules that limit scalability. In this paper, we present MHEL-LLaMo (Multilingual Historical Entity Linking with Large Language MOdels), an unsupervised ensemble approach combining a Small Language Model (SLM) and an LLM. MHEL-LLaMo leverages a multilingual bi-encoder (BELA) for candidate retrieval and an instruction-tuned LLM for NIL prediction and candidate selection via prompt chaining. Our system uses SLM’s confidence scores to discriminate between easy and hard samples, applying an LLM only for hard cases. This strategy reduces computational costs while preventing hallucinations on straightforward cases. We evaluate MHEL-LLaMo on four established benchmarks in six European languages (English, Finnish, French, German, Italian and Swedish) from the 19th and 20th centuries. Results demonstrate that MHEL-LLaMo outperforms state-of-the-art models without requiring fine-tuning, offering a scalable solution for low-resource historical EL. Our error analysis reveals that 41% of false predictions exhibit semantic proximity to ground truth entities, highlighting the LLM’s accurate disambiguation of historical references.</description>
-      <author>Cristian Santini, Marieke van Erp and Mehwish Alam</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.184/</guid>
-    </item>
-    <item>
-      <title>Jailbreaks as Inference-Time Alignment: A Framework for Understanding Safety Failures in LLMs</title>
-      <link>https://aclanthology.org/2026.eacl-long.360/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) are safety-aligned to prevent harmful response generation, yet still remain vulnerable to jailbreak attacks. While prior works have focused on improving jailbreak attack effectiveness, they offer little explanation for why safety alignment fails. We address this gap by framing jailbreaks as inference-time alignment, connecting attack design and safety alignment within a unified optimization framework. This framing allows us to extend best-of-N inference-time alignment to the adversarial setting, called LIAR (Leveraging Inference-time Alignment to jailbReak), and derive suboptimality bounds that show LIAR provably approaches an optimal jailbreak as compute scales. Interestingly, our framework allows us to develop the notion of a Safety-Net, a measure of how vulnerable an LLM is to jailbreaks, which helps to explain why safety alignment can fail. Empirically, LIAR produces natural, hard-to-detect prompts that achieve a competitive attack success rate while running 10 to 100x faster than prior suffix-based jailbreaks.</description>
-      <author>James Beetham, Souradip Chakraborty, Mengdi Wang, Furong Huang, Amrit Singh Bedi and Mubarak Shah</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.360/</guid>
-    </item>
-    <item>
-      <title>JiraiBench: A Bilingual Benchmark for Evaluating Large Language Models’ Detection of Human risky health behavior Content in Jirai Community</title>
-      <link>https://aclanthology.org/2026.eacl-long.23/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract In this paper, we present the first cross-lingual dataset that captures a transnational cultural phenomenon, focusing on the Chinese and Japanese "Jirai" subculture and its association with risky health behaviors. Our dataset of more than 15,000 annotated social media posts forms the core of JiraiBench, a benchmark designed to evaluate LLMs on culturally specific content. This unique resource allowed us to uncover an unexpected cross-cultural transfer in which Japanese prompts better handle Chinese content, indicating that cultural context can be more influential than linguistic similarity. Further evidence suggests potential cross-lingual knowledge transfer in fine-tuned models. This work proves the indispensable role of developing culturally informed, cross-lingual datasets for creating effective content moderation tools that can protect vulnerable communities across linguistic borders.</description>
-      <author>Yunze Xiao, Tingyu He, Lionel Z. Wang, Yiming Ma, Xingyu Song, Xiaohang Xu, Mona T. Diab, Irene Li and Ka Chung Ng</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.23/</guid>
-    </item>
-    <item>
-      <title>KAD: A Framework for Proxy-based Test-time Alignment with Knapsack Approximation Deferral</title>
-      <link>https://aclanthology.org/2026.eacl-long.179/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Several previous works concluded that the largest part of generation capabilities of large language models (LLM) are learned (early) during pre-training. However, LLMs still require further alignment to adhere to downstream task requirements and stylistic preferences, among other desired properties. As LLMs continue to scale in terms of size, the computational cost of alignment procedures increase prohibitively.In this work, we propose a novel approach to circumvent these costs via proxy-based test-time alignment, i.e. using guidance from a small aligned model. Our approach can be described as a token-specific cascading method, where the token-specific deferral rule is reduced to 0-1 knapsack problem. In this setting, we derive primal and dual approximations of the optimal deferral decision. We experimentally show the benefits of our method both in task performance and speculative decoding speed.</description>
-      <author>Ayoub Hammal, Pierre Zweigenbaum and Caio Corro</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.179/</guid>
-    </item>
-    <item>
-      <title>KidsArtBench: Multi-Dimensional Children’s Art Evaluation with Attribute-Aware MLLMs</title>
-      <link>https://aclanthology.org/2026.eacl-long.267/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Multimodal Large Language Models (MLLMs) show progress across many visual–language tasks; however, their capacity to evaluate artistic expression remains limited: aesthetic concepts are inherently abstract and open-ended, and multimodal artwork annotations are scarce. We introduce KidsArtBench, a new benchmark of over 1k children’s artworks (ages 5-15) annotated by 12 expert educators across 9 rubric-aligned dimensions, together with expert comments for feedback. Unlike prior aesthetic datasets that provide single scalar scores on adult imagery, KidsArtBench targets children’s artwork and pairs multi-dimensional annotations with comment supervision to enable both ordinal assessment and formative feedback. Building on this resource, we propose an attribute-specific multi-LoRA approach – where each attribute corresponds to a distinct evaluation dimension (e.g., Realism, Imagination) in the scoring rubric – with Regression-Aware Fine-Tuning (RAFT) to align predictions with ordinal scales. On Qwen2.5-VL-7B, our method increases correlation from 0.468 to 0.653, with the largest gains on perceptual dimensions and narrowed gaps on higher-order attributes. Our results show that educator-aligned supervision and attribute-aware training yield pedagogically meaningful evaluations and establish a rigorous testbed for sustained progress in educational AI. We release data and code with ethics documentation.</description>
-      <author>Mingrui Ye, Chanjin Zheng, Zengyi Yu, Chenyu Xiang, Zhixue Zhao, Zheng Yuan and Helen Yannakoudakis</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.267/</guid>
-    </item>
-    <item>
-      <title>Knowing When to Abstain: Medical LLMs Under Clinical Uncertainty</title>
-      <link>https://aclanthology.org/2026.eacl-long.291/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Current evaluation of large language models (LLMs) overwhelmingly prioritizes accuracy; however, in real-world and safety-critical applications, the ability to abstain when uncertain is equally vital for trustworthy deployment. We introduce a unified benchmark and evaluation protocol for abstention in medical multiple-choice question answering (MCQA), integrating conformal prediction, adversarial question perturbations, and explicit abstention options. Our systematic evaluation of both open- and closed-source LLMs reveals that even state-of-the-art, high-accuracy models often fail to abstain when uncertain. Notably, providing explicit abstention options consistently increases model uncertainty and safer abstention, far more than input perturbations, while scaling model size or advanced prompting brings little improvement. These findings highlight the central role of abstention mechanisms for trustworthy LLM deployment and offer practical guidance for improving safety in high-stakes applications.</description>
-      <author>Sravanthi Machcha, Sushrita Yerra, Sahil Gupta, Aishwarya Sahoo, Sharmin Sultana, Hong Yu and Zonghai Yao</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.291/</guid>
-    </item>
-    <item>
-      <title>LaCoMSA: Language-Consistency Multilingual Self-Alignment with Latent Representation Rewarding</title>
-      <link>https://aclanthology.org/2026.eacl-long.224/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) have achieved impressive performance yet remain inconsistent across languages, often defaulting to high-resource outputs such as English. Existing multilingual alignment methods mitigate these issues through preference optimization but rely on external supervision, such as translation systems or English-biased signal. We propose Multilingual Self-Alignment (MSA), a targeted preference optimization framework that leverages an LLM’s own latent representations as intrinsic supervision signals, rewarding lower-resource language outputs based on their alignment with high-resource (English) counterparts in the "semantic hub". We further introduce Language-Consistency MSA (LaCoMSA), which augments MSA with a final-layer language-consistency factor to prevent off-target generation. Integrated with Direct Preference Optimization, LaCoMSA improves a Llama 3 8B-based model multilingual win rates by up to 6.8% absolute (55.0% relatively) on X-AlpacaEval and achieves consistent gains across benchmarks and models. Our findings demonstrate that LaCoMSA can serve as an effective and scalable mechanism, opening a new venue toward multilingual self-alignment.</description>
-      <author>Khanh-Tung Tran, Barry O'Sullivan and Hoang D. Nguyen</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.224/</guid>
-    </item>
-    <item>
-      <title>Language Lives in Sparse Dimensions: Toward Interpretable and Efficient Multilingual Control for Large Language Models</title>
-      <link>https://aclanthology.org/2026.eacl-long.372/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models exhibit strong multilingual capabilities despite limited exposure to non-English data. Prior studies show that English-centric large language models map multilingual content into English-aligned representations at intermediate layers and then project them back into target-language token spaces in the final layer. From this observation, we hypothesize that this cross-lingual transition is governed by a small and sparse set of dimensions, which occur at consistent indices across the intermediate to final layers. Building on this insight, we introduce a simple, training-free method to identify and manipulate these dimensions, requiring only as few as 50 sentences of either parallel or monolingual data. Experiments on a multilingual generation control task reveal the interpretability of these dimensions, demonstrating that the interventions in these dimensions can switch the output language while preserving semantic content, and that it surpasses the performance of prior neuron-based approaches at a substantially lower cost.</description>
-      <author>Chengzhi Zhong, Fei Cheng, Qianying Liu, Yugo Murawaki, Chenhui Chu and Sadao Kurohashi</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.372/</guid>
-    </item>
-    <item>
-      <title>Large Language Models as Oracles for Ontology Alignment</title>
-      <link>https://aclanthology.org/2026.eacl-long.110/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract There are many methods and systems to tackle the ontology alignment problem, yet a major challenge persists in producing high-quality mappings among a set of input ontologies. Adopting a human-in-the-loop approach during the alignment process has become essential in applications requiring very accurate mappings. However, user involvement is expensive when dealing with large ontologies. In this paper, we analyse the feasibility of using Large Language Models (LLM) to aid the ontology alignment problem. LLMs are used only in the validation of a subset of correspondences for which there is high uncertainty. We have conducted an extensive analysis over several tasks of the Ontology Alignment Evaluation Initiative (OAEI), reporting in this paper the performance of several state-of-the-art LLMs using different prompt templates. Using LLMs as resulted in strong performance in the OAEI 2025, achieving the top-2 overall rank in the bio-ml track.</description>
-      <author>Sviatoslav Lushnei, Dmytro Shumskyi, Severyn Shykula, Ernesto Jiménez-Ruiz and Artur d'Avila Garcez</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.110/</guid>
-    </item>
-    <item>
-      <title>Layer-wise Swapping for Generalizable Multilingual Safety</title>
-      <link>https://aclanthology.org/2026.eacl-long.98/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Despite the rapid advancements of Large Language Models (LLMs), safety risks remain a critical challenge for low-resource languages. Existing safety datasets are predominantly English-centric, limiting progress in multilingual safety alignment. As a result, low-resource expert models—fine-tuned on their respective instruction datasets—tend to exhibit higher unsafety rates compared to their high-resource counterparts. In this work, we propose a safety aware layer swapping method that transfers safety alignment from an English safety expert to low-resource language experts without additional training. To further enhance transfer ability, our method adaptively selects or blends modules based on their degree of specialization. Our approach preserves performance on general language understanding tasks while enhancing safety in the target languages. Experimental results show that the proposed method achieves comparable performance to the language expert on general benchmarks such as MMMLU, BELEBELE, and MGSM, while producing more aligned and less harmful responses on the MultiJail safety benchmark</description>
-      <author>Hyunseo Shin and Wonseok Hwang</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.98/</guid>
-    </item>
-    <item>
-      <title>Learning Multilingual Agentic Policy to Control Sycophancy</title>
-      <link>https://aclanthology.org/2026.eacl-long.169/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) are highly effective at adapting to users’ styles, preferences, and contextual signals—a property that underlies much of their practical usefulness, but which can even manifest as sycophancy, i.e., alignment with user-implied beliefs evenwhen these contradict factual accuracy or rational reasoning. Prior work treats sycophancy as a surface-level artefact addressed via inference-time or post-hoc methods. We argue that it is a policy-level failure arising from missing agentic control over agreement under pressure. To make sycophancy amenable to explicit control, we propose learning agentic policies modelling LLMs’ behaviour as a decision-making problem. Our approach equips a single model with an explicit action space that includes answering directly, countering misleading signals, or asking for clarification. The policy is trained to optimise a multi-objective reward that balances task success, sycophancy resistance, and behavioural consistency via a control mechanism that operates through agentic behaviour. We evaluate the method on different benchmarks, showing that the approaches reduce sycophancy, improving performance, and generalise robustly across languages. These findings suggest that mitigating sycophancy requires moving beyond compliance-oriented generation towards agreement-agentic control.</description>
-      <author>Leonardo Ranaldi and Giulia Pucci</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.169/</guid>
-    </item>
-    <item>
-      <title>LingGen: Scalable Multi-Attribute Linguistic Control via Power-Law Masking</title>
-      <link>https://aclanthology.org/2026.eacl-long.85/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract We present LingGen, a controlled text generation model that allows fine-grained control over a large number of real-valued linguistic attributes. It encodes target attribute values with a dedicated linguistic attribute encoder and conditions the language model by injecting the resulting representation into the language model using the beginning-of-sequence (BOS) embeddings. To improve robustness when controlling different attribute subsets, we introduce P-MASKING, which samples per-example attribute masking rates from a truncated Pareto distribution during training. Across 1-40 control attributes, LingGen achieves the lowest average control error among evaluated methods, while remaining efficient at inference and receiving the highest fluency scores in human evaluation. Ablations show that Pareto-sampled masking and BOS-based injection are effective choices compared to alternative masking and integration variants.</description>
-      <author>Mohamed Elgaar and Hadi Amiri</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.85/</guid>
-    </item>
-    <item>
-      <title>LitBench: A Benchmark and Dataset for Reliable Evaluation of Creative Writing</title>
-      <link>https://aclanthology.org/2026.eacl-long.362/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Evaluating creative writing generated by large language models (LLMs) remains challenging because open-ended narratives lack ground truths. Without performant automated evaluation methods, off-the-shelf (OTS) language models are employed as zero-shot judges, yet their reliability is unclear in this context. To address this gap, we introduce LitBench, a large-scale benchmark for creative writing evaluation, featuring a training corpus of 43,827 story pairs and a 2,480-pair test set curated from Reddit. Using LitBench, we benchmark existing LLM judges and train specialized reward models. Our analysis reveals that the strongest OTS judge, Claude-3.7-Sonnet, achieves only 73% agreement with human preferences. In contrast, our trained Bradley-Terry and generative reward models both reach 78% accuracy, outperforming all OTS judges. An online human study further validates our models, showing their rankings of newly generated stories align more closely with human preferences. Our work provides the first reliable benchmark and specialized reward models for creative writing, establishing a crucial foundation for the future development of more capable verifiers.</description>
-      <author>Daniel Fein, Sebastian Russo, Violet Xiang, Kabir Jolly, Rafael Rafailov and Nick Haber</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.362/</guid>
-    </item>
-    <item>
-      <title>Mapping the Course for Prompt-based Structured Prediction</title>
-      <link>https://aclanthology.org/2026.eacl-long.160/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) have demonstrated strong performance in a wide-range of language tasks without requiring task-specific fine-tuning. However, they remain prone to hallucinations and inconsistencies, and often struggle with complex reasoning, in part due to the limitations of autoregressive generation. We propose to address some of these issues, particularly for structured prediction, by combining LLMs with combinatorial inference to marry the predictive power of LLMs with the structural consistency provided by inference methods. We perform exhaustive experiments in an effort to understand which prompting strategies can best estimate confidence values for downstream symbolic inference, and find that, independent of prompting strategy, incorporating symbolic inference yields more consistent and accurate predictions than prompting alone. Finally, we show that calibration and fine-tuning with structured learning objectives further increases performance on challenging tasks, highlighting that structured learning remains valuable in the era of LLMs.</description>
-      <author>Matt Pauk and Maria Leonor Pacheco</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.160/</guid>
-    </item>
-    <item>
-      <title>MERLIN: Multi-Stage Curriculum Alignment for Multilingual Encoder-LLM Integration in Cross-Lingual Reasoning</title>
-      <link>https://aclanthology.org/2026.eacl-long.277/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) excel in English but still struggle with complex reasoning in many low-resource languages (LRLs). Existing methods align LLMs with multilingual encoders, such as LangBridge and MindMerger, raising the accuracy for mid and high-resource languages, yet large performance gap remains for LRLs. We present MERLIN, a model-stacking framework that iteratively refines in 2-stages based on a curriculum strategy (from general to specific where general is bilingual bitext and specific is task-specific data) and adapts only a small set of DoRA weights. On the AfriMGSM benchmark MERLIN improves exact-match accuracy by +12.9 pp over MindMerger and outperforms GPT-4o-mini by 15.2 pp. It also yields consistent gains on MGSM and MSVAMP (+0.9 and +2.8 pp), demonstrating effectiveness across both low and high-resource settings.</description>
-      <author>Kosei Uemura, David Guzmán, Quang Phuoc Nguyen, Jesujoba Oluwadara Alabi, En-Shiun Annie Lee and David Ifeoluwa Adelani</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.277/</guid>
-    </item>
-    <item>
-      <title>MULSUM: A Multimodal Summarization System with Vis-Aligner and Diversity-Aware Image Selection</title>
-      <link>https://aclanthology.org/2026.eacl-long.16/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract The abundance of multimodal news in digital form has intensified demand for systems that condense articles and images into concise, faithful digests. Yet most approaches simply conduct unimodal text summarization and attach the most-similar images with the text summary, which leads to redundancy both in processing visual content as well as in selection of images to complement the summary. We propose MULSUM, a two-step framework: (i) a Cross-Vis Aligner that projects image-level embeddings into a shared space and conditions a pre-trained LLM decoder to generate a visually informed text summary, and (ii) a Diversity-Aware Image Selector that, after the summary is produced, maximizes images-relevance to the summary while enforcing pairwise image diversity, yielding a compact, complementary image set. Experimental results on the benchmark MSMO (Multimodal Summarization with Multimodal Output) corpus show that MULSUM consistently outperforms strong baselines on automatic metrics such as ROUGE, while qualitative inspection shows that selected images act as explanatory evidence rather than ornamental add-ons. Human evaluation results shows that our diverse set of selected images was 13% more helpful than mere similarity-based image selection.</description>
-      <author>Abid Ali, Diego Molla and Usman Naseem</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.16/</guid>
-    </item>
-    <item>
-      <title>Multilingual Amnesia: On the Transferability of Unlearning in Multilingual LLMs</title>
-      <link>https://aclanthology.org/2026.eacl-long.260/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract As multilingual large language models become more widely used, ensuring their safety and fairness across diverse linguistic contexts presents unique challenges. While existing research on machine unlearning has mainly focused on monolingual settings, typically English, multilingual environments introduce additional complexities due to cross-lingual knowledge transfer and biases embedded in both pretraining and fine-tuning data. In this work, we address the problem of multilingual unlearning using the Aya-Expanse 8B model under two settings: (1) data unlearning and (2) concept unlearning. We extend benchmarks for factual knowledge and stereotypes into ten languages through translation—English, French, Arabic, Japanese, Russian, Farsi, Korean, Hindi, Hebrew, and Indonesian—spanning five language families and varying resource levels. Our experiments show that unlearning in high-resource languages tends to be more stable, with asymmetric transfer observed between typologically related languages. Moreover, analysis of linguistic distances reveals that syntactic similarity is the most predictive factor of cross-lingual unlearning effects.</description>
-      <author>Alireza Dehghanpour Farashah, Aditi Khandelwal, Marylou Fauchard, Zhuan Shi, Negar Rostamzadeh and Golnoosh Farnadi</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.260/</guid>
-    </item>
-    <item>
-      <title>Nanda Family: Open-Weights Generative Large Language Models for Hindi</title>
-      <link>https://aclanthology.org/2026.eacl-long.288/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models remain predominantly English-centric, which limits their utility for underrepresented languages. We help bridge this gap for Hindi with Llama-3-Nanda-10B-Chat (aka Nanda-10B) and Llama-3.1-Nanda-87B-Chat (aka Nanda-87B), forming the Nanda family of open-weight bilingual models (https://github.com/MBZUAI-IFM/Nanda-Family). Our approach integrates: (i) a tokenizer extending Llama’s vocabulary with 20% Hindi-specific tokens, thus halving Hindi tokenization fertility while preserving English efficiency, (ii) Hindi-first parameter-efficient continual pretraining using Llama Pro on a 65B-token corpus spanning Devanagari script, code-mixed, and Romanized Hindi, and (iii) bilingual instruction and safety alignment on a large culturally grounded dataset. The resulting Nanda models outperform open-weight LLMs of comparable size: Nanda-87B yields high generative quality, and Nanda-10B shows competitive general-purpose performance. Nanda-87B demonstrates state-of-the-art performance on summarization, translation, transliteration, and instruction following. Moreover, both models achieve state-of-the-art performance in safety and in cultural knowledge. Our results demonstrate that careful tokenizer design, data curation, and continual pretraining can yield capable and safe LLMs for resource-poor languages without compromising English performance.</description>
-      <author>Aaryamonvikram Singh, Debopriyo Banerjee, Dhruv Sahnan, Monojit Choudhury, Shivam Chauhan, Rocktim Jyoti Das, Xudong Han, Haonan Li, Alok Anil Jadhav, Utkarsh Agarwal, Mukund Choudhary, Fajri Koto, Junaid Hamid Bhat, Awantika Shukla, Samujjwal Ghosh, Samta Kamboj, Onkar Pandit, Lalit Pradhan, Rahul Pal, Sunil Kumar Sahu, Parvez Mullah, Ali El Filali, Zainul Abedien Ahmed Quraishi, Neha Sengupta, Gokulakrishnan Ramakrishnan, Rituraj Joshi, Gurpreet Gosal, Avraham Sheinin, Natalia Vassilieva and Preslav Nakov</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.288/</guid>
-    </item>
-    <item>
-      <title>NarraBench: A Comprehensive Framework for Narrative Benchmarking</title>
-      <link>https://aclanthology.org/2026.eacl-long.176/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract We present NarraBench, a theory-informed taxonomy of narrative-understanding tasks, as well as an associated survey of 78 existing benchmarks in the area. We find significant need for new evaluations covering aspects of narrative understanding that are either overlooked in current work or are poorly aligned with existing metrics. Specifically, we estimate that only 27% of narrative tasks are well captured by existing benchmarks, and we note that some areas – including narrative events, style, perspective, and revelation – are nearly absent from current evaluations. We also note the need for increased development of benchmarks capable of assessing constitutively subjective and perspectival aspects of narrative, that is, aspects for which there is generally no single correct answer. Our taxonomy, survey, and methodology are of value to NLP researchers seeking to test LLM narrative understanding.</description>
-      <author>Sil Hamilton, Matthew Wilkens and Andrew Piper</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.176/</guid>
-    </item>
-    <item>
-      <title>NeuronMoE: Efficient Cross-Lingual Extension via Neuron-Guided Mixture-of-Experts</title>
-      <link>https://aclanthology.org/2026.eacl-long.117/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Extending large language models to low-resource languages is essential for global accessibility, but training separate models per language is prohibitively expensive. Mixture-of-Experts (MoE) architectures address this by adding sparse language-specific parameters, but determining how many experts each layer needs remains an open question. Current approaches allocate experts based on layer-level similarity, yet language processing exhibits fine-grained specialization at individual neurons. We propose NeuronMoE , a method that analyzes language-specific neurons across all transformer components to guide expert allocation per layer based on empirically measured cross-lingual neuron diversity. Applied to Llama-3.2-3B for low-resource languages (Greek, Turkish, and Hungarian), this approach achieves approximately 40% average parameter reduction while matching the performance of the LayerMoE baseline. We find that low-resource language experts independently develop neuron specialization patterns mirroring the high-resource language, which are concentrated in early and late layers. This reveals potential universal architectural principles in how multilingual models organize linguistic knowledge. Our approach generalizes across architectures, as validated on Qwen, and shows that allocation strategy matters more than total expert count.</description>
-      <author>Rongzhi Li and Hitomi Yanaka</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.117/</guid>
-    </item>
-    <item>
-      <title>Now You Hear Me: Audio Narrative Attacks Against Large Audio–Language Models</title>
-      <link>https://aclanthology.org/2026.eacl-long.278/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large audio-language models increasingly operate on raw speech inputs, enabling more seamless integration across domains such as voice assistants, education, and clinical triage. This transition, however, introduces a distinct class of vulnerabilities that remain largely uncharacterized. We examine the security implications of this modality shift by designing a text-to-audio jailbreak that embeds disallowed directives within a narrative-style audio stream. The attack leverages an advanced instruction-following text-to-speech (TTS) model to exploit structural and acoustic properties, thereby circumventing safety mechanisms primarily calibrated for text. When delivered through synthetic speech, the narrative format elicits restricted outputs from state-of-the-art models, including Gemini 2.0 Flash, achieving a 98.26% success rate that substantially exceeds text-only baselines. These results highlight the need for safety frameworks that jointly reason over linguistic and paralinguistic representations, particularly as speech-based interfaces become more prevalent.</description>
-      <author>Ye Yu, Haibo Jin, Yaoning Yu, Jun Zhuang and Haohan Wang</author>
-      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.eacl-long.278/</guid>
     </item>
   </channel>
 </rss>

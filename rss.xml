@@ -3,7 +3,7 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Tue, 14 Apr 2026 02:06:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 02:02:43 +0000</lastBuildDate>
     <item>
       <title>A RAG Chatbot with Incremental Context Retrieval based on Local LLMs for Hospital Documents</title>
       <link>https://aclanthology.org/2026.propor-2.14/</link>

@@ -3,7 +3,7 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Thu, 16 Apr 2026 02:12:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 02:03:09 +0000</lastBuildDate>
     <item>
       <title>From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space</title>
       <link>https://arxiv.org/abs/2604.14142v1</link>

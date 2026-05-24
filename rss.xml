@@ -3,7 +3,7 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Sat, 23 May 2026 02:35:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 02:44:13 +0000</lastBuildDate>
     <item>
       <title>LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems</title>
       <link>https://arxiv.org/abs/2605.22786v1</link>

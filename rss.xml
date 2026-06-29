@@ -3,7 +3,235 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Sun, 28 Jun 2026 02:52:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 02:52:40 +0000</lastBuildDate>
+    <item>
+      <title>Democratic ICAI: Debating Our Way to Steering Principles from Preferences</title>
+      <link>https://arxiv.org/abs/2606.28294v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Preference-based alignment often struggles to capture the reasoning that underlies human judgments. Many evaluations rely on multiple interacting criteria, yet pairwise labels reveal only the final choice rather than the considerations that shape preferences. Inverse Constitutional AI (ICAI) improves interpretability in decision making by summarizing preferences into natural-language principles, but its single-pass explanations miss much of the nuance involved in complex decisions. We introduce Democratic ICAI, a novel approach that gathers multiple competing rationales through structured persona debate, offering a broader and more expressive account of the factors influencing each comparison. From these richer signals, we derive clearer and more comprehensive steering principles and use them to guide decision modeling through both LLM-based and decision-tree judges. Experiments on creative preference benchmarks, MuCE-Pref and LiTBench, across multiple creative task categories show that Democratic ICAI yields a more faithful preference structure. It improves average preference prediction across tasks relative to deliberative prompting and principle-based baselines, while producing constitutions that LLM annotators prefer.</description>
+      <author>Kevin Kingslin, Anish Natekar, Ashutosh Ranjan, Vivek Srivastava, Savita Bhat, Shirish Karande</author>
+      <pubDate>2026-06-26T17:38:47Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28294v1</guid>
+    </item>
+    <item>
+      <title>HPRO: Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech</title>
+      <link>https://arxiv.org/abs/2606.28249v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recently, Large Language Model (LLM)-based Text-to-Speech (TTS) models have achieved remarkable naturalness. However, the standard Supervised Fine-Tuning paradigm often converges to statistically averaged prosody, limiting emotional expressiveness. While preference-driven optimization offers a promising alternative, existing approaches suffer from two structural mismatches: information conflict, where content and emotion in a shared latent space produce conflicting gradients, leading to reward hacking and semantic degradation; and scale gap, where sparse sentence-level rewards struggle to guide dense frame-level generation. To overcome these challenges, we propose HPRO, a hierarchical progressive reward optimization framework. Within HPRO, we introduce the HD-Emo codec as a novel differentiable reward model to resolve the information conflict. It extracts speech into distinct content and style preference tokens, structurally isolating emotional optimization from semantic content. Building upon this structured preference space, HPRO bridges the scale gap by progressively aligning frame-, word- and sentence-level objectives. Experiments demonstrate that HPRO significantly enhances emotional expressiveness, while effectively preserving linguistic intelligibility. The code and audio samples are publicly available at https://xxh333.github.io/hpro-demo/.</description>
+      <author>Sihang Nie, Xiaofen Xing, Rui Xing, Haoming Li, Ruitong Xiao, Jingyuan Xing, Baiji Liu, Xiangmin Xu</author>
+      <pubDate>2026-06-26T16:35:48Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28249v1</guid>
+    </item>
+    <item>
+      <title>LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior</title>
+      <link>https://arxiv.org/abs/2606.28182v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Embodied agents operating in decentralized and partially observable environments have attracted growing attention in recent years. However, existing large language model (LLM)-based agents often exhibit behaviors that are misaligned with their partners or inconsistent with the environment state, leading to inefficient cooperation and poor task success. To address this challenge, we propose a novel framework, Learning Laws of Cooperation (LLawCo), that enables embodied agents to autonomously align with both their partners and task objectives. Our framework allows agents to reflect on past failures to extract misaligned behavioral patterns, which are used to derive high-level behavioral laws, such as "Talk when necessary" and "Wait for partner." These laws are explicitly incorporated into the agents' chains of thought via supervised fine-tuning, aligning their reasoning with task requirements and the behavior of other agents. To evaluate our approach, we introduce PARTNR-Dialog, a large-scale multi-agent communicative and cooperative planning benchmark built on the PARTNR environment. Experiments on existing tasks and our new benchmark demonstrate significant improvements in cooperative efficiency and task success rates. Across four backbone LLMs, our method achieves average success rate improvements of 4.5% on the PARTNR-Dialog benchmark and 6.8% on the TDW-MAT benchmark over state-of-the-art open-source communicative agent frameworks. See the LLawCo project page for details: https://www.merl.com/research/highlights/LLawCo</description>
+      <author>Qinhong Zhou, Chuang Gan, Anoop Cherian</author>
+      <pubDate>2026-06-26T15:26:12Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28182v1</guid>
+    </item>
+    <item>
+      <title>EchoSonar-R: A Multi-View Reasoning-Enabled Model for Disease Classification and Report Generation in Echocardiography</title>
+      <link>https://arxiv.org/abs/2606.28164v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Echocardiography is the most widely used non-invasive cardiac imaging modality, providing essential information for cardiovascular diagnosis. Interpreting an echocardiogram requires synthesizing complementary evidence across multiple heart views to identify abnormalities and produce structured clinical reports. While recent efforts focus on improving classification performance, most models lack explicit diagnostic reasoning and spatially grounded anatomical evidence, limiting clinician trust. We present EchoSonar-R, a multi-view reasoning-enabled vision-language model that jointly performs multi-label disease classification and report generation from echocardiography studies. EchoSonar-R combines a spatiotemporal video encoder with a structure-aware cardiac detector that provides spatially grounded anatomical cues to improve interpretability and clinician trust during cross-view reasoning. EchoSonar-R is trained in two stages: supervised fine-tuning (SFT) on reasoning-annotated targets, followed by Group Relative Policy Optimization (GRPO) with task-specific rewards that jointly align classification and report generation within a unified reinforcement-learning framework. Across a private multi-view dataset and two public benchmarks, EchoSonar-R improves macro balanced accuracy by 17.1% on the private set and 6.1% on MIMICEchoQA over the strongest baseline, achieves a GREEN clinical faithfulness score of 0.800, and produces interpretable reasoning traces grounded in multi-view visual evidence.</description>
+      <author>Darya Taratynova, Ahmed Aly, Numan Saeed, Mohammad Yaqub</author>
+      <pubDate>2026-06-26T14:58:45Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28164v1</guid>
+    </item>
+    <item>
+      <title>Robust Harmful Features Under Jailbreak Attacks: Mechanistic Evidence from Attention Head Specialization in Large Language Models</title>
+      <link>https://arxiv.org/abs/2606.28153v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Jailbreak attacks bypass LLM safety alignment, yet their mechanisms remain poorly understood. We provide evidence that attacks do not comprehensively eliminate safety features, but instead selectively suppress specific attention heads. We identify two functionally differentiated types: Adversarially Compromised Heads (ACHs) concentrated in early layers, which are suppressed under attacks, and Safety-Aligned Heads (SAHs) in mid-layers, which maintain robust activations even when attacks succeed. Ablation studies support the causal role of ACHs and the contribution of SAHs to robust activations: suppressing a small number of ACHs is sufficient to induce jailbreak-like behavior on normally refused inputs, while removing SAHs substantially weakens mid-layer safety activations. Token-level attribution further shows that ACH suppression is driven specifically by attack-template tokens, providing a mechanistic account of why attacks can bypass refusal decisions through ACH suppression while leaving internal safety signals sustained by SAHs -- a phenomenon we term Robust Harmful Features. To validate the practical significance of this robustness, we show that simply reading these persistent activations -- without any training -- yields competitive aggregate detection performance with strong adversarial robustness.</description>
+      <author>Yanchen Yin, Dongqi Han, Linghui Li</author>
+      <pubDate>2026-06-26T14:51:16Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28153v1</guid>
+    </item>
+    <item>
+      <title>Regularized Reward-Punishment Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2606.28152v1</link>
+      <description>[arXiv | abstract_keywords]
+
+We propose KL-Coupled Policy Regularization (KCPR), a policy coordination framework for Reward-Punishment Reinforcement Learning (RPRL). Based on KCPR, we derive KL-Coupled Soft Optimality (KCSO) and develop its deep realization, klDMP. Unlike existing RPRL approaches that optimize reward-seeking and punishment-related policies largely independently, KCPR enables direct interactions between companion policies by treating each as a dynamically learned prior for the other. KCSO yields coupled soft-optimal policies and KL-regularized Bellman operators, allowing reward and punishment information to jointly influence value propagation. To improve learning stability, we introduce a companion-prior softening mechanism and evaluate separate replay-buffer designs for balancing reward- and punishment-related experience. Experiments in grid-world and Gazebo robotic navigation tasks demonstrate that klDMP improves safety and learning stability while maintaining competitive task performance compared with DQN, SQL and softDMP. These results suggest that policy-level coordination provides an effective mechanism for integrating multiple behavioral objectives and may serve as a useful design principle for reinforcement learning systems with interacting motivational processes.</description>
+      <author>Jiexin Wang, Eiji Uchibe</author>
+      <pubDate>2026-06-26T14:50:16Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28152v1</guid>
+    </item>
+    <item>
+      <title>Single and Multi Truth Data Fusion using Large Language Models</title>
+      <link>https://arxiv.org/abs/2606.28062v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Data fusion, also known as truth discovery, is a data integration problem that aims to determine the correct value or set of values for each attribute of an object when presented with potentially conflicting values from multiple sources. Data fusion tasks belong to two main categories: single-truth scenarios, where each attribute has only one correct value, and multi-truth scenarios, where multiple values can be valid simultaneously. This paper investigates the use of Large Language Models (LLMs) in data fusion tasks for tabular data. Various prompting strategies, encompassing both single-truth and multi-truth scenarios, are investigated empirically. Domain-dependent, domain-independent, zero-shot and one-shot prompts are evaluated on three different benchmark datasets. Experimental results demonstrate that LLM-based approaches outperform traditional unsupervised truth discovery methods, such as DART and LTM, across all datasets. The codebase of this study has been made publicly available on GitHub.</description>
+      <author>Hira Beril Kucuk, Norman W Paton, Jiaoyan Chen, Zhenyu Wu</author>
+      <pubDate>2026-06-26T13:10:11Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28062v1</guid>
+    </item>
+    <item>
+      <title>MultiHashFormer: Hash-based Generative Language Models</title>
+      <link>https://arxiv.org/abs/2606.28057v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Language models (LMs) represent tokens using embedding matrices that scale linearly with the vocabulary size. To constrain the parameter footprint, prior work proposes hashing many tokens into a single vector within encoder-only models. While this offers parameter efficiency, many-to-one collisions prevent its use in causal LMs. In this paper, we propose MultiHashFormer, a new framework that allows hash-based autoregression. Each token is represented as a unique hash signature, a short sequence of discrete hash IDs, generated by multiple independent hash functions. A Hash Encoder compresses this signature into a single latent vector for processing by a Transformer decoder. Then, a Hash Decoder generates the hash signature of the next token, which is then mapped back to text. We evaluate our approach at the 100M, 1B and 3B parameter scales, demonstrating that MultiHashFormer consistently outperforms standard Transformer LMs across multiple benchmarks. Furthermore, we show that our model handles multilingual vocabulary expansion with a constant parameter footprint without any modifications.</description>
+      <author>Huiyin Xue, Atsuki Yamaguchi, Nikolaos Aletras</author>
+      <pubDate>2026-06-26T13:03:29Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28057v1</guid>
+    </item>
+    <item>
+      <title>From Detection to Action: Using LLM Agents for Fault-Tolerant Control</title>
+      <link>https://arxiv.org/abs/2606.28011v1</link>
+      <description>[arXiv | abstract_keywords]
+
+We propose an agentic Large Language Model (LLM) framework for active Fault-Tolerant Control (FTC) that transforms fault detection outputs into constraint-aware recovery actions grounded in plant-specific knowledge. The approach couples (i) a multi-agent workflow that decomposes operator duties into monitoring, planning, action synthesis, simulation, validation, and reprompting; (ii) a Digital Process Plant Twin (DPPT) that exposes plant data, models, and a simulation service for pre-execution testing; and (iii) a Graph Retrieval-Augmented Generation (Graph RAG) layer built on the CPSMod ontology, which organizes plant knowledge (structure, function, hybrid dynamics, control context, and fault semantics) into a graph that supports relation-aware, multi-hop retrieval for the agents. Corrective actions are generated as minimal-risk state-machine recovery paths and corresponding discrete commands or continuous setpoint adaptations, then validated deterministically against interlocks, envelopes, and dynamic feasibility before any actuation. If no acceptable plan is found within a bounded time window, control is handed to a safety fallback. The framework is evaluated in simulation on two representative benchmarks: a discrete batch Mixing Module and a Continuous Stirred-Tank Reactor (CSTR) under closed-loop PID regulation. Results with lightweight LLMs (GPT-4o-mini and GPT-4.1-mini) show that semantically grounded agents can derive valid recovery decisions within latency budgets compatible with the respective process dynamics, demonstrating a practical pathway from detection to validated corrective action across both discrete and continuous FTC tasks.</description>
+      <author>Javal Vyas, Milapji Singh Gill, Artan Markaj, Felix Gehlhoff, Mehmet Mercangöz</author>
+      <pubDate>2026-06-26T12:13:58Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.28011v1</guid>
+    </item>
+    <item>
+      <title>ToxiREX: A Dataset on Toxic REasoning in ConteXt</title>
+      <link>https://arxiv.org/abs/2606.27981v1</link>
+      <description>[arXiv | abstract_keywords]
+
+We introduce a new, contextual, multilingual dataset called ToxiREX: Toxic REasoning in ConteXt. The dataset consists of threads of Reddit comments and structured characterizations of what the comments imply, following a systematic toxic reasoning schema developed in a previous paper. Using the schema allows us to capture and explain implicit and context-dependent toxicity, while supporting mappings to existing toxicity taxonomies. The dataset includes comments in six languages (English, Arabic, Turkish, Spanish, German, and Dutch), collected from posts connected to specific major events (e.g. the 2023 Turkey earthquakes; the Russian invasion of Ukraine). We describe the context-preserving preprocessing of the threads. We create a training set of 125 thousand comments which is annotated by a commercially available LLM, and a test set of just under three thousand comments that is annotated by native speakers. We show that apparent disagreements in the test set annotations often reflect defensible alternative interpretations rather than noise. Finally, we provide baseline results by prompting and fine-tuning language models. To produce these results, we develop evaluation strategies for our hierarchical, schema-based predictions. While models perform better than random, there remains a lot of room for improvement, showing the task to be challenging. ToxiREX is the first dataset to simultaneously incorporate multiple languages, conversational context, and implicit toxicity, while using the toxic reasoning schema for rich, structured annotations. Dataset available at: https://github.com/cltl/toxirex</description>
+      <author>Stefan F. Schouten, Ilia Markov, Piek Vossen</author>
+      <pubDate>2026-06-26T11:30:42Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27981v1</guid>
+    </item>
+    <item>
+      <title>From Black-Box to Clinical Insight: A Multi-Stage Explainable Framework for Speech-Based Cognitive Impairment Detection</title>
+      <link>https://arxiv.org/abs/2606.27973v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Speech-based cognitive impairment detection offers a noninvasive, accessible alternative to costly biomarker assays, yet transformer-based models remain clinically uninterpretable. We propose a multi-stage explainability framework that translates black-box transformer predictions into clinically grounded narratives by integrating SHapley Additive exPlanations (SHAP)-based token attribution, theory-informed linguistic features, and a four-stage LLM reasoning pipeline using LLaMA-3.1-70B-Instruct. Built on the SpeechCARE-Adaptive Gating Network multimodal screening model (F1 = 72.11% on the NIA PREPARE benchmark), the framework maps model outputs to four cognitive-linguistic dimensions, including lexical richness, syntactic complexity, and semantic coherence. Physician evaluation on 70 stratified English samples demonstrated strong alignment with patient-level cognitive profiles, and a System Usability Scale score of 82/100 indicated high potential for clinical workflow integration.</description>
+      <author>Yasaman Haghbin, Sina Rashidi, Ali Zolnour, Fatemeh Taherinezhad, Ali Fartoot, Hossein Azadmaleki, James M Noble, Maryam Dadkhah, Maryam Zolnoori</author>
+      <pubDate>2026-06-26T11:21:42Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27973v1</guid>
+    </item>
+    <item>
+      <title>Two-Stage Fine-Tuning for Protein Sequence Generation with Targeted Amino-Acid Composition</title>
+      <link>https://arxiv.org/abs/2606.27939v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Protein language models are standard priors for biological sequence generation, but steering them toward explicit distributional design targets remains largely unexplored. We study a constrained protein generation problem in which sequences must match a desired amino-acid (AA) composition profile while preserving plausible sequence statistics and diversity. The motivating application is synthetic feed protein design, where the AA composition of dietary proteins directly determines their nutritional value. We propose a two-stage pipeline in which domain-adaptive fine-tuning (FT) on an in-domain protein dataset is followed by iterative reward-weighted FT via reinforcement learning (RL) anchored against the FT model as a frozen reference. We evaluate the pipeline on two AA compositions and find that FT brings the average composition close to the target, while the subsequent RL enforces specific sequence constraints that FT alone cannot satisfy. We additionally evaluate the design choices of the proposed composition reward term against two baselines and an ablated variant, isolate the contribution of each training stage, and verify that AA composition alignment is achieved without degrading sequence quality.</description>
+      <author>Violeta Basten-Romero, Rubén Muñoz-Tafalla, Anna María Díaz-Rovira, Bertran Miquel-Oliver, Isaac Filella-Merce, Víctor Guallar</author>
+      <pubDate>2026-06-26T10:29:42Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27939v1</guid>
+    </item>
+    <item>
+      <title>SpatialUAV: Benchmarking Spatial Intelligence for Low-Altitude UAV Perception, Collaboration, and Motion</title>
+      <link>https://arxiv.org/abs/2606.27876v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Spatial intelligence is essential for low-altitude unmanned aerial vehicle (UAV) perception, collaboration, and navigation. However, existing UAV benchmarks often emphasize image-level recognition, single-view understanding, or narrow answer formats, leaving 3D spatial inference, multi-view collaboration, scene dynamics, and diverse task formulations insufficiently evaluated. To address these gaps, we introduce SpatialUAV, a real low-altitude UAV benchmark comprising 4,331 curated instances across 14 fine-grained task types, covering semantic discrimination, spatial relation, aerial--aerial collaboration, aerial--ground collaboration, and motion understanding. SpatialUAV organizes all samples into a unified visual-input--question--answer schema, while supporting seven input configurations and nine answer formats, including option labels, region identifiers, geometric values, cross-view correspondences, and free-form motion descriptions. To ensure reliable and grounded evaluation, our data construction pipeline integrates detector-assisted regions, depth supervision, metadata-derived rules, extensive manual annotation, blind filtering, and multi-turn human validation, together with task-specific metrics for heterogeneous outputs. Evaluating representative vision-language models across three categories, we show that current models remain far from human-level performance, with pronounced bottlenecks in cross-view association, structured grounding, geometric reasoning, and temporal viewpoint understanding. These results offer empirical guidance for advancing low-altitude UAV spatial intelligence. Code and data are available at https://github.com/Hyu-Zhang/SpatialUAV.</description>
+      <author>Haoyu Zhang, Meng Liu, Qianlong Xiang, Kun Wang, Yaowei Wang, Liqiang Nie</author>
+      <pubDate>2026-06-26T09:16:55Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27876v1</guid>
+    </item>
+    <item>
+      <title>Output-Space Allocation Costs for Calibration-Guided LLM Compression: An Empirical Study</title>
+      <link>https://arxiv.org/abs/2606.27785v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Training-free compression methods for large language models (LLMs) often use calibration data to guide compression decisions. ROCKET, a recent method combining sparse-dictionary factorization with multi-choice knapsack problem (MCKP) allocation, derives its per-layer factorization from an output reconstruction objective but uses weight-space Frobenius error as the MCKP allocation cost. We investigate whether aligning the allocation cost with the output-space objective improves compressed model fidelity. On Qwen3-8B at 50\% compression, our ROCKET-ActCost achieves +0.8 percentage points higher average accuracy across 8 zero-shot benchmarks (53.1\% vs 52.3\%), but increases WikiText perplexity by 16\% (61.46 vs 52.98). This accuracy-perplexity tradeoff reveals that different allocation objectives favor different downstream metrics. The high correlation ($&gt;$0.99) between weight-space and output-space errors limits allocation divergence, explaining the modest effect size. On Llama-3.2-1B at 20\% compression, the two methods produce near-identical results (53.3\% vs 53.5\% accuracy, 14.45 vs 14.66 PPL), suggesting that the effect of the cost function is minor at lower compression ratios.</description>
+      <author>Qiong Tang, Xiangkun Hu, Xiangyang Liu, Yiran Chen, Yunfan Shao</author>
+      <pubDate>2026-06-26T07:15:17Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27785v1</guid>
+    </item>
+    <item>
+      <title>NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2606.27771v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Reinforcement learning (RL) post-training improves the reward alignment of flow-based generators, but often degrades perceptual quality in ways that are not captured by the reward proxy. We identify a simple structural signature of this drift: across three post-training methods (NFT, AWM, DPO), RL fine-tuning inflates the per-step velocity norm $\|v_θ\|$ by $5\%$ to $15\%$ relative to the reference. A form of norm inflation has been studied in classifier-free guidance (CFG), where rescaling the velocity back to a reference norm at inference time can mitigate the resulting artifacts. However, this inference-time correction does not transfer cleanly to RL: rescaling $v_θ$ to match $\|v_{\text{ref}}\|$ at inference time neither improves reward nor fixes the quality degradation, because the inflation is co-adapted into the model weights. Furthermore, an adjoint sensitivity analysis shows that velocity magnitude rescaling carries no coherent first-order reward signal at the batch level, indicating that suppressing norm inflation is unlikely to remove a consistently reward-carrying component. Since inference-time renormalization fails while norm suppression carries no reward cost, training-time intervention is the appropriate strategy. Together, these findings motivate \methodname, a hinge penalty that activates only when $\|v_θ\|$ exceeds $\|v_{\text{ref}}\|$ and composes additively with any velocity-local base loss. Across two base models, three post-training methods, and two reward proxies, \methodname consistently improves MLLM-judged image quality and forensic realism while preserving reward, with gains that amplify under few-step inference and are not explained by early stopping.</description>
+      <author>Tianlin Pan, Lianyu Pang, Cheng Da, Huan Yang, Changqian Yu, Kun Gai, Wenhan Luo</author>
+      <pubDate>2026-06-26T06:56:54Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27771v1</guid>
+    </item>
+    <item>
+      <title>Towards Reliable and Robust LLM Planning: Symbolic Feedback-Driven Iterative Self-Refinement Framework</title>
+      <link>https://arxiv.org/abs/2606.27757v1</link>
+      <description>[arXiv | affiliation]
+
+Large language models (LLMs) have attracted widespread attention from academia and industry, yet their deployment raises critical security concerns regarding robustness and reliability. Planning, a core component of intelligent behavior, remains challenging for LLMs, which often produce infeasible or incorrect solutions in long-horizon decision-making tasks due to inherent complexity. In this paper, we propose a symbolic feedback-driven iterative self-refinement framework to enhance the robustness and reliability of LLMs in long-horizon planning. Specifically, a natural language prompting mechanism is introduced to map logical symbols into natural language descriptions, enabling LLMs to better capture task constraints and semantics. We further design a symbolic verifier that identifies errors and converts them into corrective instructions interpretable by the LLM, thereby guiding self-refinement. In addition, we leverage a plan recognizer to infer goal reachability, facilitating more effective guidance toward desired goals. Empirical results demonstrate that the proposed framework consistently improves both feasibility and correctness in long-horizon planning tasks. This highlights its effectiveness in enhancing the reliability of LLM-based planning and potential to enable more trustworthy AI systems.</description>
+      <author>Jiajing Zhang, Jiamei Jiang, Chenyang Zhang, Feifei Mo, Linjing Li, Daniel Zeng</author>
+      <pubDate>2026-06-26T06:24:33Z</pubDate>
+      <category>arXiv</category>
+      <category>affiliation</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27757v1</guid>
+    </item>
+    <item>
+      <title>Enhancing Numerical Prediction in LLMs via Smooth MMD Alignment</title>
+      <link>https://arxiv.org/abs/2606.27731v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Despite their strong general capabilities, large language models (LLMs) often remain unreliable when outputs must be numerically precise. A key reason is the training objective: standard cross-entropy treats numeric tokens as unstructured categories and ignores the metric structure of their values. We address this mismatch with Smooth Maximum Mean Discrepancy (SMMD), which builds on the classic MMD by incorporating value-distance kernels over numeric tokens and graph-based smoothness. With this kernel defined over a numeric sub-vocabulary, SMMD aligns the predicted numeric distribution to the target via kernel matching and smooths the prediction-target residual over the induced kernel graph to encourage local consistency. We evaluate SMMD on four numeric-target tasks: mathematical reasoning, arithmetic calculation, clock-time recognition, and chart question answering, across multiple open-weight LLM and VLM backbones. SMMD consistently improves accuracy over both cross-entropy and recent numeric-target losses; analyses show complementary effects between MMD and smoothness and underscore the importance of distance-based kernel design. Code is available at https://github.com/Zuozhuo/smmd-loss.</description>
+      <author>Zhuo Zuo, Li Yue, Wenhao Zheng, Chenpeng Wang, Xianggen Liu</author>
+      <pubDate>2026-06-26T05:25:43Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27731v1</guid>
+    </item>
+    <item>
+      <title>Low-Agreeableness Persona Conditioning for Safe LLM Fine-Tuning</title>
+      <link>https://arxiv.org/abs/2606.27709v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Recent work has shown that fine-tuning large language models (LLMs) for social warmth degrades factual reliability and increases sycophancy. We investigate a related but distinct failure mode: warmth fine-tuning also weakens adversarial safety, making models more susceptible to jailbreaks and harmful output generation. We examine whether this reflects an inherent consequence of empathetic adaptation or an artifact of data construction. To address this, we introduce a persona-driven rewriting pipeline that conditions user turns on low agreeableness and pairs this with warm, de-escalating assistant responses. Across three experiments on four models, our approach reduces jailbreak susceptibility and harmful output rates relative to generic warmth fine-tuning baselines, while preserving conversational warmth. Representational probing provides suggestive evidence that this conditioning reduces the geometric alignment between warmth and compliance directions in latent space. These results show that safer empathetic fine-tuning is achievable through data design alone, without safety labels, harm detectors, or changes to the training objective.</description>
+      <author>Austin MY Cheung, Yi Yang</author>
+      <pubDate>2026-06-26T04:15:06Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27709v1</guid>
+    </item>
+    <item>
+      <title>Mitigating LLM-based p-Hacking by Preregistering for the Next LLM</title>
+      <link>https://arxiv.org/abs/2606.27687v1</link>
+      <description>[arXiv | abstract_keywords]
+
+Large language models (LLMs) are increasingly used to generate, classify, and annotate data whose outputs feed downstream hypothesis tests. However, LLM-based research is easy to p-hack: a researcher can tune the prompts, decoding parameters, or output format until a desired result is reached. We propose a protocol to mitigate p-hacking in LLM-based research: preregistering the experiment and eligible models, and then running it on the first eligible LLM that is released after the preregistration. The researcher finalizes the procedure on current models, preregisters the analysis plan together with a set of eligible future models, and runs the confirmatory analysis on the first eligible model released afterward. Because this model does not exist at commitment time, it cannot be hacked against; furthermore, configurations that hack one model frequently do not transfer to the next. We evaluate the protocol on two tasks whose true values are known. Across 20 models from four providers and 11 LLM-analysis configurations, the protocol would have blocked successful transfer of the p-hack in 73.9% and 72.7% of cases in the two tasks. Additional analyses reveal that mitigation remains substantial under several stress tests. Finally, putting money where our mouth is, we followed our own protocol and preregistered our experiment. The preregistered experiment confirmed the protocol's effectiveness: out of the 7 configurations that hacked the prior model, the hacking failed to carry over in 6 configurations on the first eligible model released afterward.</description>
+      <author>Maria Thomas, Kristina Gligoric, Nihar B. Shah</author>
+      <pubDate>2026-06-26T03:31:31Z</pubDate>
+      <category>arXiv</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://arxiv.org/abs/2606.27687v1</guid>
+    </item>
     <item>
       <title>When are likely answers right? On Sequence Probability and Correctness in LLMs</title>
       <link>https://arxiv.org/abs/2606.27359v1</link>
@@ -8775,234 +9003,6 @@ Abstract We investigate how role models shape collective morality. To explore th
       <category>ACL Anthology</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1992/</guid>
-    </item>
-    <item>
-      <title>How Good is Your Wikipedia? Auditing Data Quality for Low-resource and Multilingual NLP</title>
-      <link>https://aclanthology.org/2026.acl-long.1373/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Wikipedia’s perceived high quality and broad language coverage have established it as a fundamental resource in NLP. However, in recent years, such assumptions of high quality have become the subject of scrutiny in low-resource and multilingual contexts. In this study, we subject the entirety of non-English Wikipedia to a data filtering procedure typically reserved for noisy web-text — a process which removes a large percentage of the collection’s data. In analysing the removed data, we reveal numerous systematic quality issues, such as script and language contamination, repeated template and placeholder articles, and a high concentration of bot-generated content. We consolidate these findings into a 4-level quality ranking of Wikipedia, which shows strong correspondence with alternative quality measures and heuristics. Lastly, we evaluate the downstream impact of quality filtering in three practical language modelling scenarios, showing that models trained on filtered data largely match or outperform those trained on raw Wikipedia, with the largest gains observed for lower-quality language editions. Ultimately, our experiments serve as a first step in establishing quality-aware best practices for Wikipedia utilization in NLP, laying groundwork that can inform future dataset creation and curation efforts.</description>
-      <author>Kushal Tatariya, Artur Kulmizev, Wessel Poelman, Esther Ploeger, Marcel Bollmann, Johannes Bjerva, Jiaming Luo, Heather Lent and Miryam de Lhoneux</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1373/</guid>
-    </item>
-    <item>
-      <title>How Hard is Math? Using Quantitative Metrics to Measure LLM Alignment to Human Intuitions of Difficulty</title>
-      <link>https://aclanthology.org/2026.acl-srw.85/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Modern LLMs have demonstrated advanced reasoning skills, including the ability to solve Olympiad-level mathematics problems. While solving more and more difficult problems is a hallmark of LLM progress, less attention has been placed on how "difficulty" is operationalized in the context of LLM problem solving tasks. This is particularly relevant in educational contexts where teachers or students may ask LLMs for "easy" or "hard" questions. In this paper, we explore various quantitative measurements from LLM-generated solutions and evaluate their inter-correlations, as well as their correlation to human-annotated difficulty scores. We find moderate correlations between metrics using log probabilities and output lengths, including some that are more strongly correlated to difficulty than LLM accuracy. We also train ModernBERT to predict difficulty scores, leading to reasonable accuracy within a given benchmark, but decreased performance when generalizing to other math benchmarks. Finally, to explore connections between difficulty scores and human performance, we collect problems, human solutions, and human performance data from the Putnam competition. We find poor alignment between LLM metrics and human-assigned difficulty scores, despite strong correlations between those scores and human performance on the problems.</description>
-      <author>Micah Helzerman, Steven R Wilson and Cam McLeman</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-srw.85/</guid>
-    </item>
-    <item>
-      <title>How Hypocritical Is Your LLM judge? Listener-Speaker Asymmetries in the Pragmatic Competence of Large Language Models</title>
-      <link>https://aclanthology.org/2026.findings-acl.372/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) are increasingly studied as repositories of linguistic knowledge. In this line of work, models are commonly evaluated both as generators of language and as judges of linguistic output, yet these two roles are rarely examined in direct relation to one another. As a result, it remains unclear whether success in one role aligns with success in the other. In this paper, we address this question for pragmatic competence by comparing LLMs’ performance as pragmatic listeners, judging the appropriateness of linguistic outputs, and as pragmatic speakers, generating pragmatically appropriate language. We evaluate multiple open-weight and proprietary LLMs across three pragmatic settings. We find a robust asymmetry between pragmatic evaluation and pragmatic generation: many models perform substantially better as listeners than as speakers. Our results suggest that pragmatic judging and pragmatic generation are only weakly aligned in current LLMs, calling for more integrated evaluation practices.</description>
-      <author>Judith Sieker and Sina Zarrieß</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.372/</guid>
-    </item>
-    <item>
-      <title>How Language Models Conflate Logical Validity with Plausibility: A Representational Analysis of Content Effects</title>
-      <link>https://aclanthology.org/2026.findings-acl.454/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Both humans and large language models (LLMs) exhibit content effects: biases in which the plausibility of the semantic content of a reasoning problem influences judgments regarding its logical validity. While this phenomenon in humans is best explained by the dual-process theory of reasoning, the mechanisms behind content effects in LLMs remain unclear. In this work, we address this issue by investigating how LLMs encode the concepts of validity and plausibility within their internal representations. We show that both concepts are linearly represented and strongly aligned in representational geometry, leading models to conflate plausibility with validity. Using steering vectors, we demonstrate that plausibility vectors can causally bias validity judgements, and vice versa, and that the degree of alignment between these two concepts predicts the magnitude of behavioral content effects across models. Finally, we construct debiasing vectors that disentangle these concepts, reducing content effects and improving reasoning accuracy. Our findings advance understanding of how abstract logical concepts are represented in LLMs and highlight representational interventions as a path toward more logical systems.</description>
-      <author>Leonardo Bertolazzi, Sandro Pezzelle and Raffaella Bernardi</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.454/</guid>
-    </item>
-    <item>
-      <title>How Large Language Models Balance Internal Knowledge with User and Document Assertions</title>
-      <link>https://aclanthology.org/2026.findings-acl.1267/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) often need to balance their internal parametric knowledge with external information, such as user beliefs and content from retrieved documents, in real-world scenarios like RAG or chat-based systems. A model’s ability to reliably process these sources is key to system safety. Previous studies on knowledge conflict and sycophancy are limited to a binary conflict paradigm, primarily exploring conflicts between parametric knowledge and either a document or a user, but ignoring the interactive environment where all three sources exist simultaneously. To fill this gap, we propose a three-source interaction framework and systematically evaluate 27 LLMs from 3 families on 2 datasets. Our findings reveal general patterns: most models rely more on document assertions than user assertions, and this preference is reinforced by post-training. Furthermore, our behavioral analysis shows that most models are impressionable, unable to effectively discriminate between helpful and harmful external information. To address this, we demonstrate that fine-tuning on diverse source interaction data can significantly increase a model’s discrimination abilities. In short, our work paves the way for developing trustworthy LLMs that can effectively and reliably integrate multiple sources of information. Code is available at https://github.com/shuowl/llm-source-balancing.</description>
-      <author>Shuowei Li, Haoxin Li, Wenda Chu and Yi Fang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1267/</guid>
-    </item>
-    <item>
-      <title>How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior</title>
-      <link>https://aclanthology.org/2026.acl-long.27/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Memory is a critical component in large language model (LLM)-based agents, enabling them to store and retrieve past executions to improve task performance over time. In this paper, we conduct an empirical study on how memory management choices impact the LLM agents’ behavior, especially their long-term performance. Specifically, we focus on two fundamental memory management operations that are widely used by many agent frameworks—memory addition and deletion—to systematically study their impact on the agent behavior. Through our quantitative analysis, we find that LLM agents display an *experience-following* property: high similarity between a task input and the input in a retrieved memory record often results in highly similar agent outputs. Our analysis further reveals two significant challenges associated with this property: *error propagation*, where inaccuracies in past experiences compound and degrade future performance, and *misaligned experience replay*, where some seemingly correct executions can provide limited or even misleading value as experiences. Through controlled experiments, we demonstrate the importance of regulating experience quality within the memory bank and show that future task evaluations can serve as free quality labels for stored memory. Our findings offer insights into the behavioral dynamics of LLM agent memory systems and provide practical guidance for designing memory components that support robust, long-term agent performance.</description>
-      <author>Zidi Xiong, Yuping Lin, Wenya Xie, Pengfei He, Zirui Liu, Jiliang Tang, Himabindu Lakkaraju and Zhen Xiang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.27/</guid>
-    </item>
-    <item>
-      <title>How Much Would a Clinician Edit This Draft? Evaluating LLM Alignment for Patient Message Response Drafting</title>
-      <link>https://aclanthology.org/2026.acl-long.1505/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) show promise in drafting responses to patient portal messages, yet their integration into clinical workflows raises various concerns, including whether they would actually save clinicians time and effort in their portal workload. We investigate LLM alignment with individual clinicians through a comprehensive evaluation of the patient message response drafting task. We develop a novel taxonomy of thematic elements in clinician responses and propose a novel evaluation framework for assessing clinician editing load of LLM-drafted responses at both content and theme levels. We release an expert-annotated dataset and conduct large-scale evaluations of local and commercial LLMs using various adaptation techniques including thematic prompting, retrieval-augmented generation, supervised fine-tuning, and direct preference optimization. Our results reveal substantial epistemic uncertainty in aligning LLM drafts with clinician responses. While LLMs demonstrate capability in drafting certain thematic elements, they struggle with clinician-aligned generation in other themes, particularly question asking to elicit further information from patients. Theme-driven adaptation strategies yield improvements across most themes. Our findings underscore the necessity of adapting LLMs to individual clinician preferences to enable reliable and responsible use in patient-clinician communication workflows.</description>
-      <author>Parker Seegmiller, Joseph Gatto, Sarah E. Greer, Ganza Belise Isingizwe, Rohan Ray, Timothy E. Burdick and Sarah Masud Preum</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1505/</guid>
-    </item>
-    <item>
-      <title>How Robust Are Large Language Models for Clinical Numeracy? An Empirical Study on Numerical Reasoning Abilities in Clinical Contexts</title>
-      <link>https://aclanthology.org/2026.findings-acl.901/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) are increasingly being explored for clinical question answering and decision support, yet safe deployment critically requires reliable handling of patient measurements in heterogeneous clinical notes. Existing evaluations of LLMs for clinical numerical reasoning provide limited operation-level coverage, restricted primarily to arithmetic computation, and rarely assess the robustness of numerical understanding across clinical note formats. We introduce ClinicNumRobBench, a benchmark of 1,624 context-question instances with ground-truth answers that evaluates four main types of clinical numeracy: value retrieval, arithmetic computation, relational comparison, and aggregation. To stress-test robustness, ClinicNumRobBench presents longitudinal MIMIC-IV vital-sign records in three semantically equivalent representations, including a real-world note-style variant derived from the Open Patients dataset, and instantiates queries using 42 question templates. Experiments on 17 LLMs show that value retrieval is generally strong, with most models exceeding 85% accuracy, while relational comparison and aggregation remain challenging, with some models scoring below 15%. Fine-tuning on medical data can reduce numeracy relative to base models by over 30%, and performance drops under note-style variation indicate LLM sensitivity to format. ClinicNumRobBench offers a rigorous testbed for clinically reliable numerical reasoning. Code and data URL are available on https://github.com/MinhVuong2000/ClinicNumRobBench.</description>
-      <author>Minh-Vuong Nguyen, Fatemeh Shiri, Zhuang Li and Karin Verspoor</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.901/</guid>
-    </item>
-    <item>
-      <title>How to Improve LLMs’ Performance on Specific Languages: A Perspective on LLM-Derived Language Similarity</title>
-      <link>https://aclanthology.org/2026.acl-long.691/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) exhibit uneven performance across languages. In language-specific applications, practitioners often rely on target-language corpora or cross-lingual transfer to achieve better performance. However, traditional linguistic typology, commonly used as a transfer language selection strategy in previous studies, may not align with LLM’s perception of language similarity. This work proposes **LLM-based language similarity** as a novel perspective for selecting effective fine-tuning languages. We construct a framework to quantify the similarity within each language pair through both the lenses of **language-specific performance patterns** and **cross-lingual transferability**, ultimately deriving three similarity score matrices. Moreover, we observe a counter-intuitive phenomenon: **super-additive transfer effect**, where fine-tuning on a certain language yields higher performance than fine-tuning directly on the target language. Additionally, due to the absence of an existing dataset meeting our experimental requirements, we construct and release **M4CQ-Pro** dataset, which features domain-diverse distribution of **135** tasks and content consistency across **31** languages (including over 20 medium- and low-resource languages), with 61518 manually reviewed high-quality questions per language. We evaluate our approach on representative multilingual LLMs and results show that all three LLM-based similarity measures effectively guide fine-tuning language selection, outperforming traditional linguistic similarity, with the integrated measure achieving the best results. Our approach provides not only **a novel perspective on language similarity**, but also **practical baselines for selecting fine-tuning languages**.</description>
-      <author>Xinhe Shi, Qingcheng Zeng, Weihao Xuan and Linchao Zhu</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.691/</guid>
-    </item>
-    <item>
-      <title>How Tokenization Limits Phonological Knowledge Representation in Language Models and How to Improve Them</title>
-      <link>https://aclanthology.org/2026.acl-long.634/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Tokenization is the first step in every language model (LM), yet it never takes the sounds of words into account. We investigate how tokenization influences text-only LMs’ ability to represent phonological knowledge. Through a series of probing experiments, we show that subword-based tokenization systematically weakens the encoding of both local (e.g., rhyme) and global (e.g., syllabification) phonological features. To quantify this effect, we introduce the syllabification-tokenization alignment distance (STAD), a metric that measures the misalignment between a model’s tokenization and the natural syllable boundaries of words, and find that higher misalignment correlates with poorer phonological representations, providing a simple diagnostic for phonology-aware tokenization. To address these limitations, we propose a lightweight IPA-based fine-tuning method that infuses phonological awareness into LMs, leading to consistent improvements across three phonology-related tasks while largely preserving math and general reasoning ability, with 1.1% and 0.9% drops on GSM8K and MMLU, respectively.[Our code is available at &lt;https://github.com/liaodisen/Tokenization-Phonology&gt;]</description>
-      <author>Disen Liao and Freda Shi</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.634/</guid>
-    </item>
-    <item>
-      <title>How Value Induction Reshapes LLM Behavior</title>
-      <link>https://aclanthology.org/2026.findings-acl.1302/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Conversational Large Language Models are post-trained on language that expresses specific behavioural traits, such as curiosity, open-mindedness, and empathy, and values, such as helpfulness, harmlessness, and honesty. This is done to increase utility, ensure safety, and improve the user experience of the people interacting with the model. However, values are complex and inter-related - incorporating one can modify behaviour on another. Further, incorporating certain values can make models more addictive or sycophantic, potentially having a detrimental effect on the user interacting with it. We investigate these and other unintended effects of value incorporation into models. We fine-tune models using value subsets of existing preference datasets, measuring the effect of value induction of 15 values on safety, anthropomorphism, and various QA benchmarks. We find that i) inducing values also leads to expression of other related, and sometimes contrastive values, ii) inducing positive values increases safety, and iii) all values increase anthropomorphic language use by models, making them more validating and sycophantic.</description>
-      <author>Arnav Arora, Natalie Schluter, Katherine Metcalf and Maartje Ter Hoeve</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1302/</guid>
-    </item>
-    <item>
-      <title>HowToNarrate: A General-Domain Benchmark for Synchronized Video Narration with External Knowledge</title>
-      <link>https://aclanthology.org/2026.acl-long.1815/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract We present ***HowToNarrate***, the first general-domain benchmark for Synchronized Video Narration. The benchmark contains 3.2K videos across seven domains, segmented into 37.5K clips with aligned narrations and associated external knowledge. Effective narration requires models to *understand visual scenes*, incorporate *relevant knowledge*, and produce *coherent, length-appropriate* descriptions. We systematically benchmark current Multimodal LLMs (MLLMs) on these abilities. Our analysis shows that existing MLLMs overemphasize knowledge retrieval while largely neglecting prior context (receiving less than 10% attention). Moreover, they often conflate narration context with external knowledge, leading to redundancy and incoherence. To mitigate these issues, we propose VideoNarrationAgent, a multi-agent framework that combines context compression, knowledge retrieval, and narration generation. Experiments demonstrate that our method significantly improves MLLM performance. Furthermore, instruction tuning on HowToNarrate enhances both context-awareness and length control, boosting Qwen2.5-VL’s score from 25 to 84. We will release all data and code to support future research in synchronized video narration.</description>
-      <author>Xueyan Wang, Dingyi Yang and Qin Jin</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1815/</guid>
-    </item>
-    <item>
-      <title>HSCodeComp: A Realistic and Expert-level Agent Benchmark for Hierarchical Rule Application</title>
-      <link>https://aclanthology.org/2026.acl-long.937/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Despite recent progress, existing agent benchmarks neglect a fundamental real-world capability: hierarchical rule application, a critical requirement in fields such as law and medicine where agents must reason from broad categories down to specific exceptions to reach rule-compliant decisions.This introduces significant challenges in resolving logical dependencies and disambiguating vague boundaries.To bridge this gap, we introduce HSCodeComp, a novel benchmark derived from e-commerce, requiring agents to assign a unique 10-digit Harmonized System (HS) Code to products by aligning their fuzzy attributes with strict tariff classification rules.HSCodeComp comprises 632 realistic products across 32 categories, featuring detailed yet noisy product information (titles, attributes, and images). The HS Codes are annotated by a panel of 26 tariff experts, strictly adhering to official rules and an empirical knowledge base, both of which we jointly open-source.Through a comprehensive evaluation of 23 LLMs, VLMs, and agents on HSCodeComp, we demonstrate that: 1) a substantial performance gap remains between state-of-the-art agents and human experts (46.8% vs. 95.0%); and 2) test-time scaling fails to close this gap. Further analysis reveals that 1) excessive reasoning steps frequently induce “reasoning drift,” which degrades accuracy; and 2) agents are prone to premature decisions on high-level categories and reasoning hallucinations that lack factual grounding.</description>
-      <author>Tian Lan, Yiqian Yang, Qianghuai Jia, Li Zhu, Hui Jiang, Hang Zhu, Weihua Luo and Longyue Wang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.937/</guid>
-    </item>
-    <item>
-      <title>HSGraphAgent: Knowledge-Graph-Guided Large Language Models for Harmonized System Code Classification</title>
-      <link>https://aclanthology.org/2026.acl-long.2072/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Harmonized System (HS) code classification is a hierarchically structured and regulation-constrained task, often complicated by short and noisy product descriptions. Misclassification can lead to tariff misapplication, regulatory violations, or delayed customs clearance, which in turn requires predictions to be both semantically appropriate and hierarchically valid. While large language models (LLMs) show strong semantic understanding, their unconstrained generation is poorly aligned with these requirements, often producing non-existent or hierarchically inconsistent codes. We propose HSGraphAgent a knowledge-graph-guided LLM framework that formulates HS classification as a stepwise, regulation-aware reasoning process over an explicit HS knowledge graph. By encoding hierarchical containment relations and regulatory exclusion rules, and enforcing them through a Select-Redirect mechanism, HSGraphAgent constrains inference to legally valid paths while producing explicit and traceable reasoning trajectories. Experiments on taxonomy-wide 4-digit and fine-grained 6-digit HS benchmarks demonstrate consistent improvements over direct generation and retrieval-augmented baselines, with particularly strong gains in fine-grained and regulation-sensitive classification settings.</description>
-      <author>Qiang Xia, Zijian Zhang, Ao Wang, Wenhan Wang, Xiangyu Wang and Jian Li</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.2072/</guid>
-    </item>
-    <item>
-      <title>HSS-Synth: Humanities and Social Sciences Data Synthesis for LLMs</title>
-      <link>https://aclanthology.org/2026.findings-acl.1880/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract High-quality, diverse data are vital for large language models (LLMs) but remain scarce and costly. Data synthesis is a viable alternative and succeeds on closed tasks, yet the humanities and social sciences (HSS) are overlooked, and their open-ended nature makes synthesis challenging.Moving beyond prior capability-centric, fragmented attempts, we adopt a subject-centric paradigm, define the first HSS domain system covering 14 mainstream fields, and introduce HSS-Synth—the first data synthesis pipeline for HSS.HSS-Synth comprises: (1) constructing seed document from web corpora via multi-step filtering and text refinement evaluated by a judge; (2) specifying “requirements + persona” to backtranslate seed document into diverse yet faithful instructions with strict Q&amp;A alignment check; and (3) breaking LLM response limits via teacher-forced Answering that fed seed documents during response to anchor semantics, reduce hallucinations, and preserve tone and integrity.HSS-Synth yields 237k high-quality, diverse instruction-tuning samples that outperform 14 leading baselines on 16 benchmarks. The fine-tuned Qwen3-8B-Base set new SOTA and approached official Qwen3-8B, improving both human preference and knowledge capability without performance seesaws. Extensive experiments demonstrate the HSS-Synth’s robustness and transferability.Our code is publicly available at https://github.com/pengr/HSS-Synth.</description>
-      <author>Ru Peng, Tianyu Zhao, Xijun Gu, Zhiting Fan, Haokai Xu, Jinyang Zhang, Yawen Zeng, Yihong Zhuang, Kexin Yang, Junyang Lin, Dayiheng Liu and Junbo Zhao</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1880/</guid>
-    </item>
-    <item>
-      <title>HSUGA: LLM-Enhanced Recommendation with Hierarchical Semantic Understanding and Group-Aware Alignment</title>
-      <link>https://aclanthology.org/2026.findings-acl.726/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language model (LLM)-enhanced sequential recommendation typically aims to improve two core components: user semantic embedding extraction and utilization. Despite promising results, existing methods still have two limitations: 1) In the extraction stage, most methods directly input long interaction sequence fragments into LLM for preference summarization. However, excessively long sequences increase inference difficulty, making it challenging to infer accurate user embeddings reliably. 2) In the utilization stage, most methods employ the same semantic embedding utilization strategy for all users, neglecting the differences caused by user activity levels, leading to suboptimal performance. To address these issues, we propose HSUGA, which introduces a simple yet effective plugin for each of the two core components: Hierarchical Semantic Understanding (HSU) and Group-Aware Alignment (GAA). HSU performs a staged two-phase preference mining and models preference evolution through constrained editing operations, thereby improving the reliability of user semantic extraction. GAA adjusts the semantic utilization intensity based on user activity levels, providing weaker alignment for active users and stronger guidance for users with sparse historical data. Finally, extensive experiments on three benchmark datasets demonstrate the effectiveness and compatibility of HSUGA.</description>
-      <author>Guorui Li, Dugang Liu, Lei Li, Xing Tang and Zhong Ming</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.726/</guid>
-    </item>
-    <item>
-      <title>HTMR: Hybrid Token Masking Reinforcement Learning with Verifiable Rewards for Event Argument Extraction with Multi-Perspective Reasoning</title>
-      <link>https://aclanthology.org/2026.acl-long.910/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Event Argument Extraction (EAE) aims to identify event arguments and assign semantic roles under a predefined schema. Recent work formulates EAE with large language models as a structured conditional generation task and applies Reinforcement Learning with Verifiable Rewards (RLVR) to optimize sequence-level event structures. However, RLVR-based EAE supervision is coarse-grained, as a single reward is assigned to the whole event structure, while optimization happens at the token level. This misalignment causes the same reward to be applied to all tokens, including those not related to event roles or arguments, introducing noise into the gradient updates and weakening the signals for decisions critical to argument extraction. To mitigate this misalignment, we propose Hybrid Token Masking RLVR (HTMR), which selectively updates policy gradients on both high-entropy forking tokens and event-critical tokens that define event structure, along with multi-perspective reasoning. Experiments across multiple benchmarks and models show that HTMR consistently outperforms full-token and high-entropy only RLVR methods. Moreover, HTMR transfers effectively as a plug-and-play approach to other tasks such as named entity recognition and relation classification. The code is publicly available for reproducibility.</description>
-      <author>Jianwen Luo, Yongkang Jin, Yu Hong and Jianmin Yao</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.910/</guid>
-    </item>
-    <item>
-      <title>Human or LLM as Standardized Patients? A Comparative Study in Medical Education</title>
-      <link>https://aclanthology.org/2026.acl-long.1243/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Standardized patients (SPs) are indispensable for clinical skills training but remain expensive and difficult to scale. Although large language model (LLM)-based virtual standardized patients (VSPs) have been proposed as an alternative, their behavior remains unstable and lacks rigorous comparison with human standardized patients. We propose EasyMED, a multi-agent VSP framework that separates case-grounded information disclosure from response generation to support stable, inquiry-conditioned patient behavior. We also introduce SPBench, a human-grounded benchmark with eight expert-defined criteria for interaction-level evaluation. Experiments show that EasyMED more closely matches human SP behavior than existing VSPs, particularly in case consistency and controlled disclosure. A four-week controlled study further demonstrates learning outcomes comparable to human SP training, with stronger early gains for novice learners and improved flexibility, psychological safety, and cost efficiency.</description>
-      <author>Bingquan Zhang, Xiaoxiao Liu, Yuchi Wang, Zhou Lei, Qianqian Xie and Benyou Wang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1243/</guid>
-    </item>
-    <item>
-      <title>HumanLLM: Benchmarking and Improving LLM Anthropomorphism via Human Cognitive Patterns</title>
-      <link>https://aclanthology.org/2026.acl-long.1783/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) have demonstrated remarkable capabilities in reasoning and generation, serving as the foundation for advanced persona simulation and Role-Playing Language Agents (RPLAs). However, achieving authentic alignment with human cognitive and behavioral patterns remains a critical challenge for these agents. We present HumanLLM, a framework treating psychological patterns as interacting causal forces.We construct 244 patterns from ∼ 12,000 academic papers and synthesize 11,359 scenarios where 2-5 patterns reinforce, conflict, or modulate each other, with multi-turn conversations expressing inner thoughts, actions, and dialogue.Our dual-level checklists evaluate both individual pattern fidelity and emergent multi-pattern dynamics, achieving strong human alignment ( r=0.90 ) while revealing that holistic metrics conflate simulation accuracy with social desirability.HumanLLM-8B outperforms Qwen3-32B on multi-pattern dynamics despite 4 × fewer parameters, demonstrating that authentic anthropomorphism requires cognitive modeling—simulating not just what humans do, but the psychological processes generating those behaviors.Our dataset, code, and model are available at:https://github.com/YJGoodbye2024/HumanLLM</description>
-      <author>Xintao Wang, Jian Yang, Weiyuan Li, Rui Xie, Jen-tse Huang, Jun Gao, Shuai Huang, Yueping Kang, Yuanli Guo, Hongwei Feng and Yanghua Xiao</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1783/</guid>
     </item>
   </channel>
 </rss>

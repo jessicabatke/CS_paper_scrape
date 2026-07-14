@@ -3,7 +3,55 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Mon, 13 Jul 2026 02:09:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 01:58:02 +0000</lastBuildDate>
+    <item>
+      <title>Learning Moral Diversity: Modelling Individual Perspectives in Moral Classification of Texts</title>
+      <link>https://aclanthology.org/2026.nlpcss-1.4/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Understanding moral values in social media text offers insight into moral judgement formation, and supervised NLP models trained on crowdsourced data have achieved strong classification performance. However, most approaches simplify the problem by aggregating multiple annotators’ labels into a single "ground truth", overlooking the inherent subjectivity of the task. In practice, there are disagreements between annotators caused by personal viewpoint or inherent ambiguities, particularly for short tweets. Here, we extend a pretrained language model with a layer that learns annotator-specific features. Our model improves predictions of individual annotations and yields representations that reveal meaningful insights into annotators’ moral perspectives. We show that models trained on aggregated labels may hide variation and give a misleading impression of performance. Overall, we demonstrate that disagreement reflects the inherent subjectivity of the task and that modelling individual perspectives creates benefits for moral classification of texts.</description>
+      <author>Yi Ren, Lewis Mitchell and Matthew Roughan</author>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.nlpcss-1.4/</guid>
+    </item>
+    <item>
+      <title>Prompt Perturbations Reveal Human-Like Biases in Large Language Model Survey Responses</title>
+      <link>https://aclanthology.org/2026.nlpcss-1.1/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Large Language Models (LLMs) are increasingly used as proxies for human subjects in social science surveys, but their reliability and susceptibility to known human-like response biases, such as central tendency, opinion floating and primacy bias are poorly understood. This work investigates the response robustness of LLMs in normative survey contexts—we test 18 LLMs on questions taken from the World Values Survey (WVS), applying a comprehensive set of ten perturbations to both question phrasing and answer option structure, resulting in over 334,800 simulated survey interviews. In doing so, we not only reveal LLMs’ vulnerabilities to perturbations but also show that almost all tested models exhibit a consistent recency bias , disproportionately favoring the last-presented answer option. While larger models are generally more robust, all models remain sensitive to semantic variations like paraphrasing and to combined perturbations. This underscores the critical importance of prompt design and robustness testing when using LLMs to generate synthetic survey data.</description>
+      <author>Jens Rupprecht, Georg Ahnert and Markus Strohmaier</author>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.nlpcss-1.1/</guid>
+    </item>
+    <item>
+      <title>The Hidden Language of Harm: Examining the Role of Emojis in Harmful Online Communication and Content Moderation</title>
+      <link>https://aclanthology.org/2026.nlpcss-1.19/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Social media platforms have become central to modern communication, yet they also harbor offensive content that challenges platform safety and inclusivity. While prior research has primarily focused on textual indicators of offense, the role of emojis, ubiquitous visual elements in online discourse, remains underexplored. Emojis, despite being rarely offensive in isolation, can acquire harmful meanings through symbolic associations, sarcasm, and contextual misuse. In this work, we systematically examine emoji contributions to offensive Twitter messages, analyzing their distribution across offense categories and how users exploit emoji ambiguity. To address this, we propose an LLM-powered, multi-step moderation pipeline that selectively replaces harmful emojis while preserving the tweet’s semantic intent. Human evaluations demonstrate that our approach effectively reduces offensiveness while preserving semantic integrity. Our analysis also reveals heterogeneous effects across offense types, offering nuanced insights for online communication and emoji moderation.</description>
+      <author>Yuhang Zhou, Yimin Xiao, Wei Ai and Ge Gao</author>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.nlpcss-1.19/</guid>
+    </item>
+    <item>
+      <title>Who Speaks for Whom? LLM-Generated Survey Data as a Proxy for Public Opinion</title>
+      <link>https://aclanthology.org/2026.nlpcss-1.9/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Technological advancements, such as Large Language Models (LLMs), offer a potential solution to the two-faceted problem facing social science researchers: rising costs and declining response rates. The use of artificial personas is a budding practice, where chatbots are given the demographic characteristics of the person they are supposed to role-play as and answer questions for researchers. Before scholars and practitioners augment or replace the data created by interviewing humans, it is essential to understand how well models perform in generating accurate, reliable, and robust data, with concerns that the training of LLMs results in a bias towards the norms of WEIRD cultures. We present a procedure for practitioners to use to evaluate the quality of their synthetic data by measuring Intra Class Correlation (ICC), Earth Mover Distance (EMD), Variance, Hedging, and demographic drivers of LLM output. We find that the models may generate plausible results in the aggregate, but these synthetic data do not exhibit the depth or nuance of human respondents. Secondarily, we find that despite having generated definitive answers on a ten-point scale, the reasoning provided by the LLM exhibited varying degrees of hedging that do not consistently align with the LLM’s answer. The distortion of the results was not uniformly distributed; instead, the effects were more extreme for some demographic groups. Our findings suggest that the technology generating synthetic survey data may not be mature enough to address the increasing challenges of interviewing humans for public opinion research.</description>
+      <author>Radhakrishnan Venkatakrishnan, Travis Brodbeck and Michael D. Young</author>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.nlpcss-1.9/</guid>
+    </item>
     <item>
       <title>Co-LMLM: Continuous-Query Limited Memory Language Models</title>
       <link>https://arxiv.org/abs/2607.07707v1</link>
@@ -8955,54 +9003,6 @@ Abstract Simulating dementia patients with large language models (LLMs) is chall
       <category>ACL Anthology</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.605/</guid>
-    </item>
-    <item>
-      <title>DentalGPT: Incentivizing Multimodal Reasoning in Dentistry</title>
-      <link>https://aclanthology.org/2026.findings-acl.135/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Reliable interpretation of multimodal dental data is essential for automated oral healthcare, yet current multimodal large language models (MLLMs) show limited understanding of dental images. Although complex reasoning improves performance, its gains in dentistry are substantially smaller than in other medical domains, suggesting that complex reasoning is not yet sufficiently incentivized for dental diagnosis, likely due to insufficient domain knowledge and limited reinforcement learning on dental questions. We present DentalGPT, a dentistry-specialized MLLM trained via staged multimodal alignment and reinforcement learning. By constructing the largest annotated multimodal dental dataset to date with over 120k images, multimodal alignment provides the necessary domain knowledge foundation to support and incentivize complex reasoning, which is further strengthened through reinforcement learning. Experiments on expert-annotated benchmarks and dental subsets of medical VQA benchmarks show that DentalGPT achieves superior performance on disease classification and dental VQA tasks, outperforming many state-of-the-art MLLMs despite its compact 7B parameter scale.</description>
-      <author>Zhenyang Cai, Jiaming Zhang, Junjie Zhao, Ziyi Zeng, Yanchao Li, Liang Jingyi, Junying Chen, Yunjin Yang, Jiajun You, Shuzhi Deng, Xieruiqiii, Yuanting Chen, Xiangyi Feng, Jianquan Li, Liangyi Chen, Junwen Wang, Shan Jiang and Benyou Wang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.135/</guid>
-    </item>
-    <item>
-      <title>Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution</title>
-      <link>https://aclanthology.org/2026.findings-acl.991/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract While the massive scale of modern LLMs enables remarkable performance, their static, input-agnostic computational graph incurs substantial resource wastage and high latency during inference. Existing dynamic schemes, such as early-exit and layer-drop reduce FLOPs but break batch processing or introduce KV-cache inconsistency. We propose Deputy, a dynamic low-rank substitution framework that employs a lightweight decision module at each layer to dynamically determine the execution branch for different tokens: Attention layers choose between full and low-rank computation to mitigate the KV cache issue, while FFN layers additionally support skipping to further reduce computation. We fine-tune the LLM with LoRA and then derive an additional low-rank matrix C via a least-squares fit BC ≈ W pre , where B is the shared LoRA matrix, so that only one extra low-rank matrix is introduced, effectively reducing memory overhead. Moreover, a hybrid KV cache strategy stores KV values generated by the low-rank branch, achieving a 38% reduction in cache storage. Experiments on Llama models demonstrate that Deputy reduces computation by approximately 40% compared to the original dense model while outperforming existing baseline methods.</description>
-      <author>Yuhua Zhou, Shichao Weng, Changhai Zhou, Yuhan Wu, Qian Qiao, Jun Gao, Fei Yang and Aimin Pan</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.991/</guid>
-    </item>
-    <item>
-      <title>DeReA: Improving Idiom Translation with Detect-Retrieve-Arbitrate Reasoning</title>
-      <link>https://aclanthology.org/2026.acl-long.299/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Idiom translation remains a formidable challenge for Large Language Models (LLMs), as the constraints of static parametric memory and the noise in sentence-level retrieval often lead to literal misinterpretations. To address this, we propose DeReA, a detect-retrieve-arbitrate framework. The system employs a preference-aligned detector to identify idiomatic spans by reasoning over semantic conflicts between literal and contextual meanings. Subsequently, an idiom-centric translator invokes a fine-tuned embedding model to efficiently retrieve canonical definitions from an external knowledge base. The translator then utilizes a dual-path arbitration mechanism to select the optimal rendering by weighing the retrieval-augmented translations against direct translation. To evaluate our framework, we introduce LoMI, a high-difficulty benchmark with low data contamination. Experimental results demonstrate that DeReA significantly enhances performance across various model scales, improving GPT-5-mini by over 5.2 points in both idiomatic quality and consistency according to LLM-based metrics. Furthermore, evaluations on an emerging slang dataset from Urban Dictionary validate the potential of our approach in handling novel and evolving linguistic data. Our code is available at https://github.com/jrongqing/DeReA.</description>
-      <author>Rongqing Jiang, Xuebo Liu, Shengxin Liu, Yutong Wang, Min Zhang, Shimin Tao, Daimeng Wei and Min Zhang</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.299/</guid>
-    </item>
-    <item>
-      <title>Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests</title>
-      <link>https://aclanthology.org/2026.findings-acl.513/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Proxy optimization, where AI systems exploit evaluator weaknesses rather than improve intended objectives, threatens both reinforcement learning (reward hacking) and LLM alignment (evaluator gaming). We introduce the Evaluator Stress Test (EST), an invariance-based framework that detects proxy gaming by separating exploitable sensitivity (e.g., format, physics bugs) from content-driven improvements using controlled perturbations with semantic validity audits. We validate EST across both domains. In RL, across 15 environments and 5 algorithms (2,156 expert-annotated episodes), EST achieves 78.4% precision and 81.7% recall. In LLM alignment, across 4 tasks, 2 model scales, 2 training methods, and 2 judges (1,200 human-annotated instances), EST achieves 74.2% precision and 78.6% recall with early warning signals preceding quality decline. Cross-domain analysis reveals that proxy-true correlation tracking transfers directly between domains, while perturbation design requires domain adaptation. Closed-loop mitigation improves human win-rate by 8.3 points (LLM) and reduces hacking by 54.6% (RL). We release benchmarks for both domains: 2,156 RL episodes and 1,200 LLM instances.</description>
-      <author>Sanjeda Akter, Ibne Farabi Shihab and Anuj Sharma</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.513/</guid>
     </item>
   </channel>
 </rss>

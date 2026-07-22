@@ -3,7 +3,127 @@
     <title>AI Safety &amp; Alignment Papers</title>
     <link>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repo&gt;/main/rss.xml</link>
     <description>Daily feed of arXiv and ACL Anthology papers on LLM alignment, safety, and related topics.</description>
-    <lastBuildDate>Tue, 21 Jul 2026 02:05:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 02:06:02 +0000</lastBuildDate>
+    <item>
+      <title>ArgAssist: LLM-based Argument Synthesis for Insurance Disputes</title>
+      <link>https://aclanthology.org/2026.sigdial-1.9/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Access to timely and affordable dispute resolution is a major challenge for industries such as insurance, finance, and consumer goods, where legal disputes between suppliers and consumers are frequent and often complex. We present "ArgAssist", an LLM-based system for structured argumentative discourse generation that forms a core component of an alternative dispute resolution (ADR) platform that we are building. ArgAssist assists parties involved in a dispute (such as insurer and insured in an insurance dispute) by synthesizing discourse-structured legal arguments, represented as claims supported by typed premises grounded in case information. ArgAssist first generates "base" arguments using an LLM, which are then strengthened by grounding them in relevant prior cases and statutes to ensure legal soundness and contextual coherence. We introduce a novel evaluation metric for assessing the quality of generated arguments and demonstrate ArgAssist’s effectiveness on two real-world datasets in the insurance domain. Our results show that explicitly modeling argumentative discourse structure and grounding significantly improves alignment with expert-authored legal arguments.</description>
+      <author>Anubhav Sinha, Nitin Ramrakhiyani, Sachin Pawar, Isha Narang and Manoj Apte</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.9/</guid>
+    </item>
+    <item>
+      <title>Breaking the Script: Do Role-Playing Agents Maintain Goal Alignment under Distraction?</title>
+      <link>https://aclanthology.org/2026.sigdial-1.8/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract As large language models (LLMs) are increasingly deployed as role-playing agents in educational and professional training simulations, their susceptibility to user-induced distraction threatens their pedagogical utility. We formalise goal-competing distraction as a controlled evaluation paradigm and introduce a simulation framework that captures both immediate reactions and multi-turn trajectories under targeted distraction, using an LLM-based user simulator. Building upon this framework, we evaluate agent behaviour across three models: Gemini-2.0-Flash, Llama-3.3-70B-Instruct, and Llama-3.1-8B-Instruct. Our findings reveal a critical trade-off dependent on model scale. While larger models tend to remain socially responsive and more frequently engage with distractor topics, the smaller model shows rigid goal adherence by resisting and rejecting distraction. Although redirection is the most common initial response, subsequent trajectories diverge substantially. The inclusion of explicit dialogue state demonstrates model-dependent effects, acting as a stabilising anchor for smaller models but providing limited benefit for larger ones. These results suggest that maintaining goal alignment in role-playing agents requires explicitly managing the trade-off between conversational responsiveness and goal adherence.</description>
+      <author>Dongxu Lu, Albert Gatt and Johan Jeuring</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.8/</guid>
+    </item>
+    <item>
+      <title>Embodied Multi-Agent Coordination by Aligning World Models Through Dialogue</title>
+      <link>https://aclanthology.org/2026.sigdial-1.21/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Effective collaboration between embodied agents requires more than acting in a shared environment, it demands communication grounded in each agent’s evolving understanding of the world. When agents can only partially observe their surroundings, coordination without communication is provably hard, but communication can, in principle, bridge this gap by allowing agents to share observations and align their world models. In this work, we examine whether LLM-based embodied agents actually realize the ability to communicate. We extend PARTNR, a benchmark for collaborative household robotics, with a natural-language dialogue channel that enables two agents with partial observability to communicate during task execution. To evaluate whether dialogue leads to genuine world-model alignment rather than superficial coordination, we propose a framework for measuring world-model alignment defined over per-agent world graphs: observation convergence (do private world models align over time?), information novelty (do messages convey what the partner lacks?), and belief-sensitive messaging (do agents model what their partner knows?). Our experiments across three LLMs reveal that dialogue reduces action conflicts 40–83 percentage points but degrades task success relative to silent coordination. Using our metrics, we characterize the gap between superficial coordination and genuine world-model alignment, and identify where current models fall on this spectrum.</description>
+      <author>Vardhan Dongre and Dilek Hakkani-Tur</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.21/</guid>
+    </item>
+    <item>
+      <title>Enhancing Operational Safety via Agentic Dialogue Hazard Identification Analysis</title>
+      <link>https://aclanthology.org/2026.sigdial-1.53/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Operational safety in high-stakes domains such as industrial process control, autonomous, and safety-critical systems demand reliable hazard identification. While large language models (LLMs) have shown promise in automating safety analysis tasks, single-turn, monolithic inference is brittle: it lacks the self-correction, deliberation, and contextual refinement that safety engineers apply iteratively. In this paper, we introduce HAZDIAL, a framework that investigates whether structured agentic dialogue (multi-agent, multi-turn interactions) improves the quality of NLP-based hazard identification over single-pass baselines. We systematically compare two dialogue modalities: adversarial debate and constructive discussion, and propose an genetic algorithm-based agentic interaction optimization. We evaluate all configurations against a curated golden dataset using standard classification metrics (accuracy, precision, recall, F1) and a novel dialogue metrics. This work advances the intersection of dialogue systems, multi-agent reasoning, and AI safety, providing empirical evidence for dialogue-driven hazard analysis.</description>
+      <author>Sanjay Das, Ran Elgedawy, Ethan Seefried, Ryan Burchfield and Tirthankar Ghosal</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.53/</guid>
+    </item>
+    <item>
+      <title>Evaluation of Paralinguistic-Aware Spoken Dialogue Systems using Next-Utterance Classification</title>
+      <link>https://aclanthology.org/2026.sigdial-1.50/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract In spoken dialogues, paralinguistic cues frequently convey crucial information not captured by linguistic content alone. However, conventional spoken dialogue systems (SDSs), which typically comprise a cascade of an automatic speech recognition model and a large language model (LLM), lack the ability to recognize paralinguistic cues. Relying solely on transcribed text, paralinguistic-agnostic SDSs often cause dialogue breakdowns. To address this difficulty, integrating a paralinguistic recognition model into SDSs is essential. Therefore, this study focuses on evaluating such paralinguistic-aware SDSs. To this end, we propose a corpus-based evaluation method utilizing next-utterance classification as an automated alternative to human evaluation. Specifically, an LLM is tasked with predicting the dialogue act of the subsequent utterance given a transcribed dialogue history, comparing scenarios with and without paralinguistic attitude classes. Our experiments demonstrate that incorporating a paralinguistic attitude recognition model improves prediction performance, as measured by the mean reciprocal rank. Furthermore, we assessed the alignment of our proposed corpus-based evaluation method with subjective human evaluations. The results confirmed the validity of the proposed method as a reliable proxy for human evaluation, demonstrating its correlation with human rankings and agreement with human preferences in pairwise comparisons. Taken together, this work highlights that integrating paralinguistic recognition is a crucial step toward realizing more robust and natural spoken dialogue systems.</description>
+      <author>Kouki Miyazawa and Yoshinao Sato</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.50/</guid>
+    </item>
+    <item>
+      <title>From Propositional to Perceptual Asymmetry: Extending FPO to Asymmetric Partial Information Dialogue</title>
+      <link>https://aclanthology.org/2026.sigdial-1.28/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Frictive Policy Optimization treats friction in collaborative dialogue – misalignment, misunderstanding, repair – as an epistemic signal essential to common-ground construction, rather than noise to be minimized. However, FPO and its implementations have assumed shared perceptual contexts, where friction arises from differently interpreted propositions over the same scene, which we define as propositional asymmetry. We extend FPO to perceptual asymmetry, where participants hold asymmetric partial information and the same referring expression yields different denotations depending on whose information state grounds the reference. We evaluate this through cross-corpora analysis and LLM probing on referentially asymmetric dialogue tasks, primarily the HCRC MapTask. We find that FPO’s friction functional is empirically valid only when evaluated from within each participant’s information horizon: different landmark configurations produce qualitatively distinct grounding failure modes, with a small class of ambiguous configurations driving a disproportionate share of misunderstandings through trajectories that appear successful but silently diverge. The LLM probe confirms that having the right perspective matters more than having all perspectives: the informed single viewpoint outperforms omniscient access to both participants’ contexts. We propose two annotation refinements: subtype decomposition of pending grounding states and accommodation-aware alignment classification.</description>
+      <author>Yifan Zhu, Kyeongmin Rim and James Pustejovsky</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.28/</guid>
+    </item>
+    <item>
+      <title>From Sound to Symptom: Real-Time Respiratory Signal Understanding for Conversational Healthcare Agents</title>
+      <link>https://aclanthology.org/2026.sigdial-1.39/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Cough events during live spoken conversations carry clinically valuable respiratory signals, yet existing dialogue systems treat them as acoustic noise to be discarded. We present HealthCUES (Clinical Understanding from Embodied Sounds), a streaming pipeline for paralinguistic respiratory monitoring in real-time conversational agents, a capability that, to the best of our knowledge, is absent from all prior systems. HealthCUES processes audio through a rolling buffer aligned with dialogue turn boundaries, enabling sub-second event detection without interrupting conversational flow. Beyond binary cough detection, the system provides fine-grained analytics: (i) differentiation between coughing and throat clearing, (ii) cough subtype classification (dry, wet, barking, whooping) with confidence scores, and (iii) temporal duration estimation with start–end boundaries. To prevent alert fatigue, HealthCUES introduces dialogue-aware gating mechanisms that modulate triggering based on conversational context. The system leverages Qwen3-Omni, a multimodal large language model (MLLM), with constrained structured outputs, decomposing cough analysis into parallel prediction tasks for independent prompt optimization. Evaluation on 847 in-house conversational audio segments demonstrates 93% F1 for cough detection, 0.75 weighted-F1 for wet/dry subtype classification, and average end-to-end latency of 340ms; external validation on the AMI meeting corpus confirms robust cough, throat-clearing, and speech separation in the presence of speech (0.91 macro-F1). A user study with licensed healthcare professionals confirms the clinical relevance of subtype information and the system’s utility in telehealth workflows.</description>
+      <author>Tanmay Laud, Herprit Mahal and Subhabrata Mukherjee</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.39/</guid>
+    </item>
+    <item>
+      <title>I Understand How You Feel: Enhancing Deeper Emotional Support Through Multilingual Emotional Validation in Dialogue System</title>
+      <link>https://aclanthology.org/2026.sigdial-1.16/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Emotional validation - explicitly acknowledging that a user’s feelings make sense - has proven therapeutic value but has received little computational attention. The emotional validation in dialogue systems can be decomposed into (i) validating response identification, (ii) validation timing detection, and (iii) validating response generation. To support research on all three subtasks, we release M-EDESConv, a 120k English–Japanese multilingual corpus created through hybrid manual–automatic annotation, and M-TESC, a multilingual spoken-dialogue test set. For timing detection, we propose MEGUMI, a Multilingual Emotion-aware Gated Unit for Mutual Integration, that fuses frozen XLM-RoBERTa semantics with language-specific emotion encoders via cross-modal attention and gated fusion. MEGUMI shows superior performance on both the M-EDESConv and M-TESC datasets, both objectively and subjectively. Finally, our EmoValidBench benchmarks of GPT-4.1 Nano and Llama-3.1 8B indicate that current LLMs generate contextually similar, diverse validating responses, but emotional understanding remains a major area for improvement.</description>
+      <author>Zi Haur Pang, Yahui Fu, Koji Inoue and Tatsuya Kawahara</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.16/</guid>
+    </item>
+    <item>
+      <title>Seeing Is Not Sharing: Some Vision-Language Models Overestimate Common Ground in Asymmetric Dialogue</title>
+      <link>https://aclanthology.org/2026.sigdial-1.49/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract In collaborative dialogue, shared perception does not guarantee shared interpretation. Mutual understanding must be established through interaction. We investigate whether vision-language models (VLMs) can distinguish what could be shared from what has been shared between dialogue participants through grounding. We formulate this as an interpretation-matching task on 13,077 annotated reference expressions from HCRC MapTask dialogues, and evaluate VLMs under systematically controlled manipulations of dialogue context and map-information access. Our results show that providing authentic map images improves overall performance but shifts models toward over-predicting alignment. Textual descriptions of the same map content reproduce this bias, while non-informative images suppress alignment predictions entirely, indicating that the bias is driven by task-relevant map content, not the visual channel. This improvement comes at the cost of degraded accuracy on non-aligned cases. Calibration analysis and reference-chain tracking further suggest that models rely on static referential cues on the maps rather than tracking how grounding unfolds through dialogue history. We observe these patterns most clearly in Qwen3-VL-8B-Instruct and, to varying degrees, in four additional models from two architecture families. In models that exhibit the bias, map content, whether presented visually or textually, is treated as evidence of mutual understanding, conflating potential with established common ground.</description>
+      <author>Nan Li, Albert Gatt and Massimo Poesio</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.49/</guid>
+    </item>
+    <item>
+      <title>When the Database Fails: Prompting LLM Dialogue Agents for Safe Recovery in Task-Oriented Dialogue</title>
+      <link>https://aclanthology.org/2026.sigdial-1.57/</link>
+      <description>[ACL Anthology | abstract_keywords]
+
+Abstract Large language models used in task-oriented dialogue often produce fluent but unsafe responses when backend database calls fail, return empty results, or surface mismatched information, inventing venues, confirmations, or booking details not grounded in the database. We study a lightweight prompting-based recovery approach that improves robustness without retraining or additional model calls. We compare three response strategies, including a guided recovery prompt conditioned on structured database status, across six open-weight model families (DeepSeek-R1, Gemma-2, Llama-3, Mistral, Phi-3, and Qwen-2.5) and four database conditions: empty result, wrong-domain retrieval, API error, and clean retrieval. Using fault-injected benchmarks built on two structurally different datasets, MultiWOZ 2.2 (5 domains) and SGD (20 domains), we find that naive agents hallucinate on 30.5% of failure turns on MultiWOZ and 20.9% on SGD. Our Guided-Retry strategy reduces hallucination by 50% on MultiWOZ (30.5→15.3%) and by 42% on SGD (20.9→12.2%) without retraining. However, residual hallucination remains substantial (6–37% across models), with wrong-domain failures the hardest case. Results are consistent across both datasets and all six model families, and human annotation shows substantial agreement while supporting the validity of the automatic commitment-safety metric.</description>
+      <author>Mohammad Alijanpour Shalmani, Alale Rezvani Boroujeni and Jiann S. Yuan</author>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <category>ACL Anthology</category>
+      <category>abstract_keywords</category>
+      <guid isPermaLink="true">https://aclanthology.org/2026.sigdial-1.57/</guid>
+    </item>
     <item>
       <title>Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models</title>
       <link>https://arxiv.org/abs/2607.15277v1</link>
@@ -8883,126 +9003,6 @@ Abstract Group Relative Policy Optimization (GRPO) enhances LLM reasoning but of
       <category>ACL Anthology</category>
       <category>abstract_keywords</category>
       <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.836/</guid>
-    </item>
-    <item>
-      <title>Can AI Be a Good Peer Reviewer? A Survey of Peer Review Process, Evaluation, and the Future</title>
-      <link>https://aclanthology.org/2026.acl-long.1504/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Peer review is a multi-stage process involving reviews, rebuttals, meta-reviews, final decisions, and subsequent manuscript revisions. Recent advances in large language models (LLMs) have motivated methods that assist or automate different stages of this pipeline. In this survey, we synthesize techniques for (i) peer review generation, including fine-tuning strategies, agent-based systems, RL-based methods, and emerging paradigms to enhance generation; (ii) after-review tasks including rebuttals, meta-review and revision aligned to reviews; and (iii) evaluation methods spanning human-centered, reference-based, LLM-based and aspect-oriented. We catalog datasets, compare modeling choices, and discuss limitations, ethical concerns, and future directions. The survey aims to provide practical guidance for building, evaluating, and integrating LLM systems across the full peer review workflow.</description>
-      <author>Sihong Wu, Owen Jiang, Yilun Zhao, Tiansheng Hu, Yiling Ma, Kaiyan Zhang, Manasi Patwardhan and Arman Cohan</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1504/</guid>
-    </item>
-    <item>
-      <title>Can AI-Generated Persuasion Be Detected? Persuaficial Benchmark and AI vs. Human Linguistic Differences</title>
-      <link>https://aclanthology.org/2026.acl-long.1433/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) can generate highly persuasive text, raising concerns about their misuse for propaganda, manipulation, and other harmful purposes. This leads us to our central question: Is LLM-generated persuasion more difficult to automatically detect than human-written persuasion? To address this, we categorize controllable generation approaches for producing persuasive content with LLMs and introduce Persuaficial, a high-quality multilingual benchmark covering six languages: English, German, Polish, Italian, French and Russian. Using this benchmark, we conduct extensive empirical evaluations comparing human-authored and LLM-generated persuasive texts. We find that although overtly persuasive LLM-generated texts can be easier to detect than human-written ones, subtle LLM-generated persuasion consistently degrades automatic detection performance. Beyond detection performance, we provide the first comprehensive linguistic analysis contrasting human and LLM-generated persuasive texts, offering insights that may guide the development of more interpretable and robust detection tools.</description>
-      <author>Arkadiusz Modzelewski, Paweł Golik, Anna Kołos and Giovanni Da San Martino</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1433/</guid>
-    </item>
-    <item>
-      <title>Can Factual Opinions Be Edited (Manipulated) in Large Language Models?</title>
-      <link>https://aclanthology.org/2026.acl-long.627/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large Language Models (LLMs) are increasingly integrated into various domains, making knowledge editing techniques crucial yet potentially hazardous. Current editing methods primarily target atomic facts, overlooking the significant risks associated with manipulating “factual opinions”, e.g., documented stances of public figures on societal issues. Such manipulation could reshape public images, influence elections, and alter societal views. To systematically assess this threat, we introduce the Factual Opinion Editing with Evidence (FOE) benchmark, which encompasses 261 public figures, 19 issue categories, and 2,178 complete opinion records. Our evaluations demonstrate that current editing techniques struggle significantly with factual opinions, often achieving only superficial changes while failing to preserve consistency between the edited opinion and the supporting evidence generated by the model. To address this limitation, we further propose a simple yet effective Self-Generated Evidence-Aligned method that achieves opinion–evidence alignment without relying on explicit instructions. Together, our benchmark and method provide a foundation for understanding the emerging security implications of factual opinion editing in LLMs.</description>
-      <author>Yuanpu Cao, Ziyi Yin, Fenglong Ma and Jinghui Chen</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.627/</guid>
-    </item>
-    <item>
-      <title>Can Large Language Models Adequately Perform Symbolic Reasoning Over Time Series?</title>
-      <link>https://aclanthology.org/2026.findings-acl.1756/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Uncovering hidden symbolic laws from time series data, as an aspiration dating back to Kepler’s discovery of planetary motion, remains a core challenge in scientific discovery and artificial intelligence. While Large Language Models show promise in structured reasoning tasks, their ability to infer interpretable, context-aligned symbolic structures from time series data is still underexplored. To systematically evaluate this capability, we introduce SymbolBench, a comprehensive benchmark designed to assess symbolic reasoning over real-world time series across three tasks: multivariate symbolic regression, Boolean network inference, and causal discovery. Unlike prior efforts limited to simple algebraic equations, SymbolBench spans a diverse set of symbolic forms with varying complexity. We further propose a unified framework that integrates LLMs with genetic programming to form a closed-loop symbolic reasoning system. Our empirical results reveal key strengths and limitations of current models, highlighting the importance of combining domain knowledge, context alignment, and reasoning structure to improve LLMs in automated scientific discovery.</description>
-      <author>Zewen Liu, Juntong Ni, Xianfeng Tang, Max SY Lau, Qi He, Wenpeng Yin and Wei Jin</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1756/</guid>
-    </item>
-    <item>
-      <title>Can Large Language Models Infer Human Actions and Motives? Evaluation in Social Prediction and Inspection Games</title>
-      <link>https://aclanthology.org/2026.findings-acl.1641/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Humans are able to predict each other’s actions by reasoning about the others’ underlying goals, preferences, and motives, such as greed and risk-aversion. Game theory provides a framework for studying human behaviors through incentivized games that simulate social situations. We utilized two validated games from the cognitive science literature—the Social Prediction Game (SPG) and the Inspection Game (IG)—to systematically study how well several recent open- and closed-source LLMs predict player actions and whether they can leverage and generalize the players’ motives learned from the iterated games. Our results indicate that state-of-the-art LLMs can achieve accuracy close to human levels in predicting players’ actions with underlying human motives in SPGs. However, unlike humans, who rely on reasoning about players’ motives to inform their predictions, LLMs failed to recognize statistical patterns in players’ actions. As a result, LLM prediction accuracy did not improve over multiple rounds. Our results in the IG further demonstrate that, unlike humans, LLMs were unable to recognize a player’s underlying motives and to generalize their understanding of the same player to a new context. This suggests that LLMs may lack reasoning capabilities. Our findings offer insights into differences in human and LLM reasoning mechanisms, suggesting that further research into human-AI alignment is needed before utilizing LLMs for human behavior modeling and simulation in this and related contexts.</description>
-      <author>Kaleen Shrestha, Abhinav Gupta, Harish Dukkipati, Zhonghao Shi and Maja Mataric</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1641/</guid>
-    </item>
-    <item>
-      <title>Can LLM Safety Be Ensured by Constraining Parameter Regions?</title>
-      <link>https://aclanthology.org/2026.acl-long.1616/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Large language models (LLMs) are often assumed to contain "safety regions” - parameter subsets whose modification directly influences safety behaviors. We conduct a systematic evaluation of four safety region identification methods spanning different parameter granularities, from individual weights to entire Transformer layers, across four families of backbone LLMs with varying sizes. Using ten safety identification datasets, we find that the identified safety regions exhibit only low to moderate overlap, as measured by IoU. The overlap drops significantly when the safety regions are further refined using utility datasets (i.e. non-harmful queries). These results suggest that current techniques fail to reliably identify a stable, dataset-agnostic safety region.</description>
-      <author>Zongmin Li, Jian Su, Farah Benamara and Aixin Sun</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1616/</guid>
-    </item>
-    <item>
-      <title>Can LLMs Estimate Student Struggles? Human-AI Difficulty Alignment with Proficiency Simulation for Item Difficulty Prediction</title>
-      <link>https://aclanthology.org/2026.findings-acl.1270/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Accurate estimation of item (question or task) difficulty is critical for educational assessment but suffers from the cold start problem. While Large Language Models demonstrate superhuman problem-solving capabilities, it remains an open question whether they can perceive the cognitive struggles of human learners. In this work, we present a large-scale empirical analysis of Human-AI Difficulty Alignment for over 20 models across diverse domains such as medical knowledge and mathematical reasoning. Our findings reveal a systematic misalignment where scaling up model size is not reliably helpful; instead of aligning with humans, models converge toward a shared machine consensus. We observe that high performance often impedes accurate difficulty estimation, as models struggle to simulate the capability limitations of students even when being explicitly prompted to adopt specific proficiency levels. Furthermore, we identify a critical lack of introspection, as models fail to predict their own limitations. These results suggest that general problem-solving capability does not imply an understanding of human cognitive struggles, highlighting the challenge of using current models for automated difficulty prediction.</description>
-      <author>Ming Li, Han Chen, Yunze Xiao, Jian Chen, Hong Jiao and Tianyi Zhou</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.1270/</guid>
-    </item>
-    <item>
-      <title>Can LLMs Hear the Dogwhistle?</title>
-      <link>https://aclanthology.org/2026.findings-acl.161/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract With the widespread deployment of large language models (LLMs), existing safety benchmarks remain largely focused on explicitly harmful content, overlooking context-dependent expressions such as dogwhistles, the language that conveys harmful intent while appearing benign on the surface. To address this gap, we introduce DogBench, a comprehensive benchmark for evaluating LLM safety under dogwhistle-driven prompts. DogBench comprises 11,150 prompt instances constructed from controlled templates that embed dogwhistle terms, allowing for enabling direct comparison with explicit toxic terms under identical prompt structures. Each prompt is further annotated with pragmatic attributes, including interaction category and stance tendency. Extensive evaluations across multiple mainstream LLMs reveal a consistent pattern: dogwhistle prompts are substantially more likely to elicit harmful outputs than their explicit toxic counterparts, with an average risk increase of approximately fourfold. These findings expose a blind spot in current safety evaluation and alignment practices. Our work underscores the need to explicitly incorporate dogwhistles into future LLM safety research, with DogBench serving as a dedicated benchmark for this purpose.</description>
-      <author>Yifan Liu, Yi Lin, Xinwei Guo, Ziwei Wang, Jiaxin Zhang, Guanhua Chen, Haiyan Wu, Xiangyu Zhao, Xin Yao and Xuetao Wei</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.findings-acl.161/</guid>
-    </item>
-    <item>
-      <title>Can LLMs Learn to Map the World from Local Descriptions?</title>
-      <link>https://aclanthology.org/2026.acl-long.128/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Recent advances in Large Language Models (LLMs) have demonstrated strong capabilities in tasks such as code generation and mathematical reasoning. However, their potential to internalize structured spatial knowledge remains underexplored. This study investigates whether LLMs, grounded in locally relative human observations, can construct coherent global spatial cognition by integrating fragmented relational descriptions. We focus on two core aspects of spatial cognition: spatial perception, where models infer consistent global layouts from local positional relationships, and spatial navigation, where models learn road connectivity from trajectory data and plan optimal paths between unconnected locations. Experiments conducted in a simulated urban environment demonstrate that LLMs not only generalize to unseen spatial relationships between points of interest (POIs) but also exhibit latent representations aligned with real-world spatial distributions. Furthermore, LLMs can learn road connectivity from trajectory descriptions, enabling accurate path planning and dynamic spatial awareness during navigation.</description>
-      <author>Sirui Xia, Aili Chen, Xintao Wang, Tinghui Zhu, Yikai Zhang, Jiangjie Chen and Yanghua Xiao</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.128/</guid>
-    </item>
-    <item>
-      <title>Can Persona-Prompted LLMs Emulate Subgroup Values? An Empirical Analysis of Generalisability and Fairness in Cultural Alignment</title>
-      <link>https://aclanthology.org/2026.acl-long.1127/</link>
-      <description>[ACL Anthology | abstract_keywords]
-
-Abstract Despite their global prevalence, many Large Language Models (LLMs) are aligned to a monolithic, often Western-centric set of values. This paper investigates the more challenging task of fine-grained value alignment: examining whether LLMs can emulate the distinct cultural values of demographic subgroups. Using Singapore as a case study and the World Values Survey (WVS), we examine the value landscape and show that even state-of-the-art models like GPT-4.1 achieve only 57.4% accuracy in predicting subgroup modal preferences. We construct a dataset of over 20,000 samples to train and evaluate a range of models. We demonstrate that simple fine-tuning on structured numerical preferences yields substantial gains, improving accuracy on unseen, out-of-distribution subgroups by an average of 17.4%. These gains partially transfer to open-ended generation. However, we find significant pre-existing performance biases, where models better emulate young, male, Chinese, and Christian personas. Furthermore, while fine-tuning improves average performance, it widens the disparity between subgroups when measured by distance-aware metrics. Our work offers insights into the limits and fairness implications of subgroup-level cultural alignment.</description>
-      <author>Bryan Chen Zhengyu Tan, Zhengyuan Liu, Xiaoyuan Yi, Jing Yao, Xing Xie, Nancy F. Chen and Roy Ka-Wei Lee</author>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <category>ACL Anthology</category>
-      <category>abstract_keywords</category>
-      <guid isPermaLink="true">https://aclanthology.org/2026.acl-long.1127/</guid>
     </item>
   </channel>
 </rss>
